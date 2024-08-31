@@ -35,11 +35,7 @@ function viewAllProfiles() {
         if ($result->num_rows > 0) {
             echo "<table class='w3-table-all w3-card-4'>";
             echo "<tr><th>Username</th><th>Email</th><th>Address</th>";
-            
-            if ($role === 'customer') {
-                echo "<th>Contact</th>";
-            }
-
+            echo "<th>Contact</th>";
             echo "</tr>";
 
             while ($row = $result->fetch_assoc()) {
@@ -47,9 +43,7 @@ function viewAllProfiles() {
                 echo "<td>" . htmlspecialchars($row['Username']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['Email']) . "</td>";
 				echo "<td>" . htmlspecialchars($row['Address']) . "</td>";
-                if ($role === 'customer') {
-                    echo "<td>" . htmlspecialchars($row['Contact']) . "</td>";
-                }
+                echo "<td>" . htmlspecialchars($row['Contact']) . "</td>";
 
                 echo "</tr>";
             }

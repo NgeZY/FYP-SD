@@ -5,6 +5,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
+	$address = $_POST['address'];
+    $contact = $_POST['contact'];
 
     
     $con = new mysqli("localhost", "root", "", "utmadvance");
@@ -34,16 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-       
-        if ($role === 'customer') {
-            $address = $_POST['address'];
-            $contact = $_POST['contact'];
-            $stmt = $con->prepare("INSERT INTO $table (Username, Password, Email, Address, Contact) VALUES (?, ?, ?, ?, ?)");
-            $stmt->bind_param("sssss", $username, $hashed_password, $email, $address, $contact);
-        } else {
-            $stmt = $con->prepare("INSERT INTO $table (Username, Password, Email) VALUES (?, ?, ?)");
-            $stmt->bind_param("sss", $username, $hashed_password, $email);
-        }
+		$stmt = $con->prepare("INSERT INTO $table (Username, Password, Email, Address, Contact) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssss", $username, $hashed_password, $email, $address, $contact);
 
         if ($stmt->execute()) {
             echo "Sign-up successful! You can now sign in.";

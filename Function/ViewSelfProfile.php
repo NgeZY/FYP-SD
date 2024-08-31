@@ -22,9 +22,9 @@ function viewSelfProfile() {
     if ($role === 'customer') {
         $sql = "SELECT Username, Email, Address, Contact FROM customer WHERE Username = ?";
     } elseif ($role === 'staff') {
-        $sql = "SELECT Username, Email, Address FROM staff WHERE Username = ?";
+        $sql = "SELECT Username, Email, Address, Contact FROM staff WHERE Username = ?";
     } elseif ($role === 'admin') {
-        $sql = "SELECT Username, Email, Address FROM admin WHERE Username = ?";
+        $sql = "SELECT Username, Email, Address, Contact FROM admin WHERE Username = ?";
     }
 
     $stmt = $db->prepare($sql);
@@ -40,13 +40,8 @@ function viewSelfProfile() {
         echo "<table class='w3-table-all w3-card-4'>";
         echo "<tr><th>Username</th><td>" . htmlspecialchars($row['Username']) . "</td></tr>";
         echo "<tr><th>Email</th><td>" . htmlspecialchars($row['Email']) . "</td></tr>";
-
-        if ($role === 'customer') {
-            echo "<tr><th>Address</th><td>" . htmlspecialchars($row['Address']) . "</td></tr>";
-            echo "<tr><th>Contact</th><td>" . htmlspecialchars($row['Contact']) . "</td></tr>";
-        } elseif ($role === 'staff' || $role === 'admin') {
-            echo "<tr><th>Address</th><td>" . htmlspecialchars($row['Address']) . "</td></tr>";
-        }
+		echo "<tr><th>Address</th><td>" . htmlspecialchars($row['Address']) . "</td></tr>";
+        echo "<tr><th>Contact</th><td>" . htmlspecialchars($row['Contact']) . "</td></tr>";
 
         echo "</table>";
     } else {
