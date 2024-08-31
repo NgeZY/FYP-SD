@@ -66,7 +66,7 @@ if ($count > 0) {
             $mail->Port = 587;
 
             // Recipients
-            $mail->setFrom('no-reply@yourdomain.com', 'Your Company');
+            $mail->setFrom('no-reply@gmail.com', 'Your Company');
             $mail->addAddress($email);
 
             // Content

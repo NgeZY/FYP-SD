@@ -1,20 +1,48 @@
 <?php
-if(empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-  http_response_code(500);
-  exit();
+header('Content-Type: text/plain'); // Set content type to plain text
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "utmadvance";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    // Respond with a generic error message
+    echo 'Something went wrong... Please try again.';
+    exit();
 }
 
+// Sanitize inputs
 $name = strip_tags(htmlspecialchars($_POST['name']));
 $email = strip_tags(htmlspecialchars($_POST['email']));
-$m_subject = strip_tags(htmlspecialchars($_POST['subject']));
+$subject = strip_tags(htmlspecialchars($_POST['subject']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
 
-$to = "info@example.com"; // Change this email to your //
-$subject = "$m_subject:  $name";
-$body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\n\nEmail: $email\n\nSubject: $m_subject\n\nMessage: $message";
-$header = "From: $email";
-$header .= "Reply-To: $email";	
+// Prepare and bind
+$stmt = $conn->prepare("INSERT INTO feedback (name, email, subject, message) VALUES (?, ?, ?, ?)");
+if ($stmt === false) {
+    // Respond with a generic error message
+    echo 'Something went wrong... Please try again.';
+    exit();
+}
+$stmt->bind_param("ssss", $name, $email, $subject, $message);
 
-if(!mail($to, $subject, $body, $header))
-  http_response_code(500);
+// Execute the statement
+if ($stmt->execute() === false) {
+    // Respond with a generic error message
+    echo 'Something went wrong... Please try again.';
+    exit();
+}
+
+// Close the statement and connection
+$stmt->close();
+$conn->close();
+
+// Respond with a success message
+echo 'Feedback submitted successfully!';
+exit();
 ?>
