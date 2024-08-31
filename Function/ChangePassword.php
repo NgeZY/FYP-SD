@@ -4,7 +4,7 @@ session_start();
 $username = $_POST['username'];
 $OPassword = $_POST['current_password'];
 $NPassword = $_POST['new_password'];
-$NPassword2 = $_POST['password_confirm'];
+$NPassword2 = $_POST['confirm_password'];
 
 $con = new mysqli("localhost", "root", "", "utmadvance");
 
@@ -12,7 +12,21 @@ if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
 }
 
-$qry = "SELECT Password FROM customer WHERE Username = ?";
+switch ($user_type) {
+    case 'admin':
+        $table = 'admin';
+        break;
+    case 'customer':
+        $table = 'customer';
+        break;
+    case 'staff':
+        $table = 'staff';
+        break;
+    default:
+        die("Invalid user type.");
+}
+
+$qry = "SELECT Password FROM $table WHERE Username = ?";
 $stmt = $con->prepare($qry);
 $stmt->bind_param("s", $username);
 $stmt->execute();
@@ -26,7 +40,7 @@ if ($stored_password === null) {
     echo "You entered an incorrect password.";
 } else {
     if ($NPassword === $NPassword2) {
-        $updateQry = "UPDATE customer SET Password = ? WHERE Username = ?";
+        $updateQry = "UPDATE $table SET Password = ? WHERE Username = ?";
         $stmt = $con->prepare($updateQry);
         $stmt->bind_param("ss", $NPassword, $username);
         

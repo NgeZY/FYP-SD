@@ -15,17 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $con->connect_error);
     }
 
-   
-    $table = '';
-    if ($role === 'customer' || $role === 'staff' || $role === 'admin') {
-        $table = $role;
-    } else {
-        echo "Invalid role selected.";
-        exit;
-    }
-
     
-    $stmt = $con->prepare("SELECT Username FROM $table WHERE Username = ?");
+    $stmt = $con->prepare("SELECT Username FROM customer WHERE Username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt->store_result();
@@ -36,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-		$stmt = $con->prepare("INSERT INTO $table (Username, Password, Email, Address, Contact) VALUES (?, ?, ?, ?, ?)");
+		$stmt = $con->prepare("INSERT INTO customer (Username, Password, Email, Address, Contact) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("sssss", $username, $hashed_password, $email, $address, $contact);
 
         if ($stmt->execute()) {
