@@ -16,8 +16,17 @@ if ($conn->connect_error) {
 // Sanitize and validate input
 $email = $_POST['email'];
 $verification_code = $_POST['verification_code'];
-$new_password = password_hash($_POST['new_password'], PASSWORD_BCRYPT);
+$new_password = $_POST['new_password'];
+$confirm_password = $_POST['confirm_password'];
 $user_type = $_POST['user_type']; // Assuming user_type is provided
+
+// Check if passwords match
+if ($new_password !== $confirm_password) {
+    die("<script>alert('Passwords do not match.'); window.history.back();</script>");
+}
+
+// Hash the new password
+$hashed_password = password_hash($new_password, PASSWORD_BCRYPT);
 
 // Determine the correct table based on user_type
 switch ($user_type) {
@@ -43,17 +52,17 @@ if ($result->num_rows > 0) {
     
     if ($row['Verification_code'] == $verification_code) {
         // Update the password
-        $sql = "UPDATE $table SET password='$new_password' WHERE email='$email'";
+        $sql = "UPDATE $table SET password='$hashed_password' WHERE email='$email'";
         if ($conn->query($sql) === TRUE) {
-            echo "Your password has been reset successfully.";
+            echo '<script>alert("Your password has been reset successfully."); window.location.href = "../CG/Signinform.html";</script>';
         } else {
-            echo "Error updating password: " . $conn->error;
+            echo "<script>alert('Error updating password: " . $conn->error . "'); window.history.back();</script>";
         }
     } else {
-        echo "Incorrect verification code.";
+        echo '<script>alert("Incorrect verification code."); window.history.back();</script>';
     }
 } else {
-    echo "No user found with that email.";
+    echo '<script>alert("No user found with that email."); window.history.back();</script>';
 }
 
 $conn->close();

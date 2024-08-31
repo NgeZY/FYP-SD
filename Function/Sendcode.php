@@ -76,7 +76,7 @@ if ($count > 0) {
 
             $mail->send();
             echo "A verification code has been sent to your email.";
-			header("Location: verifycodeform.php");
+			header("Location: ../CG/Verifycodeform.html");
 			exit;
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

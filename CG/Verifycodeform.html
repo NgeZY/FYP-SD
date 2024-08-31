@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    <title>Verification</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,24 +52,28 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Login</h1>
-			<form action="../Function/Signin.php" method="post">
+		<h1>Verification</h1>
+			<form action="../Function/Verifycode.php" method="post">
 					<label for="role">Role:</label>
-					<select name="role" id="role" required>
+					<select name="user_type" id="user_type" required>
 						<option value="customer">Customer</option>
 						<option value="staff">Staff</option>
 						<option value="admin">Admin</option>
 					</select>
 					
-					<label for="username">Username:</label>
-					<input type="text" name="username" id="username" required>
+					<label for="email">Email:</label>
+					<input type="text" name="email" id="email" required>
 					
-					<label for="password">Password:</label>
-					<input type="password" name="password" id="password" required>
+					<label for="verification_code">Verification code:</label>
+					<input type="text" name="verification_code" id="verification_code" required>
 					
-					<a href = "Forgotpasswordform.html">Forgot password?</a>
+					<label for="new_password">New password:</label>
+					<input type="password" name="new_password" id="new_password" required>
 					
-					<input type="submit" value="Login">
+					<label for="confirm_password">Confirm the password:</label>
+					<input type="password" name="confirm_password" id="confirm_password" required>
+					
+					<input type="submit" value="Change password">
     </form>
 	</div>
 </body>
