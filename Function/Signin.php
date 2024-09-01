@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($row && password_verify($password, $row['Password'])) {
             $_SESSION['username'] = $username; 
             $_SESSION['role'] = $role; 
-            header("Location: mainpage.php");
+            header("Location: ../CG/index.php");
             exit();
         } else {
             $error = "Your Login Name or Password is invalid";
@@ -45,40 +45,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $con->close();
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sign In</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Add your CSS file here -->
-</head>
-<body>
-    <div class="login-container">
-        <h2>Sign In</h2>
-        <form action="Signin.php" method="post">
-            <div class="form-group">
-                <label for="role">Role:</label>
-                <select id="role" name="role" required>
-                    <option value="customer">Customer</option>
-                    <option value="staff">Staff</option>
-                    <option value="admin">Admin</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Sign In</button>
-        </form>
-        <?php
-        if (isset($error)) {
-            echo "<p class='error'>$error</p>";
-        }
-        ?>
-    </div>
-</body>
-</html>

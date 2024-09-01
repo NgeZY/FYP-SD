@@ -49,11 +49,28 @@
             display: none;
         }
     </style>
+    <script>
+        function toggleAdminPassword() {
+            var role = document.getElementById("role").value;
+            var adminPasswordField = document.getElementById("adminPasswordField");
+            
+            if (role === "admin") {
+                adminPasswordField.style.display = "block";
+            } else {
+                adminPasswordField.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Sign-Up Form</h1>
         <form action="../Function/Signup.php" method="post">
+            <label for="role">Role:</label>
+            <select name="role" id="role" required onchange="toggleAdminPassword()">
+                <option value="customer">Customer</option>
+                <option value="admin">Admin</option>
+            </select>
 
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
@@ -69,6 +86,11 @@
 
             <label for="contact">Contact Number:</label>
             <input type="text" id="contact" name="contact">
+
+            <div id="adminPasswordField" class="optional-fields">
+                <label for="adminPassword">Admin Password:</label>
+                <input type="password" id="adminPassword" name="adminPassword">
+            </div>
 
             <input type="submit" value="Sign Up">
         </form>
