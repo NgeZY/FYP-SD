@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($role === 'customer' || $role === 'staff' || $role === 'admin') {
         $table = $role;
     } else {
-        echo "Invalid role selected.";
+        echo "<script>alert('Invalid role selected.')</script>";
         exit;
     }
 
@@ -36,11 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       
         $_SESSION['username'] = $username;
         $_SESSION['role'] = $role;
-
-        echo "Sign-in successful! Welcome, " . $username . ". You are logged in as " . $role . ".";
+		
+		//To add pages to load to after user sign in
+        echo "<script>alert('Sign-in successful! Welcome, " . $username . ". You are logged in as " . $role . ".');</script>";
        
     } else {
-        echo "Incorrect username or password.";
+        echo "<script>alert('Incorrect username or password.'); window.history.back();</script>";
     }
 
     $con->close();

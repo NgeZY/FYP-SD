@@ -1,7 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    $role = $_POST['role']; 
     $username = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
@@ -16,13 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     
-    $stmt = $con->prepare("SELECT Username FROM customer WHERE Username = ?");
-    $stmt->bind_param("s", $username);
+    $stmt = $con->prepare("SELECT Email FROM customer WHERE Email = ?");
+    $stmt->bind_param("s", $email);
     $stmt->execute();
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        echo "Username already exists. Please choose a different username.";
+        echo "<script>alert('There is already an account for this email, please try with another account.'); window.history.back();</script>";
     } else {
         
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -31,10 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sssss", $username, $hashed_password, $email, $address, $contact);
 
         if ($stmt->execute()) {
-            echo "Sign-up successful! You can now sign in.";
+            echo "<script>alert('Sign-up successful! You can now sign in.'); window.location.href = '../CG/Signinform.html';</script>";
             
         } else {
-            echo "Error: " . $stmt->error;
+            echo "<script>alert('Error: " . $stmt->error . "'); window.history.back();</script>";
         }
     }
 
