@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo "Session ID: " . session_id(); 
 
 include("config.php"); 
 
@@ -31,7 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($row && password_verify($password, $row['Password'])) {
             $_SESSION['username'] = $username; 
-            $_SESSION['role'] = $role; 
+            $_SESSION['role'] = $role;
+			$_SESSION['email'] = $row['Email'];
+            $_SESSION['address'] = $row['Address'];
+            $_SESSION['contact'] = $row['Contact'];
             header("Location: ../CG/index.php");
             exit();
         } else {

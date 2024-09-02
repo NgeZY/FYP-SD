@@ -148,7 +148,7 @@
                         </div>
                         <div class="navbar-nav ml-auto py-0">
                             <?php if(isset($_SESSION['username'])): ?>
-                                <a href="#" class="nav-item nav-link"><?php echo htmlspecialchars($_SESSION['username']); ?></a>
+                                <a href="../AS/Profile.php" class="nav-item nav-link"><?php echo htmlspecialchars($_SESSION['username']); ?></a>
                                 <a href="../Function/Signout.php" class="nav-item nav-link">Logout</a>
                             <?php else: ?>
                                 <a href="../CG/Signinform.html" class="nav-item nav-link">Sign In</a>

@@ -26,6 +26,9 @@
 </head>
 
 <body>
+	<?php
+	session_start();
+	?>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -164,8 +167,7 @@
                             <div class="card-body">
                                 <center class="m-t-30"> <img src="assets/images/users/5.jpg"
                                         class="rounded-circle" width="150" />
-                                    <h4 class="card-title m-t-10">Hanna Gover</h4>
-                                    <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
+                                    <h4 class="card-title m-t-10"><?php echo htmlspecialchars($_SESSION['username']); ?></h4>
                                     <div class="row text-center justify-content-md-center">
                                         <div class="col-4"><a href="javascript:void(0)" class="link"><i
                                                     class="icon-people"></i>
@@ -182,8 +184,8 @@
                                 <hr>
                             </div>
                             <div class="card-body"> <small class="text-muted">Email address </small>
-                                <h6>hannagover@gmail.com</h6> <small class="text-muted p-t-30 db">Phone</small>
-                                <h6>+91 654 784 547</h6> 
+                                <h6><?php echo htmlspecialchars($_SESSION['email']); ?></h6> <small class="text-muted p-t-30 db">Phone</small>
+                                <h6><?php echo htmlspecialchars($_SESSION['contact']); ?></h6> 
                                 
                                 <div class="map-box">
                                    
@@ -198,65 +200,46 @@
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-body">
-                                <form class="form-horizontal form-material mx-2">
+                                <form class="form-horizontal form-material mx-2" action = "../Function/Editprofile.php" method = "POST">
                                     <div class="form-group">
-                                        <label class="col-md-12">Full Name</label>
+                                        <label class="col-md-12">Username</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Johnathan Doe"
+                                            <input type="text" name="username" 
+											value="<?php echo htmlspecialchars($_SESSION['username']); ?>"
                                                 class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="example-email" class="col-md-12">Email</label>
                                         <div class="col-md-12">
-                                            <input type="email" placeholder="johnathan@admin.com"
-                                                class="form-control form-control-line" name="example-email"
-                                                id="example-email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Password</label>
-                                        <div class="col-md-12">
-                                            <input type="password" value="password"
-                                                class="form-control form-control-line">
+                                            <input type="email" value="<?php echo htmlspecialchars($_SESSION['email']); ?>"
+											class="form-control form-control-line" name="email" id="email">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Phone No</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="123 456 7890"
-                                                class="form-control form-control-line">
+                                            <input type="text" value="<?php echo htmlspecialchars($_SESSION['contact']); ?>"
+                                                class="form-control form-control-line" name = "contact_number">
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Message</label>
+									<div class="form-group">
+                                        <label class="col-md-12">Address</label>
                                         <div class="col-md-12">
-                                            <textarea rows="5" class="form-control form-control-line"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-12">Select Country</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-select shadow-none form-control-line">
-                                                <option>London</option>
-                                                <option>India</option>
-                                                <option>Usa</option>
-                                                <option>Canada</option>
-                                                <option>Thailand</option>
-                                            </select>
+                                            <input type="text" value="<?php echo htmlspecialchars($_SESSION['address']); ?>"
+                                                class="form-control form-control-line" name = "address">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success text-white">Update Profile</button>
+                                            <button class="btn btn-success text-white" name = "update_profile">Update Profile</button>
                                         </div>
-										</div>
-										
-										<div class="col-sm-12">
-                                            <button class="btn btn-success text-white">Change Password</button>
-                                        </div>
-                                    </div>
+									</div>
                                 </form>
+									<div class="col-sm-12">
+                                            <button class="btn btn-success text-white" onclick="window.location.href='../CG/Changepasswordform.html'">
+											Change Password</button>
+                                    </div>
                             </div>
                         </div>
                     </div>
