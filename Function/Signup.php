@@ -25,18 +25,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->num_rows > 0) {
         echo "<script>alert('There is already an account for this email, please try with another account.'); window.history.back();</script>";
+        $stmt->close();  // Close the statement here
     } else {
         // Validate admin password if the role is admin
         if ($role === "admin") {
             $adminPassword = $_POST['adminPassword'];
-            $stmt = $con->prepare("SELECT Admin_password FROM Password WHERE 1"); // Assuming there's only one row in the Password table
-            $stmt->execute();
-            $stmt->bind_result($storedAdminPassword);
-            $stmt->fetch();
-            $stmt->close();
 
-            if (!password_verify($adminPassword, $storedAdminPassword)) {
-                echo "<script>alert('Wrong admin password, please try again or make sure you choose the correct identity.'); window.history.back();</script>";
+            // Fetch the stored admin password
+            $stmt->close();  // Close the previous statement before opening a new one
+            $stmt = $con->prepare("SELECT Admin_password FROM Password WHERE 1 LIMIT 1"); // Assuming there's only one row in the Password table
+            if ($stmt->execute()) {
+                $stmt->bind_result($storedAdminPassword);
+                if ($stmt->fetch()) {
+                    // Directly compare the plain text passwords
+                    if ($adminPassword !== $storedAdminPassword) {
+                        echo "<script>alert('Wrong admin password, please try again or make sure you choose the correct identity.'); window.history.back();</script>";
+                        $stmt->close();
+                        $con->close();
+                        exit();
+                    }
+                } else {
+                    echo "<script>alert('Failed to fetch the admin password from the database.'); window.history.back();</script>";
+                    $stmt->close();
+                    $con->close();
+                    exit();
+                }
+            } else {
+                echo "<script>alert('Error executing query: " . $stmt->error . "'); window.history.back();</script>";
+                $stmt->close();
                 $con->close();
                 exit();
             }
@@ -46,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Prepare and execute the insertion query
+        $stmt->close();  // Close the previous statement before opening a new one
         $stmt = $con->prepare("INSERT INTO $table (Username, Password, Email, Address, Contact) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("sssss", $username, $hashed_password, $email, $address, $contact);
 
