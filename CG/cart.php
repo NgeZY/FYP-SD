@@ -137,18 +137,18 @@
                             <a href="index.php" class="nav-item nav-link">Home</a>
                             <a href="mainpage.php" class="nav-item nav-link">Shop</a>
                             <a href="detail.php" class="nav-item nav-link">Shop Detail</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="cart.php" class="dropdown-item">Shopping Cart</a>
-                                    <a href="checkout.php" class="dropdown-item">Checkout</a>
-                                </div>
-                            </div>
-                            <a href="contact.php" class="nav-item nav-link">Contact</a>
+							<a href="cart.php" class="nav-item nav-link">Cart</a>
+                            <a href="contact.php" class="nav-item nav-link">Contact Us</a>
+							<a href="about.php" class="nav-item nav-link">About Us</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0">
                             <?php if(isset($_SESSION['username'])): ?>
-                                <a href="../AS/Profile.php" class="nav-item nav-link"><?php echo htmlspecialchars($_SESSION['username']); ?></a>
+                                <a href="<?php 
+											if ($_SESSION['role'] === 'customer') {
+												echo '../AS/Profile.php';
+											} elseif ($_SESSION['role'] === 'staff' || $_SESSION['role'] === 'admin') {
+												echo '../AS/index.html';
+											}?>" class="nav-item nav-link"><?php echo htmlspecialchars($_SESSION['username']); ?></a>
                                 <a href="../Function/Signout.php" class="nav-item nav-link">Logout</a>
                             <?php else: ?>
                                 <a href="../CG/Signinform.html" class="nav-item nav-link">Sign In</a>
@@ -328,7 +328,7 @@
                             <h5 class="font-weight-bold">Total</h5>
                             <h5 class="font-weight-bold">$160</h5>
                         </div>
-                        <button class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</button>
+                        <button class="btn btn-block btn-primary my-3 py-3" onclick = "window.location.href='checkout.php'">Proceed To Checkout</button>
                     </div>
                 </div>
             </div>
@@ -358,8 +358,8 @@
                             <a class="text-dark mb-2" href="shop.php"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
                             <a class="text-dark mb-2" href="detail.php"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
                             <a class="text-dark mb-2" href="cart.php"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                            <a class="text-dark mb-2" href="checkout.php"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                            <a class="text-dark" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            <a class="text-dark mb-2" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            <a class="text-dark mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About Us</a>
                         </div>
                     </div>
                     

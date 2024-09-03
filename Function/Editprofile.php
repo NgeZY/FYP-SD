@@ -68,9 +68,11 @@ if (isset($_POST['update_profile'])) {
         $_SESSION['username'] = $username;
         $_SESSION['email'] = $email;
         $_SESSION['address'] = $address;
-        $_SESSION['contact_number'] = $contact_number;
-
-        echo "<script>alert('Profile updated successfully!'); window.location.href = '$current_page'; </script>";
+        $_SESSION['contact'] = $contact_number;
+		if($role == "customer")
+			echo "<script>alert('Profile updated successfully!'); window.location.href = '$current_page'; </script>";
+		else if($role == "staff" || $role == "admin")
+			echo "<script>alert('Profile updated successfully!'); window.location.href = '../AS/ProfileAS.php'; </script>";
     } else {
         echo "<script>
 				alert('Error updating profile: " . addslashes($conn->error) . "');

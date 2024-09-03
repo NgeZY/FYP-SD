@@ -1,5 +1,6 @@
 <?php
 // send_verification_code.php
+session_start();
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -35,6 +36,9 @@ switch ($user_type) {
     default:
         die("Invalid user type.");
 }
+
+$_SESSION['user_type'] = $user_type;
+$_SESSION['email'] = $email;
 
 // Check if the email exists in the table
 $stmt = $conn->prepare("SELECT COUNT(*) FROM $table WHERE email=?");

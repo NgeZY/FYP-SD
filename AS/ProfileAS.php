@@ -26,6 +26,9 @@
 </head>
 
 <body>
+	<?php
+	session_start();
+	?>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -49,7 +52,12 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon -->
+                       
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        
                     <!-- ============================================================== -->
                     <!-- End Logo -->
                     <!-- ============================================================== -->
@@ -68,7 +76,7 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        
+
                     </ul>
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
@@ -99,7 +107,9 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li>
-                           
+                            <!-- User Profile-->
+                            
+                            <!-- End User Profile-->
                         </li>
                         
                         <!-- User Profile-->
@@ -121,9 +131,7 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="../CG/index.php" aria-expanded="false"><i class="mdi mdi-home"></i><span
                                     class="hide-menu">Homepage</span></a></li>
-                        <li class="text-center p-40 upgrade-btn">
-                           
-                        </li>
+                        
                     </ul>
 
                 </nav>
@@ -144,12 +152,11 @@
             <div class="page-breadcrumb">
                 <div class="row align-items-center">
                     <div class="col-5">
-                        <h4 class="page-title">Feedback</h4>
+                        <h4 class="page-title">Profile Page</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page"></li>
+                                   <a href="../CG/index.php" class="nav-item nav-link">Home</a>
                                 </ol>
                             </nav>
                         </div>
@@ -171,15 +178,93 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
+                <!-- Row -->
                 <div class="row">
-                    <div class="col-12">
+                    <!-- Column -->
+                    <div class="col-lg-4 col-xlg-3 col-md-5">
                         <div class="card">
                             <div class="card-body">
-                                This is some text within a card block.
+                                <center class="m-t-30"> <img src="assets/images/users/5.jpg"
+                                        class="rounded-circle" width="150" />
+                                    <h4 class="card-title m-t-10"><?php echo htmlspecialchars($_SESSION['username']); ?></h4>
+                                    <div class="row text-center justify-content-md-center">
+                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i
+                                                    class="icon-people"></i>
+                                                <font class="font-medium"></font>
+                                            </a></div>
+                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i
+                                                    class="icon-picture"></i>
+                                                <font class="font-medium"></font>
+                                            </a></div>
+                                    </div>
+                                </center>
+                            </div>
+                            <div>
+                                <hr>
+                            </div>
+                            <div class="card-body"> <small class="text-muted">Email address </small>
+                                <h6><?php echo htmlspecialchars($_SESSION['email']); ?></h6> <small class="text-muted p-t-30 db">Phone</small>
+                                <h6><?php echo htmlspecialchars($_SESSION['contact']); ?></h6> 
+                                
+                                <div class="map-box">
+                                   
+                                </div> <small class="text-muted p-t-30 db"></small>
+                                <br />
+                                
                             </div>
                         </div>
                     </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-lg-8 col-xlg-9 col-md-7">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="form-horizontal form-material mx-2" action = "../Function/Editprofile.php" method = "POST">
+                                    <div class="form-group">
+                                        <label class="col-md-12">Username</label>
+                                        <div class="col-md-12">
+                                            <input type="text" name="username" 
+											value="<?php echo htmlspecialchars($_SESSION['username']); ?>"
+                                                class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-email" class="col-md-12">Email</label>
+                                        <div class="col-md-12">
+                                            <input type="email" value="<?php echo htmlspecialchars($_SESSION['email']); ?>"
+											class="form-control form-control-line" name="email" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Phone No</label>
+                                        <div class="col-md-12">
+                                            <input type="text" value="<?php echo htmlspecialchars($_SESSION['contact']); ?>"
+                                                class="form-control form-control-line" name = "contact_number">
+                                        </div>
+                                    </div>
+									<div class="form-group">
+                                        <label class="col-md-12">Address</label>
+                                        <div class="col-md-12">
+                                            <input type="text" value="<?php echo htmlspecialchars($_SESSION['address']); ?>"
+                                                class="form-control form-control-line" name = "address">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success text-white" name = "update_profile">Update Profile</button>
+                                        </div>
+									</div>
+                                </form>
+									<div class="col-sm-12">
+                                            <button class="btn btn-success text-white" onclick="window.location.href='../CG/Changepasswordform.html'">
+											Change Password</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
                 </div>
+                <!-- Row -->
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->

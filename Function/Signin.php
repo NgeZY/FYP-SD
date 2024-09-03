@@ -34,8 +34,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$_SESSION['email'] = $row['Email'];
             $_SESSION['address'] = $row['Address'];
             $_SESSION['contact'] = $row['Contact'];
-            header("Location: ../CG/index.php");
-            exit();
+			if($role == 'customer'){
+				header("Location: ../CG/index.php");
+				exit();
+			} else if($role == 'admin' || $role == 'staff'){
+				header("Location: ../AS/index.html");
+				exit();
+			}
         } else {
             $error = "Your Login Name or Password is invalid";
         }

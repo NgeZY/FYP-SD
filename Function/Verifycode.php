@@ -1,4 +1,5 @@
 <?php
+session_start();
 // reset_password.php
 
 // Database connection
@@ -14,11 +15,11 @@ if ($conn->connect_error) {
 }
 
 // Sanitize and validate input
-$email = $_POST['email'];
+$email = $_SESSION['email'];
 $verification_code = $_POST['verification_code'];
 $new_password = $_POST['new_password'];
 $confirm_password = $_POST['confirm_password'];
-$user_type = $_POST['user_type']; // Assuming user_type is provided
+$user_type = $_SESSION['user_type']; // Assuming user_type is provided
 
 // Check if passwords match
 if ($new_password !== $confirm_password) {
@@ -66,4 +67,6 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
+session_unset(); // Remove all session variables
+session_destroy();
 ?>
