@@ -180,13 +180,14 @@
     <!-- About Start -->
     <div class="container-fluid pt-5">
         <div class="text-center mb-4">
-            <p class = "px-5">Welcome to UTM Advance, your ultimate destination for stylish clothing and accessories that celebrate the University of Technology Malaysia (UTM). Founded by passionate UTM alumni, our store is dedicated to bringing you high-quality, trendy apparel and accessories that allow you to showcase your UTM pride in style.
-
-At UTM Advance, we believe that your university experience is more than just academics; it’s a part of your identity. That’s why we offer a wide range of products designed to help you express your connection to UTM. Whether you're a student, alumni, or a fan of the university, our collection has something for everyone.
-
-Our mission is to provide UTM supporters with unique and fashionable items that reflect the spirit of innovation, excellence, and community that UTM embodies. From cozy hoodies and stylish tees to exclusive accessories, every item is crafted with care to ensure you look and feel your best.
-
-Thank you for choosing UTM Advance. Together, let's advance the UTM spirit, one stylish outfit at a time!</p>
+            <p class = "px-5" style="margin-left: 175px; margin-right: 175px; font-size: 20px;">
+			Welcome to UTM Advance, your go-to store for stylish clothing and accessories that celebrate the spirit of the University of 
+			Technology Malaysia (UTM). Founded by UTM alumni, we are committed to offering high-quality products that allow you to proudly 
+			showcase your UTM pride.
+			Whether you're a student, alumni, or a fan, our collection has something for everyone. From trendy apparel to unique accessories,
+			each item reflects the innovation and excellence that UTM stands for. Thank you for choosing UTM Advance—where UTM pride meets 
+			style!
+			</p>
         </div>
     </div>
     <!-- About End -->
