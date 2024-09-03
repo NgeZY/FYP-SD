@@ -215,7 +215,7 @@
                             <a class="text-dark mb-2" href="detail.php"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
                             <a class="text-dark mb-2" href="cart.php"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
                             <a class="text-dark mb-2" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-                            <a class="text-dark mb-2" href="checkout.php"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                            <a class="text-dark mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About Us</a>
                         </div>
                     </div>
                     
