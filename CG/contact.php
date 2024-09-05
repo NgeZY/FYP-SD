@@ -57,7 +57,7 @@
                 </form>
             </div>
             <div class="col-lg-3 col-6 text-right">
-                =
+                
                 <a href="" class="btn border">
                     <i class="fas fa-shopping-cart text-primary"></i>
                     <span class="badge">0</span>
@@ -198,6 +198,8 @@
                     <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>utmadvance@gmail.com</p>
                     <p class="mb-2"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 6789</p>
                 </div>
+				<h5 class="font-weight-semi-bold mb-3">Operating Hour</h5>
+                <p>9:00a.m - 9:30p.m</p>
               
             </div>
         </div>
