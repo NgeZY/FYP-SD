@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2024 at 04:43 PM
+-- Generation Time: Sep 07, 2024 at 08:15 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
-('AdminTest', '$2y$10$iIF08bUYUrglNm6B6twxK.y1F95Ep2p/GZw4ZbrbfNDws37h6C1Li', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '', '../Uploads/Screenshot (307).png');
+('AdminTest', '$2y$10$iIF08bUYUrglNm6B6twxK.y1F95Ep2p/GZw4ZbrbfNDws37h6C1Li', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '', '../Uploads/Screenshot (422).png');
 
 -- --------------------------------------------------------
 
@@ -65,7 +65,7 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
-('CustomerTest', '$2y$10$ByUZHF8MaT3w/1Mpdkk62O4HTADnSgL67wGQSHWWf1u5Z94r40nlC', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '864224', '');
+('CustomerTest', '$2y$10$ByUZHF8MaT3w/1Mpdkk62O4HTADnSgL67wGQSHWWf1u5Z94r40nlC', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '864224', '../Uploads/Screenshot (448).png');
 
 -- --------------------------------------------------------
 
