@@ -67,7 +67,7 @@
 					<label for="password">Password:</label>
 					<input type="password" name="password" id="password" required>
 					
-					<a href = "Forgotpasswordform.html">Forgot password?</a>
+					<a href = "Forgotpasswordform.php">Forgot password?</a>
 					
 					<input type="submit" value="Login">
     </form>
