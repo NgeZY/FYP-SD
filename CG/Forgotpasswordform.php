@@ -27,12 +27,13 @@
             display: block;
             margin-bottom: 8px;
         }
-        input[type="text"], input[type="password"], input[type="email"] {
-            width: 100%;
+        input[type="text"], input[type="password"], input[type="email"], select {
+            width: calc(100% - 2px);
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
+            box-sizing: border-box;
         }
         input[type="submit"] {
             background-color: #007bff;
@@ -48,24 +49,32 @@
         .optional-fields {
             display: none;
         }
+        .spacing {
+            margin-bottom: 30px; /* Adjust this value to control spacing */
+        }
+        .tip {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
-	<div class="container">
-		<h1>Forgot Password</h1>
-			<form action="../Function/Sendcode.php" method="post">
-					<label for="role">Role:</label>
-					<select name="user_type" id="user_type" required>
-						<option value="customer">Customer</option>
-						<option value="staff">Staff</option>
-						<option value="admin">Admin</option>
-					</select>
-					
-					<label for="email">Email:</label>
-					<input type="text" name="email" id="email" required>
-					
-					<input type="submit" value="Send verification code">
-    </form>
-	</div>
+    <div class="container">
+        <h1>Forgot Password</h1>
+        <form action="../Function/Sendcode.php" method="post">
+            <label for="role">Role:</label>
+            <select name="user_type" id="user_type" class="spacing" required>
+                <option value="customer">Customer</option>
+                <option value="staff">Staff</option>
+                <option value="admin">Admin</option>
+            </select>
+            
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required>
+            <div class="tip">We'll send the verification code to this email.</div>
+            <input type="submit" value="Send verification code">
+        </form>
+    </div>
 </body>
 </html>

@@ -27,12 +27,13 @@
             display: block;
             margin-bottom: 8px;
         }
-        input[type="text"], input[type="password"], input[type="email"] {
-            width: 100%;
+        input[type="text"], input[type="password"], input[type="email"], select {
+            width: calc(100% - 2px);
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
+			box-sizing: border-box;
         }
         input[type="submit"] {
             background-color: #007bff;
@@ -47,6 +48,9 @@
         }
         .optional-fields {
             display: none;
+        }
+        .spacing {
+            margin-bottom: 30px; /* Adjust this value to control spacing */
         }
     </style>
     <script>
@@ -67,11 +71,13 @@
         <h1>Sign-Up Form</h1>
         <form action="../Function/Signup.php" method="post">
             <label for="role">Role:</label>
-            <select name="role" id="role" required onchange="toggleAdminPassword()">
+            <select name="role" id="role" class = "spacing" required onchange="toggleAdminPassword()">
                 <option value="customer">Customer</option>
                 <option value="admin">Admin</option>
             </select>
-
+			
+			<br>
+			
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
@@ -91,7 +97,8 @@
                 <label for="adminPassword">Admin Password:</label>
                 <input type="password" id="adminPassword" name="adminPassword">
             </div>
-
+			
+			<a href = "Signinform.php">Already have an account? Sign in</a><br><br>
             <input type="submit" value="Sign Up">
         </form>
     </div>
