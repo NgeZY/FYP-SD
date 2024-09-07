@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2024 at 12:59 PM
+-- Generation Time: Sep 07, 2024 at 04:43 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,15 +33,16 @@ CREATE TABLE `admin` (
   `Email` varchar(255) NOT NULL,
   `Address` varchar(255) NOT NULL,
   `Contact` varchar(255) NOT NULL,
-  `Verification_code` varchar(255) NOT NULL
+  `Verification_code` varchar(255) NOT NULL,
+  `Profile_photo` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`) VALUES
-('AdminTest', '$2y$10$iIF08bUYUrglNm6B6twxK.y1F95Ep2p/GZw4ZbrbfNDws37h6C1Li', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '');
+INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
+('AdminTest', '$2y$10$iIF08bUYUrglNm6B6twxK.y1F95Ep2p/GZw4ZbrbfNDws37h6C1Li', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '', '../Uploads/Screenshot (307).png');
 
 -- --------------------------------------------------------
 
@@ -55,15 +56,16 @@ CREATE TABLE `customer` (
   `Email` varchar(255) NOT NULL,
   `Address` varchar(255) NOT NULL,
   `Contact` varchar(255) NOT NULL,
-  `Verification_code` varchar(255) NOT NULL
+  `Verification_code` varchar(255) NOT NULL,
+  `Profile_photo` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`) VALUES
-('CustomerTest', '$2y$10$ByUZHF8MaT3w/1Mpdkk62O4HTADnSgL67wGQSHWWf1u5Z94r40nlC', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '864224');
+INSERT INTO `customer` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
+('CustomerTest', '$2y$10$ByUZHF8MaT3w/1Mpdkk62O4HTADnSgL67wGQSHWWf1u5Z94r40nlC', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '864224', '');
 
 -- --------------------------------------------------------
 
@@ -114,7 +116,8 @@ CREATE TABLE `staff` (
   `Email` varchar(255) NOT NULL,
   `Address` varchar(255) NOT NULL,
   `Contact` varchar(255) NOT NULL,
-  `Verification_code` varchar(255) NOT NULL
+  `Verification_code` varchar(255) NOT NULL,
+  `Profile_photo` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 

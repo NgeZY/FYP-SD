@@ -34,6 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$_SESSION['email'] = $row['Email'];
             $_SESSION['address'] = $row['Address'];
             $_SESSION['contact'] = $row['Contact'];
+			if (!empty($row['Profile_photo'])) {
+                $_SESSION['profilePhoto'] = $row['Profile_photo'];
+            }
 			if($role == 'customer'){
 				header("Location: ../CG/index.php");
 				exit();

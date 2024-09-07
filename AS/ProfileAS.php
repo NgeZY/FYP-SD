@@ -24,7 +24,26 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
+<style>
+    /* Frame for profile picture */
+    .profile-frame {
+        width: 150px;
+        height: 150px;
+        border: 3px solid #ccc; /* Customize the frame border */
+        border-radius: 50%; /* Makes the frame circular */
+        overflow: hidden; /* Ensures the image stays within the frame */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    /* Profile photo styling */
+    .profile-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the frame without stretching */
+    }
+</style>
 <body>
 	<?php
 	session_start();
@@ -184,8 +203,23 @@
                     <div class="col-lg-4 col-xlg-3 col-md-5">
                         <div class="card">
                             <div class="card-body">
-                                <center class="m-t-30"> <img src="assets/images/users/5.jpg"
-                                        class="rounded-circle" width="150" />
+								<?php
+									if (isset($_SESSION['profilePhoto'])) {
+										echo '<center class="m-t-30">
+											<div class="profile-frame">
+												<img src="' . htmlspecialchars($_SESSION['profilePhoto'], ENT_QUOTES, 'UTF-8') . '" alt="Profile Photo" 
+												class="profile-photo" />
+											</div>
+										</center>';
+									} else {
+										echo '<center class="m-t-30">
+											<div class="profile-frame">
+												<img src="assets/images/users/default.jpg" alt="Profile Photo" 
+												class="profile-photo" />
+											</div>
+										</center>';
+									}
+								?>
                                     <h4 class="card-title m-t-10"><?php echo htmlspecialchars($_SESSION['username']); ?></h4>
                                     <div class="row text-center justify-content-md-center">
                                         <div class="col-4"><a href="javascript:void(0)" class="link"><i
@@ -204,8 +238,11 @@
                             </div>
                             <div class="card-body"> <small class="text-muted">Email address </small>
                                 <h6><?php echo htmlspecialchars($_SESSION['email']); ?></h6> <small class="text-muted p-t-30 db">Phone</small>
-                                <h6><?php echo htmlspecialchars($_SESSION['contact']); ?></h6> 
-                                
+                                <h6><?php echo htmlspecialchars($_SESSION['contact']); ?></h6><br>
+                                <form action="../Function/Upload.php" method="post" enctype="multipart/form-data" id="photoForm">
+									<label for="profilePhoto" class="btn btn-success text-white" id="uploadButton">Upload Profile Photo</label>
+									<input type="file" name="profilePhoto" id="profilePhoto" accept="image/*" style="display: none;">
+								</form>
                                 <div class="map-box">
                                    
                                 </div> <small class="text-muted p-t-30 db"></small>
@@ -310,6 +347,18 @@
     <script src="dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="dist/js/custom.js"></script>
+	<script>
+    // Trigger file input when the button is clicked
+    document.getElementById('uploadButton').addEventListener('click', function(event) {
+        event.preventDefault();  // Prevent the default button action
+        document.getElementById('profilePhoto').click();  // Open the file dialog
+    });
+
+    // Submit the form when the user selects a file
+    document.getElementById('profilePhoto').addEventListener('change', function() {
+        document.getElementById('photoForm').submit();  // Submit the form on file selection
+    });
+	</script>
 </body>
 
 </html>
