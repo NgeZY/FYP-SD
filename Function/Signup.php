@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sssss", $username, $hashed_password, $email, $address, $contact);
 
         if ($stmt->execute()) {
-            echo "<script>alert('Sign-up successful! You can now sign in.'); window.location.href = '../CG/Signinform.html';</script>";
+            echo "<script>alert('Sign-up successful! You can now sign in.'); window.location.href = '../CG/Signinform.php';</script>";
         } else {
             echo "<script>alert('Error: " . $stmt->error . "'); window.history.back();</script>";
         }
