@@ -55,7 +55,7 @@ if ($result->num_rows > 0) {
         // Update the password
         $sql = "UPDATE $table SET password='$hashed_password' WHERE email='$email'";
         if ($conn->query($sql) === TRUE) {
-            echo '<script>alert("Your password has been reset successfully."); window.location.href = "../CG/Signinform.html";</script>';
+            echo '<script>alert("Your password has been reset successfully."); window.location.href = "../CG/Signinform.php";</script>';
         } else {
             echo "<script>alert('Error updating password: " . $conn->error . "'); window.history.back();</script>";
         }
