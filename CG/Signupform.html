@@ -33,7 +33,7 @@
             margin-bottom: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
-			box-sizing: border-box;
+            box-sizing: border-box;
         }
         input[type="submit"] {
             background-color: #007bff;
@@ -48,6 +48,19 @@
         }
         .optional-fields {
             display: none;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            font-size: 16px; /* Increased font size */
+            margin-bottom: 20px; /* Added space below the checkbox */
+        }
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2); /* Makes the checkbox larger */
+        }
+        .checkbox-container label {
+            margin: 0; /* Removes default margin for better alignment */
         }
         .spacing {
             margin-bottom: 30px; /* Adjust this value to control spacing */
@@ -64,6 +77,14 @@
                 adminPasswordField.style.display = "none";
             }
         }
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var confirmPasswordInput = document.getElementById("confirmPassword");
+            var checkbox = document.getElementById("toggle-password");
+            passwordInput.type = checkbox.checked ? "text" : "password";
+            confirmPasswordInput.type = checkbox.checked ? "text" : "password";
+        }
     </script>
 </head>
 <body>
@@ -71,18 +92,19 @@
         <h1>Sign-Up Form</h1>
         <form action="../Function/Signup.php" method="post">
             <label for="role">Role:</label>
-            <select name="role" id="role" class = "spacing" required onchange="toggleAdminPassword()">
+            <select name="role" id="role" class="spacing" required onchange="toggleAdminPassword()">
                 <option value="customer">Customer</option>
                 <option value="admin">Admin</option>
             </select>
-			
-			<br>
-			
+            
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
+            
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
@@ -97,8 +119,13 @@
                 <label for="adminPassword">Admin Password:</label>
                 <input type="password" id="adminPassword" name="adminPassword">
             </div>
+            
+			<div class="checkbox-container">
+                <input type="checkbox" id="toggle-password" onchange="togglePasswordVisibility()">
+                <label for="toggle-password">Show passwords</label>
+            </div>
 			
-			<a href = "Signinform.php">Already have an account? Sign in</a><br><br>
+            <a href="Signinform.php">Already have an account? Sign in</a><br><br>
             <input type="submit" value="Sign Up">
         </form>
     </div>

@@ -3,6 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $confirmPassword = $_POST['confirmPassword']; // Get the confirm password from the form
     $email = $_POST['email'];
     $address = $_POST['address'];
     $contact = $_POST['contact'];
@@ -12,6 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($con->connect_error) {
         die("Connection failed: " . $con->connect_error);
+    }
+
+    // Check if passwords match
+    if ($password !== $confirmPassword) {
+        echo "<script>alert('Passwords do not match. Please try again.'); window.history.back();</script>";
+        $con->close();
+        exit();
     }
 
     // Determine the table to check based on the role
