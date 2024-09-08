@@ -5,7 +5,7 @@ include("config.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $role = $_POST['role'];
-    $username = mysqli_real_escape_string($con, $_POST['username']);
+    $email = mysqli_real_escape_string($con, $_POST['email']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
 
     $table = '';
@@ -19,17 +19,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Invalid role selected.");
     }
 
-    $stmt = $con->prepare("SELECT * FROM $table WHERE Username = ?");
+    $stmt = $con->prepare("SELECT * FROM $table WHERE Email = ?");
     if ($stmt) {
-        $stmt->bind_param("s", $username);
+        $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
         $row = $result->fetch_assoc();
 
         if ($row && password_verify($password, $row['Password'])) {
-            $_SESSION['username'] = $username; 
+            $_SESSION['username'] = $row['Username']; 
             $_SESSION['role'] = $role;
-            $_SESSION['email'] = $row['Email'];
+            $_SESSION['email'] = $email
             $_SESSION['address'] = $row['Address'];
             $_SESSION['contact'] = $row['Contact'];
 
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 exit();
             }
         } else {
-            echo "<script>alert('Your Login Name or Password is invalid'); window.history.back();</script>";
+            echo "<script>alert('Your email or password is invalid'); window.history.back();</script>";
         }
 
         $stmt->close();

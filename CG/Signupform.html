@@ -52,18 +52,23 @@
         .checkbox-container {
             display: flex;
             align-items: center;
-            font-size: 16px; /* Increased font size */
-            margin-bottom: 20px; /* Added space below the checkbox */
+            font-size: 16px;
+            margin-bottom: 20px;
         }
         .checkbox-container input[type="checkbox"] {
             margin-right: 10px;
-            transform: scale(1.2); /* Makes the checkbox larger */
+            transform: scale(1.2);
         }
         .checkbox-container label {
-            margin: 0; /* Removes default margin for better alignment */
+            margin: 0;
         }
         .spacing {
-            margin-bottom: 30px; /* Adjust this value to control spacing */
+            margin-bottom: 30px;
+        }
+        .error-message {
+            color: red;
+            font-size: 18px;
+            margin-bottom: 15px;
         }
     </style>
     <script>
@@ -85,6 +90,31 @@
             passwordInput.type = checkbox.checked ? "text" : "password";
             confirmPasswordInput.type = checkbox.checked ? "text" : "password";
         }
+
+        // Email validation
+        function validateEmail() {
+            const emailInput = document.getElementById("email");
+            const emailError = document.getElementById("emailError");
+
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            emailInput.addEventListener("input", function() {
+                const emailValue = emailInput.value;
+
+                // Clear the error message if the input is empty
+                if (emailValue === "") {
+                    emailError.textContent = "";
+                }
+                // Check if email input matches the pattern
+                else if (!emailPattern.test(emailValue)) {
+                    emailError.textContent = "Not a valid email address";
+                } else {
+                    emailError.textContent = ""; // Clear the error when valid
+                }
+            });
+        }
+
+        window.onload = validateEmail;
     </script>
 </head>
 <body>
@@ -108,6 +138,7 @@
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            <small id="emailError" class="error-message"></small>
 
             <label for="address">Address:</label>
             <input type="text" id="address" name="address">
@@ -120,11 +151,11 @@
                 <input type="password" id="adminPassword" name="adminPassword">
             </div>
             
-			<div class="checkbox-container">
+            <div class="checkbox-container">
                 <input type="checkbox" id="toggle-password" onchange="togglePasswordVisibility()">
                 <label for="toggle-password">Show passwords</label>
             </div>
-			
+            
             <a href="Signinform.php">Already have an account? Sign in</a><br><br>
             <input type="submit" value="Sign Up">
         </form>

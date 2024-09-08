@@ -52,18 +52,23 @@
         .checkbox-container {
             display: flex;
             align-items: center;
-            font-size: 16px; /* Increased font size */
+            font-size: 16px;
             margin-bottom: 20px;
         }
         .checkbox-container input[type="checkbox"] {
             margin-right: 10px;
-            transform: scale(1.2); /* Makes the checkbox larger */
+            transform: scale(1.2);
         }
         .checkbox-container label {
-            margin: 0; /* Removes default margin for better alignment */
+            margin: 0;
         }
         .spacing {
-            margin-bottom: 30px; /* Adjust this value to control spacing */
+            margin-bottom: 30px;
+        }
+        .error-message {
+            color: red;
+            font-size: 18px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -77,9 +82,10 @@
                 <option value="staff">Staff</option>
                 <option value="admin">Admin</option>
             </select>
-            
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required>
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required>
+            <small id="emailError" class="error-message"></small>
             
             <label for="password">Password:</label>
             <div class="password-container">
@@ -96,9 +102,31 @@
         </form>
     </div>
     <script>
+        // Toggle password visibility
         document.getElementById('toggle-password').addEventListener('change', function() {
             const passwordInput = document.getElementById('password');
             passwordInput.type = this.checked ? 'text' : 'password';
+        });
+
+        // Email validation
+        const emailInput = document.getElementById("email");
+        const emailError = document.getElementById("emailError");
+
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        emailInput.addEventListener("input", function() {
+            const emailValue = emailInput.value;
+
+            // Clear the error message if the input is empty
+            if (emailValue === "") {
+                emailError.textContent = "";
+            }
+            // Check if email input matches the pattern
+            else if (!emailPattern.test(emailValue)) {
+                emailError.textContent = "Not a valid email address";
+            } else {
+                emailError.textContent = ""; // Clear the error when valid
+            }
         });
     </script>
 </body>
