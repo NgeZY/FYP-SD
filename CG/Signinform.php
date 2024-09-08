@@ -86,6 +86,7 @@
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" required>
             <small id="emailError" class="error-message"></small>
+			<p id="emailError"></p>
             
             <label for="password">Password:</label>
             <div class="password-container">
