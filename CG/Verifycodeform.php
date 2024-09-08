@@ -76,6 +76,9 @@
     </script>
 </head>
 <body>
+	<?php
+	session_start();
+	?>
     <div class="container">
         <h1>Verification</h1>
         <form action="../Function/Verifycode.php" method="post">

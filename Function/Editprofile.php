@@ -2,6 +2,10 @@
 session_start();
 require 'config.php'; // Include your database connection
 
+if (!isset($_SESSION['role']) || !isset($_SESSION['email'])) {
+    die("<script>alert('Session expired or invalid. Please sign in again.'); window.location.href = '../CG/Signinform.php';</script>");
+}
+
 if (isset($_POST['update_profile'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];

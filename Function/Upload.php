@@ -5,6 +5,10 @@ session_start();
 // Include the database configuration file
 require 'config.php';
 
+if (!isset($_SESSION['role']) || !isset($_SESSION['email'])) {
+    die("<script>alert('Session expired or invalid. Please sign in again.'); window.location.href = '../CG/Signinform.php';</script>");
+}
+
 // Define the upload directory
 $uploadDir = '../Uploads/';
 $targetFile = $uploadDir . basename($_FILES["profilePhoto"]["name"]);

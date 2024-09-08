@@ -2,6 +2,10 @@
 session_start();
 // reset_password.php
 
+if (!isset($_SESSION['email']) || !isset($_SESSION['user_type'])) {
+    die("<script>alert('Session expired or invalid. Please try again.'); window.location.href = '../CG/Forgotpasswordform.php';</script>");
+}
+
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -41,7 +45,7 @@ switch ($user_type) {
         $table = 'staff';
         break;
     default:
-        die("Invalid user type.");
+        die("<script>alert('Invalid user type.'); window.history.back();</script>");
 }
 
 // Verify the code

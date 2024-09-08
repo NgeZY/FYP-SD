@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['username']) || !isset($_SESSION['role'])) {
+    die("<script>alert('Session expired or invalid. Please sign in again.'); window.location.href = '../CG/Signinform.php';</script>");
+}
+
 $username = $_SESSION['username'];
 $OPassword = $_POST['current_password'];
 $NPassword = $_POST['new_password'];
