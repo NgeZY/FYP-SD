@@ -53,9 +53,15 @@
             margin-bottom: 30px; /* Adjust this value to control spacing */
         }
         .tip {
-            font-size: 14px;
+            font-size: 18px;
             color: #555;
-            margin-bottom: 15px;
+			margin-top: 10px;
+            margin-bottom: 10px; /* Added margin for extra spacing */
+        }
+        .error-message {
+            color: red;
+            font-size: 18px;
+            margin-bottom: 15px; /* Extra space between error message and tip */
         }
     </style>
 </head>
@@ -72,9 +78,35 @@
             
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" required>
+            <small id="emailError" class="error-message"></small>
             <div class="tip">We'll send the verification code to this email.</div>
             <input type="submit" value="Send verification code">
         </form>
     </div>
+
+    <script>
+        // Get the email input and the error message element
+        const emailInput = document.getElementById("email");
+        const emailError = document.getElementById("emailError");
+
+        // Regular expression for a basic email pattern
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        // Add event listener to email input field to validate in real-time
+        emailInput.addEventListener("input", function() {
+            const emailValue = emailInput.value;
+
+            // Clear the error message if the input is empty
+            if (emailValue === "") {
+                emailError.textContent = "";
+            }
+            // Check if email input matches the pattern
+            else if (!emailPattern.test(emailValue)) {
+                emailError.textContent = "Not a valid email address";
+            } else {
+                emailError.textContent = ""; // Clear the error when valid
+            }
+        });
+    </script>
 </body>
 </html>
