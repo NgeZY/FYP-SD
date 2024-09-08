@@ -9,7 +9,7 @@
     <meta name="keywords"
         content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Xtreme lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Xtreme admin lite design, Xtreme admin lite dashboard bootstrap 5 dashboard template">
     <meta name="description"
-        content="Xtreme Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+        content="Xtreme Admin Lite is powerful and clean admin dashboard template, inspired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
     <title>UTM Advance</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/xtreme-admin-lite/" />
@@ -149,7 +149,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page"></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Feedback</li>
                                 </ol>
                             </nav>
                         </div>
@@ -175,13 +175,59 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                This is some text within a card block.
+                                <?php
+                                // Database connection
+                                $servername = "localhost";
+                                $username = "root";
+                                $password = "";
+                                $dbname = "utmadvance";
+
+                                // Create connection
+                                $con = new mysqli($servername, $username, $password, $dbname);
+
+                                // Check connection
+                                if ($con->connect_error) {
+                                    die("Connection failed: " . $con->connect_error);
+                                }
+
+                                // SQL query to retrieve feedback
+                                $sql = "SELECT * FROM feedback ORDER BY id DESC"; // Assuming 'id' is the primary key in the feedback table
+                                $result = $con->query($sql);
+
+                                if ($result->num_rows > 0) {
+                                    echo "<table class='table table-bordered'>
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Subject</th>
+                                                    <th>Message</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>";
+                                    // Output data of each row
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<tr>
+                                                <td>" . htmlspecialchars($row["Name"]) . "</td>
+                                                <td>" . htmlspecialchars($row["Email"]) . "</td>
+                                                <td>" . htmlspecialchars($row["Subject"]) . "</td>
+                                                <td>" . htmlspecialchars($row["Message"]) . "</td>
+                                            </tr>";
+                                    }
+                                    echo "</tbody></table>";
+                                } else {
+                                    echo "<p>No feedback available.</p>";
+                                }
+
+                                // Close connection
+                                $con->close();
+                                ?>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- ============================================================== -->
-                <!-- End PAge Content -->
+                <!-- End Page Content -->
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
                 <!-- Right sidebar -->
