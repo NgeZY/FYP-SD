@@ -124,7 +124,7 @@
 											} elseif ($_SESSION['role'] === 'staff' || $_SESSION['role'] === 'admin') {
 												echo '../AS/index.html';
 											}?>" class="nav-item nav-link"><?php echo htmlspecialchars($_SESSION['username']); ?></a>
-                                <a href="../Function/Signout.php" class="nav-item nav-link">Logout</a>
+                                <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
                             <?php else: ?>
                                 <a href="../CG/Signinform.php" class="nav-item nav-link">Sign In</a>
                                 <a href="../CG/Signupform.html" class="nav-item nav-link">Sign Up</a>

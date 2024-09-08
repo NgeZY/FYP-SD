@@ -74,7 +74,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Login</h1>
+        <h1>Sign in</h1>
         <form action="../Function/Signin.php" method="post">
             <label for="role">Role:</label>
             <select name="role" id="role" class="spacing" required>

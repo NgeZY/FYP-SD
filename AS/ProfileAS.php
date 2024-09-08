@@ -253,13 +253,13 @@
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-body">
-                                <form class="form-horizontal form-material mx-2" action = "../Function/Editprofile.php" method = "POST">
+                                <form class="form-horizontal form-material mx-2" action = "../Function/Editprofile.php" method = "POST" onsubmit="return validateForm()">
                                     <div class="form-group">
                                         <label class="col-md-12">Username</label>
                                         <div class="col-md-12">
                                             <input type="text" name="username" 
 											value="<?php echo htmlspecialchars($_SESSION['username']); ?>"
-                                                class="form-control form-control-line">
+                                                class="form-control form-control-line" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -272,15 +272,15 @@
                                     <div class="form-group">
                                         <label class="col-md-12">Phone No</label>
                                         <div class="col-md-12">
-                                            <input type="text" value="<?php echo htmlspecialchars($_SESSION['contact']); ?>"
-                                                class="form-control form-control-line" name = "contact_number">
+                                            <input type="number" value="<?php echo htmlspecialchars($_SESSION['contact']); ?>"
+                                                class="form-control form-control-line" name = "contact_number" required>
                                         </div>
                                     </div>
 									<div class="form-group">
                                         <label class="col-md-12">Address</label>
                                         <div class="col-md-12">
                                             <input type="text" value="<?php echo htmlspecialchars($_SESSION['address']); ?>"
-                                                class="form-control form-control-line" name = "address">
+                                                class="form-control form-control-line" name = "address" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -355,6 +355,23 @@
     document.getElementById('profilePhoto').addEventListener('change', function() {
         document.getElementById('photoForm').submit();  // Submit the form on file selection
     });
+	</script>
+	<script>
+		function validateForm() {
+			// Get all input fields
+			var username = document.querySelector('input[name="username"]').value.trim();
+			var contact_number = document.querySelector('input[name="contact_number"]').value.trim();
+			var address = document.querySelector('input[name="address"]').value.trim();
+
+			// Check if any field is empty
+			if (username === "" || contact_number === "" || address === "") {
+				alert("All fields must be filled out before updating the profile.");
+				return false; // Prevent form submission
+			}
+    
+			// If all fields are filled, allow form submission
+			return true;
+		}
 	</script>
 </body>
 

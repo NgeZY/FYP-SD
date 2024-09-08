@@ -27,7 +27,7 @@
             display: block;
             margin-bottom: 8px;
         }
-        input[type="text"], input[type="password"], input[type="email"] {
+        input[type="text"], input[type="password"], input[type="email"], input[type="number"] {
             width: calc(100% - 2px);
             padding: 10px;
             margin-bottom: 15px;
@@ -80,7 +80,7 @@
         <h1>Verification</h1>
         <form action="../Function/Verifycode.php" method="post">
             <label for="verification_code">Verification code:</label>
-            <input type="text" name="verification_code" id="verification_code" required>
+            <input type="number" name="verification_code" id="verification_code" required>
 
             <label for="new_password">New password:</label>
             <input type="password" name="new_password" id="new_password" required>
