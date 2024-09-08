@@ -29,16 +29,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($row && password_verify($password, $row['Password'])) {
             $_SESSION['username'] = $row['Username']; 
             $_SESSION['role'] = $role;
-            $_SESSION['email'] = $email
+            $_SESSION['email'] = $email;
             $_SESSION['address'] = $row['Address'];
             $_SESSION['contact'] = $row['Contact'];
 
-            // Check if the profile photo path is not empty and the file exists
+            // Profile photo path validation
             $profilePhotoPath = $row['Profile_photo'];
-            if (!empty($profilePhotoPath) && file_exists($_SERVER['DOCUMENT_ROOT'] . '/' . $profilePhotoPath)) {
+
+            if (!empty($profilePhotoPath)) {
                 $_SESSION['profilePhoto'] = $profilePhotoPath;
             } else {
-                unset($_SESSION['profilePhoto']); // Ensure the session variable is not set if the file does not exist
+                unset($_SESSION['profilePhoto']); // Clear session variable if no photo
             }
 
             if ($role == 'customer') {

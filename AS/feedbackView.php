@@ -116,7 +116,7 @@
                                 href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                     class="hide-menu">Icon</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="starter-kit.html" aria-expanded="false"><i class="mdi mdi-file"></i><span
+                                href="feedbackView.php" aria-expanded="false"><i class="mdi mdi-file"></i><span
                                     class="hide-menu">Feedback</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="../CG/index.php" aria-expanded="false"><i class="mdi mdi-home"></i><span
@@ -148,7 +148,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Feedback</li>
                                 </ol>
                             </nav>
@@ -191,7 +191,7 @@
                                 }
 
                                 // SQL query to retrieve feedback
-                                $sql = "SELECT * FROM feedback ORDER BY id DESC"; // Assuming 'id' is the primary key in the feedback table
+                                $sql = "SELECT * FROM feedback"; // Assuming 'id' is the primary key in the feedback table
                                 $result = $con->query($sql);
 
                                 if ($result->num_rows > 0) {

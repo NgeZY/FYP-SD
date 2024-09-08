@@ -185,22 +185,20 @@
                         <div class="card">
                             <div class="card-body">
                                 <?php
-									if (isset($_SESSION['profilePhoto'])) {
-										echo '<center class="m-t-30">
-											<div class="profile-frame">
-												<img src="' . htmlspecialchars($_SESSION['profilePhoto'], ENT_QUOTES, 'UTF-8') . '" alt="Profile Photo" 
-												class="profile-photo" />
-											</div>
-										</center>';
-									} else {
-										echo '<center class="m-t-30">
-											<div class="profile-frame">
-												<img src="assets/images/users/default.jpg" alt="Profile Photo" 
-												class="profile-photo" />
-											</div>
-										</center>';
-									}
-								?>
+                                if (isset($_SESSION['profilePhoto'])) {
+                                    echo '<center class="m-t-30">
+                                        <div class="profile-frame">
+                                            <img src="../Uploads/' . htmlspecialchars($_SESSION['profilePhoto']) . '" class="profile-photo" alt="User Profile Picture">
+                                        </div>
+                                    </center>';
+                                } else {
+                                    echo '<center class="m-t-30">
+                                        <div class="profile-frame">
+                                            <img src="../Uploads/default.jpg" class="profile-photo" alt="Default Profile Picture">
+                                        </div>
+                                    </center>';
+                                }
+                                ?>
                                     <h4 class="card-title m-t-10"><?php echo htmlspecialchars($_SESSION['username']); ?></h4>
                                     <div class="row text-center justify-content-md-center">
                                         <div class="col-4"><a href="javascript:void(0)" class="link"><i

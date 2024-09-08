@@ -70,7 +70,7 @@ if ($count > 0) {
             $mail->Port = 587;
 
             // Recipients
-            $mail->setFrom('no-reply@gmail.com', 'Your Company');
+            $mail->setFrom('no-reply@gmail.com', 'UTM Advance');
             $mail->addAddress($email);
 
             // Content

@@ -25,7 +25,7 @@ if (isset($_FILES['profilePhoto']) && $_FILES['profilePhoto']['error'] == UPLOAD
                 // Move the file from the temporary directory to the upload directory
                 if (move_uploaded_file($fileTmpPath, $targetFile)) {
                     // Save the image path to the user's session
-                    $_SESSION['profilePhoto'] = $targetFile;
+                    $_SESSION['profilePhoto'] = basename($targetFile);
 
                     // Get user email and role from session
                     $userEmail = $_SESSION['email']; // Email of the current user
