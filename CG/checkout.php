@@ -141,7 +141,7 @@
 											}?>" class="nav-item nav-link"><?php echo htmlspecialchars($_SESSION['username']); ?></a>
                                 <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
                             <?php else: ?>
-                                <a href="../CG/Signinform.html" class="nav-item nav-link">Sign In</a>
+                                <a href="../CG/Signinform.php" class="nav-item nav-link">Sign In</a>
                                 <a href="../CG/Signupform.html" class="nav-item nav-link">Sign Up</a>
                             <?php endif; ?>
                         </div>

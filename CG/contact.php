@@ -118,7 +118,7 @@
 											}?>" class="nav-item nav-link"><?php echo htmlspecialchars($_SESSION['username']); ?></a>
                                 <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
                             <?php else: ?>
-                                <a href="../CG/Signinform.html" class="nav-item nav-link">Sign In</a>
+                                <a href="../CG/Signinform.php" class="nav-item nav-link">Sign In</a>
                                 <a href="../CG/Signupform.html" class="nav-item nav-link">Sign Up</a>
                             <?php endif; ?>
                         </div>
@@ -155,22 +155,22 @@
                     <div id="success"></div>
                     <form name="sentMessage" id="contactForm" action="mail/contact.php" method="POST">
                         <div class="control-group">
-                            <input type="text" class="form-control" id="name" name = "name" placeholder="Your Name"
+                            <input type="text" class="form-control" id="name" name = "name" style = "border: 2px solid #D19C97" placeholder="Your Name"
                                 required="required" data-validation-required-message="Please enter your name" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="email" class="form-control" id="email" name = "email" placeholder="Your Email"
+                            <input type="email" class="form-control" id="email" name = "email" style = "border: 2px solid #D19C97" placeholder="Your Email"
                                 required="required" data-validation-required-message="Please enter your email" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control" id="subject" name = "subject" placeholder="Subject"
+                            <input type="text" class="form-control" id="subject" name = "subject" style = "border: 2px solid #D19C97" placeholder="Subject"
                                 required="required" data-validation-required-message="Please enter a subject" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <textarea class="form-control" rows="6" id="message" name = "message" placeholder="Message"
+                            <textarea class="form-control" rows="6" id="message" name = "message" style = "border: 2px solid #D19C97" placeholder="Message"
                                 required="required"
                                 data-validation-required-message="Please enter your message"></textarea>
                             <p class="help-block text-danger"></p>
