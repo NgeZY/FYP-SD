@@ -350,6 +350,13 @@
 				alert("All fields must be filled out before updating the profile.");
 				return false; // Prevent form submission
 			}
+			
+			 // Validate phone number (basic validation for 10-15 digits)
+			var phonePattern = /^\d{10}$/;
+			if (!phonePattern.test(contact_number)) {
+				alert("Please enter a valid phone number with 10 digits.");
+				return false;
+			}
     
 			// If all fields are filled, allow form submission
 			return true;

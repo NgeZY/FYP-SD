@@ -13,7 +13,7 @@ if (isset($_POST['update_profile'])) {
     $contact_number = $_POST['contact_number'];
     $role = $_SESSION['role']; // Get the user's role from the session
     $current_email = $_SESSION['email']; // Current email from session
-	$current_page = "../AS/Profile.php";
+    $current_page = "../AS/Profile.php";
 
     // Validate and sanitize inputs
     $username = filter_var($username, FILTER_SANITIZE_STRING);
@@ -23,7 +23,7 @@ if (isset($_POST['update_profile'])) {
 
     // Check if the email is valid
     if (!$email) {
-        echo "Invalid email format";
+        echo "<script>alert('Invalid email format.'); window.location.href = '$current_page';</script>";
         exit;
     }
 
@@ -40,7 +40,7 @@ if (isset($_POST['update_profile'])) {
             $table = 'customer';
             break;
         default:
-            echo "Invalid role";
+            echo "<script>alert('Invalid role.'); window.location.href = '$current_page';</script>";
             exit;
     }
 
@@ -73,13 +73,15 @@ if (isset($_POST['update_profile'])) {
         $_SESSION['email'] = $email;
         $_SESSION['address'] = $address;
         $_SESSION['contact'] = $contact_number;
-		if($role == "customer")
-			echo "<script>alert('Profile updated successfully!'); window.location.href = '$current_page'; </script>";
-		else if($role == "staff" || $role == "admin")
-			echo "<script>alert('Profile updated successfully!'); window.location.href = '../AS/ProfileAS.php'; </script>";
+
+        if ($role == "customer") {
+            echo "<script>alert('Profile updated successfully!'); window.location.href = '$current_page'; </script>";
+        } else if ($role == "staff" || $role == "admin") {
+            echo "<script>alert('Profile updated successfully!'); window.location.href = '../AS/ProfileAS.php'; </script>";
+        }
     } else {
         echo "<script>
-				alert('Error updating profile: " . addslashes($conn->error) . "');
+				alert('Error updating profile: " . addslashes($con->error) . "');
 				window.location.href = '$current_page';
 			</script>";
     }
