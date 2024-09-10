@@ -30,6 +30,11 @@ if ($new_password !== $confirm_password) {
     die("<script>alert('Passwords do not match.'); window.history.back();</script>");
 }
 
+// Check if the new password is at least 8 characters long
+if (strlen($new_password) < 8) {
+    die("<script>alert('New password must be at least 8 characters long.'); window.history.back();</script>");
+}
+
 // Hash the new password
 $hashed_password = password_hash($new_password, PASSWORD_BCRYPT);
 

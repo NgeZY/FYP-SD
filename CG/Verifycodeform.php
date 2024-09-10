@@ -58,6 +58,11 @@
             margin: 0;
             font-size: 16px;
         }
+		.tip {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px; /* Added margin for extra spacing */
+        }
     </style>
     <script>
         function togglePasswordVisibility() {
@@ -87,6 +92,7 @@
 
             <label for="new_password">New password:</label>
             <input type="password" name="new_password" id="new_password" required>
+			<div class="tip">The password should be at least 8 characters.</div>
 
             <label for="confirm_password">Confirm the password:</label>
             <input type="password" name="confirm_password" id="confirm_password" required>
