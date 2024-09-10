@@ -48,7 +48,10 @@ if ($stored_password === null) {
 } else if (!password_verify($OPassword, $stored_password)) {
     echo "<script>alert('You entered an incorrect password.'); window.history.back();</script>";
 } else {
-    if ($NPassword === $NPassword2) {
+    // Check if the new password is at least 8 characters long
+    if (strlen($NPassword) < 8) {
+        echo "<script>alert('New password must be at least 8 characters long.'); window.history.back();</script>";
+    } else if ($NPassword === $NPassword2) {
         // Hash the new password
         $hashed_new_password = password_hash($NPassword, PASSWORD_BCRYPT);
 
@@ -57,10 +60,11 @@ if ($stored_password === null) {
         $stmt->bind_param("ss", $hashed_new_password, $username);
         
         if ($stmt->execute()) {
-			if($user_type == 'customer')
-				echo "<script>alert('Password changed successfully.'); window.location.href = '../AS/Profile.php';</script>";
-			else if($user_type == 'staff' || $user_type == 'admin')
-				echo "<script>alert('Password changed successfully.'); window.location.href = '../AS/ProfileAS.php';</script>";
+            if ($user_type == 'customer') {
+                echo "<script>alert('Password changed successfully.'); window.location.href = '../AS/Profile.php';</script>";
+            } else if ($user_type == 'staff' || $user_type == 'admin') {
+                echo "<script>alert('Password changed successfully.'); window.location.href = '../AS/ProfileAS.php';</script>";
+            }
         } else {
             echo "<script>alert('Error updating password.'); window.history.back();</script>";
         }
