@@ -351,10 +351,10 @@
 				return false; // Prevent form submission
 			}
 			
-			 // Validate phone number (basic validation for 10-15 digits)
-			var phonePattern = /^\d{10}$/;
+			 // Validate phone number (basic validation for 11 digits)
+			var phonePattern = /^\d{11}$/;
 			if (!phonePattern.test(contact_number)) {
-				alert("Please enter a valid phone number with 10 digits.");
+				alert("Please enter a valid phone number with 11 digits.");
 				return false;
 			}
     

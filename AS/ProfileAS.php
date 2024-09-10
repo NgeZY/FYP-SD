@@ -369,9 +369,9 @@
 				return false; // Prevent form submission
 			}
 			
-			var phonePattern = /^\d{10}$/;
+			var phonePattern = /^\d{11}$/;
 			if (!phonePattern.test(contact_number)) {
-				alert("Please enter a valid phone number with 10 digits.");
+				alert("Please enter a valid phone number with 11 digits.");
 				return false;
 			}
     
