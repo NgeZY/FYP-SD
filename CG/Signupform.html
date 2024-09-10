@@ -27,7 +27,7 @@
             display: block;
             margin-bottom: 8px;
         }
-        input[type="text"], input[type="password"], input[type="email"], select {
+        input[type="text"], input[type="password"],input[type="number"], input[type="email"], select {
             width: calc(100% - 2px);
             padding: 10px;
             margin-bottom: 15px;
@@ -54,6 +54,7 @@
             align-items: center;
             font-size: 16px;
             margin-bottom: 20px;
+			margin-top: 10px;
         }
         .checkbox-container input[type="checkbox"] {
             margin-right: 10px;
@@ -69,6 +70,11 @@
             color: red;
             font-size: 18px;
             margin-bottom: 15px;
+        }
+		.tip {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px; /* Added margin for extra spacing */
         }
     </style>
     <script>
@@ -114,7 +120,34 @@
             });
         }
 
-        window.onload = validateEmail;
+		// Contact number validation
+		function validateContactNumber() {
+			const contactInput = document.getElementById("contact");
+			const contactError = document.getElementById("contactError");
+
+			// Define a pattern for a valid 10-digit number
+			const contactPattern = /^\d{10}$/;
+
+			contactInput.addEventListener("input", function() {
+				const contactValue = contactInput.value;
+
+				// Clear the error message if the input is empty
+				if (contactValue === "") {
+					contactError.textContent = "";
+				}
+				// Check if contact input matches the pattern
+				else if (!contactPattern.test(contactValue)) {
+					contactError.textContent = "Contact number must be 10 digits";
+				} else {
+					contactError.textContent = ""; // Clear the error when valid
+				}
+			});
+		}
+
+		window.onload = function() {
+			validateEmail();
+			validateContactNumber();
+		};
     </script>
 </head>
 <body>
@@ -132,6 +165,7 @@
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
+			<div class="tip">The password should be at least 8 characters.</div>
             
             <label for="confirmPassword">Confirm Password:</label>
             <input type="password" id="confirmPassword" name="confirmPassword" required>
@@ -146,6 +180,8 @@
 
             <label for="contact">Contact Number:</label>
             <input type="number" id="contact" name="contact">
+			<small id="contactError" class="error-message"></small>
+
 
             <div id="adminPasswordField" class="optional-fields">
                 <label for="adminPassword">Admin Password:</label>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2024 at 06:27 AM
+-- Generation Time: Sep 09, 2024 at 07:14 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
-('AdminTest', '$2y$10$SixmSYbLg14hhhy6GcZdtew9KABZ1M/5JGy0TQiwMscnDvMEj3uZ6', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '476525', '../Uploads/Screenshot (422).png');
+('AdminTest', '$2y$10$wixnMzogaD2QqDU9QiwxaOD69RctkDydC6Rm3RSF35h8jYJnpKEeO', 'ngezheyu1225@gmail.com', '1A, Jalan A', '0123456789', '', '');
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,9 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`Name`, `Email`, `Subject`, `Message`) VALUES
-('Test', 'zheyunge@gmail.com', 'Test', 'Testing123');
+('Test', 'zheyunge@gmail.com', 'Test', 'Testing123'),
+('Nge', 'zheyunge@gmail.com', 'Test', 'Test123'),
+('Customer', 'majob16748@rogtat.com', 'CustomerTest', 'Test123');
 
 -- --------------------------------------------------------
 
@@ -108,6 +110,24 @@ INSERT INTO `password` (`Admin_password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pending_verification`
+--
+
+CREATE TABLE `pending_verification` (
+  `id` int(11) NOT NULL,
+  `Username` varchar(255) DEFAULT NULL,
+  `Password` varchar(255) DEFAULT NULL,
+  `Email` varchar(255) DEFAULT NULL,
+  `Address` varchar(255) DEFAULT NULL,
+  `Contact` varchar(255) DEFAULT NULL,
+  `Role` enum('admin','customer') NOT NULL,
+  `verification_token` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `staff`
 --
 
@@ -120,6 +140,34 @@ CREATE TABLE `staff` (
   `Verification_code` varchar(255) NOT NULL,
   `Profile_photo` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `staff`
+--
+
+INSERT INTO `staff` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
+('StaffTest', '$2y$10$uvHJi8e7QGN/q9MB3Tqd4Or50YPE9e8nk2sAS8YUhhOHfZdymlCUu', 'ngezy041225@gmail.com', '1A, Jalan A', '0123456789', '', '');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `pending_verification`
+--
+ALTER TABLE `pending_verification`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `Email` (`Email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `pending_verification`
+--
+ALTER TABLE `pending_verification`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
