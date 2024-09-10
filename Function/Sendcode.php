@@ -76,7 +76,7 @@ if ($count > 0) {
             // Content
             $mail->isHTML(true);
             $mail->Subject = 'Your Verification Code';
-            $mail->Body = 'Your verification code is: <b>' . $verification_code . '</b>';
+            $mail->Body = 'Your verification code for account ' . $email . ' for UTM Advance is: <b>' . $verification_code . '</b>';
 
             $mail->send();
             echo "A verification code has been sent to your email.";

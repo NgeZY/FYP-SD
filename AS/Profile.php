@@ -43,6 +43,18 @@
         height: 100%;
         object-fit: cover; /* Ensures the image covers the frame without stretching */
     }
+	
+	/* Inline error message styles */
+    .text-danger {
+        color: #dc3545; /* Bootstrap red for errors */
+        font-size: 16px; /* Increase font size for better visibility */
+        margin-top: 5px; /* Add space between the error message and the input field */
+    }
+
+    /* Additional spacing for contact number error */
+    .form-group .text-danger#contactError {
+        margin-top: 10px; /* Adjust spacing specifically for contact number */
+    }
 </style>
 <body>
 	<?php
@@ -235,42 +247,41 @@
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-body">
-                                <form class="form-horizontal form-material mx-2" action = "../Function/Editprofile.php" method = "POST" onsubmit="return validateForm()">
-                                    <div class="form-group">
-                                        <label class="col-md-12">Username</label>
-                                        <div class="col-md-12">
-                                            <input type="text" name="username" 
-											value="<?php echo htmlspecialchars($_SESSION['username']); ?>"
-                                                class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="example-email" class="col-md-12">Email</label>
-                                        <div class="col-md-12">
-                                            <input type="email" value="<?php echo htmlspecialchars($_SESSION['email']); ?>"
-											class="form-control form-control-line" name="email" id="email" readonly>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Phone No</label>
-                                        <div class="col-md-12">
-                                            <input type="number" value="<?php echo htmlspecialchars($_SESSION['contact']); ?>"
-                                                class="form-control form-control-line" name = "contact_number">
-                                        </div>
-                                    </div>
+                                <form class="form-horizontal form-material mx-2" action="../Function/Editprofile.php" method="POST" onsubmit="return validateForm()">
 									<div class="form-group">
-                                        <label class="col-md-12">Address</label>
-                                        <div class="col-md-12">
-                                            <input type="text" value="<?php echo htmlspecialchars($_SESSION['address']); ?>"
-                                                class="form-control form-control-line" name = "address">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success text-white" name = "update_profile">Update Profile</button>
-                                        </div>
+										<label class="col-md-12">Username</label>
+										<div class="col-md-12">
+											<input type="text" name="username" value="<?php echo htmlspecialchars($_SESSION['username']); ?>" class="form-control form-control-line" required>
+											<span id="usernameError" class="text-danger"></span> <!-- Inline error message -->
+										</div>
 									</div>
-                                </form>
+									<div class="form-group">
+										<label for="example-email" class="col-md-12">Email</label>
+										<div class="col-md-12">
+											<input type="email" value="<?php echo htmlspecialchars($_SESSION['email']); ?>" class="form-control form-control-line" name="email" id="email" readonly>
+											<span id="emailError" class="text-danger"></span> <!-- Inline error message -->
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-12">Phone No</label>
+										<div class="col-md-12">
+											<input type="number" value="<?php echo htmlspecialchars($_SESSION['contact']); ?>" class="form-control form-control-line" name="contact_number" required>
+											<span id="contactError" class="text-danger"></span> <!-- Inline error message -->
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-12">Address</label>
+										<div class="col-md-12">
+											<input type="text" value="<?php echo htmlspecialchars($_SESSION['address']); ?>" class="form-control form-control-line" name="address" required>
+											<span id="addressError" class="text-danger"></span> <!-- Inline error message -->
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-12">
+											<button class="btn btn-success text-white" name="update_profile">Update Profile</button>
+										</div>
+									</div>
+								</form>
 									<div class="col-sm-12">
                                             <button class="btn btn-success text-white" onclick="window.location.href='../CG/Changepasswordform.html'">
 											Change Password</button>
@@ -339,28 +350,43 @@
     });
 	</script>
 	<script>
-		function validateForm() {
-			// Get all input fields
-			var username = document.querySelector('input[name="username"]').value.trim();
-			var contact_number = document.querySelector('input[name="contact_number"]').value.trim();
-			var address = document.querySelector('input[name="address"]').value.trim();
+    function validateForm() {
+        // Clear previous error messages
+        document.getElementById('usernameError').textContent = '';
+        document.getElementById('contactError').textContent = '';
+        document.getElementById('addressError').textContent = '';
 
-			// Check if any field is empty
-			if (username === "" || contact_number === "" || address === "") {
-				alert("All fields must be filled out before updating the profile.");
-				return false; // Prevent form submission
-			}
-			
-			 // Validate phone number (basic validation for 11 digits)
-			var phonePattern = /^\d{11}$/;
-			if (!phonePattern.test(contact_number)) {
-				alert("Please enter a valid phone number with 11 digits.");
-				return false;
-			}
+        // Get all input fields
+        var username = document.querySelector('input[name="username"]').value.trim();
+        var contact_number = document.querySelector('input[name="contact_number"]').value.trim();
+        var address = document.querySelector('input[name="address"]').value.trim();
+
+        var isValid = true;
+
+        // Check if any field is empty
+        if (username === "" || contact_number === "" || address === "") {
+            if (username === "") {
+                document.getElementById('usernameError').textContent = 'Username is required.';
+            }
+            if (contact_number === "") {
+                document.getElementById('contactError').textContent = 'Phone number is required.';
+            }
+            if (address === "") {
+                document.getElementById('addressError').textContent = 'Address is required.';
+            }
+            isValid = false; // Prevent form submission
+        }
+        
+        // Phone number validation
+        var phonePattern = /^\d{10,11}$/;
+        if (!phonePattern.test(contact_number)) {
+            document.getElementById('contactError').textContent = 'Phone number must be between 10 and 11 digits long.';
+            isValid = false;
+        }
     
-			// If all fields are filled, allow form submission
-			return true;
-		}
+        // If all fields are valid, allow form submission
+        return isValid;
+    }
 	</script>
 </body>
 

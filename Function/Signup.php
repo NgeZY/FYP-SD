@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->addAddress($email);
 
             $mail->Subject = 'Verify your email';
-            $mail->Body    = "Please click the link below to verify your email address:
+            $mail->Body    = "Please click the link below to verify your email address for UTM Advance:
 http://localhost/FYP-SD/Function/verify.php?token=$token&role=$role";
 
             if ($mail->send()) {

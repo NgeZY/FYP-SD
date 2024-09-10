@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 10, 2024 at 10:22 AM
+-- Generation Time: Sep 10, 2024 at 10:50 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
-('Admin', '$2y$10$WViht/KfTrtmFKlVpTQ7NOW66sPGRqDDe5H9riHZw/v7za343xd5e', 'ngezheyu1225@gmail.com', '1A, Jalan A', '01242332922', '', '');
+('Admin1', '$2y$10$WViht/KfTrtmFKlVpTQ7NOW66sPGRqDDe5H9riHZw/v7za343xd5e', 'ngezheyu1225@gmail.com', '1A, Jalan A', '01110884238', '', '');
 
 -- --------------------------------------------------------
 
@@ -65,10 +65,9 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
-('Customer', '$2y$10$OJjKZwFvEPxJz62vRfpROOFdV4L4qt6SOnsytbLU2uwrTyubWCosK', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '864224', '../Uploads/Screenshot (448).png'),
+('NgeZY', '$2y$10$OJjKZwFvEPxJz62vRfpROOFdV4L4qt6SOnsytbLU2uwrTyubWCosK', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '864224', '../Uploads/Screenshot (448).png'),
 ('fenrir', '$2y$10$T7C1UDmppSLpMd5F4zEG9.FZiRQb9/ISBnWUOtWacJ8WIeix4UBPy', 'alnhakim2005@gmail.com', 'Pacific bay', '0139650334', '232195', '../Uploads/fwen.jpg'),
-('joeyichin', '$2y$10$kAL0CkSDrQDnErKlZ0OEaesnNuM1hBxhr54WK/US8I/Wc3FWzzh46', 'joeyichin123@gmail.com', '123 Banana Street', '0124233292', '386739', ''),
-('dada', '$2y$10$2jXUuobx453rw9rWmaXiAOYJPQyvJ13tk9pnCJ69DDIr.7QWsqMlK', 'dabed25144@barakal.com', '456 Rambutan Street', '5525', '', '');
+('joeyichin', '$2y$10$kAL0CkSDrQDnErKlZ0OEaesnNuM1hBxhr54WK/US8I/Wc3FWzzh46', 'joeyichin123@gmail.com', '123 Banana Street', '0124233292', '386739', '');
 
 -- --------------------------------------------------------
 
@@ -159,7 +158,7 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
-('Staff', '$2y$10$iCXQkCuBQpvgbfhx5acvLeUtUK38uPSDquFIPeGbd3pvm2YDX7JMm', 'ngezy041225@gmail.com', '1A, Jalan A', '01242332923', '484070', '');
+('Staff1', '$2y$10$iCXQkCuBQpvgbfhx5acvLeUtUK38uPSDquFIPeGbd3pvm2YDX7JMm', 'ngezy041225@gmail.com', '1A, Jalan A', '01242332923', '484070', '');
 
 --
 -- Indexes for dumped tables
