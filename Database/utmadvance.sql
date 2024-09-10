@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2024 at 07:14 AM
+-- Generation Time: Sep 10, 2024 at 10:22 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
-('AdminTest', '$2y$10$wixnMzogaD2QqDU9QiwxaOD69RctkDydC6Rm3RSF35h8jYJnpKEeO', 'ngezheyu1225@gmail.com', '1A, Jalan A', '0123456789', '', '');
+('Admin', '$2y$10$WViht/KfTrtmFKlVpTQ7NOW66sPGRqDDe5H9riHZw/v7za343xd5e', 'ngezheyu1225@gmail.com', '1A, Jalan A', '01242332922', '', '');
 
 -- --------------------------------------------------------
 
@@ -65,8 +65,10 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
-('CustomerTest', '$2y$10$ByUZHF8MaT3w/1Mpdkk62O4HTADnSgL67wGQSHWWf1u5Z94r40nlC', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '864224', '../Uploads/Screenshot (448).png'),
-('fenrir', '$2y$10$T7C1UDmppSLpMd5F4zEG9.FZiRQb9/ISBnWUOtWacJ8WIeix4UBPy', 'alnhakim2005@gmail.com', 'Pacific bay', '0139650334', '232195', '../Uploads/fwen.jpg');
+('Customer', '$2y$10$OJjKZwFvEPxJz62vRfpROOFdV4L4qt6SOnsytbLU2uwrTyubWCosK', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '864224', '../Uploads/Screenshot (448).png'),
+('fenrir', '$2y$10$T7C1UDmppSLpMd5F4zEG9.FZiRQb9/ISBnWUOtWacJ8WIeix4UBPy', 'alnhakim2005@gmail.com', 'Pacific bay', '0139650334', '232195', '../Uploads/fwen.jpg'),
+('joeyichin', '$2y$10$kAL0CkSDrQDnErKlZ0OEaesnNuM1hBxhr54WK/US8I/Wc3FWzzh46', 'joeyichin123@gmail.com', '123 Banana Street', '0124233292', '386739', ''),
+('dada', '$2y$10$2jXUuobx453rw9rWmaXiAOYJPQyvJ13tk9pnCJ69DDIr.7QWsqMlK', 'dabed25144@barakal.com', '456 Rambutan Street', '5525', '', '');
 
 -- --------------------------------------------------------
 
@@ -88,7 +90,8 @@ CREATE TABLE `feedback` (
 INSERT INTO `feedback` (`Name`, `Email`, `Subject`, `Message`) VALUES
 ('Test', 'zheyunge@gmail.com', 'Test', 'Testing123'),
 ('Nge', 'zheyunge@gmail.com', 'Test', 'Test123'),
-('Customer', 'majob16748@rogtat.com', 'CustomerTest', 'Test123');
+('Customer', 'majob16748@rogtat.com', 'CustomerTest', 'Test123'),
+('joe', 'joeyichin123@gmail.com', 'Hello', '\nhello website\n\n');
 
 -- --------------------------------------------------------
 
@@ -125,6 +128,16 @@ CREATE TABLE `pending_verification` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `pending_verification`
+--
+
+INSERT INTO `pending_verification` (`id`, `Username`, `Password`, `Email`, `Address`, `Contact`, `Role`, `verification_token`, `created_at`) VALUES
+(15, 'dada', '$2y$10$Kmyc4v629ApMxJbo2bKvYenuMOrLCnhv80uCiNno8LSJgFduQQKrG', 'dabed25144@baakal.com', '', '5525', 'customer', '93050a8ecef76c061ccfe7e7ef1d825a', '2024-09-10 02:32:04'),
+(16, 'da', '$2y$10$pkedgCdzTuH6ktCRVRymB.FIsJT09ZyGWjoLJCjVqiXCEx/L.XHWm', 'relami8288@rogtat.com', '', '0124233292', 'customer', '7c185eb1c09236992deded3953b7bc21', '2024-09-10 02:34:14'),
+(17, 'da', '$2y$10$Yp5zIj3TOar09MYbCwJ8IeOuTaFRviEObs1GZVtog6/vwWliIcLmm', 'relami8288@rogat.com', 'dad', '', 'customer', '45d5e477ad79d8d9f6b821bb6dd6d859', '2024-09-10 02:36:39'),
+(18, 'da', '$2y$10$cveu4X3m2tJ.A7fcoeSmNeFEOqhkJ1tZbCMExdwWlEu2YKAe12LT6', 'relami8288@roat.com', 'dad', '', 'customer', '3ff1025763d785c6b7d827d61b73d149', '2024-09-10 02:37:02');
+
 -- --------------------------------------------------------
 
 --
@@ -146,7 +159,7 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
-('StaffTest', '$2y$10$uvHJi8e7QGN/q9MB3Tqd4Or50YPE9e8nk2sAS8YUhhOHfZdymlCUu', 'ngezy041225@gmail.com', '1A, Jalan A', '0123456789', '', '');
+('Staff', '$2y$10$iCXQkCuBQpvgbfhx5acvLeUtUK38uPSDquFIPeGbd3pvm2YDX7JMm', 'ngezy041225@gmail.com', '1A, Jalan A', '01242332923', '484070', '');
 
 --
 -- Indexes for dumped tables
@@ -167,7 +180,7 @@ ALTER TABLE `pending_verification`
 -- AUTO_INCREMENT for table `pending_verification`
 --
 ALTER TABLE `pending_verification`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
