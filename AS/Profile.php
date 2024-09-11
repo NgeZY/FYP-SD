@@ -77,7 +77,7 @@
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
-        
+        <header class="topbar" data-navbarbg="skin5">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin5">
                     <!-- ============================================================== -->
@@ -112,11 +112,12 @@
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
-                    <ul class="navbar-nav float-end">
+                    <ul class="navbar-nav float-end" style = "font-size: 16px;">
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
-                        
+						<a href="../CG/index.php" class="nav-item nav-link">Homepage</a>
+                        <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
@@ -134,19 +135,11 @@
                 <!-- Sidebar navigation-->
                 
                         <!-- User Profile-->
-                        <li>
                             <!-- User Profile-->
                            
                             <!-- End User Profile-->
-                        </li>
                         
                         <!-- User Profile-->
-                        
-                            
-                        </li>
-                    </ul>
-
-                </nav>
                 <!-- End Sidebar navigation -->
             </div>
             <!-- End Sidebar scroll-->

@@ -99,7 +99,7 @@
             
             <a href="Forgotpasswordform.php">Forgot password?</a><br><br>
             <a href="Signupform.html">Don't have an account yet? Sign up</a><br><br>
-            <input type="submit" value="Login">
+            <input type="submit" value="Sign in">
         </form>
     </div>
     <script>

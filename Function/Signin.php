@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: ../CG/index.php");
                 exit();
             } elseif ($role == 'admin' || $role == 'staff') {
-                header("Location: ../AS/index.html");
+                header("Location: ../AS/index.php");
                 exit();
             }
         } else {

@@ -114,7 +114,7 @@
 											if ($_SESSION['role'] === 'customer') {
 												echo '../AS/Profile.php';
 											} elseif ($_SESSION['role'] === 'staff' || $_SESSION['role'] === 'admin') {
-												echo '../AS/index.html';
+												echo '../AS/index.php';
 											}?>" class="nav-item nav-link"><?php echo htmlspecialchars($_SESSION['username']); ?></a>
                                 <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
                             <?php else: ?>
