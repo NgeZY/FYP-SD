@@ -105,8 +105,8 @@
                             <a href="mainpage.php" class="nav-item nav-link">Shop</a>
                             <a href="detail.php" class="nav-item nav-link">Shop Detail</a>
                             <a href="cart.php" class="nav-item nav-link">Cart</a>
-                            <a href="contact.php" class="nav-item nav-link">Contact Us</a>
 							<a href="about.php" class="nav-item nav-link">About Us</a>
+                            <a href="contact.php" class="nav-item nav-link">Contact Us</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0">
                             <?php if(isset($_SESSION['username'])): ?>
@@ -626,8 +626,8 @@
                             <a class="text-dark mb-2" href="mainpage.php"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
                             <a class="text-dark mb-2" href="detail.php"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
                             <a class="text-dark mb-2" href="cart.php"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                            <a class="text-dark mb-2" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                             <a class="text-dark mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                            <a class="text-dark mb-2" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                         </div>
                     </div>
                     

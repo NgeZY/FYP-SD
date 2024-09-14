@@ -70,25 +70,37 @@
             font-size: 18px;
             margin-bottom: 20px;
         }
+		.password-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .forgot-link {
+            text-align: left;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Sign in</h1>
         <form action="../Function/Signin.php" method="post">
-            <label for="role">Role:</label>
+            <label for="role">Role</label>
             <select name="role" id="role" class="spacing" required>
                 <option value="customer">Customer</option>
                 <option value="staff">Staff</option>
                 <option value="admin">Admin</option>
             </select>
 
-            <label for="email">Email:</label>
+            <label for="email">Email</label>
             <input type="text" name="email" id="email" required>
             <small id="emailError" class="error-message"></small>
 			<p id="emailError"></p>
             
-            <label for="password">Password:</label>
+            <div class="password-header">
+                <label for="password">Password</label>
+                <a href="Forgotpasswordform.php" class="forgot-link">Forgot password?</a>
+            </div>
             <div class="password-container">
                 <input type="password" name="password" id="password" required>
             </div>
@@ -97,7 +109,6 @@
                 <label for="toggle-password">Show password</label>
             </div>
             
-            <a href="Forgotpasswordform.php">Forgot password?</a><br><br>
             <a href="Signupform.html">Don't have an account yet? Sign up</a><br><br>
             <input type="submit" value="Sign in">
         </form>
