@@ -55,6 +55,12 @@
     .form-group .text-danger#contactError {
         margin-top: 10px; /* Adjust spacing specifically for contact number */
     }
+	
+	.button-container {
+    display: flex;
+    gap: 1rem; /* Adjust the space between the buttons as needed */
+    margin-top: 1rem; /* Add space above the button container */
+	}
 </style>
 <body>
 	<?php
@@ -271,14 +277,13 @@
 									</div>
 									<div class="form-group">
 										<div class="col-sm-12">
-											<button class="btn btn-success text-white" name="update_profile">Update Profile</button>
+											<div class="button-container">
+												<button class="btn btn-success text-white" name="update_profile">Update Profile</button>
+    											<button class="btn btn-success text-white" onclick="window.location.href='../CG/Changepasswordform.html'">Change Password</button>
+											</div>
 										</div>
 									</div>
 								</form>
-									<div class="col-sm-12">
-                                            <button class="btn btn-success text-white" onclick="window.location.href='../CG/Changepasswordform.html'">
-											Change Password</button>
-                                    </div>
                             </div>
                         </div>
                     </div>
@@ -303,8 +308,7 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                All Rights Reserved by Xtreme Admin. Designed and Developed by <a
-                    href="https://www.wrappixel.com">WrapPixel</a>.
+                &copy; 2024 UTM Advance
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

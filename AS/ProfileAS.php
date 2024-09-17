@@ -55,6 +55,12 @@
     .form-group .text-danger#contactError {
         margin-top: 10px; /* Adjust spacing specifically for contact number */
     }
+	
+	.button-container {
+    display: flex;
+    gap: 1rem; /* Adjust the space between the buttons as needed */
+    margin-top: 1rem; /* Add space above the button container */
+	}
 </style>
 <body>
 	<?php
@@ -151,8 +157,8 @@
                                 href="ProfileAS.php" aria-expanded="false"><i
                                     class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="table-basic.html" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
-                                    class="hide-menu">Table</span></a></li>
+                                href="Product.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
+                                    class="hide-menu">Product</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                     class="hide-menu">Icon</span></a></li>
@@ -183,7 +189,7 @@
             <div class="page-breadcrumb">
                 <div class="row align-items-center">
                     <div class="col-5">
-                        <h4 class="page-title">Profile Page </h4>
+                        <h4 class="page-title">Profile Page</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -296,14 +302,13 @@
 									</div>
 									<div class="form-group">
 										<div class="col-sm-12">
-											<button class="btn btn-success text-white" name="update_profile">Update Profile</button>
+											<div class="button-container">
+												<button class="btn btn-success text-white" name="update_profile">Update Profile</button>
+    											<button class="btn btn-success text-white" onclick="window.location.href='../CG/Changepasswordform.html'">Change Password</button>
+											</div>
 										</div>
 									</div>
 								</form>
-									<div class="col-sm-12">
-                                            <button class="btn btn-success text-white" onclick="window.location.href='../CG/Changepasswordform.html'">
-											Change Password</button>
-                                    </div>
                             </div>
                         </div>
                     </div>
@@ -328,8 +333,7 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                All Rights Reserved by Xtreme Admin. Designed and Developed by <a
-                    href="https://www.wrappixel.com">WrapPixel</a>.
+                &copy; 2024 UTM Advance
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

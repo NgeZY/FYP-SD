@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2024 at 02:58 PM
+-- Generation Time: Sep 17, 2024 at 09:59 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -144,6 +144,30 @@ INSERT INTO `pending_verification` (`id`, `Username`, `Password`, `Email`, `Addr
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `ProductID` int(11) NOT NULL,
+  `ProductName` varchar(255) NOT NULL,
+  `Price` decimal(10,2) NOT NULL,
+  `Category` varchar(100) NOT NULL,
+  `StockQuantity` int(11) NOT NULL,
+  `Status` varchar(50) NOT NULL,
+  `Image` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQuantity`, `Status`, `Image`) VALUES
+(1, 'Test', 10.00, 'Test', 8, 'In Stock', '../Products/Screenshot (473).png'),
+(2, 'Test2', 18.00, 'Test', 20, 'In Stock', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `staff`
 --
 
@@ -176,6 +200,12 @@ ALTER TABLE `pending_verification`
   ADD UNIQUE KEY `Email` (`Email`);
 
 --
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`ProductID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -184,6 +214,12 @@ ALTER TABLE `pending_verification`
 --
 ALTER TABLE `pending_verification`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
