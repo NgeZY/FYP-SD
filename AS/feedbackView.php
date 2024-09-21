@@ -119,6 +119,9 @@
                                 href="feedbackView.php" aria-expanded="false"><i class="mdi mdi-file"></i><span
                                     class="hide-menu">Feedback</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="deletestaffview.php" aria-expanded="false"><i class="mdi mdi-home"></i><span
+                                    class="hide-menu">Staff</span></a></li>
+						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="../CG/index.php" aria-expanded="false"><i class="mdi mdi-home"></i><span
                                     class="hide-menu">Homepage</span></a></li>
                         <li class="text-center p-40 upgrade-btn">
