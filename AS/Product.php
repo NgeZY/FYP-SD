@@ -71,9 +71,6 @@ if (!$result) {
 </style>
 
 <body>
-	<?php
-		session_start();
-	?>
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
@@ -121,6 +118,9 @@ if (!$result) {
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="feedbackView.php" aria-expanded="false"><i class="mdi mdi-file"></i><span
                                     class="hide-menu">Feedback</span></a></li>
+						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="deletestaffview.php" aria-expanded="false"><i class="mdi mdi-home"></i><span
+                                    class="hide-menu">Staff</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="../CG/index.php" aria-expanded="false"><i class="mdi mdi-home"></i><span
                                     class="hide-menu">Homepage</span></a></li>
@@ -161,9 +161,9 @@ if (!$result) {
                             </div>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered" style="background-color: #cce5ff;">
                                 <thead>
-                                    <tr>
+                                    <tr style="background-color: #007bff; color: white;">
                                         <th scope="col">ID</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Price</th>

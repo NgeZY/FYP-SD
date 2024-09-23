@@ -228,7 +228,10 @@
                                     <div class="button-container">
                                         <button type="button" id="editButton" class="btn btn-success text-white">Edit</button>
                                         <button type="button" id="backButton" class="btn btn-secondary text-white" style="display: none;">Back</button>
-										<button type="button" id="deleteButton" class="btn btn-danger text-white button-right-align">Delete</button>
+										<form method="POST" action="../Function/Deleteproduct.php" onsubmit="return confirm('Are you sure you want to delete this product?');">
+											<input type="hidden" name="ProductID" value="<?php echo $productID; ?>">
+											<button type="button" id="deleteButton" class="btn btn-danger text-white button-right-align">Delete</button>
+										</form>
                                     </div>
                                 </form>
                             </div>
