@@ -55,28 +55,6 @@
 <body>
     <?php
     session_start(); // Start the session
-
-    // Check if session variables are set
-    if (isset($_SESSION['productID'])) {
-        // Extract product details
-        $productID = $_SESSION['productID'];
-        $productName = $_SESSION['productName'];
-        $price = $_SESSION['price'];
-        $category = $_SESSION['category'];
-        $stock = $_SESSION['stock'];
-        $status = $_SESSION['status'];
-		if(isset($_SESSION['image']))
-			$image = $_SESSION['image'];
-		else
-			$image = "../Products/default.png";
-    } else {
-        // Handle case where session variable is not set
-        echo "<script>
-                alert('Product details not found. Please ensure the product is selected correctly.');
-                window.history.back();
-              </script>";
-        exit();
-    }
     ?>
     <div class="preloader">
         <div class="lds-ripple">
@@ -171,7 +149,7 @@
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="Product.php">Product</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Product Details</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Add product</li>
                                 </ol>
                             </nav>
                         </div>
@@ -181,64 +159,42 @@
             </div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-4 col-xlg-3 col-md-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <center class="m-t-30">
-                                    <div class="product-frame">
-                                        <img src="<?= $image ?>" class="product-image" alt="Product Image">
-                                    </div>
-                                    <form action="../Function/UpdateProductImage.php" method="POST" enctype="multipart/form-data" id="photoForm">
-										<label for="productPhoto" class="btn btn-success text-white" id="uploadButton">Upload Product Picture</label>
-                                        <input type="file" name="newProductImage" id = "newProductImage" accept="image/*" style="display:none;">
-                                    </form>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-body">
-                                <form id="productForm" method="POST" action="../Function/UpdateProduct.php">
+                                <form id="productForm" method="POST" action="../Function/Addproduct.php">
 									<input type="hidden" id="formMode" value="view">
                                     <div class="form-group">
                                         <label for="productName">Product Name:</label>
-                                        <input type="text" class="form-control" id="productName" name="productName"
-                                            value="<?= htmlspecialchars($productName) ?>" readonly>
+                                        <input type="text" class="form-control" id="productName" name="productName" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="price">Price:</label>
-                                        <input type="text" class="form-control" id="price" name="price"
-                                            value="<?= htmlspecialchars($price) ?>" readonly>
+                                        <input type="text" class="form-control" id="price" name="price" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="category">Category:</label>
-										<select class="form-control" id="category" name="category" disabled>
-        									<option value="">Select Category</option>
-        									<option value="Shirts" <?= ($category == 'Shirts') ? 'selected' : '' ?>>Shirts</option>
-        									<option value="Blazers" <?= ($category == 'Blazers') ? 'selected' : '' ?>>Blazers</option>
-        									<option value="Accessories" <?= ($category == 'Accessories') ? 'selected' : '' ?>>Accessories</option>
-    									</select>
+										<select class = "form-control" id="category" name="category" required> 
+											<option value = "">Select Category</option>
+											<option value = "Shirts">Shirts</option>
+											<option value = "Blazers">Blazers</option>
+											<option value = "Accessories">Accessories</option>
+										</select>
                                     </div>
                                     <div class="form-group">
                                         <label for="stock">Stock Quantity:</label>
-                                        <input type="text" class="form-control" id="stock" name="stock"
-                                            value="<?= htmlspecialchars($stock) ?>" readonly>
+                                        <input type="text" class="form-control" id="stock" name="stock" required>
                                     </div>
                                     <div class="form-group">
 										<label for="status">Status:</label>
-    									<select class="form-control" id="status" name="status" disabled>
-        									<option value="In Stock" <?= $status === 'In Stock' ? 'selected' : '' ?>>In Stock</option>
-        									<option value="Not In Stock" <?= $status === 'Not In Stock' ? 'selected' : '' ?>>Not In Stock</option>
+    									<select class="form-control" id="status" name="status" required>
+											<option value = ""></option>
+        									<option value = "In Stock">In Stock</option>
+        									<option value = "Not In Stock">Not In Stock</option>
     									</select>
 									</div>
                                     <div class="button-container">
-                                        <button type="button" id="editButton" class="btn btn-success text-white">Edit</button>
-                                        <button type="button" id="backButton" class="btn btn-secondary text-white" style="display: none;">Back</button>
-										<form method="POST" action="../Function/Deleteproduct.php" onsubmit="return confirm('Are you sure you want to delete this product?');">
-											<input type="hidden" name="ProductID" value="<?php echo $productID; ?>">
-											<button type="button" id="deleteButton" class="btn btn-danger text-white button-right-align">Delete</button>
-										</form>
+                                        <button type="submit" id="addButton" class="btn btn-success text-white">Add Product</button>
                                     </div>
                                 </form>
                             </div>
@@ -272,48 +228,6 @@ document.getElementById('uploadButton').addEventListener('click', function(event
 document.getElementById('newProductImage').addEventListener('change', function() {
     document.getElementById('photoForm').submit();  // Submit the form on file selection
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    var editButton = document.getElementById('editButton');
-    var backButton = document.getElementById('backButton');
-    var productForm = document.getElementById('productForm');
-
-    editButton.addEventListener('click', function() {
-        var isReadOnly = productForm.querySelectorAll('input[readonly]').length > 0;
-		var isDisabled = productForm.querySelectorAll('select[disabled]').length > 0;
-
-        if (isReadOnly || isDisabled) {
-            // Enable inputs for editing
-            productForm.querySelectorAll('input, select').forEach(function(element) {
-                element.removeAttribute('readonly');
-				element.removeAttribute('disabled');
-            });
-            editButton.textContent = 'Update';
-            backButton.style.display = 'inline'; // Show the Back button
-        } else {
-            // Submit the form to update the product
-            productForm.submit();
-        }
-    });
-
-    backButton.addEventListener('click', function() {
-        // Make all input fields readonly
-        productForm.querySelectorAll('input, select').forEach(function(element) {
-            element.setAttribute('readonly', true);
-            element.setAttribute('disabled', true); // Disable select fields
-        });
-        editButton.textContent = 'Edit';
-        backButton.style.display = 'none'; // Hide the Back button
-    });
-});
-
-document.getElementById('deleteButton').addEventListener('click', function() {
-    if (confirm('Are you sure you want to delete this product?')) {
-        // Proceed with deletion
-        window.location.href = '../Function/DeleteProduct.php?productID=<?= $productID ?>';
-    }
-});
-
 </script>
 </body>
 

@@ -10,6 +10,7 @@ $result = mysqli_query($con, $query);
 if (!$result) {
     die("Database query failed: " . mysqli_error($con));
 }
+unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SESSION['category'], $_SESSION['stock'], $_SESSION['status'], $_SESSION['image']);
 ?>
 
 <!DOCTYPE html>
@@ -157,7 +158,7 @@ if (!$result) {
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <h4 class="card-title">Product list</h4>
-                                <a href="AddProduct.php" class="btn btn-success text-white" style="margin-bottom: 1rem;">Add Product</a>
+                                <a href="Addproductpage.php" class="btn btn-success text-white" style="margin-bottom: 1rem;">Add Product</a>
                             </div>
                         </div>
                         <div class="table-responsive">

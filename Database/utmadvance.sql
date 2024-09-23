@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1
--- 生成日期： 2024-09-23 06:22:09
+-- 生成日期： 2024-09-23 07:54:13
 -- 服务器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -162,7 +162,8 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQuantity`, `Status`, `Image`) VALUES
-(1, 'Test', 10.00, 'Test', 8, 'In Stock', '../Products/Screenshot (473).png');
+(1, 'Test', 10.00, 'Shirts', 8, 'In Stock', '../Products/Screenshot (473).png'),
+(3, 'Test3', 18.00, 'Blazers', 111, 'Not In Stock', NULL);
 
 -- --------------------------------------------------------
 
@@ -218,7 +219,7 @@ ALTER TABLE `pending_verification`
 -- 使用表AUTO_INCREMENT `product`
 --
 ALTER TABLE `product`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
