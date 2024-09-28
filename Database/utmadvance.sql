@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 17, 2024 at 09:59 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- 主机： 127.0.0.1
+-- 生成日期： 2024-09-23 07:54:13
+-- 服务器版本： 10.4.32-MariaDB
+-- PHP 版本： 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `utmadvance`
+-- 数据库： `utmadvance`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- 表的结构 `admin`
 --
 
 CREATE TABLE `admin` (
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `admin`
+-- 转存表中的数据 `admin`
 --
 
 INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Ver
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- 表的结构 `customer`
 --
 
 CREATE TABLE `customer` (
@@ -61,7 +61,7 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `customer`
+-- 转存表中的数据 `customer`
 --
 
 INSERT INTO `customer` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
@@ -73,7 +73,7 @@ INSERT INTO `customer` (`Username`, `Password`, `Email`, `Address`, `Contact`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `feedback`
+-- 表的结构 `feedback`
 --
 
 CREATE TABLE `feedback` (
@@ -84,7 +84,7 @@ CREATE TABLE `feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `feedback`
+-- 转存表中的数据 `feedback`
 --
 
 INSERT INTO `feedback` (`Name`, `Email`, `Subject`, `Message`) VALUES
@@ -99,7 +99,7 @@ INSERT INTO `feedback` (`Name`, `Email`, `Subject`, `Message`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password`
+-- 表的结构 `password`
 --
 
 CREATE TABLE `password` (
@@ -107,7 +107,7 @@ CREATE TABLE `password` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `password`
+-- 转存表中的数据 `password`
 --
 
 INSERT INTO `password` (`Admin_password`) VALUES
@@ -116,7 +116,7 @@ INSERT INTO `password` (`Admin_password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pending_verification`
+-- 表的结构 `pending_verification`
 --
 
 CREATE TABLE `pending_verification` (
@@ -132,7 +132,7 @@ CREATE TABLE `pending_verification` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pending_verification`
+-- 转存表中的数据 `pending_verification`
 --
 
 INSERT INTO `pending_verification` (`id`, `Username`, `Password`, `Email`, `Address`, `Contact`, `Role`, `verification_token`, `created_at`) VALUES
@@ -144,7 +144,7 @@ INSERT INTO `pending_verification` (`id`, `Username`, `Password`, `Email`, `Addr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product`
+-- 表的结构 `product`
 --
 
 CREATE TABLE `product` (
@@ -158,17 +158,17 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `product`
+-- 转存表中的数据 `product`
 --
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQuantity`, `Status`, `Image`) VALUES
-(1, 'Test', 10.00, 'Test', 8, 'In Stock', '../Products/Screenshot (473).png'),
-(2, 'Test2', 18.00, 'Test', 20, 'In Stock', NULL);
+(1, 'Test', 10.00, 'Shirts', 8, 'In Stock', '../Products/Screenshot (473).png'),
+(3, 'Test3', 18.00, 'Blazers', 111, 'Not In Stock', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `staff`
+-- 表的结构 `staff`
 --
 
 CREATE TABLE `staff` (
@@ -182,44 +182,44 @@ CREATE TABLE `staff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `staff`
+-- 转存表中的数据 `staff`
 --
 
 INSERT INTO `staff` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
 ('Staff Test', '$2y$10$l5BllUUfVNCC5FB4w1qN.OgiG40.h7BVT/Ul6lli9.36FvtJpeZti', 'ngezy041225@gmail.com', '1A, Jalan A', '01242332923', '753507', '');
 
 --
--- Indexes for dumped tables
+-- 转储表的索引
 --
 
 --
--- Indexes for table `pending_verification`
+-- 表的索引 `pending_verification`
 --
 ALTER TABLE `pending_verification`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `Email` (`Email`);
 
 --
--- Indexes for table `product`
+-- 表的索引 `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`ProductID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- 在导出的表使用AUTO_INCREMENT
 --
 
 --
--- AUTO_INCREMENT for table `pending_verification`
+-- 使用表AUTO_INCREMENT `pending_verification`
 --
 ALTER TABLE `pending_verification`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `product`
+-- 使用表AUTO_INCREMENT `product`
 --
 ALTER TABLE `product`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
