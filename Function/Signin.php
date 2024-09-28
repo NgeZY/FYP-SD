@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } elseif ($role == 'admin') {
                 header("Location: ../AS/index.php");
 				exit();
-			  elseif ($role == 'staff'){
+			}elseif ($role == 'staff'){
 				header("Location: ../AS/indexstaff.php");
                 exit();
             }
