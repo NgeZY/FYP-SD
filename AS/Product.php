@@ -65,9 +65,13 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
         border: 1px solid #dee2e6 !important;
     }
 
-    .table-bordered th,
+    .table-bordered th {
+		border: 1px solid #dee2e6 !important;
+		background-color: #007bff !important;
+	}
     .table-bordered td {
         border: 1px solid #dee2e6 !important;
+		background-color: #cce5ff !important;
     }
 </style>
 
@@ -165,9 +169,9 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
                             </div>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-bordered" style="background-color: #cce5ff;">
+                            <table class="table table-bordered">
                                 <thead>
-                                    <tr style="background-color: #007bff; color: white;">
+                                    <tr>
                                         <th scope="col">ID</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Price</th>
