@@ -181,20 +181,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <!-- Staff Registration Form -->
-                <h5>Register New Staff Member</h5>
-                <form method="POST" action="../Function/registerstaff.php" class="mb-4">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Register Staff</button>
-                </form>
-
+                
                 <?php
                 // Database connection
                 $servername = "localhost";
@@ -210,8 +197,8 @@
                     die("Connection failed: " . $con->connect_error);
                 }
 
-                // SQL query to retrieve staff members
-                $sql = "SELECT username, email, address FROM staff";
+                // SQL query to retrieve customer
+                $sql = "SELECT username, email, address FROM customer";
                 $result = $con->query($sql);
 
                 if ($result->num_rows > 0) {
@@ -233,9 +220,9 @@
                               <td>" . htmlspecialchars($row["email"]) . "</td>
                               <td>" . htmlspecialchars($row["address"]) . "</td>
                               <td>
-                                  <form method='POST' action='../Function/deletestaff.php' style='display:inline;'>
+                                  <form method='POST' action='../Function/deletecustomer.php' style='display:inline;'>
                                       <input type='hidden' name='username' value='" . htmlspecialchars($row["username"]) . "'>
-                                      <button type='submit' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this staff member?\");'>Delete</button>
+                                      <button type='submit' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this customer?\");'>Delete</button>
                                   </form>
                               </td>
                               </tr>";
@@ -243,7 +230,7 @@
 
                     echo "</tbody></table>";
                 } else {
-                    echo "<p>No staff members available.</p>";
+                    echo "<p>No customer available.</p>";
                 }
 
                 // Close connection

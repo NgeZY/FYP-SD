@@ -122,6 +122,9 @@
                                 href="deletestaffview.php" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                     class="hide-menu">Staff</span></a></li>
 						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="deletecustomerview.php" aria-expanded="false"><i class="mdi mdi-face"></i><span
+                                    class="hide-menu">Customer</span></a></li>
+						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="../CG/index.php" aria-expanded="false"><i class="mdi mdi-home"></i><span
                                     class="hide-menu">Homepage</span></a></li>
                         <li class="text-center p-40 upgrade-btn">
