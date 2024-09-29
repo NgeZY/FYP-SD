@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1
--- 生成日期： 2024-09-23 07:54:13
+-- 生成日期： 2024-09-29 09:52:23
 -- 服务器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -43,6 +43,20 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
 ('Admin Test', '$2y$10$Ed1c0GkmVyntXM3FYiZFbOz4NdKWsRR4KXFzCoYxULcWp9FBRKIwy', 'ngezheyu1225@gmail.com', '1A, Jalan A', '01110884238', '249738', '');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `blazer`
+--
+
+CREATE TABLE `blazer` (
+  `BlazerID` int(11) NOT NULL,
+  `ProductID` int(11) DEFAULT NULL,
+  `ProductName` varchar(255) DEFAULT NULL,
+  `Size` varchar(50) DEFAULT NULL,
+  `Quantity` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -168,6 +182,20 @@ INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQu
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `shirt`
+--
+
+CREATE TABLE `shirt` (
+  `ShirtID` int(11) NOT NULL,
+  `ProductID` int(11) DEFAULT NULL,
+  `ProductName` varchar(255) DEFAULT NULL,
+  `Size` varchar(50) DEFAULT NULL,
+  `Quantity` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `staff`
 --
 
@@ -193,6 +221,13 @@ INSERT INTO `staff` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Ver
 --
 
 --
+-- 表的索引 `blazer`
+--
+ALTER TABLE `blazer`
+  ADD PRIMARY KEY (`BlazerID`),
+  ADD KEY `ProductID` (`ProductID`);
+
+--
 -- 表的索引 `pending_verification`
 --
 ALTER TABLE `pending_verification`
@@ -206,8 +241,21 @@ ALTER TABLE `product`
   ADD PRIMARY KEY (`ProductID`);
 
 --
+-- 表的索引 `shirt`
+--
+ALTER TABLE `shirt`
+  ADD PRIMARY KEY (`ShirtID`),
+  ADD KEY `ProductID` (`ProductID`);
+
+--
 -- 在导出的表使用AUTO_INCREMENT
 --
+
+--
+-- 使用表AUTO_INCREMENT `blazer`
+--
+ALTER TABLE `blazer`
+  MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- 使用表AUTO_INCREMENT `pending_verification`
@@ -220,6 +268,28 @@ ALTER TABLE `pending_verification`
 --
 ALTER TABLE `product`
   MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- 使用表AUTO_INCREMENT `shirt`
+--
+ALTER TABLE `shirt`
+  MODIFY `ShirtID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- 限制导出的表
+--
+
+--
+-- 限制表 `blazer`
+--
+ALTER TABLE `blazer`
+  ADD CONSTRAINT `blazer_ibfk_1` FOREIGN KEY (`ProductID`) REFERENCES `product` (`ProductID`);
+
+--
+-- 限制表 `shirt`
+--
+ALTER TABLE `shirt`
+  ADD CONSTRAINT `shirt_ibfk_1` FOREIGN KEY (`ProductID`) REFERENCES `product` (`ProductID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
