@@ -198,11 +198,13 @@
 
 			if (mysqli_num_rows($result) > 0) {
     			while ($row = mysqli_fetch_assoc($result)) {
+					$productImage = !empty($row['Image']) ? $row['Image'] : '../Products/default.png';
+					
         			echo '<div class="col-lg-4 col-md-6 pb-1">';
         			echo '    <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">';
         			echo '        <p class="text-right">' . $row['StockQuantity'] . ' Products</p>';
         			echo '        <a href="productdetails.php?id=' . $row['ProductID'] . '" class="cat-img position-relative overflow-hidden mb-3">';
-        			echo '            <img class="img-fluid" src="' . $row['Image'] . '" alt="">';
+        			echo '            <img class="img-fluid" src="' . $productImage. '" alt="">';
         			echo '        </a>';
         			echo '        <h5 class="font-weight-semi-bold m-0">' . $row['Category'] . '</h5>'; 
         			echo '    </div>';
@@ -248,10 +250,12 @@
 
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
+					$productImage = !empty($row['Image']) ? $row['Image'] : '../Products/default.png';
+					
                     echo '<div class="col-lg-3 col-md-6 col-sm-12 pb-1">';
                     echo '    <div class="card product-item border-0 mb-4">';
                     echo '        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">';
-                    echo '            <img class="img-fluid w-100" src="' . $row['Image'] . '" alt="Product Image">'; // Product image from database
+                    echo '            <img class="img-fluid w-100" src="' . $productImage. '" alt="Product Image">'; // Product image from database
                     echo '        </div>';
                     echo '        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">';
                     echo '            <h6 class="text-truncate mb-3">' . $row['ProductName'] . '</h6>'; // Product name from database
