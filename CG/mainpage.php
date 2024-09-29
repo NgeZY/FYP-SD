@@ -196,109 +196,110 @@
 
 
             <!-- Shop Product Start -->
+			<?php
+			require '../Function/config.php';
+
+			// Get current page number from query parameter, default to 1
+			$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+			$limit = 9; // Number of products per page
+			$offset = ($page - 1) * $limit;
+
+			// Get total number of products
+			$totalProductsQuery = "SELECT COUNT(*) AS total FROM product";
+			$result = mysqli_query($con, $totalProductsQuery);
+			$totalProducts = mysqli_fetch_assoc($result)['total'];
+
+			// Calculate total pages
+			$totalPages = ceil($totalProducts / $limit);
+
+			// Fetch products for the current page
+			$productsQuery = "SELECT * FROM product LIMIT $limit OFFSET $offset";
+			$productsResult = mysqli_query($con, $productsQuery);
+			?>
 			<div class="col-lg-9 col-md-12">
-                <div class="row pb-3">
-                    <div class="col-12 pb-1">
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <form action="">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search by name">
-                                    <div class="input-group-append">
-                                        <span class="input-group-text bg-transparent text-primary">
-                                            <i class="fa fa-search"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <?php
-                    require '../Function/config.php';
+    			<div class="row pb-3">
+        			<div class="col-12 pb-1">
+            			<div class="d-flex align-items-center justify-content-between mb-4">
+                			<form action="">
+                    			<div class="input-group">
+                        			<input type="text" class="form-control" placeholder="Search by name" id="searchInput">
+                        			<div class="input-group-append">
+                            			<span class="input-group-text bg-transparent text-primary">
+                                			<i class="fa fa-search"></i>
+                            			</span>
+                        			</div>
+                    			</div>
+                			</form>
+            			</div>
+        			</div>
+					<div id = "product-list" class="row pb-3">
+        			<?php while ($product = mysqli_fetch_assoc($productsResult)): ?>
+            			<?php $productImage = !empty($product['Image']) ? $product['Image'] : '../Products/default.png'; ?>
+            			<div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                			<div class="card product-item border-0 mb-4">
+                    			<div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        			<img class="img-fluid w-100" src="<?= $productImage ?>" alt="">
+                    			</div>
+                    			<div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        			<h6 class="text-truncate mb-3"><?= htmlspecialchars($product['ProductName']) ?></h6>
+                        			<div class="d-flex justify-content-center">
+                            			<h6>RM <?= number_format($product['Price'], 2) ?></h6>
+                        			</div>
+                    			</div>
+                    			<div class="card-footer d-flex justify-content-between bg-light border">
+                        			<a href="product-details.php?id=<?= $product['ProductID'] ?>" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        			<a href="cart.php?action=add&id=<?= $product['ProductID'] ?>" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                    			</div>
+                			</div>
+            			</div>
+        			<?php endwhile; ?>
+					</div>
+        
+        			<div class="col-12 pb-1">
+            			<nav aria-label="Page navigation">
+                			<ul class="pagination justify-content-center mb-3">
+                    			<?php if ($page > 1): ?>
+                        			<li class="page-item">
+                            			<a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                			<span aria-hidden="true">&laquo;</span>
+                                			<span class="sr-only">Previous</span>
+                            			</a>
+                        			</li>
+                    			<?php else: ?>
+                        			<li class="page-item disabled">
+                            			<a class="page-link" href="#" aria-label="Previous">
+                                			<span aria-hidden="true">&laquo;</span>
+                                			<span class="sr-only">Previous</span>
+                            			</a>
+                        			</li>
+                    			<?php endif; ?>
 
-                    // Get current page number from query parameter, default to 1
-                    $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-                    $limit = 9; // Number of products per page
-                    $offset = ($page - 1) * $limit;
+                    			<?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                        			<li class="page-item <?= $i === $page ? 'active' : '' ?>">
+                            			<a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                        			</li>
+                    			<?php endfor; ?>
 
-                    // Get total number of products
-                    $totalProductsQuery = "SELECT COUNT(*) AS total FROM product";
-                    $result = mysqli_query($con, $totalProductsQuery);
-                    $totalProducts = mysqli_fetch_assoc($result)['total'];
-
-                    // Calculate total pages
-                    $totalPages = ceil($totalProducts / $limit);
-
-                    // Fetch products for the current page
-                    $productsQuery = "SELECT * FROM product LIMIT $limit OFFSET $offset";
-                    $productsResult = mysqli_query($con, $productsQuery);
-
-                    while ($product = mysqli_fetch_assoc($productsResult)) {
-						$productImage = !empty($product['Image']) ? $product['Image'] : '../Products/default.png';
-                        echo '<div class="col-lg-4 col-md-6 col-sm-12 pb-1">';
-                        echo '    <div class="card product-item border-0 mb-4">';
-                        echo '        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">';
-                        echo '            <img class="img-fluid w-100" src="' . $productImage . '" alt="">'; // Assuming Image contains the path
-                        echo '        </div>';
-                        echo '        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">';
-                        echo '            <h6 class="text-truncate mb-3">' . htmlspecialchars($product['ProductName']) . '</h6>';
-                        echo '            <div class="d-flex justify-content-center">';
-                        echo '                <h6>$' . number_format($product['Price'], 2) . '</h6>';
-                        echo '            </div>';
-                        echo '        </div>';
-                        echo '        <div class="card-footer d-flex justify-content-between bg-light border">';
-                        echo '            <a href="product-details.php?id=' . $product['ProductID'] . '" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>';
-                        echo '            <a href="cart.php?action=add&id=' . $product['ProductID'] . '" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>';
-                        echo '        </div>';
-                        echo '    </div>';
-                        echo '</div>';
-                    }
-                    ?>
-
-                    <div class="col-12 pb-1">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination justify-content-center mb-3">
-                                <?php if ($page > 1): ?>
-                                    <li class="page-item">
-                                        <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                    </li>
-                                <?php else: ?>
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                    </li>
-                                <?php endif; ?>
-
-                                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                                    <li class="page-item <?= $i === $page ? 'active' : '' ?>">
-                                        <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
-                                    </li>
-                                <?php endfor; ?>
-
-                                <?php if ($page < $totalPages): ?>
-                                    <li class="page-item">
-                                        <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </li>
-                                <?php else: ?>
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                            <span aria-hidden="true">Next</span>
-                                        </a>
-                                    </li>
-                                <?php endif; ?>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+                    			<?php if ($page < $totalPages): ?>
+                        			<li class="page-item">
+                            			<a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                			<span aria-hidden="true">&raquo;</span>
+                                			<span aria-hidden="true">Next</span>
+                            			</a>
+                        			</li>
+                    			<?php else: ?>
+                        			<li class="page-item disabled">
+                            			<a class="page-link" href="#" aria-label="Next">
+                                			<span aria-hidden="true">&raquo;</span>
+                                			<span aria-hidden="true">Next</span>
+                            			</a>
+                        			</li>
+                    			<?php endif; ?>
+                			</ul>
+            			</nav>
+        			</div>
+    			</div>
+			</div>
             <!-- Shop Product End -->
         </div>
     </div>
@@ -365,6 +366,105 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+	
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const priceCheckboxes = document.querySelectorAll('.custom-control-input:not(#price-all)');
+    const allPriceCheckbox = document.getElementById('price-all');
+
+    // Add event listeners for all price range checkboxes
+    priceCheckboxes.forEach(input => {
+        input.addEventListener('change', function() {
+            if (this.checked) {
+                // If any price range checkbox is checked, uncheck "All Price"
+                allPriceCheckbox.checked = false;
+            }
+
+            // Call the function to filter products
+            filterProducts();
+        });
+    });
+
+    // Add event listener for the "All Price" checkbox
+    allPriceCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            // Uncheck all other checkboxes if "All Price" is checked
+            priceCheckboxes.forEach(input => {
+                input.checked = false;
+            });
+        }
+        // Call the function to filter products
+        filterProducts();
+    });
+});
+
+function filterProducts() {
+    const selectedPrices = Array.from(document.querySelectorAll('.custom-control-input:checked')).map(input => {
+        return input.id; // Get the ID of checked checkboxes
+    });
+
+    // If "All Price" is checked, clear selectedPrices
+    if (document.getElementById('price-all').checked) {
+        selectedPrices.length = 0; // Clear the array
+    }
+
+    // Make an AJAX call to your PHP script to fetch filtered products
+    fetch('../Function/filter_products.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ prices: selectedPrices }) // Send selected prices to the server
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        updateProductList(data); // Update the product display
+    })
+    .catch(error => console.error('Error fetching products:', error));
+}
+
+function updateProductList(products) {
+    const productList = document.getElementById('product-list');
+    productList.innerHTML = ''; // Clear existing products
+
+    if (products.length > 0) {
+        products.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('col-lg-4', 'col-md-6', 'col-sm-12', 'pb-1'); // Added Bootstrap grid classes
+
+            productDiv.innerHTML = `
+                <div class="card product-item border-0 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" src="${product.Image ? product.Image : '../Products/default.png'}" alt="${product.ProductName}">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">${product.ProductName}</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>RM${product.Price}</h6>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="#" class="btn btn-sm text-dark p-0">
+                            <i class="fas fa-eye text-primary mr-1"></i>View Detail
+                        </a>
+                        <a href="#" class="btn btn-sm text-dark p-0">
+                            <i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart
+                        </a>
+                    </div>
+                </div>
+            `;
+            productList.appendChild(productDiv);
+        });
+    } else {
+        productList.innerHTML = '<p style = "margin-left: 35px;">No products found.</p>'; // Display if no products match
+    }
+}
+</script>
 </body>
 
 </html>
