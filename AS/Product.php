@@ -29,6 +29,7 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
     <link href="dist/css/style.min.css" rel="stylesheet">
 </head>
 
+
 <style>
     .card {
         position: relative;
@@ -76,6 +77,10 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
 </style>
 
 <body>
+<?php
+	session_start();
+	$role = $_SESSION['role'];
+	?>
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
@@ -123,9 +128,13 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="feedbackView.php" aria-expanded="false"><i class="mdi mdi-file"></i><span
                                     class="hide-menu">Feedback</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="deletestaffview.php" aria-expanded="false"><i class="mdi mdi-face"></i><span
-                                    class="hide-menu">Staff</span></a></li>
+						<?php
+						if($role === "admin"){
+                        echo "<li class='sidebar-item'> <a class='sidebar-link waves-effect waves-dark sidebar-link'
+                                href='deletestaffview.php' aria-expanded='false'><i class='mdi mdi-face'></i><span
+                                    class='hide-menu'>Staff</span></a></li>";
+						}
+						?>
 						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="deletecustomerview.php" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                     class="hide-menu">Customer</span></a></li>
@@ -172,32 +181,27 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th scope="col">No.</th>
+                                        <th scope="col">ID</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Price</th>
                                         <th scope="col">Category</th>
                                         <th scope="col">Stock Quantity</th>
                                         <th scope="col">Status</th>
-										<th scope="col">ID</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-									$no = 1;
                                     // Check if any products exist
                                     if (mysqli_num_rows($result) > 0) {
                                         while ($row = mysqli_fetch_assoc($result)) {
                                             echo "<tr>";
-                                            echo "<td>" . $no . "</td>";
+                                            echo "<td>" . $row['ProductID'] . "</td>";
                                             echo "<td><a href='../Function/GetProductDetails.php?id=" . $row['ProductID'] . "'>" . $row['ProductName'] . "</a></td>";
                                             echo "<td>" . $row['Price'] . "</td>";
                                             echo "<td>" . $row['Category'] . "</td>";
                                             echo "<td>" . $row['StockQuantity'] . "</td>";
                                             echo "<td>" . $row['Status'] . "</td>";
-											echo "<td>" . $row['ProductID'] . "</td>";
                                             echo "</tr>";
-											
-											$no++;
                                         }
                                     } else {
                                         echo "<tr><td colspan='7'>No products found</td></tr>";

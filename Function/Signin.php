@@ -42,16 +42,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 unset($_SESSION['profilePhoto']); // Clear session variable if no photo
             }
 
-            if ($role == 'customer') {
-                header("Location: ../CG/index.php");
-                exit();
-            } elseif ($role == 'admin') {
-                header("Location: ../AS/index.php");
-				exit();
-			}elseif ($role == 'staff'){
-				header("Location: ../AS/indexstaff.php");
-                exit();
-            }
+           if ($role == 'customer') {
+			header("Location: ../CG/index.php");
+			exit();
+	     }elseif ($role == 'admin' || $role == 'staff') {
+			header("Location: ../AS/index.php");
+			exit();
+           }
+
+           
 			
         } else {
             echo "<script>alert('Your email or password is invalid'); window.history.back();</script>";

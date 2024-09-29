@@ -24,6 +24,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
+
 <style>
     /* Frame for profile picture */
     .profile-frame {
@@ -65,6 +66,7 @@
 <body>
 	<?php
 	session_start();
+	$role = $_SESSION['role'];
 	?>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->

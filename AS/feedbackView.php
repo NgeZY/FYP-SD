@@ -26,6 +26,10 @@
 </head>
 
 <body>
+<?php
+	session_start();
+	$role = $_SESSION['role'];
+	?>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -118,9 +122,13 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="feedbackView.php" aria-expanded="false"><i class="mdi mdi-file"></i><span
                                     class="hide-menu">Feedback</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="deletestaffview.php" aria-expanded="false"><i class="mdi mdi-face"></i><span
-                                    class="hide-menu">Staff</span></a></li>
+						<?php
+						if($role === "admin"){
+                        echo "<li class='sidebar-item'> <a class='sidebar-link waves-effect waves-dark sidebar-link'
+                                href='deletestaffview.php' aria-expanded='false'><i class='mdi mdi-face'></i><span
+                                    class='hide-menu'>Staff</span></a></li>";
+						}
+						?>
 						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="deletecustomerview.php" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                     class="hide-menu">Customer</span></a></li>
