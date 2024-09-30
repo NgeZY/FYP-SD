@@ -120,7 +120,7 @@
                                 href="Product.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
                                     class="hide-menu">Product</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span
+                                href="icon-material.php" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                     class="hide-menu">Icon</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="feedbackView.php" aria-expanded="false"><i class="mdi mdi-file"></i><span

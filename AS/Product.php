@@ -78,7 +78,6 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
 
 <body>
 <?php
-	session_start();
 	$role = $_SESSION['role'];
 	?>
     <div class="preloader">
@@ -123,7 +122,7 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
                                 href="Product.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
                                     class="hide-menu">Product</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span
+                                href="icon-material.php" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                     class="hide-menu">Icon</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="feedbackView.php" aria-expanded="false"><i class="mdi mdi-file"></i><span

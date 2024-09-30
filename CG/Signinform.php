@@ -109,8 +109,8 @@
                 <label for="toggle-password">Show password</label>
             </div>
             
-            <a href="Signupform.html">Don't have an account yet? Sign up</a><br><br>
-            <input type="submit" value="Sign in">
+            <input type="submit" value="Sign in"><br><br>
+			<a href="Signupform.html">Don't have an account yet? Sign up</a>
         </form>
     </div>
     <script>
