@@ -247,7 +247,7 @@
                         			</div>
                     			</div>
                     			<div class="card-footer d-flex justify-content-between bg-light border">
-                        			<a href="product-details.php?id=<?= $product['ProductID'] ?>" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        			<a href="detail.php?id=<?= $product['ProductID'] ?>" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
                         			<a href="cart.php?action=add&id=<?= $product['ProductID'] ?>" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                     			</div>
                 			</div>

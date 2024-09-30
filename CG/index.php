@@ -203,7 +203,7 @@
         			echo '<div class="col-lg-4 col-md-6 pb-1">';
         			echo '    <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">';
         			echo '        <p class="text-right">' . $row['StockQuantity'] . ' Products</p>';
-        			echo '        <a href="productdetails.php?id=' . $row['ProductID'] . '" class="cat-img position-relative overflow-hidden mb-3">';
+        			echo '        <a href="detail.php?id=' . $row['ProductID'] . '" class="cat-img position-relative overflow-hidden mb-3">';
         			echo '            <img class="img-fluid" src="' . $productImage. '" alt="">';
         			echo '        </a>';
         			echo '        <h5 class="font-weight-semi-bold m-0">' . $row['Category'] . '</h5>'; 
@@ -264,7 +264,7 @@
                     echo '            </div>';
                     echo '        </div>';
                     echo '        <div class="card-footer d-flex justify-content-between bg-light border">';
-                    echo '            <a href="productdetails.php?id=' . $row['ProductID'] . '" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>'; // Link to product details
+                    echo '            <a href="detail.php?id=' . $row['ProductID'] . '" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>'; // Link to product details
                     echo '            <a href="addtocart.php?id=' . $row['ProductID'] . '" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>'; // Link to add to cart
                     echo '        </div>';
                     echo '    </div>';
