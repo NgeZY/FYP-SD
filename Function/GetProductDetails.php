@@ -27,12 +27,59 @@ if (isset($_GET['id'])) {
             $_SESSION['productName'] = htmlspecialchars($productDetails['ProductName']);
             $_SESSION['price'] = htmlspecialchars($productDetails['Price']);
             $_SESSION['category'] = htmlspecialchars($productDetails['Category']);
-            $_SESSION['stock'] = htmlspecialchars($productDetails['StockQuantity']);
+            $category = $_SESSION['category'];
+            
+            if ($category == "Accessories") {
+                $_SESSION['stock'] = htmlspecialchars($productDetails['StockQuantity']);
+            }
+
             $_SESSION['status'] = htmlspecialchars($productDetails['Status']);
             if (!empty($productImagePath)) {
                 $_SESSION['image'] = $productImagePath;
             } else {
                 unset($_SESSION['image']); // Clear session variable if no photo
+            }
+
+            // Additional logic for Blazers and Shirts categories
+            if ($category == "Blazers" || $category == "Shirts") {
+				$table2 = ($category == "Blazers") ? "blazer" : "shirt";
+                // Query to get size and quantity based on category
+                $sizeQuery = "SELECT Size, Quantity FROM $table2 WHERE ProductID = ?";
+                if ($sizeStmt = mysqli_prepare($con, $sizeQuery)) {
+                    mysqli_stmt_bind_param($sizeStmt, "s", $productID);
+                    mysqli_stmt_execute($sizeStmt);
+                    $sizeResult = mysqli_stmt_get_result($sizeStmt);
+                    
+                    if (!$sizeResult) {
+                        die("Size query failed: " . mysqli_error($con));
+                    }
+
+                    // Use switch case to store size quantities in different session variables
+                    while ($sizeRow = mysqli_fetch_assoc($sizeResult)) {
+                        $size = $sizeRow['Size'];
+                        $quantity = htmlspecialchars($sizeRow['Quantity']);
+
+                        switch ($size) {
+                            case 'S':
+                                $_SESSION['quantityS'] = $quantity;
+                                break;
+                            case 'M':
+                                $_SESSION['quantityM'] = $quantity;
+                                break;
+                            case 'L':
+                                $_SESSION['quantityL'] = $quantity;
+                                break;
+                            default:
+                                // Handle unexpected size
+                                $_SESSION['quantityOther'] = $quantity;
+                                break;
+                        }
+                    }
+
+                    mysqli_stmt_close($sizeStmt);
+                } else {
+                    die("Failed to prepare size SQL statement: " . mysqli_error($con));
+                }
             }
 
             // Redirect to productdetails.php
