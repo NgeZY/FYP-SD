@@ -50,6 +50,10 @@
 		#uploadButton {
             margin-top: 30px; /* Adjust the value as needed */
         }
+		
+		.sizequantity {
+			display: none;
+		}
     </style>
 </head>
 <body>
@@ -222,6 +226,17 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="stock">Stock Quantity:</label>
+                                        <input type="text" class="form-control" id="stock" name="stock"
+                                            value="<?= htmlspecialchars($stock) ?>" readonly>
+                                    </div>
+									<div class="form-group sizequantity">
+                                        <label for="stock S">Size S:</label>
+                                        <input type="text" class="form-control" id="stock" name="stock"
+                                            value="<?= htmlspecialchars($stock) ?>" readonly>
+										<label for="stock M">Size M:</label>
+                                        <input type="text" class="form-control" id="stock" name="stock"
+                                            value="<?= htmlspecialchars($stock) ?>" readonly>
+										<label for="stock L">Size L:</label>
                                         <input type="text" class="form-control" id="stock" name="stock"
                                             value="<?= htmlspecialchars($stock) ?>" readonly>
                                     </div>
