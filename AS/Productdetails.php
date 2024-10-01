@@ -50,10 +50,6 @@
 		#uploadButton {
             margin-top: 30px; /* Adjust the value as needed */
         }
-		
-		.sizequantity {
-			display: none;
-		}
     </style>
 </head>
 <body>
@@ -67,7 +63,13 @@
         $productName = $_SESSION['productName'];
         $price = $_SESSION['price'];
         $category = $_SESSION['category'];
-        $stock = $_SESSION['stock'];
+		if($category == 'Accessories'){
+			$stock = $_SESSION['stock'];
+        } else if($category == 'Shirts' || $category == 'Blazers'){
+			$stockS = isset($_SESSION['quantityS']) ? $_SESSION['quantityS'] : 0;
+            $stockM = isset($_SESSION['quantityM']) ? $_SESSION['quantityM'] : 0;
+            $stockL = isset($_SESSION['quantityL']) ? $_SESSION['quantityL'] : 0;
+		}
         $status = $_SESSION['status'];
 		if(isset($_SESSION['image']))
 			$image = $_SESSION['image'];
@@ -224,22 +226,29 @@
         									<option value="Accessories" <?= ($category == 'Accessories') ? 'selected' : '' ?>>Accessories</option>
     									</select>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="stock">Stock Quantity:</label>
-                                        <input type="text" class="form-control" id="stock" name="stock"
-                                            value="<?= htmlspecialchars($stock) ?>" readonly>
-                                    </div>
-									<div class="form-group sizequantity">
-                                        <label for="stock S">Size S:</label>
-                                        <input type="text" class="form-control" id="stock" name="stock"
-                                            value="<?= htmlspecialchars($stock) ?>" readonly>
-										<label for="stock M">Size M:</label>
-                                        <input type="text" class="form-control" id="stock" name="stock"
-                                            value="<?= htmlspecialchars($stock) ?>" readonly>
-										<label for="stock L">Size L:</label>
-                                        <input type="text" class="form-control" id="stock" name="stock"
-                                            value="<?= htmlspecialchars($stock) ?>" readonly>
-                                    </div>
+									<?php
+									if ($category == 'Accessories') {
+    									echo '
+    									<div class="form-group">
+        									<label for="stock">Stock Quantity:</label>
+        									<input type="text" class="form-control" id="stock" name="stock"
+            									value="' . htmlspecialchars($stock) . '" readonly>
+    									</div>';
+									} elseif ($category == 'Shirts' || $category == 'Blazers') {
+    									echo '
+    									<div class="form-group">
+        									<label for="stockS">Size S:</label>
+        									<input type="text" class="form-control" id="stockS" name="stockS"
+            									value="' . htmlspecialchars($stockS) . '" readonly>
+        									<label for="stockM">Size M:</label>
+        									<input type="text" class="form-control" id="stockM" name="stockM"
+            									value="' . htmlspecialchars($stockM) . '" readonly>
+        									<label for="stockL">Size L:</label>
+        									<input type="text" class="form-control" id="stockL" name="stockL"
+            									value="' . htmlspecialchars($stockL) . '" readonly>
+    									</div>';
+									}
+									?>
                                     <div class="form-group">
 										<label for="status">Status:</label>
     									<select class="form-control" id="status" name="status" disabled>
