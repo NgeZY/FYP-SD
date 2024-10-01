@@ -239,10 +239,10 @@
     									<div class="form-group">
         									<label for="stockS">Size S:</label>
         									<input type="text" class="form-control" id="stockS" name="stockS"
-            									value="' . htmlspecialchars($stockS) . '" readonly>
+            									value="' . htmlspecialchars($stockS) . '" style="margin-bottom: 13px;" readonly>
         									<label for="stockM">Size M:</label>
         									<input type="text" class="form-control" id="stockM" name="stockM"
-            									value="' . htmlspecialchars($stockM) . '" readonly>
+            									value="' . htmlspecialchars($stockM) . '" style="margin-bottom: 13px;" readonly>
         									<label for="stockL">Size L:</label>
         									<input type="text" class="form-control" id="stockL" name="stockL"
             									value="' . htmlspecialchars($stockL) . '" readonly>
