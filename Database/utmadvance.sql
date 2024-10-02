@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2024 at 05:56 AM
+-- Generation Time: Oct 02, 2024 at 02:23 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -64,7 +64,7 @@ CREATE TABLE `blazer` (
 --
 
 INSERT INTO `blazer` (`BlazerID`, `ProductID`, `ProductName`, `SizeS`, `SizeM`, `SizeL`) VALUES
-(1, 3, 'Test3', 20, 10, 1);
+(7, 3, 'Test3', 10, 15, 7);
 
 -- --------------------------------------------------------
 
@@ -185,8 +185,9 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQuantity`, `Status`, `Image`) VALUES
 (1, 'Test', 10.00, 'Shirts', 9, 'In Stock', '../Products/Screenshot (473).png'),
-(3, 'Test3', 18.00, 'Blazers', 31, 'Not In Stock', NULL),
-(4, 'Test4', 45.00, 'Accessories', 29, 'In Stock', NULL);
+(3, 'Test3', 18.00, 'Blazers', 32, 'Not In Stock', NULL),
+(4, 'Test4', 45.00, 'Accessories', 29, 'In Stock', NULL),
+(5, 'Test5', 23.00, 'Shirts', 28, 'In Stock', NULL);
 
 -- --------------------------------------------------------
 
@@ -208,7 +209,8 @@ CREATE TABLE `shirt` (
 --
 
 INSERT INTO `shirt` (`ShirtID`, `ProductID`, `ProductName`, `SizeS`, `SizeM`, `SizeL`) VALUES
-(1, 1, 'Test', 3, 2, 4);
+(1, 1, 'Test', 3, 2, 4),
+(3, 5, 'Test5', 12, 13, 3);
 
 -- --------------------------------------------------------
 
@@ -272,7 +274,7 @@ ALTER TABLE `shirt`
 -- AUTO_INCREMENT for table `blazer`
 --
 ALTER TABLE `blazer`
-  MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `pending_verification`
@@ -284,13 +286,13 @@ ALTER TABLE `pending_verification`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `shirt`
 --
 ALTER TABLE `shirt`
-  MODIFY `ShirtID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ShirtID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

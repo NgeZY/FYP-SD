@@ -182,7 +182,7 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
                                     <tr>
                                         <th scope="col">ID</th>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Price</th>
+                                        <th scope="col">Price (RM)</th>
                                         <th scope="col">Category</th>
                                         <th scope="col">Stock Quantity</th>
                                         <th scope="col">Status</th>
