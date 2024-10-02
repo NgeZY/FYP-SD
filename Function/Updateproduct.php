@@ -39,6 +39,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION['price'] = $price;
                             $_SESSION['category'] = $category;
 							$_SESSION['stock'] = $stock;
+							$_SESSION['quantityS'] = $sizeS;
+							$_SESSION['quantityM'] = $sizeM;
+							$_SESSION['quantityL'] = $sizeL;
                             $_SESSION['status'] = $status;
                             // Success message
                             echo "<script>alert('Product details and sizes inserted successfully'); window.location.href='../AS/Productdetails.php';</script>";
