@@ -46,9 +46,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION['productName'] = $productName;
                         $_SESSION['price'] = $price;
                         $_SESSION['category'] = $category;
-                        $_SESSION['stockS'] = $sizeS;
-                        $_SESSION['stockM'] = $sizeM;
-                        $_SESSION['stockL'] = $sizeL;
+                        $_SESSION['quantityS'] = $sizeS;
+                        $_SESSION['quantityM'] = $sizeM;
+                        $_SESSION['quantityL'] = $sizeL;
                         $_SESSION['status'] = $status;
 
                         // Success message

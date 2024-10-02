@@ -64,11 +64,9 @@
         $price = $_SESSION['price'];
         $category = $_SESSION['category'];
 		$stock = $_SESSION['stock'];
-        if($category == 'Shirts' || $category == 'Blazers'){
-			$stockS = isset($_SESSION['quantityS']) ? $_SESSION['quantityS'] : 0;
-            $stockM = isset($_SESSION['quantityM']) ? $_SESSION['quantityM'] : 0;
-            $stockL = isset($_SESSION['quantityL']) ? $_SESSION['quantityL'] : 0;
-		}
+		$stockS = isset($_SESSION['quantityS']) ? $_SESSION['quantityS'] : 0;
+        $stockM = isset($_SESSION['quantityM']) ? $_SESSION['quantityM'] : 0;
+        $stockL = isset($_SESSION['quantityL']) ? $_SESSION['quantityL'] : 0;
         $status = $_SESSION['status'];
 		if(isset($_SESSION['image']))
 			$image = $_SESSION['image'];

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2024 at 05:22 AM
+-- Generation Time: Oct 02, 2024 at 05:56 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -58,6 +58,13 @@ CREATE TABLE `blazer` (
   `SizeM` int(11) DEFAULT NULL,
   `SizeL` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `blazer`
+--
+
+INSERT INTO `blazer` (`BlazerID`, `ProductID`, `ProductName`, `SizeS`, `SizeM`, `SizeL`) VALUES
+(1, 3, 'Test3', 20, 10, 1);
 
 -- --------------------------------------------------------
 
@@ -177,9 +184,9 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQuantity`, `Status`, `Image`) VALUES
-(1, 'Test', 10.00, 'Shirts', 8, 'In Stock', '../Products/Screenshot (473).png'),
-(3, 'Test3', 18.00, 'Blazers', 111, 'Not In Stock', NULL),
-(4, 'Test4', 45.00, 'Accessories', 23, 'In Stock', NULL);
+(1, 'Test', 10.00, 'Shirts', 9, 'In Stock', '../Products/Screenshot (473).png'),
+(3, 'Test3', 18.00, 'Blazers', 31, 'Not In Stock', NULL),
+(4, 'Test4', 45.00, 'Accessories', 29, 'In Stock', NULL);
 
 -- --------------------------------------------------------
 
@@ -195,6 +202,13 @@ CREATE TABLE `shirt` (
   `SizeM` int(11) DEFAULT NULL,
   `SizeL` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `shirt`
+--
+
+INSERT INTO `shirt` (`ShirtID`, `ProductID`, `ProductName`, `SizeS`, `SizeM`, `SizeL`) VALUES
+(1, 1, 'Test', 3, 2, 4);
 
 -- --------------------------------------------------------
 
@@ -258,7 +272,7 @@ ALTER TABLE `shirt`
 -- AUTO_INCREMENT for table `blazer`
 --
 ALTER TABLE `blazer`
-  MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pending_verification`
@@ -276,7 +290,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `shirt`
 --
 ALTER TABLE `shirt`
-  MODIFY `ShirtID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ShirtID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
