@@ -192,9 +192,6 @@
 
 									<label for="sizeL">Size L - Quantity:</label>
 									<input type="number" class="form-control mb-3" id="sizeL" name="sizeL" placeholder="Enter quantity for Size L" oninput="calculateTotal()" style="margin-bottom: 13px;">
-	
-									<label for="totalQuantity">Total Quantity:</label>
-									<input type="number" class="form-control" id="totalQuantity" name="totalQuantity" readonly>
 									</div>
 
 									<div class="form-group">
@@ -227,7 +224,6 @@
 									document.getElementById('sizeS').value = ''; 
 									document.getElementById('sizeM').value = '';
 									document.getElementById('sizeL').value = '';
-									document.getElementById('totalQuantity').value = ''; 
 									document.getElementById('stockQuantity').value = ''; 
 										}
 									}
@@ -240,7 +236,6 @@
 									var total = sizeS + sizeM + sizeL;
     
    
-									document.getElementById('totalQuantity').value = total;
 									document.getElementById('stockQuantity').value = total;
 									}
 									</script>
