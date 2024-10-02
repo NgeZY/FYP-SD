@@ -162,46 +162,89 @@
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-body">
-                                <form id="productForm" method="POST" action="../Function/Addproduct.php">
-									<input type="hidden" id="formMode" value="view">
-                                    <div class="form-group">
-                                        <label for="productName">Product Name:</label>
-                                        <input type="text" class="form-control" id="productName" name="productName" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="price">Price:</label>
-                                        <input type="text" class="form-control" id="price" name="price" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="category">Category:</label>
-										<select class = "form-control" id="category" name="category" required> 
-											<option value = "">Select Category</option>
-											<option value = "Shirts">Shirts</option>
-											<option value = "Blazers">Blazers</option>
-											<option value = "Accessories">Accessories</option>
-										</select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="stock">Stock Quantity:</label>
-                                        <input type="text" class="form-control" id="stock" name="stock" required>
-                                    </div>
-                                    <div class="form-group">
-										<label for="status">Status:</label>
-    									<select class="form-control" id="status" name="status" required>
-											<option value = ""></option>
-        									<option value = "In Stock">In Stock</option>
-        									<option value = "Not In Stock">Not In Stock</option>
-    									</select>
+                               <form id="productForm" method="POST" action="../Function/Addproduct.php">
+									<div class="form-group">
+										<label for="productName">Product Name:</label>
+										<input type="text" class="form-control" id="productName" name="productName" required>
 									</div>
-                                    <div class="button-container">
-                                        <button type="submit" id="addButton" class="btn btn-success text-white">Add Product</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+									<div class="form-group">
+										<label for="price">Price:</label>
+										<input type="text" class="form-control" id="price" name="price" required>
+									</div>
+
+									<div class="form-group">
+										<label for="category">Category:</label>
+										<select class="form-control" id="category" name="category" required onchange="toggleSizeQuantityFields()">
+										<option value="">Select Category</option>
+										<option value="Shirts">Shirts</option>
+										<option value="Blazers">Blazers</option>
+										<option value="Accessories">Accessories</option>
+										</select>
+									</div>
+
+									<div class="form-group sizequantity" style="display: none;" id="sizeQuantityDiv">
+									<label for="sizeS">Size S - Quantity:</label>
+									<input type="number" class="form-control" id="sizeS" name="sizeS" placeholder="Enter quantity for Size S" oninput="calculateTotal()">
+
+									<label for="sizeM">Size M - Quantity:</label>
+									<input type="number" class="form-control" id="sizeM" name="sizeM" placeholder="Enter quantity for Size M" oninput="calculateTotal()">
+
+									<label for="sizeL">Size L - Quantity:</label>
+									<input type="number" class="form-control" id="sizeL" name="sizeL" placeholder="Enter quantity for Size L" oninput="calculateTotal()">
+
+									<label for="totalQuantity">Total Quantity:</label>
+									<input type="number" class="form-control" id="totalQuantity" name="totalQuantity" readonly>
+									</div>
+
+									<div class="form-group">
+									<label for="stockQuantity">Stock Quantity:</label>
+									<input type="number" class="form-control" id="stockQuantity" name="stockQuantity" readonly>
+									</div>
+
+									<div class="form-group">
+									<label for="status">Status:</label>
+									<select class="form-control" id="status" name="status" required>
+										<option value="In Stock">In Stock</option>
+										<option value="Not In Stock">Not In Stock</option>
+									</select>
+									</div>
+
+									<div class="form-group">
+									<button type="submit" class="btn btn-success">Submit</button>
+									</div>
+									</form>
+
+								<script>
+								function toggleSizeQuantityFields() {
+									var category = document.getElementById('category').value;
+									var sizeQuantityDiv = document.getElementById('sizeQuantityDiv');
+
+									if (category === 'Shirts' || category === 'Blazers') {
+										sizeQuantityDiv.style.display = 'block'; 
+									} else {
+									sizeQuantityDiv.style.display = 'none'; 
+									document.getElementById('sizeS').value = ''; 
+									document.getElementById('sizeM').value = '';
+									document.getElementById('sizeL').value = '';
+									document.getElementById('totalQuantity').value = ''; 
+									document.getElementById('stockQuantity').value = ''; 
+										}
+									}
+
+								function calculateTotal() {
+									var sizeS = parseInt(document.getElementById('sizeS').value) || 0;
+									var sizeM = parseInt(document.getElementById('sizeM').value) || 0;
+									var sizeL = parseInt(document.getElementById('sizeL').value) || 0;
+
+									var total = sizeS + sizeM + sizeL;
+    
+   
+									document.getElementById('totalQuantity').value = total;
+									document.getElementById('stockQuantity').value = total;
+									}
+									</script>
+
             <footer class="footer text-center">
                 All Rights Reserved by UTM Advance. Designed and Developed by UTM Advance Team.
             </footer>

@@ -2,47 +2,42 @@
 session_start();
 include 'config.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Get the form data
-    $productName = $_POST['productName'];
-    $price = $_POST['price'];
-    $category = $_POST['category'];
-    $stock = $_POST['stock'];
-    $status = $_POST['status'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $productName = mysqli_real_escape_string($con, $_POST['productName']);
+    $price = mysqli_real_escape_string($con, $_POST['price']);
+    $category = mysqli_real_escape_string($con, $_POST['category']);
+    $stockQuantity = mysqli_real_escape_string($con, $_POST['stockQuantity']);
+    $status = mysqli_real_escape_string($con, $_POST['status']);
     
-    // Validate data (Optional: Add your own validation here)
+    // Insert into the Product table
+    $insertProductQuery = "INSERT INTO Product (ProductName, Price, Category, StockQuantity, Status)
+                           VALUES ('$productName', '$price', '$category', '$stockQuantity', '$status')";
+    
+    if (mysqli_query($con, $insertProductQuery)) {
+        $productID = mysqli_insert_id($con); // Get the last inserted product ID
 
-    // Check if the product name already exists
-    $checkQuery = $con->prepare("SELECT COUNT(*) FROM product WHERE ProductName = ?");
-    $checkQuery->bind_param("s", $productName);
-    $checkQuery->execute();
-    $checkQuery->bind_result($productCount);
-    $checkQuery->fetch();
-    $checkQuery->close();
+        // If category is Blazers or Shirts, insert size details into the respective table
+        if ($category === 'Blazers' || $category === 'Shirts') {
+            $sizeS = mysqli_real_escape_string($con, $_POST['sizeS']);
+            $sizeM = mysqli_real_escape_string($con, $_POST['sizeM']);
+            $sizeL = mysqli_real_escape_string($con, $_POST['sizeL']);
 
-    if ($productCount > 0) {
-        // Product already exists
-        echo "<script>alert('Error: Product name already exists!'); window.history.back();</script>";
-    } else {
-        // Prepare an SQL statement to insert the product
-        $stmt = $con->prepare("INSERT INTO product (ProductName, Price, Category, StockQuantity, Status) VALUES (?, ?, ?, ?, ?)");
-        
-        // Bind parameters (s = string, i = integer, d = double, etc.)
-        $stmt->bind_param("sssis", $productName, $price, $category, $stock, $status);
-        
-        // Execute the query
-        if ($stmt->execute()) {
-            echo "<script>alert('Product added successfully!'); window.location.href = '../AS/Product.php';</script>";
-        } else {
-            // Handle error
-            echo "<script>alert('Error: " . addslashes($stmt->error) . "'); window.history.back();</script>";
+            if ($category === 'Blazers') {
+                $insertBlazerQuery = "INSERT INTO blazer (ProductID, ProductName, SizeS, SizeM, SizeL)
+                                      VALUES ('$productID', '$productName', '$sizeS', '$sizeM', '$sizeL')";
+                mysqli_query($con, $insertBlazerQuery);
+            } elseif ($category === 'Shirts') {
+                $insertShirtQuery = "INSERT INTO shirt (ProductID, ProductName, SizeS, SizeM, SizeL)
+                                     VALUES ('$productID', '$productName', '$sizeS', '$sizeM', '$sizeL')";
+                mysqli_query($con, $insertShirtQuery);
+            }
         }
-        
-        // Close the statement
-        $stmt->close();
+
+        // Redirect or show success message
+        header('Location: ../AS/Product.php');
+        exit;
+    } else {
+        echo "Error: " . mysqli_error($con);
     }
 }
-
-// Close the connection
-$con->close();
 ?>
