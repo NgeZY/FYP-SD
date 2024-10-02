@@ -71,9 +71,9 @@
                 </a>
                 <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 1;">
                     <div class="navbar-nav w-100 overflow-hidden">
-                        <a href="" class="nav-item nav-link">Shirts</a>
-                        <a href="" class="nav-item nav-link">Blazers</a>
-                        <a href="" class="nav-item nav-link">Accessories</a>
+                        <a href="mainpage.php?category=Shirts" class="nav-item nav-link">Shirts</a>
+                        <a href="mainpage.php?category=Blazers" class="nav-item nav-link">Blazers</a>
+                        <a href="mainpage.php?category=Accessories" class="nav-item nav-link">Accessories</a>
                     </div>
                 </nav>
             </div>
