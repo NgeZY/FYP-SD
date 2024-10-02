@@ -211,7 +211,7 @@
 									</div>
 
 									<div class="form-group">
-									<button type="submit" class="btn btn-success">Submit</button>
+									<button type="submit" class="btn btn-success text-white">Submit</button>
 									</div>
 									</form>
 
@@ -243,14 +243,17 @@
 									document.getElementById('totalQuantity').value = total;
 									document.getElementById('stockQuantity').value = total;
 									}
-									</script>
-
-      
-        </div>
-    </div>
-	 <footer class="footer text-center">
-                All Rights Reserved by UTM Advance. Designed and Developed by UTM Advance Team.
-            </footer>
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer text-center">
+			&copy; 2024 UTM Advance
+			</footer>
+		</div>
+	</div>
 <!-- All Jquery -->
 <script src="assets/libs/jquery/dist/jquery.min.js"></script>
 <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
