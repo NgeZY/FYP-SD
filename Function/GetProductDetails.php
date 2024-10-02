@@ -41,39 +41,21 @@ if (isset($_GET['id'])) {
             if ($category == "Blazers" || $category == "Shirts") {
 				$table2 = ($category == "Blazers") ? "blazer" : "shirt";
                 // Query to get size and quantity based on category
-                $sizeQuery = "SELECT Size, Quantity FROM $table2 WHERE ProductID = ?";
-                if ($sizeStmt = mysqli_prepare($con, $sizeQuery)) {
-                    mysqli_stmt_bind_param($sizeStmt, "s", $productID);
-                    mysqli_stmt_execute($sizeStmt);
-                    $sizeResult = mysqli_stmt_get_result($sizeStmt);
+                $query2 = "SELECT SizeS, SizeM, SizeL FROM $table2 WHERE ProductID = ?";
+                if ($stmt2 = mysqli_prepare($con, $query2)) {
+                    mysqli_stmt_bind_param($stmt2, "s", $productID);
+                    mysqli_stmt_execute($stmt2);
+                    $result2 = mysqli_stmt_get_result($stmt2);
                     
-                    if (!$sizeResult) {
+                    if (!$result2) {
                         die("Size query failed: " . mysqli_error($con));
                     }
+					$size = mysqli_fetch_assoc($result2);
+					$_SESSION['quantityS'] = htmlspecialchars($size['SizeS']);
+					$_SESSION['quantityM'] = htmlspecialchars($size['SizeM']);
+					$_SESSION['quantityL'] = htmlspecialchars($size['SizeL']);
 
-                    // Use switch case to store size quantities in different session variables
-                    while ($sizeRow = mysqli_fetch_assoc($sizeResult)) {
-                        $size = $sizeRow['Size'];
-                        $quantity = htmlspecialchars($sizeRow['Quantity']);
-
-                        switch ($size) {
-                            case 'S':
-                                $_SESSION['quantityS'] = $quantity;
-                                break;
-                            case 'M':
-                                $_SESSION['quantityM'] = $quantity;
-                                break;
-                            case 'L':
-                                $_SESSION['quantityL'] = $quantity;
-                                break;
-                            default:
-                                // Handle unexpected size
-                                $_SESSION['quantityOther'] = $quantity;
-                                break;
-                        }
-                    }
-
-                    mysqli_stmt_close($sizeStmt);
+                    mysqli_stmt_close($stmt2);
                 } else {
                     die("Failed to prepare size SQL statement: " . mysqli_error($con));
                 }
