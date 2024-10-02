@@ -185,21 +185,21 @@
 
 									<div class="form-group sizequantity" style="display: none;" id="sizeQuantityDiv">
 									<label for="sizeS">Size S - Quantity:</label>
-									<input type="number" class="form-control" id="sizeS" name="sizeS" placeholder="Enter quantity for Size S" oninput="calculateTotal()">
+									<input type="number" class="form-control mb-3" id="sizeS" name="sizeS" placeholder="Enter quantity for Size S" oninput="calculateTotal()" style="margin-bottom: 13px;">
 
 									<label for="sizeM">Size M - Quantity:</label>
-									<input type="number" class="form-control" id="sizeM" name="sizeM" placeholder="Enter quantity for Size M" oninput="calculateTotal()">
+									<input type="number" class="form-control mb-3" id="sizeM" name="sizeM" placeholder="Enter quantity for Size M" oninput="calculateTotal()" style="margin-bottom: 13px;">
 
 									<label for="sizeL">Size L - Quantity:</label>
-									<input type="number" class="form-control" id="sizeL" name="sizeL" placeholder="Enter quantity for Size L" oninput="calculateTotal()">
-
+									<input type="number" class="form-control mb-3" id="sizeL" name="sizeL" placeholder="Enter quantity for Size L" oninput="calculateTotal()" style="margin-bottom: 13px;">
+	
 									<label for="totalQuantity">Total Quantity:</label>
 									<input type="number" class="form-control" id="totalQuantity" name="totalQuantity" readonly>
 									</div>
 
 									<div class="form-group">
 									<label for="stockQuantity">Stock Quantity:</label>
-									<input type="number" class="form-control" id="stockQuantity" name="stockQuantity" readonly>
+									<input type="number" class="form-control" id="stockQuantity" name="stockQuantity" placeholder="Enter stock quantity">
 									</div>
 
 									<div class="form-group">
@@ -245,11 +245,12 @@
 									}
 									</script>
 
-            <footer class="footer text-center">
-                All Rights Reserved by UTM Advance. Designed and Developed by UTM Advance Team.
-            </footer>
+      
         </div>
     </div>
+	 <footer class="footer text-center">
+                All Rights Reserved by UTM Advance. Designed and Developed by UTM Advance Team.
+            </footer>
 <!-- All Jquery -->
 <script src="assets/libs/jquery/dist/jquery.min.js"></script>
 <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
