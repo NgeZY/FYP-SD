@@ -63,9 +63,8 @@
         $productName = $_SESSION['productName'];
         $price = $_SESSION['price'];
         $category = $_SESSION['category'];
-		if($category == 'Accessories'){
-			$stock = $_SESSION['stock'];
-        } else if($category == 'Shirts' || $category == 'Blazers'){
+		$stock = $_SESSION['stock'];
+        if($category == 'Shirts' || $category == 'Blazers'){
 			$stockS = isset($_SESSION['quantityS']) ? $_SESSION['quantityS'] : 0;
             $stockM = isset($_SESSION['quantityM']) ? $_SESSION['quantityM'] : 0;
             $stockL = isset($_SESSION['quantityL']) ? $_SESSION['quantityL'] : 0;
@@ -219,36 +218,27 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="category">Category:</label>
-										<select class="form-control" id="category" name="category" disabled>
-        									<option value="">Select Category</option>
-        									<option value="Shirts" <?= ($category == 'Shirts') ? 'selected' : '' ?>>Shirts</option>
-        									<option value="Blazers" <?= ($category == 'Blazers') ? 'selected' : '' ?>>Blazers</option>
-        									<option value="Accessories" <?= ($category == 'Accessories') ? 'selected' : '' ?>>Accessories</option>
-    									</select>
+                                        <select class="form-control" id="category" name="category" disabled>
+                                            <option value="">Select Category</option>
+                                            <option value="Shirts" <?= ($category == 'Shirts') ? 'selected' : '' ?>>Shirts</option>
+                                            <option value="Blazers" <?= ($category == 'Blazers') ? 'selected' : '' ?>>Blazers</option>
+                                            <option value="Accessories" <?= ($category == 'Accessories') ? 'selected' : '' ?>>Accessories</option>
+                                        </select>
                                     </div>
-									<?php
-									if ($category == 'Accessories') {
-    									echo '
-    									<div class="form-group">
-        									<label for="stock">Stock Quantity:</label>
-        									<input type="text" class="form-control" id="stock" name="stock"
-            									value="' . htmlspecialchars($stock) . '" readonly>
-    									</div>';
-									} elseif ($category == 'Shirts' || $category == 'Blazers') {
-    									echo '
-    									<div class="form-group">
-        									<label for="stockS">Size S:</label>
-        									<input type="text" class="form-control" id="stockS" name="stockS"
-            									value="' . htmlspecialchars($stockS) . '" style="margin-bottom: 13px;" readonly>
-        									<label for="stockM">Size M:</label>
-        									<input type="text" class="form-control" id="stockM" name="stockM"
-            									value="' . htmlspecialchars($stockM) . '" style="margin-bottom: 13px;" readonly>
-        									<label for="stockL">Size L:</label>
-        									<input type="text" class="form-control" id="stockL" name="stockL"
-            									value="' . htmlspecialchars($stockL) . '" readonly>
-    									</div>';
-									}
-									?>
+                                    <!-- Stock quantity for Accessories -->
+                                    <div id="accessoriesStock" class="form-group" style="display: <?= ($category == 'Accessories') ? 'block' : 'none' ?>;">
+                                        <label for="stock">Stock Quantity:</label>
+                                        <input type="text" class="form-control" id="stock" name="stock" value="<?= htmlspecialchars($stock) ?>" readonly>
+                                    </div>
+                                    <!-- Stock sizes for Shirts and Blazers -->
+                                    <div id="sizeStock" class="form-group" style="display: <?= ($category == 'Shirts' || $category == 'Blazers') ? 'block' : 'none' ?>;">
+                                        <label for="stockS">Size S:</label>
+                                        <input type="text" class="form-control" id="stockS" name="stockS" value="<?= htmlspecialchars($stockS) ?>" style="margin-bottom: 13px;" readonly>
+                                        <label for="stockM">Size M:</label>
+                                        <input type="text" class="form-control" id="stockM" name="stockM" value="<?= htmlspecialchars($stockM) ?>" style="margin-bottom: 13px;" readonly>
+                                        <label for="stockL">Size L:</label>
+                                        <input type="text" class="form-control" id="stockL" name="stockL" value="<?= htmlspecialchars($stockL) ?>" readonly>
+                                    </div>
                                     <div class="form-group">
 										<label for="status">Status:</label>
     									<select class="form-control" id="status" name="status" disabled>
@@ -321,13 +311,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     backButton.addEventListener('click', function() {
-        // Make all input fields readonly
-        productForm.querySelectorAll('input, select').forEach(function(element) {
-            element.setAttribute('readonly', true);
-            element.setAttribute('disabled', true); // Disable select fields
-        });
-        editButton.textContent = 'Edit';
-        backButton.style.display = 'none'; // Hide the Back button
+        location.reload();
     });
 });
 
@@ -338,6 +322,22 @@ document.getElementById('deleteButton').addEventListener('click', function() {
     }
 });
 
+document.getElementById('category').addEventListener('change', function () {
+    var selectedCategory = this.value;
+
+    // Show/Hide fields based on category
+    if (selectedCategory === 'Accessories') {
+        document.getElementById('accessoriesStock').style.display = 'block';
+        document.getElementById('sizeStock').style.display = 'none';
+    } else if (selectedCategory === 'Shirts' || selectedCategory === 'Blazers') {
+        document.getElementById('accessoriesStock').style.display = 'none';
+        document.getElementById('sizeStock').style.display = 'block';
+    } else {
+        // Hide all if no valid category is selected
+        document.getElementById('accessoriesStock').style.display = 'none';
+        document.getElementById('sizeStock').style.display = 'none';
+    }
+});
 </script>
 </body>
 

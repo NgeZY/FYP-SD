@@ -28,10 +28,7 @@ if (isset($_GET['id'])) {
             $_SESSION['price'] = htmlspecialchars($productDetails['Price']);
             $_SESSION['category'] = htmlspecialchars($productDetails['Category']);
             $category = $_SESSION['category'];
-            
-            if ($category == "Accessories") {
-                $_SESSION['stock'] = htmlspecialchars($productDetails['StockQuantity']);
-            }
+            $_SESSION['stock'] = htmlspecialchars($productDetails['StockQuantity']);
 
             $_SESSION['status'] = htmlspecialchars($productDetails['Status']);
             if (!empty($productImagePath)) {
