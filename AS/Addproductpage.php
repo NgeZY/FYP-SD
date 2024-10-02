@@ -216,14 +216,17 @@
 								function toggleSizeQuantityFields() {
 									var category = document.getElementById('category').value;
 									var sizeQuantityDiv = document.getElementById('sizeQuantityDiv');
+									var stockquantity = document.getElementById('stockQuantity');
 
 									if (category === 'Shirts' || category === 'Blazers') {
-										sizeQuantityDiv.style.display = 'block'; 
+										sizeQuantityDiv.style.display = 'block';
+										stockQuantity.readOnly = true;
 									} else {
 									sizeQuantityDiv.style.display = 'none'; 
 									document.getElementById('sizeS').value = ''; 
 									document.getElementById('sizeM').value = '';
 									document.getElementById('sizeL').value = '';
+									stockquantity.readOnly = false;
 									document.getElementById('stockQuantity').value = ''; 
 										}
 									}
