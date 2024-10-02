@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- 主机： 127.0.0.1
--- 生成日期： 2024-09-29 09:52:23
--- 服务器版本： 10.4.32-MariaDB
--- PHP 版本： 8.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Oct 02, 2024 at 05:22 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 数据库： `utmadvance`
+-- Database: `utmadvance`
 --
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- 转存表中的数据 `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
@@ -47,21 +47,22 @@ INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Ver
 -- --------------------------------------------------------
 
 --
--- 表的结构 `blazer`
+-- Table structure for table `blazer`
 --
 
 CREATE TABLE `blazer` (
   `BlazerID` int(11) NOT NULL,
   `ProductID` int(11) DEFAULT NULL,
   `ProductName` varchar(255) DEFAULT NULL,
-  `Size` varchar(50) DEFAULT NULL,
-  `Quantity` int(11) DEFAULT NULL
+  `SizeS` int(11) DEFAULT NULL,
+  `SizeM` int(11) DEFAULT NULL,
+  `SizeL` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `customer`
+-- Table structure for table `customer`
 --
 
 CREATE TABLE `customer` (
@@ -75,7 +76,7 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- 转存表中的数据 `customer`
+-- Dumping data for table `customer`
 --
 
 INSERT INTO `customer` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
@@ -87,7 +88,7 @@ INSERT INTO `customer` (`Username`, `Password`, `Email`, `Address`, `Contact`, `
 -- --------------------------------------------------------
 
 --
--- 表的结构 `feedback`
+-- Table structure for table `feedback`
 --
 
 CREATE TABLE `feedback` (
@@ -98,7 +99,7 @@ CREATE TABLE `feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- 转存表中的数据 `feedback`
+-- Dumping data for table `feedback`
 --
 
 INSERT INTO `feedback` (`Name`, `Email`, `Subject`, `Message`) VALUES
@@ -113,7 +114,7 @@ INSERT INTO `feedback` (`Name`, `Email`, `Subject`, `Message`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `password`
+-- Table structure for table `password`
 --
 
 CREATE TABLE `password` (
@@ -121,7 +122,7 @@ CREATE TABLE `password` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- 转存表中的数据 `password`
+-- Dumping data for table `password`
 --
 
 INSERT INTO `password` (`Admin_password`) VALUES
@@ -130,7 +131,7 @@ INSERT INTO `password` (`Admin_password`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `pending_verification`
+-- Table structure for table `pending_verification`
 --
 
 CREATE TABLE `pending_verification` (
@@ -146,7 +147,7 @@ CREATE TABLE `pending_verification` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- 转存表中的数据 `pending_verification`
+-- Dumping data for table `pending_verification`
 --
 
 INSERT INTO `pending_verification` (`id`, `Username`, `Password`, `Email`, `Address`, `Contact`, `Role`, `verification_token`, `created_at`) VALUES
@@ -158,7 +159,7 @@ INSERT INTO `pending_verification` (`id`, `Username`, `Password`, `Email`, `Addr
 -- --------------------------------------------------------
 
 --
--- 表的结构 `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -172,31 +173,33 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- 转存表中的数据 `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQuantity`, `Status`, `Image`) VALUES
 (1, 'Test', 10.00, 'Shirts', 8, 'In Stock', '../Products/Screenshot (473).png'),
-(3, 'Test3', 18.00, 'Blazers', 111, 'Not In Stock', NULL);
+(3, 'Test3', 18.00, 'Blazers', 111, 'Not In Stock', NULL),
+(4, 'Test4', 45.00, 'Accessories', 23, 'In Stock', NULL);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `shirt`
+-- Table structure for table `shirt`
 --
 
 CREATE TABLE `shirt` (
   `ShirtID` int(11) NOT NULL,
   `ProductID` int(11) DEFAULT NULL,
   `ProductName` varchar(255) DEFAULT NULL,
-  `Size` varchar(50) DEFAULT NULL,
-  `Quantity` int(11) DEFAULT NULL
+  `SizeS` int(11) DEFAULT NULL,
+  `SizeM` int(11) DEFAULT NULL,
+  `SizeL` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `staff`
+-- Table structure for table `staff`
 --
 
 CREATE TABLE `staff` (
@@ -210,83 +213,83 @@ CREATE TABLE `staff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- 转存表中的数据 `staff`
+-- Dumping data for table `staff`
 --
 
 INSERT INTO `staff` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
 ('Staff Test', '$2y$10$l5BllUUfVNCC5FB4w1qN.OgiG40.h7BVT/Ul6lli9.36FvtJpeZti', 'ngezy041225@gmail.com', '1A, Jalan A', '01242332923', '753507', '');
 
 --
--- 转储表的索引
+-- Indexes for dumped tables
 --
 
 --
--- 表的索引 `blazer`
+-- Indexes for table `blazer`
 --
 ALTER TABLE `blazer`
   ADD PRIMARY KEY (`BlazerID`),
   ADD KEY `ProductID` (`ProductID`);
 
 --
--- 表的索引 `pending_verification`
+-- Indexes for table `pending_verification`
 --
 ALTER TABLE `pending_verification`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `Email` (`Email`);
 
 --
--- 表的索引 `product`
+-- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`ProductID`);
 
 --
--- 表的索引 `shirt`
+-- Indexes for table `shirt`
 --
 ALTER TABLE `shirt`
   ADD PRIMARY KEY (`ShirtID`),
   ADD KEY `ProductID` (`ProductID`);
 
 --
--- 在导出的表使用AUTO_INCREMENT
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- 使用表AUTO_INCREMENT `blazer`
+-- AUTO_INCREMENT for table `blazer`
 --
 ALTER TABLE `blazer`
   MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 使用表AUTO_INCREMENT `pending_verification`
+-- AUTO_INCREMENT for table `pending_verification`
 --
 ALTER TABLE `pending_verification`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- 使用表AUTO_INCREMENT `product`
+-- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- 使用表AUTO_INCREMENT `shirt`
+-- AUTO_INCREMENT for table `shirt`
 --
 ALTER TABLE `shirt`
   MODIFY `ShirtID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- 限制导出的表
+-- Constraints for dumped tables
 --
 
 --
--- 限制表 `blazer`
+-- Constraints for table `blazer`
 --
 ALTER TABLE `blazer`
   ADD CONSTRAINT `blazer_ibfk_1` FOREIGN KEY (`ProductID`) REFERENCES `product` (`ProductID`);
 
 --
--- 限制表 `shirt`
+-- Constraints for table `shirt`
 --
 ALTER TABLE `shirt`
   ADD CONSTRAINT `shirt_ibfk_1` FOREIGN KEY (`ProductID`) REFERENCES `product` (`ProductID`);

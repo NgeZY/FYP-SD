@@ -12,9 +12,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $_POST['price'];
     $stock = $_POST['stock'];
     $status = $_POST['status'];
-
+	if($category == "Shirts" || $category == "Blazers"){
+		$sizeS = $_POST['stockS'];
+		$sizeM = $_POST['stockM'];
+		$sizeL = $_POST['stockL'];
+		$stock = $sizeS + $sizeM + $sizeL;
+	}
     // Update the product in the database
     $sql = "UPDATE product SET ProductName = ?, Price = ?, Category = ?, StockQuantity = ?, Status = ? WHERE ProductID = ?";
+	if($category == "Shirts" || $category == "Blazers"){
+		$table = ($category == "Shirts") ? "shirt" : "blazer";
+		$sql2 = "UPDATE $table SET ProductName = ?, Quantity = ? WHERE ProductID = ?";
+	}
 
     if ($stmt = mysqli_prepare($con, $sql)) {
         // Bind parameters
