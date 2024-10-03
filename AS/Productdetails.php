@@ -223,19 +223,19 @@
                                             <option value="Accessories" <?= ($category == 'Accessories') ? 'selected' : '' ?>>Accessories</option>
                                         </select>
                                     </div>
-                                    <!-- Stock quantity for Accessories -->
-                                    <div id="accessoriesStock" class="form-group" style="display: <?= ($category == 'Accessories') ? 'block' : 'none' ?>;">
-                                        <label for="stock">Stock Quantity:</label>
-                                        <input type="text" class="form-control" id="stock" name="stock" value="<?= htmlspecialchars($stock) ?>" readonly>
-                                    </div>
                                     <!-- Stock sizes for Shirts and Blazers -->
                                     <div id="sizeStock" class="form-group" style="display: <?= ($category == 'Shirts' || $category == 'Blazers') ? 'block' : 'none' ?>;">
                                         <label for="stockS">Size S:</label>
-                                        <input type="text" class="form-control" id="stockS" name="stockS" value="<?= htmlspecialchars($stockS) ?>" style="margin-bottom: 13px;" readonly>
+                                        <input type="text" class="form-control" id="stockS" name="stockS" value="<?= htmlspecialchars($stockS) ?>" style="margin-bottom: 13px;" oninput="calculateTotal()" readonly>
                                         <label for="stockM">Size M:</label>
-                                        <input type="text" class="form-control" id="stockM" name="stockM" value="<?= htmlspecialchars($stockM) ?>" style="margin-bottom: 13px;" readonly>
+                                        <input type="text" class="form-control" id="stockM" name="stockM" value="<?= htmlspecialchars($stockM) ?>" style="margin-bottom: 13px;" oninput="calculateTotal()" readonly>
                                         <label for="stockL">Size L:</label>
-                                        <input type="text" class="form-control" id="stockL" name="stockL" value="<?= htmlspecialchars($stockL) ?>" readonly>
+                                        <input type="text" class="form-control" id="stockL" name="stockL" value="<?= htmlspecialchars($stockL) ?>" oninput="calculateTotal()" readonly>
+                                    </div>
+                                    <!-- Stock quantity for Accessories -->
+                                    <div id="accessoriesStock" class="form-group">
+                                        <label for="stock">Stock Quantity:</label>
+                                        <input type="text" class="form-control" id="stock" name="stock" value="<?= htmlspecialchars($stock) ?>" readonly>
                                     </div>
                                     <div class="form-group">
 										<label for="status">Status:</label>
@@ -289,6 +289,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var editButton = document.getElementById('editButton');
     var backButton = document.getElementById('backButton');
     var productForm = document.getElementById('productForm');
+	var stockquantity = document.getElementById('stock');
+	var category = document.getElementById('category').value;
 
     editButton.addEventListener('click', function() {
         var isReadOnly = productForm.querySelectorAll('input[readonly]').length > 0;
@@ -298,6 +300,11 @@ document.addEventListener("DOMContentLoaded", function() {
             // Enable inputs for editing
             productForm.querySelectorAll('input, select').forEach(function(element) {
                 element.removeAttribute('readonly');
+				if(category == "Accessories"){
+					stock.readOnly = false;
+				} else {
+					stock.readOnly = true;
+				}
 				element.removeAttribute('disabled');
             });
             editButton.textContent = 'Update';
@@ -322,20 +329,32 @@ document.getElementById('deleteButton').addEventListener('click', function() {
 
 document.getElementById('category').addEventListener('change', function () {
     var selectedCategory = this.value;
+	var stockquantity = document.getElementById('stock');
 
     // Show/Hide fields based on category
     if (selectedCategory === 'Accessories') {
-        document.getElementById('accessoriesStock').style.display = 'block';
         document.getElementById('sizeStock').style.display = 'none';
+		stockquantity.readOnly = false;
     } else if (selectedCategory === 'Shirts' || selectedCategory === 'Blazers') {
-        document.getElementById('accessoriesStock').style.display = 'none';
         document.getElementById('sizeStock').style.display = 'block';
+		stockquantity.readOnly = true;
     } else {
         // Hide all if no valid category is selected
         document.getElementById('accessoriesStock').style.display = 'none';
         document.getElementById('sizeStock').style.display = 'none';
     }
 });
+
+function calculateTotal() {
+	var sizeS = parseInt(document.getElementById('stockS').value) || 0;
+	var sizeM = parseInt(document.getElementById('stockM').value) || 0;
+	var sizeL = parseInt(document.getElementById('stockL').value) || 0;
+
+	var total = sizeS + sizeM + sizeL;
+    
+   
+	document.getElementById('stock').value = total;
+}
 </script>
 </body>
 

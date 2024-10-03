@@ -228,8 +228,8 @@
 									document.getElementById('sizeL').value = '';
 									stockquantity.readOnly = false;
 									document.getElementById('stockQuantity').value = ''; 
-										}
 									}
+								}
 
 								function calculateTotal() {
 									var sizeS = parseInt(document.getElementById('sizeS').value) || 0;
@@ -240,7 +240,7 @@
     
    
 									document.getElementById('stockQuantity').value = total;
-									}
+								}
 								</script>
 							</div>
 						</div>
