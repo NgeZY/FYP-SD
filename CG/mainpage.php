@@ -23,7 +23,17 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+	
+	<style>
+        .product-img img {
+            width: 100%;        
+            height: 350px;      
+            object-fit: cover; 
+        }
+    </style>
+	
 </head>
+
 
 <body>
 	<?php
