@@ -23,6 +23,17 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+	
+	
+    <style>
+        .product-img img {
+            width: 100%;        
+            height: 250px;      
+            object-fit: cover; 
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -201,7 +212,7 @@
 					$productImage = !empty($row['Image']) ? $row['Image'] : '../Products/default.png';
 					
         			echo '<div class="col-lg-4 col-md-6 pb-1">';
-        			echo '    <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">';
+        			echo '    <div class="cat-item d-flex flex-column border mb-4" style="padding: 80px;">';
         			echo '        <p class="text-right">' . $row['StockQuantity'] . ' Products</p>';
         			echo '        <a href="detail.php?id=' . $row['ProductID'] . '" class="cat-img position-relative overflow-hidden mb-3">';
         			echo '            <img class="img-fluid" src="' . $productImage. '" alt="">';
