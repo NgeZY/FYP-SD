@@ -28,7 +28,7 @@
 </head>
 
 <body>
-<?php
+	<?php
 	session_start();
 	$role = $_SESSION['role'];
 	?>
@@ -400,66 +400,33 @@
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Recent Comments</h4>
+                                <h4 class="card-title">Recent Feedbacks</h4>
                             </div>
                             <div class="comment-widgets scrollable">
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row m-t-0">
-                                    <div class="p-2"><img src="assets/images/users/1.jpg" alt="user" width="50"
-                                            class="rounded-circle"></div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">James Anderson</h6>
-                                        <span class="m-b-15 d-block">Lorem Ipsum is simply dummy text of the printing
-                                            and type setting industry. </span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">April 14, 2021</span> <span
-                                                class="label label-rounded label-primary">Pending</span> <span
-                                                class="action-icons">
-                                                <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                                <a href="javascript:void(0)"><i class="ti-check"></i></a>
-                                                <a href="javascript:void(0)"><i class="ti-heart"></i></a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row">
-                                    <div class="p-2"><img src="assets/images/users/4.jpg" alt="user" width="50"
-                                            class="rounded-circle"></div>
-                                    <div class="comment-text active w-100">
-                                        <h6 class="font-medium">Michael Jorden</h6>
-                                        <span class="m-b-15 d-block">Lorem Ipsum is simply dummy text of the printing
-                                            and type setting industry. </span>
-                                        <div class="comment-footer ">
-                                            <span class="text-muted float-end">April 14, 2021</span>
-                                            <span class="label label-success label-rounded">Approved</span>
-                                            <span class="action-icons active">
-                                                <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                                <a href="javascript:void(0)"><i class="icon-close"></i></a>
-                                                <a href="javascript:void(0)"><i class="ti-heart text-danger"></i></a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row">
-                                    <div class="p-2"><img src="assets/images/users/5.jpg" alt="user" width="50"
-                                            class="rounded-circle"></div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Johnathan Doeting</h6>
-                                        <span class="m-b-15 d-block">Lorem Ipsum is simply dummy text of the printing
-                                            and type setting industry. </span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">April 14, 2021</span>
-                                            <span class="label label-rounded label-danger">Rejected</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                                <a href="javascript:void(0)"><i class="ti-check"></i></a>
-                                                <a href="javascript:void(0)"><i class="ti-heart"></i></a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+							<?php
+                                // Database connection
+                                require '../Function/config.php';
+
+                                // SQL query to retrieve feedback
+                                $sql = "SELECT Name, Email, Message FROM feedback LIMIT 4"; // Assuming 'id' is the primary key in the feedback table
+                                $result = $con->query($sql);
+
+                                if ($result->num_rows > 0) {
+   
+									while($row = $result->fetch_assoc()) {
+										echo "<div class='comment-text w-100'>
+												<h6 style = 'font-size: 20px;'>" . htmlspecialchars($row["Name"]) . "</h6>
+												<span style = 'font-size: 15px;'>" . htmlspecialchars($row["Message"]) . "</span>
+												<span class='m-b-15 d-block'>Email: ". htmlspecialchars($row["Email"]) . "</span>
+											</div>";
+									}
+                                } else {
+                                    echo "<p>No feedback available.</p>";
+                                }
+
+                                // Close connection
+                                $con->close();
+                            ?>
                             </div>
                         </div>
                     </div>
