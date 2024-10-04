@@ -237,7 +237,7 @@
         <div class="row px-xl-5">
             <div class="col">
                 <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5">
-                    <img src="img/UTM.png" alt="" width="1000" height="1000">
+                    <img src="img/offer16.png" alt="" width="850" height="1000">
                     <div class="position-relative" style="z-index: 1;">
                         <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
                         <h1 class="mb-4 font-weight-semi-bold">UTM Collection</h1>
