@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2024 at 02:23 PM
+-- Generation Time: Oct 04, 2024 at 12:06 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
-('Admin Test', '$2y$10$Ed1c0GkmVyntXM3FYiZFbOz4NdKWsRR4KXFzCoYxULcWp9FBRKIwy', 'ngezheyu1225@gmail.com', '1A, Jalan A', '01110884238', '249738', '');
+('Admin Test', '$2y$10$Ed1c0GkmVyntXM3FYiZFbOz4NdKWsRR4KXFzCoYxULcWp9FBRKIwy', 'ngezheyu1225@gmail.com', '1A, Jalan A', '01110884238', '249738', '../Uploads/Screenshot (421).png');
 
 -- --------------------------------------------------------
 
@@ -186,8 +186,8 @@ CREATE TABLE `product` (
 INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQuantity`, `Status`, `Image`) VALUES
 (1, 'Test', 10.00, 'Shirts', 9, 'In Stock', '../Products/Screenshot (473).png'),
 (3, 'Test3', 18.00, 'Blazers', 32, 'Not In Stock', NULL),
-(4, 'Test4', 45.00, 'Accessories', 29, 'In Stock', NULL),
-(5, 'Test5', 23.00, 'Shirts', 28, 'In Stock', NULL);
+(4, 'Test4', 45.00, 'Accessories', 29, 'In Stock', '../Products/Screenshot 2024-09-28 181519.png'),
+(5, 'Test5', 23.00, 'Shirts', 28, 'In Stock', '../Products/Screenshot (469).png');
 
 -- --------------------------------------------------------
 
