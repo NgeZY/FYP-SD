@@ -25,11 +25,15 @@
     <link href="css/style.css" rel="stylesheet">
 	
 	<style>
-        .product-img img {
-            width: 100%;        
-            height: 350px;      
-            object-fit: cover; 
-        }
+    .product-img img {
+        width: 100%;        
+        height: 350px;      
+        object-fit: cover; 
+    }
+		
+	.product-item {
+		min-width: 450px;
+	}
     </style>
 	
 </head>
