@@ -91,21 +91,40 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
         
         <!-- Topbar header -->
         <header class="topbar" data-navbarbg="skin5">
-            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-                <div class="navbar-header" data-logobg="skin5">
-                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
-                            class="ti-menu ti-close"></i></a>
-                </div>
-                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                    <ul class="navbar-nav float-start me-auto">
-                        <!-- Search -->
-                    </ul>
-                    <ul class="navbar-nav float-end" style="font-size: 16px;">
-                        <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+		<nav class="navbar top-navbar navbar-expand-md navbar-dark">
+        <div class="navbar-header" data-logobg="skin5">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <a class="navbar-brand" href="index.html">
+                <!-- Logo icon -->
+                <img src="../CG/img/UTM.png" alt="" style="height: 40px; width: auto;">
+                <!-- End Logo icon -->
+            </a>
+            <!-- ============================================================== -->
+            <!-- Sidebar toggle (visible on mobile only) -->
+            <!-- ============================================================== -->
+            <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
+                <i class="ti-menu ti-close"></i>
+            </a>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Logo -->
+        <!-- ============================================================== -->
+        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+            <!-- ============================================================== -->
+            <!-- Nav items and right side controls -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav float-start me-auto">
+                <!-- Optional: Add items to the left side if needed -->
+            </ul>
+            <ul class="navbar-nav float-end" style="font-size: 16px;">
+                <!-- Sign out button -->
+                <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
+            </ul>
+        </div>
+    </nav>
+</header>
 
         <!-- Left Sidebar -->
         <aside class="left-sidebar" data-sidebarbg="skin6">
