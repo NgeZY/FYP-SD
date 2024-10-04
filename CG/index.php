@@ -200,10 +200,12 @@
 			require('../Function/config.php');
 
 			$sql = "SELECT * FROM (
-            			SELECT *, ROW_NUMBER() OVER (PARTITION BY Category ORDER BY ProductID) AS row_num
-            			FROM product
-        			) AS temp
-        			WHERE row_num = 1"; 
+					SELECT *, 
+					(SELECT COUNT(ProductID) FROM product AS p2 WHERE p2.Category = p1.Category) AS product_count
+					FROM product AS p1
+					GROUP BY Category
+					) AS temp
+					GROUP BY Category";
 
 			$result = mysqli_query($con, $sql); // Execute the query
 
@@ -213,7 +215,7 @@
 					
         			echo '<div class="col-lg-4 col-md-6 pb-1">';
         			echo '    <div class="cat-item d-flex flex-column border mb-4" style="padding: 80px;">';
-        			echo '        <p class="text-right">' . $row['StockQuantity'] . ' Products</p>';
+        			echo '        <p class="text-right">' . $row['product_count'] . ' Products</p>';
         			echo '        <a href="detail.php?id=' . $row['ProductID'] . '" class="cat-img position-relative overflow-hidden mb-3">';
         			echo '            <img class="img-fluid" src="' . $productImage. '" alt="">';
         			echo '        </a>';

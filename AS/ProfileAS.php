@@ -90,7 +90,7 @@
             <!-- ============================================================== -->
             <!-- Logo -->
             <!-- ============================================================== -->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
                 <!-- Logo icon -->
                 <img src="../CG/img/UTM.png" alt="" style="height: 40px; width: auto;">
                 <!-- End Logo icon -->

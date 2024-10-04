@@ -70,10 +70,11 @@
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin5">
                     <!-- Logo -->
-                    <a class="navbar-brand" href="index.html">
-                        <!-- Logo icon -->
-                       
-                        <!--End Logo icon -->
+                    <a class="navbar-brand" href="index.php">
+						<!-- Logo icon -->
+						<img src="../CG/img/UTM.png" alt="" style="height: 40px; width: auto;">
+						<!-- End Logo icon -->
+					</a>
                         <!-- Logo text -->
                         
                     <!-- End Logo -->

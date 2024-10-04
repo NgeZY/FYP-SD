@@ -95,12 +95,12 @@
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin5">
                     <!-- Logo -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="index.php">
                         <!-- Logo icon -->
-                       
+						<img src="../CG/img/UTM.png" alt="" style="height: 40px; width: auto;">
                         <!--End Logo icon -->
                         <!-- Logo text -->
-                        
+                    </a>    
                     <!-- End Logo -->
                     <!-- This is for the sidebar toggle which is visible on mobile only -->
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
