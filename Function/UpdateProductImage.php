@@ -35,6 +35,7 @@ if (isset($_FILES['newProductImage']) && $_FILES['newProductImage']['error'] == 
                         // Bind parameters and execute statement
                         $stmt->bind_param('si', $targetFile, $productID);
                         if ($stmt->execute()) {
+							$_SESSION['image'] = $targetFile;
                             echo "<script>alert('Product image updated successfully!'); window.location.href = '../AS/Productdetails.php';</script>";
                         } else {
                             echo "<script>alert('Failed to update product image.'); window.history.back();</script>";

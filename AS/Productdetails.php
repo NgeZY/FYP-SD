@@ -55,7 +55,7 @@
 <body>
     <?php
     session_start(); // Start the session
-
+	$role = $_SESSION['role'];
     // Check if session variables are set
     if (isset($_SESSION['productID'])) {
         // Extract product details
@@ -68,6 +68,7 @@
         $stockM = isset($_SESSION['quantityM']) ? $_SESSION['quantityM'] : 0;
         $stockL = isset($_SESSION['quantityL']) ? $_SESSION['quantityL'] : 0;
         $status = $_SESSION['status'];
+		
 		if(isset($_SESSION['image']))
 			$image = $_SESSION['image'];
 		else
@@ -124,17 +125,8 @@
         <aside class="left-sidebar" data-sidebarbg="skin6">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <!-- User Profile-->
-                        <li>
-                            <!-- User Profile-->
-                            
-                            <!-- End User Profile-->
-                        </li>
-                        
-                        <!-- User Profile-->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="index.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
@@ -150,17 +142,23 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="feedbackView.php" aria-expanded="false"><i class="mdi mdi-file"></i><span
                                     class="hide-menu">Feedback</span></a></li>
+						<?php
+						if($role === "admin"){
+                        echo "<li class='sidebar-item'> <a class='sidebar-link waves-effect waves-dark sidebar-link'
+                                href='deletestaffview.php' aria-expanded='false'><i class='mdi mdi-face'></i><span
+                                    class='hide-menu'>Staff</span></a></li>";
+						}
+						?>
 						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="deletestaffview.php" aria-expanded="false"><i class="mdi mdi-home"></i><span
-                                    class="hide-menu">Staff</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="deletecustomerview.php" aria-expanded="false"><i class="mdi mdi-face"></i><span
+                                    class="hide-menu">Customer</span></a></li>
+						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="../CG/index.php" aria-expanded="false"><i class="mdi mdi-home"></i><span
                                     class="hide-menu">Homepage</span></a></li>
-                        
+                        <li class="text-center p-40 upgrade-btn">
+                        </li>
                     </ul>
-
                 </nav>
-                <!-- End Sidebar navigation -->
             </div>
             <!-- End Sidebar scroll-->
         </aside>

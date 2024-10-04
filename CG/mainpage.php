@@ -233,20 +233,6 @@
 			?>
 			<div class="col-lg-9 col-md-12">
     			<div class="row pb-3">
-        			<div class="col-12 pb-1">
-            			<div class="d-flex align-items-center justify-content-between mb-4">
-                			<form action="">
-                    			<div class="input-group">
-                        			<input type="text" class="form-control" placeholder="Search by name" id="searchInput">
-                        			<div class="input-group-append">
-                            			<span class="input-group-text bg-transparent text-primary">
-                                			<i class="fa fa-search"></i>
-                            			</span>
-                        			</div>
-                    			</div>
-                			</form>
-            			</div>
-        			</div>
 					<div id = "product-list" class="row pb-3">
         			<?php while ($product = mysqli_fetch_assoc($productsResult)): ?>
             			<?php $productImage = !empty($product['Image']) ? $product['Image'] : '../Products/default.png'; ?>
@@ -452,27 +438,69 @@ function updateProductList(products) {
             const productDiv = document.createElement('div');
             productDiv.classList.add('col-lg-4', 'col-md-6', 'col-sm-12', 'pb-1'); // Added Bootstrap grid classes
 
-            productDiv.innerHTML = `
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="${product.Image ? product.Image : '../Products/default.png'}" alt="${product.ProductName}">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">${product.ProductName}</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>RM${product.Price}</h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="#" class="btn btn-sm text-dark p-0">
-                            <i class="fas fa-eye text-primary mr-1"></i>View Detail
-                        </a>
-                        <a href="#" class="btn btn-sm text-dark p-0">
-                            <i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart
-                        </a>
-                    </div>
-                </div>
-            `;
+            const card = document.createElement('div');
+            card.classList.add('card', 'product-item', 'border-0', 'mb-4');
+
+            const cardHeader = document.createElement('div');
+            cardHeader.classList.add('card-header', 'product-img', 'position-relative', 'overflow-hidden', 'bg-transparent', 'border', 'p-0');
+
+            const img = document.createElement('img');
+            img.classList.add('img-fluid', 'w-100');
+            img.src = product.Image ? product.Image : '../Products/default.png';
+            img.alt = product.ProductName;
+
+            cardHeader.appendChild(img);
+
+            const cardBody = document.createElement('div');
+            cardBody.classList.add('card-body', 'border-left', 'border-right', 'text-center', 'p-0', 'pt-4', 'pb-3');
+
+            const productName = document.createElement('h6');
+            productName.classList.add('text-truncate', 'mb-3');
+            productName.textContent = product.ProductName;
+
+            const price = document.createElement('div');
+            price.classList.add('d-flex', 'justify-content-center');
+
+            const priceText = document.createElement('h6');
+            priceText.textContent = `RM${product.Price}`;
+
+            price.appendChild(priceText);
+
+            cardBody.appendChild(productName);
+            cardBody.appendChild(price);
+
+            const cardFooter = document.createElement('div');
+            cardFooter.classList.add('card-footer', 'd-flex', 'justify-content-between', 'bg-light', 'border');
+
+            const viewDetail = document.createElement('a');
+            viewDetail.href = '#';
+            viewDetail.classList.add('btn', 'btn-sm', 'text-dark', 'p-0');
+
+            const viewDetailIcon = document.createElement('i');
+            viewDetailIcon.classList.add('fas', 'fa-eye', 'text-primary', 'mr-1');
+
+            viewDetail.appendChild(viewDetailIcon);
+            viewDetail.appendChild(document.createTextNode('View Detail'));
+
+            const addToCart = document.createElement('a');
+            addToCart.href = '#';
+            addToCart.classList.add('btn', 'btn-sm', 'text-dark', 'p-0');
+
+            const addToCartIcon = document.createElement('i');
+            addToCartIcon.classList.add('fas', 'fa-shopping-cart', 'text-primary', 'mr-1');
+
+            addToCart.appendChild(addToCartIcon);
+            addToCart.appendChild(document.createTextNode('Add To Cart'));
+
+            cardFooter.appendChild(viewDetail);
+            cardFooter.appendChild(addToCart);
+
+            card.appendChild(cardHeader);
+            card.appendChild(cardBody);
+            card.appendChild(cardFooter);
+
+            productDiv.appendChild(card);
+
             productList.appendChild(productDiv);
         });
     } else {
