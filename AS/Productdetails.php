@@ -257,8 +257,8 @@
                 </div>
             </div>
             <footer class="footer text-center">
-                All Rights Reserved by UTM Advance. Designed and Developed by UTM Advance Team.
-            </footer>
+			&copy; 2024 UTM Advance
+			</footer>
         </div>
     </div>
 <!-- All Jquery -->
@@ -289,29 +289,29 @@ document.addEventListener("DOMContentLoaded", function() {
     var productForm = document.getElementById('productForm');
 	var stockquantity = document.getElementById('stock');
 	var category = document.getElementById('category').value;
+	
+	var isEditMode = false;
 
-    editButton.addEventListener('click', function() {
-        var isReadOnly = productForm.querySelectorAll('input[readonly]').length > 0;
-		var isDisabled = productForm.querySelectorAll('select[disabled]').length > 0;
-
-        if (isReadOnly || isDisabled) {
-            // Enable inputs for editing
-            productForm.querySelectorAll('input, select').forEach(function(element) {
-                element.removeAttribute('readonly');
+	editButton.addEventListener('click', function() {
+		if (!isEditMode) {
+			// Enable inputs for editing
+			productForm.querySelectorAll('input, select').forEach(function(element) {
+				element.removeAttribute('readonly');
 				if(category == "Accessories"){
 					stock.readOnly = false;
 				} else {
 					stock.readOnly = true;
 				}
 				element.removeAttribute('disabled');
-            });
-            editButton.textContent = 'Update';
-            backButton.style.display = 'inline'; // Show the Back button
-        } else {
-            // Submit the form to update the product
-            productForm.submit();
-        }
-    });
+			});
+			editButton.textContent = 'Update';
+			isEditMode = true;
+			backButton.style.display = 'inline'; // Show the Back button
+		} else {
+			// Submit the form to update the product
+			productForm.submit();
+		}
+});
 
     backButton.addEventListener('click', function() {
         location.reload();

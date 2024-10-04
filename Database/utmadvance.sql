@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2024 at 12:06 PM
+-- Generation Time: Oct 04, 2024 at 12:23 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -185,9 +185,9 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQuantity`, `Status`, `Image`) VALUES
 (1, 'Test', 10.00, 'Shirts', 9, 'In Stock', '../Products/Screenshot (473).png'),
-(3, 'Test3', 18.00, 'Blazers', 32, 'Not In Stock', NULL),
+(3, 'Test3', 90.00, 'Blazers', 32, 'Not In Stock', NULL),
 (4, 'Test4', 45.00, 'Accessories', 29, 'In Stock', '../Products/Screenshot 2024-09-28 181519.png'),
-(5, 'Test5', 23.00, 'Shirts', 28, 'In Stock', '../Products/Screenshot (469).png');
+(5, 'Test5', 101.00, 'Shirts', 28, 'In Stock', '../Products/Screenshot (469).png');
 
 -- --------------------------------------------------------
 

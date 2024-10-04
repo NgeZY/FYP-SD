@@ -442,7 +442,7 @@ function updateProductList(products) {
             card.classList.add('card', 'product-item', 'border-0', 'mb-4');
 
             const cardHeader = document.createElement('div');
-            cardHeader.classList.add('card-header', 'product-img', 'position-relative', 'overflow-hidden', 'bg-transparent', 'border', 'p-0');
+            cardHeader.classList.add('card-header', 'product-img', 'position-relative', 'bg-transparent', 'border', 'p-0');
 
             const img = document.createElement('img');
             img.classList.add('img-fluid', 'w-100');
