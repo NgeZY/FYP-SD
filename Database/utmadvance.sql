@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2024 at 12:23 PM
+-- Generation Time: Oct 05, 2024 at 03:34 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -89,8 +89,7 @@ CREATE TABLE `customer` (
 INSERT INTO `customer` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
 ('NgeZY', '$2y$10$OJjKZwFvEPxJz62vRfpROOFdV4L4qt6SOnsytbLU2uwrTyubWCosK', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '864224', '../Uploads/Screenshot (448).png'),
 ('fenrir', '$2y$10$T7C1UDmppSLpMd5F4zEG9.FZiRQb9/ISBnWUOtWacJ8WIeix4UBPy', 'alnhakim2005@gmail.com', 'Pacific bay', '0139650334', '232195', '../Uploads/fwen.jpg'),
-('joeyichin', '$2y$10$kAL0CkSDrQDnErKlZ0OEaesnNuM1hBxhr54WK/US8I/Wc3FWzzh46', 'joeyichin123@gmail.com', '123 Banana Street', '0124233292', '386739', ''),
-('Customer 1', '$2y$10$P5Mj6Xv4NMCM1gsh3nXQnOekDAvyGMOJ98fMKj//8veZap5oO3URm', 'zheyunge04@gmail.com', '1A, Jalan A', '01110884238', '540368', '../Uploads/Screenshot (482).png');
+('joeyichin', '$2y$10$kAL0CkSDrQDnErKlZ0OEaesnNuM1hBxhr54WK/US8I/Wc3FWzzh46', 'joeyichin123@gmail.com', '123 Banana Street', '0124233292', '386739', '');
 
 -- --------------------------------------------------------
 
@@ -184,10 +183,11 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQuantity`, `Status`, `Image`) VALUES
-(1, 'Test', 10.00, 'Shirts', 9, 'In Stock', '../Products/Screenshot (473).png'),
+(1, 'Test', 10.00, 'Shirts', 12, 'In Stock', '../Products/Screenshot (473).png'),
 (3, 'Test3', 90.00, 'Blazers', 32, 'Not In Stock', NULL),
 (4, 'Test4', 45.00, 'Accessories', 29, 'In Stock', '../Products/Screenshot 2024-09-28 181519.png'),
-(5, 'Test5', 101.00, 'Shirts', 28, 'In Stock', '../Products/Screenshot (469).png');
+(5, 'Test5', 101.00, 'Shirts', 28, 'In Stock', '../Products/Screenshot (469).png'),
+(6, 'Testing', 44.00, 'Shirts', 15, 'Not In Stock', NULL);
 
 -- --------------------------------------------------------
 
@@ -209,8 +209,9 @@ CREATE TABLE `shirt` (
 --
 
 INSERT INTO `shirt` (`ShirtID`, `ProductID`, `ProductName`, `SizeS`, `SizeM`, `SizeL`) VALUES
-(1, 1, 'Test', 3, 2, 4),
-(3, 5, 'Test5', 12, 13, 3);
+(1, 1, 'Test', 6, 2, 4),
+(3, 5, 'Test5', 12, 13, 3),
+(4, 6, 'Testing', 6, 6, 3);
 
 -- --------------------------------------------------------
 
@@ -274,7 +275,7 @@ ALTER TABLE `shirt`
 -- AUTO_INCREMENT for table `blazer`
 --
 ALTER TABLE `blazer`
-  MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `pending_verification`
@@ -286,13 +287,13 @@ ALTER TABLE `pending_verification`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `shirt`
 --
 ALTER TABLE `shirt`
-  MODIFY `ShirtID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ShirtID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
