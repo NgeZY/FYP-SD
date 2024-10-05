@@ -14,6 +14,16 @@ if (!isset($_SESSION['role'])) {
 // Check if ProductID is set
 if (isset($_SESSION['productID'])) {
     $productID = $_SESSION['productID'];
+	$category = $_SESSION['category'];
+	
+	if($category == "Shirts" || $category == "Blazers"){
+    $table = ($category == "Shirts") ? "shirt" : "blazer";
+    $sql = "DELETE FROM $table WHERE ProductID = ?";
+    $stmt2 = $con->prepare($sql);
+    $stmt2->bind_param("i", $productID);
+    $stmt2->execute(); // Execute the query to delete associated records
+    $stmt2->close();
+}
 
     // Prepare the SQL delete query
     $query = "DELETE FROM product WHERE ProductID = ?";

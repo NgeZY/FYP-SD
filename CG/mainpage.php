@@ -476,8 +476,9 @@ function updateProductList(products) {
             const cardFooter = document.createElement('div');
             cardFooter.classList.add('card-footer', 'd-flex', 'justify-content-between', 'bg-light', 'border');
 
+            const productId = product.ProductID;
             const viewDetail = document.createElement('a');
-            viewDetail.href = '#';
+            viewDetail.href = `detail.php?id=${productId}`;
             viewDetail.classList.add('btn', 'btn-sm', 'text-dark', 'p-0');
 
             const viewDetailIcon = document.createElement('i');
