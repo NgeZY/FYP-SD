@@ -34,6 +34,21 @@
 	.product-item {
 		min-width: 450px;
 	}
+	
+	.img-container {
+		width: 100%;
+		height: 350px;  /* Ensuring image containers are the same size */
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.img-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;  /* Ensure images fit the container without stretching */
+	}
     </style>
 	
 </head>
@@ -438,79 +453,82 @@ function updateProductList(products) {
     productList.innerHTML = ''; // Clear existing products
 
     if (products.length > 0) {
-        products.forEach(product => {
-            const productDiv = document.createElement('div');
-            productDiv.classList.add('col-lg-4', 'col-md-6', 'col-sm-12', 'pb-1'); // Added Bootstrap grid classes
+    products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.classList.add('col-lg-4', 'col-md-6', 'col-sm-12', 'pb-4'); // Adjust padding for better spacing
 
-            const card = document.createElement('div');
-            card.classList.add('card', 'product-item', 'border-0', 'mb-4');
+        const card = document.createElement('div');
+        card.classList.add('card', 'product-item', 'border-0', 'mb-4', 'h-100');
 
-            const cardHeader = document.createElement('div');
-            cardHeader.classList.add('card-header', 'product-img', 'position-relative', 'bg-transparent', 'border', 'p-0');
+        const cardHeader = document.createElement('div');
+        cardHeader.classList.add('card-header', 'product-img', 'position-relative', 'bg-transparent', 'border', 'p-0');
 
-            const img = document.createElement('img');
-            img.classList.add('img-fluid', 'w-100');
-            img.src = product.Image ? product.Image : '../Products/default.png';
-            img.alt = product.ProductName;
+        const imgContainer = document.createElement('div');
+        imgContainer.classList.add('img-container'); // Adjust the image container size
 
-            cardHeader.appendChild(img);
+        const img = document.createElement('img');
+        img.classList.add('img-fluid', 'w-100');
+        img.src = product.Image ? product.Image : '../Products/default.png';
+        img.alt = product.ProductName;
 
-            const cardBody = document.createElement('div');
-            cardBody.classList.add('card-body', 'border-left', 'border-right', 'text-center', 'p-0', 'pt-4', 'pb-3');
+        imgContainer.appendChild(img);
+        cardHeader.appendChild(imgContainer);
 
-            const productName = document.createElement('h6');
-            productName.classList.add('text-truncate', 'mb-3');
-            productName.textContent = product.ProductName;
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body', 'border-left', 'border-right', 'text-center', 'p-2'); // Adjust padding inside the card
 
-            const price = document.createElement('div');
-            price.classList.add('d-flex', 'justify-content-center');
+        const productName = document.createElement('h6');
+        productName.classList.add('text-truncate', 'mb-2'); // Reduce the margin-bottom to tighten spacing
+        productName.textContent = product.ProductName;
 
-            const priceText = document.createElement('h6');
-            priceText.textContent = `RM${product.Price}`;
+        const price = document.createElement('div');
+        price.classList.add('d-flex', 'justify-content-center', 'mb-2'); // Adjust margin-bottom for better spacing
 
-            price.appendChild(priceText);
+        const priceText = document.createElement('h6');
+        priceText.textContent = `RM${product.Price}`;
 
-            cardBody.appendChild(productName);
-            cardBody.appendChild(price);
+        price.appendChild(priceText);
+        cardBody.appendChild(productName);
+        cardBody.appendChild(price);
 
-            const cardFooter = document.createElement('div');
-            cardFooter.classList.add('card-footer', 'd-flex', 'justify-content-between', 'bg-light', 'border');
+        const cardFooter = document.createElement('div');
+        cardFooter.classList.add('card-footer', 'd-flex', 'justify-content-between', 'bg-light', 'border', 'p-2'); // Adjust footer padding
 
-            const productId = product.ProductID;
-            const viewDetail = document.createElement('a');
-            viewDetail.href = `detail.php?id=${productId}`;
-            viewDetail.classList.add('btn', 'btn-sm', 'text-dark', 'p-0');
+        const productId = product.ProductID;
+        const viewDetail = document.createElement('a');
+        viewDetail.href = `detail.php?id=${productId}`;
+        viewDetail.classList.add('btn', 'btn-sm', 'text-dark', 'p-0');
 
-            const viewDetailIcon = document.createElement('i');
-            viewDetailIcon.classList.add('fas', 'fa-eye', 'text-primary', 'mr-1');
+        const viewDetailIcon = document.createElement('i');
+        viewDetailIcon.classList.add('fas', 'fa-eye', 'text-primary', 'mr-1');
 
-            viewDetail.appendChild(viewDetailIcon);
-            viewDetail.appendChild(document.createTextNode('View Detail'));
+        viewDetail.appendChild(viewDetailIcon);
+        viewDetail.appendChild(document.createTextNode('View Detail'));
 
-            const addToCart = document.createElement('a');
-            addToCart.href = '#';
-            addToCart.classList.add('btn', 'btn-sm', 'text-dark', 'p-0');
+        const addToCart = document.createElement('a');
+        addToCart.href = '#';
+        addToCart.classList.add('btn', 'btn-sm', 'text-dark', 'p-0');
 
-            const addToCartIcon = document.createElement('i');
-            addToCartIcon.classList.add('fas', 'fa-shopping-cart', 'text-primary', 'mr-1');
+        const addToCartIcon = document.createElement('i');
+        addToCartIcon.classList.add('fas', 'fa-shopping-cart', 'text-primary', 'mr-1');
 
-            addToCart.appendChild(addToCartIcon);
-            addToCart.appendChild(document.createTextNode('Add To Cart'));
+        addToCart.appendChild(addToCartIcon);
+        addToCart.appendChild(document.createTextNode('Add To Cart'));
 
-            cardFooter.appendChild(viewDetail);
-            cardFooter.appendChild(addToCart);
+        cardFooter.appendChild(viewDetail);
+        cardFooter.appendChild(addToCart);
 
-            card.appendChild(cardHeader);
-            card.appendChild(cardBody);
-            card.appendChild(cardFooter);
+        card.appendChild(cardHeader);
+        card.appendChild(cardBody);
+        card.appendChild(cardFooter);
 
-            productDiv.appendChild(card);
+        productDiv.appendChild(card);
+        productList.appendChild(productDiv);
+    });
+} else {
+    productList.innerHTML = '<p style="margin-left: 35px;">No products found.</p>';
+}
 
-            productList.appendChild(productDiv);
-        });
-    } else {
-        productList.innerHTML = '<p style = "margin-left: 35px;">No products found.</p>'; // Display if no products match
-    }
 }
 </script>
 </body>
