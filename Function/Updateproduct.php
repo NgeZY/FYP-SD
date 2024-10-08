@@ -13,6 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $_POST['price'];
     $status = $_POST['status'];
 	
+	if($category = ""){
+		echo "<script>alert('Product category is not selected'); window.history.back();</script>";
+		exit();
+	}
+	
 	$sql_check = "SELECT COUNT(*) FROM product WHERE ProductName = ? AND ProductID != ?";
 	if ($stmt_check = mysqli_prepare($con, $sql_check)) {
 		// Bind parameters
