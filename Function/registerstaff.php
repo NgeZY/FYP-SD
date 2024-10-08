@@ -15,6 +15,12 @@ if ($con->connect_error) {
 
 // Check if form data is set
 if (isset($_POST['email']) && isset($_POST['password'])) {
+	$password = $_POST['password'];
+	if (strlen($password) < 8) {
+        echo "<script>alert('Password must be at least 8 characters long.'); window.history.back();</script>";
+        $con->close();
+        exit();
+    }
     $emailToAdd = $con->real_escape_string($_POST['email']);
     $passwordToAdd = password_hash($_POST['password'], PASSWORD_BCRYPT); // Hash the password
 
