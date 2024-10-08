@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2024 at 03:45 AM
+-- Generation Time: Oct 08, 2024 at 10:48 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -64,7 +64,9 @@ CREATE TABLE `blazer` (
 --
 
 INSERT INTO `blazer` (`BlazerID`, `ProductID`, `ProductName`, `SizeS`, `SizeM`, `SizeL`) VALUES
-(7, 3, 'Blazer1', 10, 15, 7);
+(7, 3, 'Blazer1', 0, 0, 0),
+(10, 11, 'Blazer3', 0, 0, 0),
+(11, 12, 'Blazer4', 3, 5, 3);
 
 -- --------------------------------------------------------
 
@@ -183,11 +185,15 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQuantity`, `Status`, `Image`) VALUES
-(1, 'Shirt1', 10.00, 'Shirts', 12, 'In Stock', '../Products/Screenshot (473).png'),
-(3, 'Blazer1', 90.00, 'Blazers', 32, 'Not In Stock', NULL),
-(4, 'Accessories1', 45.00, 'Accessories', 29, 'In Stock', '../Products/Screenshot 2024-09-28 181519.png'),
-(5, 'Shirt2', 101.00, 'Shirts', 28, 'In Stock', '../Products/Screenshot (469).png'),
-(6, 'Shirt3', 44.00, 'Shirts', 15, 'Not In Stock', NULL);
+(1, 'Shirt1', 40.00, 'Shirts', 12, 'In Stock', '../Products/WhatsApp Image 2024-10-08 at 10.36.49_f3de0f54.jpg'),
+(3, 'Blazer1', 89.00, 'Blazers', 0, 'Not In Stock', '../Products/WhatsApp Image 2024-10-08 at 11.33.20_7e5989a8.jpg'),
+(4, 'Accessories1', 10.00, 'Accessories', 29, 'In Stock', '../Products/WhatsApp Image 2024-10-08 at 10.32.51_3369d8be.jpg'),
+(5, 'Shirt2', 35.00, 'Shirts', 28, 'In Stock', '../Products/WhatsApp Image 2024-10-08 at 10.38.18_b01c0ccf.jpg'),
+(6, 'Shirt3', 44.00, 'Shirts', 0, 'Not In Stock', '../Products/WhatsApp Image 2024-10-08 at 10.39.48_2d21cda0.jpg'),
+(8, 'Accessories2', 20.00, 'Accessories', 0, 'Not In Stock', '../Products/WhatsApp Image 2024-10-08 at 10.34.08_72b0ed73.jpg'),
+(9, 'Accessories3', 8.00, 'Accessories', 7, 'In Stock', '../Products/77c804e1fa1178d04e29d1c1775f1b2b[1].jpg'),
+(11, 'Blazer3', 85.00, 'Blazers', 0, 'Not In Stock', '../Products/WhatsApp Image 2024-10-08 at 11.37.12_120849f0.jpg'),
+(12, 'Blazer4', 79.00, 'Blazers', 11, 'In Stock', '../Products/WhatsApp Image 2024-10-08 at 14.03.10_5258b30f.jpg');
 
 -- --------------------------------------------------------
 
@@ -211,7 +217,7 @@ CREATE TABLE `shirt` (
 INSERT INTO `shirt` (`ShirtID`, `ProductID`, `ProductName`, `SizeS`, `SizeM`, `SizeL`) VALUES
 (1, 1, 'Shirt1', 6, 2, 4),
 (3, 5, 'Shirt2', 12, 13, 3),
-(4, 6, 'Shirt3', 6, 6, 3);
+(4, 6, 'Shirt3', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -275,7 +281,7 @@ ALTER TABLE `shirt`
 -- AUTO_INCREMENT for table `blazer`
 --
 ALTER TABLE `blazer`
-  MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `pending_verification`
@@ -287,7 +293,7 @@ ALTER TABLE `pending_verification`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `shirt`
