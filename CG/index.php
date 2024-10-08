@@ -257,7 +257,7 @@
         <div class="row px-xl-5 pb-3">
             <?php
             require('../Function/config.php');
-            $sql = "SELECT * FROM product ORDER BY ProductID DESC LIMIT 8"; 
+            $sql = "SELECT * FROM product ORDER BY ProductID DESC LIMIT 4"; 
 
             $result = mysqli_query($con, $sql); // Execute the query
 
