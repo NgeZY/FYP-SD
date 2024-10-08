@@ -177,8 +177,7 @@
             <div class="container-fluid">
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
-                <!-- ============================================================== -->
- <div class="row">
+  <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-body">
@@ -188,6 +187,7 @@
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" name="email" required>
+                        <span id="emailError" style="color: red;"></span>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
@@ -195,6 +195,41 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Register Staff</button>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Run the email validation function when the page is ready
+    document.addEventListener("DOMContentLoaded", function() {
+        validateEmail();
+    });
+
+    // Email validation function
+    function validateEmail() {
+        const emailInput = document.getElementById("email");
+        const emailError = document.getElementById("emailError");
+
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        emailInput.addEventListener("input", function() {
+            const emailValue = emailInput.value;
+
+            // Clear the error message if the input is empty
+            if (emailValue === "") {
+                emailError.textContent = "";
+            }
+            // Check if email input matches the pattern
+            else if (!emailPattern.test(emailValue)) {
+                emailError.textContent = "Not a valid email address";
+            } else {
+                emailError.textContent = ""; // Clear the error when valid
+            }
+        });
+    }
+</script>
+
 
                 <?php
                 // Database connection
