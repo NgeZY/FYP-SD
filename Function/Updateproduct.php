@@ -1,5 +1,7 @@
 <?php
 // Include the database configuration
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 require('config.php');
 session_start();
 
@@ -13,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $_POST['price'];
     $status = $_POST['status'];
 	
-	if($category = ""){
+	if($category == ""){
 		echo "<script>alert('Product category is not selected'); window.history.back();</script>";
 		exit();
 	}
