@@ -26,6 +26,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		exit();
 	}
 	
+	if (empty($price)) {
+		echo "<script>alert('Product price is not entered'); window.history.back();</script>";
+		exit();
+	}
+	
+	if (empty($status)) {
+		echo "<script>alert('Product status is not selected'); window.history.back();</script>";
+		exit();
+	}
+	
 	$sql_check = "SELECT COUNT(*) FROM product WHERE ProductName = ? AND ProductID != ?";
 	if ($stmt_check = mysqli_prepare($con, $sql_check)) {
 		// Bind parameters
