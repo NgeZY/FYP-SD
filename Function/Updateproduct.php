@@ -67,6 +67,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				$sizeM = $_POST['stockM'];
 				$sizeL = $_POST['stockL'];
 				$stock = $sizeS + $sizeM + $sizeL;
+				if(($stock == 0 && $status == "In stock") || ($stock != 0 && $status == "Not In Stock")){
+					echo "<script>alert('Stock quantity and status not match.'); window.location.href='../AS/Productdetails.php';</script>";
+					exit();
+				}
                 mysqli_stmt_bind_param($stmt, "isiii", $productID, $productName, $sizeS, $sizeM, $sizeL);
                 // Execute the statement
                 if (mysqli_stmt_execute($stmt)) {
@@ -118,6 +122,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if ($stmt2 = mysqli_prepare($con, $sql2)) {
                         // Bind parameters
                         $stock = $_POST['stock'];
+						if(($stock == 0 && $status == "In stock") || ($stock != 0 && $status == "Not In Stock")){
+							echo "<script>alert('Stock quantity and status not match.'); window.location.href='../AS/Productdetails.php';</script>";
+							exit();
+						}
                         mysqli_stmt_bind_param($stmt2, "sdsisi", $productName, $price, $category, $stock, $status, $productID);
                         // Execute the statement
                         if (mysqli_stmt_execute($stmt2)) {
@@ -156,6 +164,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$sizeM = $_POST['stockM'];
 			$sizeL = $_POST['stockL'];
 			$stock = $sizeS + $sizeM + $sizeL;
+			if(($stock == 0 && $status == "In stock") || ($stock != 0 && $status == "Not In Stock")){
+				echo "<script>alert('Stock quantity and status not match.'); window.location.href='../AS/Productdetails.php';</script>";
+				exit();
+			}
 
 			// Determine the correct table to update (shirt or blazer)
 			$table = ($category == "Shirts") ? "shirt" : "blazer";
@@ -210,6 +222,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		} else {
 			// If the category is not 'Shirts' or 'Blazers', update the product as usual (without sizes)
 			$stock = $_POST['stock'];
+			if(($stock == 0 && $status == "In stock") || ($stock != 0 && $status == "Not In Stock")){
+				echo "<script>alert('Stock quantity and status not match.'); window.location.href='../AS/Productdetails.php';</script>";
+				exit();
+			}
 
 			$sql = "UPDATE product SET ProductName = ?, Price = ?, Category = ?, StockQuantity = ?, Status = ? WHERE ProductID = ?";
         
