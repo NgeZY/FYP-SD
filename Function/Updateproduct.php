@@ -13,6 +13,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $_POST['price'];
     $status = $_POST['status'];
 	
+	$sql_check = "SELECT COUNT(*) FROM product WHERE ProductName = ? AND ProductID != ?";
+	if ($stmt_check = mysqli_prepare($con, $sql_check)) {
+		// Bind parameters
+		mysqli_stmt_bind_param($stmt_check, "si", $productName, $productID);
+		// Execute the statement
+		mysqli_stmt_execute($stmt_check);
+		// Bind result
+		mysqli_stmt_bind_result($stmt_check, $count);
+		mysqli_stmt_fetch($stmt_check);
+		// Close the statement
+		mysqli_stmt_close($stmt_check);
+		
+		if ($count > 0) {
+			// If a duplicate product name is found, show an error and stop execution
+			echo "<script>alert('Product name already exists. Please choose a different name.'); window.location.href='../AS/Productdetails.php';</script>";
+			exit();
+		}
+	}
+	
 	if ($precategory != $category) {
         // If the precategory is 'Accessories' and the updated category is 'Blazers' or 'Shirts'
         if ($precategory == 'Accessories' && ($category == 'Shirts' || $category == 'Blazers')) {

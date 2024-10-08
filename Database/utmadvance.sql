@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2024 at 03:34 PM
+-- Generation Time: Oct 08, 2024 at 03:45 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -64,7 +64,7 @@ CREATE TABLE `blazer` (
 --
 
 INSERT INTO `blazer` (`BlazerID`, `ProductID`, `ProductName`, `SizeS`, `SizeM`, `SizeL`) VALUES
-(7, 3, 'Test3', 10, 15, 7);
+(7, 3, 'Blazer1', 10, 15, 7);
 
 -- --------------------------------------------------------
 
@@ -183,11 +183,11 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `Price`, `Category`, `StockQuantity`, `Status`, `Image`) VALUES
-(1, 'Test', 10.00, 'Shirts', 12, 'In Stock', '../Products/Screenshot (473).png'),
-(3, 'Test3', 90.00, 'Blazers', 32, 'Not In Stock', NULL),
-(4, 'Test4', 45.00, 'Accessories', 29, 'In Stock', '../Products/Screenshot 2024-09-28 181519.png'),
-(5, 'Test5', 101.00, 'Shirts', 28, 'In Stock', '../Products/Screenshot (469).png'),
-(6, 'Testing', 44.00, 'Shirts', 15, 'Not In Stock', NULL);
+(1, 'Shirt1', 10.00, 'Shirts', 12, 'In Stock', '../Products/Screenshot (473).png'),
+(3, 'Blazer1', 90.00, 'Blazers', 32, 'Not In Stock', NULL),
+(4, 'Accessories1', 45.00, 'Accessories', 29, 'In Stock', '../Products/Screenshot 2024-09-28 181519.png'),
+(5, 'Shirt2', 101.00, 'Shirts', 28, 'In Stock', '../Products/Screenshot (469).png'),
+(6, 'Shirt3', 44.00, 'Shirts', 15, 'Not In Stock', NULL);
 
 -- --------------------------------------------------------
 
@@ -209,9 +209,9 @@ CREATE TABLE `shirt` (
 --
 
 INSERT INTO `shirt` (`ShirtID`, `ProductID`, `ProductName`, `SizeS`, `SizeM`, `SizeL`) VALUES
-(1, 1, 'Test', 6, 2, 4),
-(3, 5, 'Test5', 12, 13, 3),
-(4, 6, 'Testing', 6, 6, 3);
+(1, 1, 'Shirt1', 6, 2, 4),
+(3, 5, 'Shirt2', 12, 13, 3),
+(4, 6, 'Shirt3', 6, 6, 3);
 
 -- --------------------------------------------------------
 
