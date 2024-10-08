@@ -47,6 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $sizeS = mysqli_real_escape_string($con, $_POST['sizeS']);
             $sizeM = mysqli_real_escape_string($con, $_POST['sizeM']);
             $sizeL = mysqli_real_escape_string($con, $_POST['sizeL']);
+			if(empty($sizeS) || empty($sizeM) || empty($sizeL)){
+				echo "<script>alert('Stock of size is empty!'); window.location.href='../AS/Productdetails.php';</script>";
+				exit();
+			}
 
             if ($category === 'Blazers') {
                 $insertBlazerQuery = "INSERT INTO blazer (ProductID, ProductName, SizeS, SizeM, SizeL)

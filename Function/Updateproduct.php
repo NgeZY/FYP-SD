@@ -63,13 +63,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "INSERT INTO $table (ProductID, ProductName, SizeS, SizeM, SizeL) VALUES (?, ?, ?, ?, ?)";
             if ($stmt = mysqli_prepare($con, $sql)) {
                 // Bind parameters
-                $sizeS = $_POST['stockS'];
-				$sizeM = $_POST['stockM'];
-				$sizeL = $_POST['stockL'];
-				$stock = $sizeS + $sizeM + $sizeL;
-				if(($stock == 0 && $status == "In stock") || ($stock != 0 && $status == "Not In Stock")){
-					echo "<script>alert('Stock quantity and status not match.'); window.location.href='../AS/Productdetails.php';</script>";
+				$sizeS = filter_var($_POST['stockS'], FILTER_VALIDATE_INT);
+				$sizeM = filter_var($_POST['stockM'], FILTER_VALIDATE_INT);
+				$sizeL = filter_var($_POST['stockL'], FILTER_VALIDATE_INT);
+				if ($sizeS === false || $sizeM === false || $sizeL === false) {
+					echo "<script>alert('Invalid stock quantity.'); window.history.back();</script>";
 					exit();
+				}
+				$stock = $sizeS + $sizeM + $sizeL;
+				if ($stock == 0) {
+					if ($status == "In stock") {
+						echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
+						exit();
+					}
+				} elseif ($stock != 0) {
+					if ($status == "Not In Stock") {
+						echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
+						exit();
+					}
 				}
                 mysqli_stmt_bind_param($stmt, "isiii", $productID, $productName, $sizeS, $sizeM, $sizeL);
                 // Execute the statement
@@ -90,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							$_SESSION['quantityL'] = $sizeL;
                             $_SESSION['status'] = $status;
                             // Success message
-                            echo "<script>alert('Product details and sizes inserted successfully'); window.location.href='../AS/Productdetails.php';</script>";
+                            echo "<script>alert('Product details updated successfully'); window.location.href='../AS/Productdetails.php';</script>";
                         } else {
                             echo "<script>alert('Error updating product details.'); window.location.href='../AS/Productdetails.php';</script>";
                         }
@@ -122,9 +133,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if ($stmt2 = mysqli_prepare($con, $sql2)) {
                         // Bind parameters
                         $stock = $_POST['stock'];
-						if(($stock == 0 && $status == "In stock") || ($stock != 0 && $status == "Not In Stock")){
-							echo "<script>alert('Stock quantity and status not match.'); window.location.href='../AS/Productdetails.php';</script>";
-							exit();
+						if ($stock == 0) {
+							if ($status == "In stock") {
+								echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
+								exit();
+							}
+						} elseif ($stock != 0) {
+							if ($status == "Not In Stock") {
+								echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
+								exit();
+							}
 						}
                         mysqli_stmt_bind_param($stmt2, "sdsisi", $productName, $price, $category, $stock, $status, $productID);
                         // Execute the statement
@@ -139,7 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION['status'] = $status;
 							$_SESSION['stock'] = $stock;
                             // Success message
-                            echo "<script>alert('Product details and sizes inserted successfully'); window.location.href='../AS/Productdetails.php';</script>";
+                            echo "<script>alert('Product details updated successfully'); window.location.href='../AS/Productdetails.php';</script>";
                         } else {
                             echo "<script>alert('Error updating product details.'); window.location.href='../AS/Productdetails.php';</script>";
                         }
@@ -160,13 +178,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
 		// If the category is 'Shirts' or 'Blazers', calculate the total stock and update size quantities
 		if ($category == "Shirts" || $category == "Blazers") {
-			$sizeS = $_POST['stockS'];
-			$sizeM = $_POST['stockM'];
-			$sizeL = $_POST['stockL'];
-			$stock = $sizeS + $sizeM + $sizeL;
-			if(($stock == 0 && $status == "In stock") || ($stock != 0 && $status == "Not In Stock")){
-				echo "<script>alert('Stock quantity and status not match.'); window.location.href='../AS/Productdetails.php';</script>";
+			$sizeS = filter_var($_POST['stockS'], FILTER_VALIDATE_INT);
+			$sizeM = filter_var($_POST['stockM'], FILTER_VALIDATE_INT);
+			$sizeL = filter_var($_POST['stockL'], FILTER_VALIDATE_INT);
+			if ($sizeS === false || $sizeM === false || $sizeL === false) {
+				echo "<script>alert('Invalid stock quantity.'); window.history.back();</script>";
 				exit();
+			}
+			$stock = $sizeS + $sizeM + $sizeL;
+			if ($stock == 0) {
+				if ($status == "In stock") {
+					echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
+					exit();
+				}
+			} elseif ($stock != 0) {
+				if ($status == "Not In Stock") {
+					echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
+					exit();
+				}
 			}
 
 			// Determine the correct table to update (shirt or blazer)
@@ -202,7 +231,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							$_SESSION['status'] = $status;
 
 							// Success message
-							echo "<script>alert('Product details and sizes updated successfully'); window.location.href='../AS/Productdetails.php';</script>";
+							echo "<script>alert('Product details updated successfully'); window.location.href='../AS/Productdetails.php';</script>";
 						} else {
 							echo "<script>alert('Error updating size quantities.'); window.location.href='../AS/Productdetails.php';</script>";
 						}
@@ -222,9 +251,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		} else {
 			// If the category is not 'Shirts' or 'Blazers', update the product as usual (without sizes)
 			$stock = $_POST['stock'];
-			if(($stock == 0 && $status == "In stock") || ($stock != 0 && $status == "Not In Stock")){
-				echo "<script>alert('Stock quantity and status not match.'); window.location.href='../AS/Productdetails.php';</script>";
-				exit();
+			echo "Stock: " . $stock . ", Status: " . $status;
+			if ($stock == 0) {
+				if ($status == "In stock") {
+					echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
+					exit();
+				}
+			} elseif ($stock != 0) {
+				if ($status == "Not In Stock") {
+					echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
+					exit();
+				}
 			}
 
 			$sql = "UPDATE product SET ProductName = ?, Price = ?, Category = ?, StockQuantity = ?, Status = ? WHERE ProductID = ?";
