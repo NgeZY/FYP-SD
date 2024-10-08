@@ -15,7 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $_POST['price'];
     $status = $_POST['status'];
 	
-	if($category == ""){
+	if (empty($productName)) {
+		echo "<script>alert('Product name cannot be empty'); window.history.back();</script>";
+		exit();
+	}
+
+	// Validate category selection
+	if (empty($category)) {
 		echo "<script>alert('Product category is not selected'); window.history.back();</script>";
 		exit();
 	}
