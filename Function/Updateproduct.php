@@ -76,7 +76,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
 						exit();
 					}
-				} elseif ($stock != 0) {
+				}
+				if ($stock != 0) {
 					if ($status == "Not In Stock") {
 						echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
 						exit();
@@ -138,7 +139,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
 								exit();
 							}
-						} elseif ($stock != 0) {
+						}
+						if ($stock != 0) {
 							if ($status == "Not In Stock") {
 								echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
 								exit();
@@ -191,7 +193,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
 					exit();
 				}
-			} elseif ($stock != 0) {
+			}
+			if ($stock != 0) {
 				if ($status == "Not In Stock") {
 					echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
 					exit();
@@ -257,7 +260,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
 					exit();
 				}
-			} elseif ($stock != 0) {
+			}
+			if ($stock != 0) {
 				if ($status == "Not In Stock") {
 					echo "<script>alert('Stock quantity and status do not match.'); window.history.back();</script>";
 					exit();
