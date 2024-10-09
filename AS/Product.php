@@ -1,17 +1,26 @@
 <?php
-// Include your database connection
-require('../Function/config.php');
-session_start(); // Start the session
 
-// Query to fetch products from the database
+require('../Function/config.php');
+session_start(); 
+
+
 $query = "SELECT * FROM product";
 $result = mysqli_query($con, $query);
 
 if (!$result) {
     die("Database query failed: " . mysqli_error($con));
 }
+
+
+if (isset($_SESSION['success'])) {
+    echo "<script>alert('" . $_SESSION['success'] . "');</script>";
+    unset($_SESSION['success']); 
+}
+
+
 unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SESSION['category'], $_SESSION['stock'], $_SESSION['status'], $_SESSION['image']);
 ?>
+
 
 <!DOCTYPE html>
 <html dir="ltr" lang="en">

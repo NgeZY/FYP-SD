@@ -8,32 +8,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $category = mysqli_real_escape_string($con, $_POST['category']);
     $stockQuantity = mysqli_real_escape_string($con, $_POST['stockQuantity']);
     $status = mysqli_real_escape_string($con, $_POST['status']);
-	
-	if (empty($productName)) {
-		echo "<script>alert('Product name cannot be empty'); window.history.back();</script>";
-		exit();
-	}
+    
+    if (empty($productName)) {
+        echo "<script>alert('Product name cannot be empty'); window.history.back();</script>";
+        exit();
+    }
 
-	// Validate category selection
-	if (empty($category)) {
-		echo "<script>alert('Product category is not selected'); window.history.back();</script>";
-		exit();
-	}
-	
-	if (empty($price)) {
-		echo "<script>alert('Product price is not entered'); window.history.back();</script>";
-		exit();
-	}
-	
-	if (empty($status)) {
-		echo "<script>alert('Product status is not selected'); window.history.back();</script>";
-		exit();
-	}
-	
-	if(($stockQuantity == 0 && $status == "In stock") || ($stockQuantity != 0 && $status == "Not In Stock")){
-		echo "<script>alert('Stock quantity and status not match.'); window.location.href='../AS/Productdetails.php';</script>";
-		exit();
-	}
+    // Validate category selection
+    if (empty($category)) {
+        echo "<script>alert('Product category is not selected'); window.history.back();</script>";
+        exit();
+    }
+    
+    if (empty($price)) {
+        echo "<script>alert('Product price is not entered'); window.history.back();</script>";
+        exit();
+    }
+    
+    if (empty($status)) {
+        echo "<script>alert('Product status is not selected'); window.history.back();</script>";
+        exit();
+    }
+    
+    if(($stockQuantity == 0 && $status == "In stock") || ($stockQuantity != 0 && $status == "Not In Stock")){
+        echo "<script>alert('Stock quantity and status not match.'); window.location.href='../AS/Productdetails.php';</script>";
+        exit();
+    }
     
     // Insert into the Product table
     $insertProductQuery = "INSERT INTO Product (ProductName, Price, Category, StockQuantity, Status)
@@ -47,10 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $sizeS = mysqli_real_escape_string($con, $_POST['sizeS']);
             $sizeM = mysqli_real_escape_string($con, $_POST['sizeM']);
             $sizeL = mysqli_real_escape_string($con, $_POST['sizeL']);
-			if(empty($sizeS) || empty($sizeM) || empty($sizeL)){
-				echo "<script>alert('Stock of size is empty!'); window.location.href='../AS/Productdetails.php';</script>";
-				exit();
-			}
+            if(empty($sizeS) || empty($sizeM) || empty($sizeL)){
+                echo "<script>alert('Stock of size is empty!'); window.location.href='../AS/Productdetails.php';</script>";
+                exit();
+            }
 
             if ($category === 'Blazers') {
                 $insertBlazerQuery = "INSERT INTO blazer (ProductID, ProductName, SizeS, SizeM, SizeL)
@@ -63,7 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        // Redirect or show success message
+        // Set session variable for success message
+        $_SESSION['success'] = 'Product successfully added!';
         header('Location: ../AS/Product.php');
         exit;
     } else {
