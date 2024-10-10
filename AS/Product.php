@@ -72,16 +72,16 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
         background-color: #fff !important;
         padding: 0.75rem;
         vertical-align: top;
-        border: 1px solid #dee2e6 !important;
+        border: 1px solid #FFFFFF !important;
     }
 
     .table-bordered th {
-		border: 1px solid #dee2e6 !important;
-		background-color: #007bff !important;
+		border: 1px solid #FFFFFF !important;
+		background-color: #f09e9a !important;
 	}
     .table-bordered td {
-        border: 1px solid #dee2e6 !important;
-		background-color: #cce5ff !important;
+        border: 1px solid #FFFFFF !important;
+		background-color: #FFFFFF !important;
     }
 </style>
 
