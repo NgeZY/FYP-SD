@@ -203,9 +203,9 @@
                 $result = $con->query($sql);
 
                 if ($result->num_rows > 0) {
-                    echo "<table class='table table-bordered' style='background-color: #cce5ff;'>
+                    echo "<table class='table table-bordered' style='background-color: #FFFFFF;'>
                             <thead>
-                            <tr style='background-color: #007bff; color: white;'>
+                            <tr style='background-color: #f09e9a; color: white;'>
                             <th>Username</th>
                             <th>Email</th>
                             <th>Address</th>
