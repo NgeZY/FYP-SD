@@ -47,9 +47,9 @@
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
-        <header class="topbar" data-navbarbg="skin5">
+        <header class="topbar" data-navbarbg="">
 		<nav class="navbar top-navbar navbar-expand-md navbar-dark">
-        <div class="navbar-header" data-logobg="skin5">
+        <div class="navbar-header" data-logobg="">
             <!-- ============================================================== -->
             <!-- Logo -->
             <!-- ============================================================== -->
@@ -68,17 +68,18 @@
         <!-- ============================================================== -->
         <!-- End Logo -->
         <!-- ============================================================== -->
-        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="">
             <!-- ============================================================== -->
             <!-- Nav items and right side controls -->
             <!-- ============================================================== -->
             <ul class="navbar-nav float-start me-auto">
                 <!-- Optional: Add items to the left side if needed -->
             </ul>
-            <ul class="navbar-nav float-end" style="font-size: 16px;">
-                <!-- Sign out button -->
-                <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
-            </ul>
+           <ul class="navbar-nav float-end" style="font-size: 16px;">
+			<!-- Sign out button -->
+			<a href="../Function/Signout.php" class="nav-item nav-link" style="color: #000000;">Sign Out</a>
+			</ul>
+
         </div>
     </nav>
 </header>
