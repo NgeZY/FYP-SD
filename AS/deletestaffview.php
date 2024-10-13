@@ -272,7 +272,7 @@
                               <td>
                                   <form method='POST' action='../Function/deletestaff.php' style='display:inline;'>
                                       <input type='hidden' name='username' value='" . htmlspecialchars($row["username"]) . "'>
-                                      <button type='submit' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this staff member?\");'>Delete</button>
+                                      <button type='submit' class='btn btn-danger btn-sm text-white' onclick='return confirm(\"Are you sure you want to delete this staff member?\");'>Delete</button>
                                   </form>
                               </td>
                               </tr>";

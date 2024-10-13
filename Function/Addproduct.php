@@ -34,6 +34,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<script>alert('Stock quantity and status not match.'); window.location.href='../AS/Productdetails.php';</script>";
         exit();
     }
+	
+	$checkname = "SELECT ProductName FROM product WHERE ProductName = '$productName'";
+	$result = mysqli_query($con, $checkname);
+	if(mysqli_num_rows($result) > 0){
+		echo "<script>alert('Product name already exists'); window.history.back();";
+		exit();
+	}
     
     // Insert into the Product table
     $insertProductQuery = "INSERT INTO Product (ProductName, Price, Category, StockQuantity, Status)
@@ -44,11 +51,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // If category is Blazers or Shirts, insert size details into the respective table
         if ($category === 'Blazers' || $category === 'Shirts') {
-            $sizeS = mysqli_real_escape_string($con, $_POST['sizeS']);
-            $sizeM = mysqli_real_escape_string($con, $_POST['sizeM']);
-            $sizeL = mysqli_real_escape_string($con, $_POST['sizeL']);
-            if(empty($sizeS) || empty($sizeM) || empty($sizeL)){
-                echo "<script>alert('Stock of size is empty!'); window.location.href='../AS/Productdetails.php';</script>";
+            $sizeS = $_POST['sizeS'];
+            $sizeM = $_POST['sizeM'];
+            $sizeL = $_POST['sizeL'];
+            if(($sizeS == "") || ($sizeM == "") || ($sizeL = "")){
+                echo "<script>alert('Stock of size is empty!'); window.history.back();</script>";
                 exit();
             }
 
