@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$checkname = "SELECT ProductName FROM product WHERE ProductName = '$productName'";
 	$result = mysqli_query($con, $checkname);
 	if(mysqli_num_rows($result) > 0){
-		echo "<script>alert('Product name already exists'); window.history.back();";
+		echo "<script>alert('Product name already exists'); window.history.back();</script>";
 		exit();
 	}
     
@@ -54,8 +54,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $sizeS = $_POST['sizeS'];
             $sizeM = $_POST['sizeM'];
             $sizeL = $_POST['sizeL'];
-            if(($sizeS == "") || ($sizeM == "") || ($sizeL = "")){
+            if(($sizeS == "") || ($sizeM == "") || ($sizeL == "")){
                 echo "<script>alert('Stock of size is empty!'); window.history.back();</script>";
+                exit();
+            }
+
+            // Validate size fields
+            if (!is_numeric($sizeS) || !is_numeric($sizeM) || !is_numeric($sizeL)) {
+                echo "<script>alert('Invalid size value'); window.history.back();</script>";
                 exit();
             }
 
