@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2024 at 10:48 AM
+-- Generation Time: Oct 17, 2024 at 08:22 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -71,6 +71,28 @@ INSERT INTO `blazer` (`BlazerID`, `ProductID`, `ProductName`, `SizeS`, `SizeM`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `CartID` int(11) NOT NULL,
+  `Email` varchar(50) DEFAULT NULL,
+  `ProductID` int(11) DEFAULT NULL,
+  `Size` varchar(10) DEFAULT NULL,
+  `Quantity` int(11) DEFAULT 1,
+  `AddedDate` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`CartID`, `Email`, `ProductID`, `Size`, `Quantity`, `AddedDate`) VALUES
+(4, 'ngezy041225@gmail.com', 1, 'S', 1, '2024-10-18 02:15:35');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `customer`
 --
 
@@ -90,8 +112,7 @@ CREATE TABLE `customer` (
 
 INSERT INTO `customer` (`Username`, `Password`, `Email`, `Address`, `Contact`, `Verification_code`, `Profile_photo`) VALUES
 ('NgeZY', '$2y$10$OJjKZwFvEPxJz62vRfpROOFdV4L4qt6SOnsytbLU2uwrTyubWCosK', 'zheyunge@gmail.com', '1A, Jalan Azman', '01110884238', '864224', '../Uploads/Screenshot (448).png'),
-('fenrir', '$2y$10$T7C1UDmppSLpMd5F4zEG9.FZiRQb9/ISBnWUOtWacJ8WIeix4UBPy', 'alnhakim2005@gmail.com', 'Pacific bay', '0139650334', '232195', '../Uploads/fwen.jpg'),
-('joeyichin', '$2y$10$kAL0CkSDrQDnErKlZ0OEaesnNuM1hBxhr54WK/US8I/Wc3FWzzh46', 'joeyichin123@gmail.com', '123 Banana Street', '0124233292', '386739', '');
+('fenrir', '$2y$10$T7C1UDmppSLpMd5F4zEG9.FZiRQb9/ISBnWUOtWacJ8WIeix4UBPy', 'alnhakim2005@gmail.com', 'Pacific bay', '0139650334', '232195', '../Uploads/fwen.jpg');
 
 -- --------------------------------------------------------
 
@@ -254,6 +275,12 @@ ALTER TABLE `blazer`
   ADD KEY `ProductID` (`ProductID`);
 
 --
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`CartID`);
+
+--
 -- Indexes for table `pending_verification`
 --
 ALTER TABLE `pending_verification`
@@ -281,7 +308,13 @@ ALTER TABLE `shirt`
 -- AUTO_INCREMENT for table `blazer`
 --
 ALTER TABLE `blazer`
-  MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `BlazerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `CartID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pending_verification`
@@ -293,13 +326,13 @@ ALTER TABLE `pending_verification`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `shirt`
 --
 ALTER TABLE `shirt`
-  MODIFY `ShirtID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ShirtID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
