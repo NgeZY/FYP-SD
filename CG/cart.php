@@ -134,157 +134,131 @@
     <div class="container-fluid pt-5">
         <div class="row px-xl-5">
             <div class="col-lg-8 table-responsive mb-5">
-                <table class="table table-bordered text-center mb-0">
-                    <thead class="bg-secondary text-dark">
-                        <tr>
-                            <th>Products</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Remove</th>
-                        </tr>
-                    </thead>
-                    <tbody class="align-middle">
-                        <tr>
-                            <td class="align-middle"><img src="img/product-1.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle">
-                                <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus" >
-                                        <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td class="align-middle"><img src="img/product-2.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle">
-                                <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus" >
-                                        <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td class="align-middle"><img src="img/product-3.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle">
-                                <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus" >
-                                        <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td class="align-middle"><img src="img/product-4.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle">
-                                <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus" >
-                                        <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td class="align-middle"><img src="img/product-5.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle">
-                                <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus" >
-                                        <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <?php
+                include '../Function/config.php'; // Your database connection
+				
+				// Check for success message
+				if (isset($_SESSION['remove_success'])) {
+    				echo "<script>alert('" . $_SESSION['remove_success'] . "');</script>";
+    				unset($_SESSION['remove_success']); // Clear the message after displaying it
+				}
+
+                $email = $_SESSION['email']; // Assuming email is stored in session after login
+
+                // Query to fetch cart items for the current user
+                $sql = "SELECT c.CartID, p.ProductName, p.Price, c.Quantity, c.Size 
+                        FROM cart c
+                        JOIN product p ON c.ProductID = p.ProductID
+                        WHERE c.Email = ?";
+                $stmt = $con->prepare($sql);
+                $stmt->bind_param('s', $email);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                // Check if cart is empty
+                if ($result->num_rows > 0) {
+                    echo '<table class="table table-bordered text-center mb-0">
+                            <thead class="bg-secondary text-dark">
+                                <tr>
+                                    <th>Products</th>
+                                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle">';
+
+                    // Loop through each cart item
+                    while ($row = $result->fetch_assoc()) {
+                        $total = $row['Price'] * $row['Quantity']; // Calculate total price for the item
+
+                        echo '<tr>
+                                <td class="align-middle">
+                                    ' . htmlspecialchars($row['ProductName']) . ' (' . htmlspecialchars($row['Size']) . ')
+                                </td>
+                                <td class="align-middle">RM ' . number_format($row['Price'], 2) . '</td>
+                                <td class="align-middle">' . $row['Quantity'] . '</td>
+                                <td class="align-middle">RM ' . number_format($total, 2) . '</td>
+                                <td class="align-middle">
+                                    <a href="../Function/removefromcart.php?cartid=' . $row['CartID'] . '" class="btn btn-sm btn-primary"><i class="fa fa-times"></i></a>
+                                </td>
+                              </tr>';
+                    }
+
+                    echo '</tbody></table>';
+                } else {
+                    echo '<p>Your cart is empty.</p>';
+                }
+
+                $stmt->close();
+                $con->close();
+                ?>
             </div>
-            <div class="col-lg-4">
-                <form class="mb-5" action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control p-4" placeholder="Coupon Code">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary">Apply Coupon</button>
+            <?php
+            include '../Function/config.php'; // Your database connection
+
+            $email = $_SESSION['email']; // Assuming email is stored in session after login
+
+            // Initialize subtotal variable
+            $subtotal = 0;
+
+            // Query to fetch cart items for the current user
+            $sql = "SELECT p.Price, c.Quantity 
+                    FROM cart c
+                    JOIN product p ON c.ProductID = p.ProductID
+                    WHERE c.Email = ?";
+            $stmt = $con->prepare($sql);
+            $stmt->bind_param('s', $email);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            // Loop through each cart item to calculate the subtotal
+            while ($row = $result->fetch_assoc()) {
+                $subtotal += $row['Price'] * $row['Quantity'];
+            }
+
+            // Calculate total
+            $total = $subtotal; // Calculate total
+
+            // Check if there are items in the cart
+            if ($subtotal > 0) {
+                echo '<div class="col-lg-4">
+                        <div class="card border-secondary mb-5">
+                            <div class="card-header bg-secondary border-0">
+                                <h4 class="font-weight-semi-bold m-0">Cart Summary</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3 pt-1">
+                                    <h6 class="font-weight-medium">Subtotal</h6>
+                                    <h6 class="font-weight-medium">RM ' . number_format($subtotal, 2) . '</h6>
+                                </div>
+                            </div>
+                            <div class="card-footer border-secondary bg-transparent">
+                                <div class="d-flex justify-content-between mt-2">
+                                    <h5 class="font-weight-bold">Total</h5>
+                                    <h5 class="font-weight-bold">RM ' . number_format($total, 2) . '</h5>
+                                </div>
+                                <button class="btn btn-block btn-primary my-3 py-3" onclick="window.location.href=\'checkout.php\'">Proceed To Checkout</button>
+                            </div>
                         </div>
-                    </div>
-                </form>
-                <div class="card border-secondary mb-5">
-                    <div class="card-header bg-secondary border-0">
-                        <h4 class="font-weight-semi-bold m-0">Cart Summary</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-3 pt-1">
-                            <h6 class="font-weight-medium">Subtotal</h6>
-                            <h6 class="font-weight-medium">$150</h6>
+                      </div>';
+            } else {
+                echo '<div class="col-lg-4">
+                        <div class="card border-secondary mb-5">
+                            <div class="card-header bg-secondary border-0">
+                                <h4 class="font-weight-semi-bold m-0">Cart Summary</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Your cart is empty.</p>
+                            </div>
                         </div>
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-medium">Shipping</h6>
-                            <h6 class="font-weight-medium">$10</h6>
-                        </div>
-                    </div>
-                    <div class="card-footer border-secondary bg-transparent">
-                        <div class="d-flex justify-content-between mt-2">
-                            <h5 class="font-weight-bold">Total</h5>
-                            <h5 class="font-weight-bold">$160</h5>
-                        </div>
-                        <button class="btn btn-block btn-primary my-3 py-3" onclick = "window.location.href='checkout.php'">Proceed To Checkout</button>
-                    </div>
-                </div>
-            </div>
+                      </div>';
+            }
+
+            $stmt->close();
+            $con->close(); // Close the connection after all operations are complete
+            ?>
         </div>
     </div>
     <!-- Cart End -->

@@ -118,7 +118,7 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.php" class="nav-item nav-link">Home</a>
-                            <a href="shop.php" class="nav-item nav-link active">Shop</a>
+                            <a href="mainpage.php" class="nav-item nav-link active">Shop</a>
                             <a href="detail.php" class="nav-item nav-link">Shop Detail</a>
                             <a href="cart.php" class="nav-item nav-link">Cart</a>
 							<a href="about.php" class="nav-item nav-link">About Us</a>
@@ -268,7 +268,6 @@
                     			</div>
                     			<div class="card-footer d-flex justify-content-between bg-light border">
                         			<a href="detail.php?id=<?= $product['ProductID'] ?>" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        			<a href="cart.php?action=add&id=<?= $product['ProductID'] ?>" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                     			</div>
                 			</div>
             			</div>
@@ -504,16 +503,6 @@ function updateProductList(products) {
 
         viewDetail.appendChild(viewDetailIcon);
         viewDetail.appendChild(document.createTextNode('View Detail'));
-
-        const addToCart = document.createElement('a');
-        addToCart.href = '#';
-        addToCart.classList.add('btn', 'btn-sm', 'text-dark', 'p-0');
-
-        const addToCartIcon = document.createElement('i');
-        addToCartIcon.classList.add('fas', 'fa-shopping-cart', 'text-primary', 'mr-1');
-
-        addToCart.appendChild(addToCartIcon);
-        addToCart.appendChild(document.createTextNode('Add To Cart'));
 
         cardFooter.appendChild(viewDetail);
         cardFooter.appendChild(addToCart);

@@ -205,51 +205,56 @@
             </div>
 
             <div class="col-lg-7 pb-5">
-                <h3 class="font-weight-semi-bold"><?= htmlspecialchars($product['ProductName']) ?></h3>
-                <h3 class="font-weight-semi-bold mb-4">RM <?= htmlspecialchars($product['Price']) ?></h3>
-                <div class="d-flex mb-3">
-                    <p class="text-dark font-weight-medium mb-0 mr-3">Sizes:</p>
-                    <form>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" class="custom-control-input" id="size-1" name="size">
-                            <label class="custom-control-label" for="size-1">XS</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" class="custom-control-input" id="size-2" name="size">
-                            <label class="custom-control-label" for="size-2">S</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" class="custom-control-input" id="size-3" name="size">
-                            <label class="custom-control-label" for="size-3">M</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" class="custom-control-input" id="size-4" name="size">
-                            <label class="custom-control-label" for="size-4">L</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" class="custom-control-input" id="size-5" name="size">
-                            <label class="custom-control-label" for="size-5">XL</label>
-                        </div>
-                    </form>
+    <h3 class="font-weight-semi-bold"><?= htmlspecialchars($product['ProductName']) ?></h3>
+    <h3 class="font-weight-semi-bold mb-4">RM <?= htmlspecialchars($product['Price']) ?></h3>
+    <form action="../Function/Addtocart.php?id=<?= htmlspecialchars($product['ProductID']) ?>" method="POST" onsubmit="return validateForm()">
+        <div class="d-flex mb-3">
+            <p class="text-dark font-weight-medium mb-0 mr-3">Sizes:</p>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="size-1" name="size" value="S">
+                <label class="custom-control-label" for="size-1">S</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="size-2" name="size" value="M">
+                <label class="custom-control-label" for="size-2">M</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="size-3" name="size" value="L">
+                <label class="custom-control-label" for="size-3">L</label>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <div class="d-flex align-items-center mb-4 pt-2">
+            <div class="input-group quantity mr-3" style="width: 130px;">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-primary btn-minus"">
+                        <i class="fa fa-minus"></i>
+                    </button>
                 </div>
-				<br><br><br><br><br><br><br><br>
-                <div class="d-flex align-items-center mb-4 pt-2">
-                    <div class="input-group quantity mr-3" style="width: 130px;">
-                        <div class="input-group-btn">
-                            <button class="btn btn-primary btn-minus" >
-                            <i class="fa fa-minus"></i>
-                            </button>
-                        </div>
-                        <input type="text" class="form-control bg-secondary text-center" value="1">
-                        <div class="input-group-btn">
-                            <button class="btn btn-primary btn-plus">
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
+                <input type="text" class="form-control bg-secondary text-center" name="quantity" value="1" id="quantityInput" readonly>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-primary btn-plus"">
+                        <i class="fa fa-plus"></i>
+                    </button>
                 </div>
             </div>
+            <button type="submit" class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        var quantityInput = document.getElementById('quantityInput').value;
+        var sizeInput = document.querySelector('input[name="size"]:checked');
+
+        if (!quantityInput || !sizeInput) {
+            alert('Please select a size and enter a quantity.');
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+</script>
         </div>
     </div>
     <!-- Shop Detail End -->
@@ -277,7 +282,6 @@
 								</div>
 								<div class="card-footer d-flex justify-content-between bg-light border">
 									<a href="detail.php?id=<?= $randomProduct['ProductID'] ?>" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Details</a>
-									<a href="cart.php?action=add&id=<?= $randomProduct['ProductID'] ?>" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
 								</div>
 							</div>
 						</div>
