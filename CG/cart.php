@@ -161,7 +161,7 @@
                             <thead class="bg-secondary text-dark">
                                 <tr>
                                     <th>Products</th>
-                                                    <th>Price</th>
+                                    <th>Price</th>
                                     <th>Quantity</th>
                                     <th>Total</th>
                                     <th>Remove</th>
@@ -220,6 +220,7 @@
 
             // Calculate total
             $total = $subtotal; // Calculate total
+			$redirectUrl = isset($_SESSION['role']) ? 'checkout.php' : 'Signinform.php';
 
             // Check if there are items in the cart
             if ($subtotal > 0) {
@@ -239,7 +240,10 @@
                                     <h5 class="font-weight-bold">Total</h5>
                                     <h5 class="font-weight-bold">RM ' . number_format($total, 2) . '</h5>
                                 </div>
-                                <button class="btn btn-block btn-primary my-3 py-3" onclick="window.location.href=\'checkout.php\'">Proceed To Checkout</button>
+                                <button class="btn btn-block btn-primary my-3 py-3" 
+									onclick="window.location.href=\'' . $redirectUrl . '\'">
+									Proceed To Checkout
+								</button>
                             </div>
                         </div>
                       </div>';

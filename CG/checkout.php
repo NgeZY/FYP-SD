@@ -28,6 +28,7 @@
 <body>
 	<?php
 	session_start();
+	$defaultAddress = isset($_SESSION['address']) ? $_SESSION['address'] : '';
 	?>
     <!-- Topbar Start -->
     <div class="container-fluid">
@@ -158,114 +159,25 @@
         <div class="row px-xl-5">
             <div class="col-lg-8">
                 <div class="mb-4">
-                    <h4 class="font-weight-semi-bold mb-4">Billing Address</h4>
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <label>First Name</label>
-                            <input class="form-control" type="text" placeholder="Mohd">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Last Name</label>
-                            <input class="form-control" type="text" placeholder="Afiq">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>E-mail</label>
-                            <input class="form-control" type="text" placeholder="example@email.com">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Mobile No</label>
-                            <input class="form-control" type="text" placeholder="+123 456 789">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Address Line 1</label>
-                            <input class="form-control" type="text" placeholder="123 Street">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Address Line 2</label>
-                            <input class="form-control" type="text" placeholder="123 Street">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Country</label>
-                            <select class="custom-select">
-                                <option selected>United States</option>
-                                <option>Afghanistan</option>
-                                <option>Albania</option>
-                                <option>Algeria</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>City</label>
-                            <input class="form-control" type="text" placeholder="Kuala Lumpur">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>State</label>
-                            <input class="form-control" type="text" placeholder="Kuala Lumpur">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>ZIP Code</label>
-                            <input class="form-control" type="text" placeholder="123">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="newaccount">
-                                <label class="custom-control-label" for="newaccount">Create an account</label>
-                            </div>
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="shipto">
-                                <label class="custom-control-label" for="shipto"  data-toggle="collapse" data-target="#shipping-address">Ship to different address</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="collapse mb-4" id="shipping-address">
                     <h4 class="font-weight-semi-bold mb-4">Shipping Address</h4>
                     <div class="row">
                         <div class="col-md-6 form-group">
                             <label>First Name</label>
-                            <input class="form-control" type="text" placeholder="John">
+                            <input class="form-control" type="text" id="firstName" placeholder="Mohd">
                         </div>
                         <div class="col-md-6 form-group">
                             <label>Last Name</label>
-                            <input class="form-control" type="text" placeholder="Doe">
+                            <input class="form-control" type="text" id="lastName" placeholder="Afiq">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label>E-mail</label>
-                            <input class="form-control" type="text" placeholder="example@email.com">
+                            <label>Address</label>
+                            <input class="form-control" type="text" id="address" placeholder="123, Jalan ABC, Taman DEF, Kuala Lumpur">
                         </div>
-                        <div class="col-md-6 form-group">
-                            <label>Mobile No</label>
-                            <input class="form-control" type="text" placeholder="+123 456 789">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Address Line 1</label>
-                            <input class="form-control" type="text" placeholder="123 Street">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Address Line 2</label>
-                            <input class="form-control" type="text" placeholder="123 Street">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Country</label>
-                            <select class="custom-select">
-                                <option selected>United States</option>
-                                <option>Afghanistan</option>
-                                <option>Albania</option>
-                                <option>Algeria</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>City</label>
-                            <input class="form-control" type="text" placeholder="Kuala Lumpur">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>State</label>
-                            <input class="form-control" type="text" placeholder="Kuala Lumpur">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>ZIP Code</label>
-                            <input class="form-control" type="text" placeholder="123">
+                        <div class="col-md-12 form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="shipto">
+                                <label class="custom-control-label" for="shipto">Use default address</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -277,32 +189,49 @@
                     </div>
                     <div class="card-body">
                         <h5 class="font-weight-medium mb-3">Products</h5>
-                        <div class="d-flex justify-content-between">
-                            <p>Colorful Stylish Shirt 1</p>
-                            <p>$150</p>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p>Colorful Stylish Shirt 2</p>
-                            <p>$150</p>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p>Colorful Stylish Shirt 3</p>
-                            <p>$150</p>
-                        </div>
-                        <hr class="mt-0">
-                        <div class="d-flex justify-content-between mb-3 pt-1">
-                            <h6 class="font-weight-medium">Subtotal</h6>
-                            <h6 class="font-weight-medium">$150</h6>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-medium">Shipping</h6>
-                            <h6 class="font-weight-medium">$10</h6>
-                        </div>
+						<?php
+						require '../Function/config.php';
+						
+						$email = $_SESSION['email'];
+						$subtotal = 0;
+						
+						$sql = "SELECT p.ProductName, p.Price, c.Quantity , c.Size
+								FROM cart c
+								JOIN product p ON c.ProductID = p.ProductID
+								WHERE c.Email = ?";
+						$stmt = $con->prepare($sql);
+						$stmt->bind_param('s', $email);
+						$stmt->execute();
+						$result = $stmt->get_result();
+						
+						if($result->num_rows > 0){
+							while($row = $result->fetch_assoc()){
+								$itemTotal = $row['Quantity'] * $row['Price'];
+								$subtotal += $itemTotal;
+								echo '<div class="d-flex justify-content-between">
+									<p>' . htmlspecialchars($row['ProductName']) . '(' . htmlspecialchars($row['Size']) . ') - ' . $row['Quantity'] . '</p>
+									<p>RM ' . number_format($itemTotal, 2) . '</p>
+									</div>';
+							}
+						} else {
+							echo '<div class = "d-flex justify-content-between">
+									<p>Your cart is empty.</p>
+								  </div>';
+						}
+						
+						echo '<hr class="mt-0">
+							  <div class = "d-flex justify-content-between mb-3 pt-1">
+									<h6 class="font-weight-medium">Subtotal</h6>
+									<h6 class="font-weight-medium">RM '. number_format($subtotal, 2) .'</h6>
+							  </div>';
+							  
+						$total = $subtotal;
+						?>
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
                             <h5 class="font-weight-bold">Total</h5>
-                            <h5 class="font-weight-bold">$160</h5>
+                            <h5 class="font-weight-bold">RM <?php echo number_format($total, 2); ?></h5>
                         </div>
                     </div>
                 </div>
@@ -310,29 +239,27 @@
                     <div class="card-header bg-secondary border-0">
                         <h4 class="font-weight-semi-bold m-0">Payment</h4>
                     </div>
+					<form action="../Function/processorder.php" method="POST" onsubmit = "return populatePaymentDetails()">
                     <div class="card-body">
-                        <div class="form-group">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" name="payment" id="paypal">
-                                <label class="custom-control-label" for="paypal">Paypal</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" name="payment" id="directcheck">
-                                <label class="custom-control-label" for="directcheck">Direct Check</label>
-                            </div>
-                        </div>
-                        <div class="">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" name="payment" id="banktransfer">
-                                <label class="custom-control-label" for="banktransfer">Bank Transfer</label>
-                            </div>
-                        </div>
+						<div class="form-group">
+							<div class="custom-control custom-radio">
+								<input type="radio" class="custom-control-input" name="payment" id="paypal" value="paypal" required>
+								<label class="custom-control-label" for="paypal">Paypal</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="custom-control custom-radio">
+								<input type="radio" class="custom-control-input" name="payment" id="banktransfer" value="bank_transfer" required>
+								<label class="custom-control-label" for="banktransfer">Bank Transfer</label>
+							</div>
+						</div>
+						<input type="hidden" id="customerName" name="customerName">
+						<input type="hidden" id="shippingAddress" name="shippingAddress">
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
-                        <button class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Place Order</button>
+                        <button type = "submit" class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Place Order</button>
                     </div>
+					</form>
                 </div>
             </div>
         </div>
@@ -386,9 +313,8 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
+	
+	<!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
@@ -400,6 +326,41 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+	
+	<script>
+    function populatePaymentDetails() {
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var address = document.getElementById('address').value;
+
+        // Populate the payment details
+        document.getElementById('customerName').value = firstName + ' ' + lastName;
+        document.getElementById('shippingAddress').value = address;
+
+        return true; // Allow form submission
+    }
+	</script>
+	
+	<script>
+	$(document).ready(function() {
+		// Get session variables from PHP
+		var defaultAddress = "<?php echo $defaultAddress; ?>"; 
+
+		// When the checkbox is checked, use the default address
+		$("#shipto").change(function() {
+			if ($(this).is(":checked")) {
+				$("#address").val(defaultAddress);      // Fill the address field
+			} else {
+				$("#address").val('');    // Clear the input if unchecked
+			}
+		});
+
+		// Optionally, handle the initial state when the page loads
+		if ($("#shipto").is(":checked")) {
+			$("#address").val(defaultAddress);
+		}
+	});
+	</script>
 </body>
 
 </html>
