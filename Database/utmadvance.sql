@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2024 at 08:22 PM
+-- Generation Time: Oct 18, 2024 at 09:46 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -83,13 +83,6 @@ CREATE TABLE `cart` (
   `AddedDate` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`CartID`, `Email`, `ProductID`, `Size`, `Quantity`, `AddedDate`) VALUES
-(4, 'ngezy041225@gmail.com', 1, 'S', 1, '2024-10-18 02:15:35');
-
 -- --------------------------------------------------------
 
 --
@@ -139,6 +132,52 @@ INSERT INTO `feedback` (`Name`, `Email`, `Subject`, `Message`) VALUES
 ('Nge', 'zheyunge@gmail.com', 'Guest Feedback', 'Hello'),
 ('Nge', 'zheyunge04@gmail.com', 'Customer Feedback', 'Hi'),
 ('Nge', 'zheyunge@gmail.com', 'Test', 'Test meeting');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order`
+--
+
+CREATE TABLE `order` (
+  `OrderID` int(11) NOT NULL,
+  `CustomerName` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Total` decimal(10,2) NOT NULL,
+  `OrderDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `Status` enum('Pending','Processing','Shipped','Delivered','Cancelled') DEFAULT 'Pending',
+  `ShippingAddress` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `order`
+--
+
+INSERT INTO `order` (`OrderID`, `CustomerName`, `Email`, `Total`, `OrderDate`, `Status`, `ShippingAddress`) VALUES
+(1, 'Nge Zhe Yu', 'ngezy041225@gmail.com', 129.00, '2024-10-18 07:38:34', 'Pending', '1A, Jalan A');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_items`
+--
+
+CREATE TABLE `order_items` (
+  `OrderItemID` int(11) NOT NULL,
+  `OrderID` int(11) NOT NULL,
+  `ProductID` int(11) NOT NULL,
+  `Quantity` int(11) NOT NULL,
+  `Price` decimal(10,2) NOT NULL,
+  `Size` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `order_items`
+--
+
+INSERT INTO `order_items` (`OrderItemID`, `OrderID`, `ProductID`, `Quantity`, `Price`, `Size`) VALUES
+(1, 1, 1, 1, 40.00, 'S'),
+(2, 1, 3, 1, 89.00, 'M');
 
 -- --------------------------------------------------------
 
@@ -281,6 +320,18 @@ ALTER TABLE `cart`
   ADD PRIMARY KEY (`CartID`);
 
 --
+-- Indexes for table `order`
+--
+ALTER TABLE `order`
+  ADD PRIMARY KEY (`OrderID`);
+
+--
+-- Indexes for table `order_items`
+--
+ALTER TABLE `order_items`
+  ADD PRIMARY KEY (`OrderItemID`);
+
+--
 -- Indexes for table `pending_verification`
 --
 ALTER TABLE `pending_verification`
@@ -314,7 +365,19 @@ ALTER TABLE `blazer`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `CartID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `CartID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `order`
+--
+ALTER TABLE `order`
+  MODIFY `OrderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `order_items`
+--
+ALTER TABLE `order_items`
+  MODIFY `OrderItemID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pending_verification`
