@@ -221,6 +221,7 @@
                               </div>';
                     }
                     ?>
+					<input type="hidden" id="categoryInput" value="<?php echo htmlspecialchars($category); ?>">
                     <br><br><br><br><br><br><br><br>
                     <div class="d-flex align-items-center mb-4 pt-2">
                         <div class="input-group quantity mr-3" style="width: 130px;">
@@ -245,11 +246,19 @@
     function validateForm() {
         var quantityInput = document.getElementById('quantityInput').value;
         var sizeInput = document.querySelector('input[name="size"]:checked');
-
-        if (!quantityInput || !sizeInput) {
-            alert('Please select a size and enter a quantity.');
-            return false; // Prevent form submission
-        }
+		var category = document.getElementById('categoryInput').value;
+		
+		if(category == "Shirts" || category == "Blazers"){
+			if (!quantityInput || !sizeInput) {
+				alert('Please select a size and enter a quantity.');
+				return false; // Prevent form submission
+			}
+		} else {
+			if (!quantityInput) {
+				alert('Please enter a quantity.');
+				return false; // Prevent form submission
+			}
+		}
         return true; // Allow form submission
     }
 </script>
