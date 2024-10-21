@@ -106,7 +106,7 @@
                         </li>
                         
                         <!-- User Profile-->
-                       <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="index.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -115,6 +115,9 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Product.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
                                     class="hide-menu">Product</span></a></li>
+						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="viewOrder.php" aria-expanded="false"><i class="mdi mdi-file"></i><span
+                                    class="hide-menu">Order</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="icon-material.php" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                     class="hide-menu">Icon</span></a></li>
@@ -135,7 +138,6 @@
                                 href="../CG/index.php" aria-expanded="false"><i class="mdi mdi-home"></i><span
                                     class="hide-menu">Homepage</span></a></li>
                         <li class="text-center p-40 upgrade-btn">
-                           
                         </li>
                     </ul>
 

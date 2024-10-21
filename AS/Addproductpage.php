@@ -112,6 +112,9 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Product.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
                                     class="hide-menu">Product</span></a></li>
+						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="viewOrder.php" aria-expanded="false"><i class="mdi mdi-file"></i><span
+                                    class="hide-menu">Order</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="icon-material.php" aria-expanded="false"><i class="mdi mdi-face"></i><span
                                     class="hide-menu">Icon</span></a></li>

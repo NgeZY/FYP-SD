@@ -1,25 +1,27 @@
 <?php
 
 require('../Function/config.php');
-session_start(); 
+session_start(); // Start the session
 
-
-$query = "SELECT * FROM product";
+// SQL query to fetch data from the order table
+$query = "SELECT * FROM `order`";
 $result = mysqli_query($con, $query);
 
 if (!$result) {
     die("Database query failed: " . mysqli_error($con));
 }
 
-
+// If there's a success message stored in the session, display it as an alert
 if (isset($_SESSION['success'])) {
     echo "<script>alert('" . $_SESSION['success'] . "');</script>";
     unset($_SESSION['success']); 
 }
 
+// Unset any session variables related to product details, if they exist
+unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SESSION['total'], $_SESSION['orderDate'], $_SESSION['status'], $_SESSION['shippingAddress']);
 
-unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SESSION['category'], $_SESSION['stock'], $_SESSION['status'], $_SESSION['image']);
 ?>
+
 
 
 <!DOCTYPE html>
@@ -72,16 +74,16 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
         background-color: #fff !important;
         padding: 0.75rem;
         vertical-align: top;
-        border: 1px solid #FFFFFF !important;
+        border: 1px solid #dee2e6 !important;
     }
 
     .table-bordered th {
-		border: 1px solid #FFFFFF !important;
-		background-color: #f09e9a !important;
+		border: 1px solid #dee2e6 !important;
+		background-color: #007bff !important;
 	}
     .table-bordered td {
-        border: 1px solid #FFFFFF !important;
-		background-color: #FFFFFF !important;
+        border: 1px solid #dee2e6 !important;
+		background-color: #cce5ff !important;
     }
 </style>
 
@@ -99,9 +101,9 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
         
         <!-- Topbar header -->
-        <header class="topbar" data-navbarbg="">
+        <header class="topbar" data-navbarbg="skin5">
 		<nav class="navbar top-navbar navbar-expand-md navbar-dark">
-        <div class="navbar-header" data-logobg="">
+        <div class="navbar-header" data-logobg="skin5">
             <!-- ============================================================== -->
             <!-- Logo -->
             <!-- ============================================================== -->
@@ -120,21 +122,20 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
         <!-- ============================================================== -->
         <!-- End Logo -->
         <!-- ============================================================== -->
-        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="">
+        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
             <!-- ============================================================== -->
             <!-- Nav items and right side controls -->
             <!-- ============================================================== -->
             <ul class="navbar-nav float-start me-auto">
                 <!-- Optional: Add items to the left side if needed -->
             </ul>
-           <ul class="navbar-nav float-end" style="font-size: 16px;">
-			<!-- Sign out button -->
-			<a href="../Function/Signout.php" class="nav-item nav-link" style="color: #000000;">Sign Out</a>
-			</ul>
-
-			</div>
-		</nav>
-	</header>
+            <ul class="navbar-nav float-end" style="font-size: 16px;">
+                <!-- Sign out button -->
+                <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
+            </ul>
+        </div>
+    </nav>
+</header>
 
         <!-- Left Sidebar -->
         <aside class="left-sidebar" data-sidebarbg="skin6">
@@ -188,7 +189,7 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Product</li>
                                 </ol>
                             </nav>
@@ -198,53 +199,59 @@ unset($_SESSION['productID'], $_SESSION['productName'], $_SESSION['price'], $_SE
             </div>
 
             <!-- Container fluid -->
-            <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h4 class="card-title">Product list</h4>
-                                <a href="Addproductpage.php" class="btn btn-success text-white" style="margin-bottom: 1rem;">Add Product</a>
-                            </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Price (RM)</th>
-                                        <th scope="col">Category</th>
-                                        <th scope="col">Stock Quantity</th>
-                                        <th scope="col">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    // Check if any products exist
-                                    if (mysqli_num_rows($result) > 0) {
-                                        while ($row = mysqli_fetch_assoc($result)) {
-                                            echo "<tr>";
-                                            echo "<td>" . $row['ProductID'] . "</td>";
-                                            echo "<td><a href='../Function/GetProductDetails.php?id=" . $row['ProductID'] . "'>" . $row['ProductName'] . "</a></td>";
-                                            echo "<td>" . $row['Price'] . "</td>";
-                                            echo "<td>" . $row['Category'] . "</td>";
-                                            echo "<td>" . $row['StockQuantity'] . "</td>";
-                                            echo "<td>" . $row['Status'] . "</td>";
-                                            echo "</tr>";
-                                        }
-                                    } else {
-                                        echo "<tr><td colspan='7'>No products found</td></tr>";
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
+           <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="card-title">Order List</h4>
                     </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Order ID</th>
+                                <th scope="col">Customer Name</th>
+                                <th scope="col">Order Date</th>
+                                <th scope="col">Total (RM)</th>
+                                <th scope="col">Order Status</th>
+                                <th scope="col">Shipping Address</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            // Check if any orders exist
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>";
+                                    echo "<td>" . $row['OrderID'] . "</td>";
+                                    echo "<td>" . $row['CustomerName'] . "</td>";
+                                    echo "<td>" . $row['OrderDate'] . "</td>";
+                                    echo "<td>" . $row['Total'] . "</td>";
+                                    echo "<td>" . $row['Status'] . "</td>";
+                                    echo "<td>" . $row['ShippingAddress'] . "</td>";
+                                    echo "<td>";
+                                    echo "<a href='../Function/ViewOrderDetails.php?id=" . $row['OrderID'] . "' class='btn btn-primary'>View</a>";
+                                    echo "<a href='../Function/UpdateOrderStatus.php?id=" . $row['OrderID'] . "' class='btn btn-secondary'>Update Status</a>";
+                                    echo "</td>";
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo "<tr><td colspan='7'>No orders found</td></tr>";
+                            }
+                            ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+
             <!-- End Container fluid -->
             <footer class="footer text-center">
                 &copy; 2024 UTM Advance
