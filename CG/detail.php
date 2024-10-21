@@ -200,7 +200,8 @@
                 <h3 class="font-weight-semi-bold mb-4">RM <?= htmlspecialchars($product['Price']) ?></h3>
                 <form action="../Function/Addtocart.php?id=<?= htmlspecialchars($product['ProductID']) ?>" method="POST" onsubmit="return validateForm()">
                     <?php
-                    $category = htmlspecialchars($product['Category']); // Example category, replace this with your actual category logic
+                    $category = htmlspecialchars($product['Category']);
+					$_SESSION['category'] = $category;
 
                     if ($category == "Shirts" || $category == "Blazers") {
                         echo '<div class="d-flex mb-3">
