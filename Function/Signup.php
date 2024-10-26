@@ -1,6 +1,7 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+require 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
@@ -11,12 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = $_POST['address'];
     $contact = $_POST['contact'];
     $role = $_POST['role'];
-
-    $con = new mysqli("localhost", "root", "", "utmadvance");
-
-    if ($con->connect_error) {
-        die("Connection failed: " . $con->connect_error);
-    }
+    
 
     // Check if any required field is empty
     if (empty($username) || empty($password) || empty($confirmPassword) || empty($email) || empty($role)) {

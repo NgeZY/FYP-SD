@@ -1,17 +1,6 @@
 <?php
 // Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "utmadvance";
-
-// Create connection
-$con = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-}
+require 'config.php';
 
 // Check if username is set
 if (isset($_POST['username'])) {

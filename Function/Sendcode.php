@@ -8,19 +8,10 @@ use PHPMailer\PHPMailer\Exception;
 require '../vendor/autoload.php'; // Path to Composer's autoload file
 
 // Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "utmadvance";
+require 'config.php';
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$email = $conn->real_escape_string($_POST['email']);
-$user_type = $conn->real_escape_string($_POST['user_type']); // Sanitize user_type
+$email = $con->real_escape_string($_POST['email']);
+$user_type = $con->real_escape_string($_POST['user_type']); // Sanitize user_type
 
 // Determine the table based on user type
 switch ($user_type) {
@@ -41,7 +32,7 @@ $_SESSION['user_type'] = $user_type;
 $_SESSION['email'] = $email;
 
 // Check if the email exists in the table
-$stmt = $conn->prepare("SELECT COUNT(*) FROM $table WHERE email=?");
+$stmt = $con->prepare("SELECT COUNT(*) FROM $table WHERE email=?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $stmt->bind_result($count);
@@ -53,7 +44,7 @@ if ($count > 0) {
     $verification_code = rand(100000, 999999);
 
     // Prepare an SQL statement to update the verification code
-    $stmt = $conn->prepare("UPDATE $table SET Verification_code=? WHERE email=?");
+    $stmt = $con->prepare("UPDATE $table SET Verification_code=? WHERE email=?");
     $stmt->bind_param("is", $verification_code, $email);
 
     if ($stmt->execute()) {
@@ -95,5 +86,5 @@ if ($count > 0) {
 }
 
 // Close connections
-$conn->close();
+$con->close();
 ?>

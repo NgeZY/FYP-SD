@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'config.php';
 
 if (!isset($_SESSION['username']) || !isset($_SESSION['role'])) {
     die("<script>alert('Session expired or invalid. Please sign in again.'); window.location.href = '../CG/Signinform.php';</script>");
@@ -12,12 +13,6 @@ $NPassword2 = $_POST['confirm_password'];
 
 // Assuming user type is stored in the session
 $user_type = $_SESSION['role'];
-
-$con = new mysqli("localhost", "root", "", "utmadvance");
-
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-}
 
 // Determine the table based on user type
 switch ($user_type) {

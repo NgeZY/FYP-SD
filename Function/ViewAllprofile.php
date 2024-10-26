@@ -10,13 +10,9 @@
     <h2>All User Profiles</h2>
     <?php
 session_start();
+require 'config.php';
 
 function viewAllProfiles() {
-    $db = new mysqli("localhost", "root", "", "utmadvance");
-
-    if ($db->connect_error) {
-        die("Connection failed: " . $db->connect_error);
-    }
 
     $roles = ['customer', 'staff', 'admin'];
 
@@ -30,7 +26,7 @@ function viewAllProfiles() {
             $sql = "SELECT Username, Email, Address FROM $role";
         }
 
-        $result = $db->query($sql);
+        $result = $con->query($sql);
 
         if ($result->num_rows > 0) {
             echo "<table class='w3-table-all w3-card-4'>";
@@ -54,7 +50,7 @@ function viewAllProfiles() {
         }
     }
 
-    $db->close();
+    $con->close();
 }
 
 viewAllProfiles();

@@ -1,13 +1,8 @@
 <?php
+require 'config.php';
 if (isset($_GET['token']) && isset($_GET['role'])) {
     $token = $_GET['token'];
     $role = $_GET['role'];
-
-    $con = new mysqli("localhost", "root", "", "utmadvance");
-
-    if ($con->connect_error) {
-        die("Connection failed: " . $con->connect_error);
-    }
 
     // Check if the token exists in the `pending_verification` table
     $stmt = $con->prepare("SELECT Username, Password, Email, Address, Contact FROM pending_verification WHERE verification_token = ? AND Role = ?");

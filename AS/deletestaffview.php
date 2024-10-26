@@ -236,18 +236,7 @@
 
                 <?php
                 // Database connection
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "utmadvance";
-
-                // Create connection
-                $con = new mysqli($servername, $username, $password, $dbname);
-
-                // Check connection
-                if ($con->connect_error) {
-                    die("Connection failed: " . $con->connect_error);
-                }
+                require('../Function/config.php');
 
                 // SQL query to retrieve staff members
                 $sql = "SELECT username, email, address FROM staff";
