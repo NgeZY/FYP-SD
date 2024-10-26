@@ -131,19 +131,19 @@
                     <div class="row">
                         <div class="col-md-6 form-group">
                             <label>First Name</label>
-                            <input class="form-control" type="text" id="firstName" placeholder="Mohd">
+                            <input class="form-control" type="text" id="firstName" placeholder="Mohd" required>
                         </div>
                         <div class="col-md-6 form-group">
                             <label>Last Name</label>
-                            <input class="form-control" type="text" id="lastName" placeholder="Afiq">
+                            <input class="form-control" type="text" id="lastName" placeholder="Afiq" required>
                         </div>
                         <div class="col-md-6 form-group">
                             <label>Address</label>
-                            <input class="form-control" type="text" id="address" placeholder="123, Jalan ABC, Taman DEF, Kuala Lumpur">
+                            <input class="form-control" type="text" id="address" placeholder="123, Jalan ABC, Taman DEF, Kuala Lumpur" required>
                         </div>
 						<div class="col-md-6 form-group">
                             <label>Contact Number</label>
-                            <input class="form-control" type="text" id="contact_number" placeholder="0123456789">
+                            <input class="form-control" type="number" id="contact_number" placeholder="0123456789" required>
                         </div>
                         <div class="col-md-12 form-group">
                             <div class="custom-control custom-checkbox">

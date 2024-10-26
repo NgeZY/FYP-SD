@@ -5,6 +5,7 @@ require 'config.php';
 $email = $_SESSION['email'];
 $customerName = $_POST['customerName'];
 $shippingAddress = $_POST['shippingAddress'];
+$paymentMethod = $_POST['payment']; // Get the selected payment method
 
 // Step 1: Calculate the subtotal and prepare order items (as before)
 $subtotal = 0;
@@ -32,7 +33,7 @@ if ($result->num_rows > 0) {
         ];
     }
 } else {
-    echo "Your cart is empty.";
+    echo "<script>alert('Your cart is empty.'); window.history.back();</script>";
     exit;
 }
 
@@ -52,6 +53,7 @@ $data = [
     'billPhone' => $_POST['contact_number'], // Include a phone number input field
     'billReturnUrl' => 'https://yourwebsite.com/CG/order_confirmation.php',
     'billCallbackUrl' => 'https://yourwebsite.com/CG/order_confirmation.php'
+	'paymentMethod' => $paymentMethod
 ];
 
 // Send the payment request to ToyyibPay
@@ -69,6 +71,6 @@ if (isset($responseData[0]['BillCode'])) {
     header("Location: $paymentUrl");
     exit;
 } else {
-    echo "Failed to initiate payment. Please try again.";
+    echo "<script>alert('Failed to initiate payment. Please try again.'); window.history.back();</script>";
     exit;
 }
