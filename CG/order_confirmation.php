@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['email'])) {
-    header("Location: ../CG/signin.php"); // Redirect to sign-in if not logged in
+    header("Location: Signinform.php"); // Redirect to sign-in if not logged in
     exit;
 }
 
@@ -35,7 +35,7 @@ if (!isset($_SESSION['email'])) {
         </ul>
 
         <p>You will receive a confirmation email shortly.</p>
-        <a href="../CG/home.php">Return to Home</a>
+        <a href="index.php">Return to Home</a>
     </div>
 </body>
 </html>
