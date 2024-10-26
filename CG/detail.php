@@ -244,6 +244,12 @@
 
 <script>
     function validateForm() {
+		<?php if (!isset($_SESSION['email'])): ?>
+            alert('Please sign in to continue.');
+            window.location.href = 'Signinform.php';
+            return false; // Prevent form submission
+        <?php endif; ?>
+
         var quantityInput = document.getElementById('quantityInput').value;
         var sizeInput = document.querySelector('input[name="size"]:checked');
 		var category = document.getElementById('categoryInput').value;

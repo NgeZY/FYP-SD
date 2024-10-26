@@ -141,6 +141,10 @@
                             <label>Address</label>
                             <input class="form-control" type="text" id="address" placeholder="123, Jalan ABC, Taman DEF, Kuala Lumpur">
                         </div>
+						<div class="col-md-6 form-group">
+                            <label>Contact Number</label>
+                            <input class="form-control" type="text" id="contact_number" placeholder="0123456789">
+                        </div>
                         <div class="col-md-12 form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="shipto">
@@ -223,6 +227,7 @@
 						</div>
 						<input type="hidden" id="customerName" name="customerName">
 						<input type="hidden" id="shippingAddress" name="shippingAddress">
+						<input type="hidden" id="contact_number" name="contact_number">
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <button type = "submit" class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Place Order</button>
@@ -300,10 +305,12 @@
         var firstName = document.getElementById('firstName').value;
         var lastName = document.getElementById('lastName').value;
         var address = document.getElementById('address').value;
+		var contact_number = document.getElementById('contact_number').value;
 
         // Populate the payment details
         document.getElementById('customerName').value = firstName + ' ' + lastName;
         document.getElementById('shippingAddress').value = address;
+		document.getElementById('contact_number').value = contact_number;
 
         return true; // Allow form submission
     }

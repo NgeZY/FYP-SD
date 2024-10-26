@@ -133,9 +133,12 @@
     				echo "<script>alert('" . $_SESSION['remove_success'] . "');</script>";
     				unset($_SESSION['remove_success']); // Clear the message after displaying it
 				}
-
-                $email = $_SESSION['email']; // Assuming email is stored in session after login
-
+				
+				if(isset($_SESSION['email'])){
+					$email = $_SESSION['email']; // Assuming email is stored in session after login
+				} else {
+					echo "<script>alert('Please sign in to continue.'); window.location.href = 'Signinform.php';</script>";
+				}
                 // Query to fetch cart items for the current user
                 $sql = "SELECT c.CartID, p.ProductName, p.Price, c.Quantity, c.Size 
                         FROM cart c
