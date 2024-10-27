@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $mail->Subject = 'Verify your email';
             $mail->Body    = "Please click the link below to verify your email address for UTM Advance:
-http://localhost/FYP-SD/Function/verify.php?token=$token&role=$role";
+https://utmadvance.com/Function/verify.php?token=$token&role=$role";
 
             if ($mail->send()) {
                 echo "<script>alert('A verification link has been sent to your email.'); window.location.href = '../CG/Signinform.php';</script>";
