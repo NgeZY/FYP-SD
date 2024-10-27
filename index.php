@@ -36,45 +36,12 @@ ob_end_flush();
             height: 250px;      
             object-fit: cover; 
         }
-		
-		#cookie-banner {
-			position: fixed;
-			bottom: 0;
-			width: 100%;
-			background-color: #333;
-			color: #fff;
-			text-align: center;
-			padding: 15px;
-			font-size: 14px;
-			z-index: 1000;
-		}
-
-		#cookie-banner p {
-			display: inline-block;
-			margin: 0;
-			padding-right: 10px;
-		}
-
-		#cookie-banner button {
-			padding: 8px 15px;
-			color: #333;
-			background-color: #fff;
-			border: none;
-			cursor: pointer;
-		}
-
     </style>
 
 
 </head>
 
 <body>
-<div id="cookie-banner" style="display: none;">
-    <p>This website uses cookies to ensure you get the best experience. 
-        <a href="YOUR_PRIVACY_POLICY_URL" target="_blank">Learn more</a>
-    </p>
-    <button onclick="acceptCookies()">Accept</button>
-</div>
     <!-- Topbar Start -->
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
@@ -371,41 +338,6 @@ ob_end_flush();
 
     <!-- Template Javascript -->
     <script src="CG/js/main.js"></script>
-<script>
-// Check if the cookie consent has already been accepted
-// Function to handle cookie acceptance
-    document.addEventListener("DOMContentLoaded", function() {
-        if (!localStorage.getItem('cookiesAccepted')) {
-            document.getElementById('cookie-banner').style.display = 'block';
-        }
-    });
-
-    function acceptCookies() {
-        localStorage.setItem('cookiesAccepted', 'true');
-        document.getElementById('cookie-banner').style.display = 'none';
-    }
-
-    // Check if cookie has already been accepted
-    function checkCookie() {
-        // Split document.cookie string to get individual cookies
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            // Check if "cookieAccepted" cookie is set to true
-            if (cookie === "cookieAccepted=true") {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // Show the banner if cookie not accepted
-    window.onload = function() {
-        if (!checkCookie()) {
-            document.getElementById("cookie-banner").style.display = "block";
-        }
-    };
-</script>
 </body>
 
 </html>
