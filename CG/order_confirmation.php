@@ -10,6 +10,27 @@ if (!isset($_SESSION['email'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<?php 
+ini_set('display_errors','1');
+ini_set('display_startup_errors','1');
+error_reporting(E_ALL);
+
+ob_start();
+
+if (session_status() === PHP_SESSION_NONE){
+	session_set_cookies_params([
+		'domain' => 'utmadvance.com',
+		'secure' => true,
+		'httponly' => true,
+		'samesite' => 'Strict',
+]);
+	session_start();
+}
+ob_end_flush();
+var_dump(["session status" => session_status(), "write permission" => is_writable(session_save_path()), "save path" => session_save_path()])
+
+?>
+
 <head>
     <meta charset="UTF-8">
     <title>Order Confirmation</title>
