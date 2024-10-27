@@ -1,5 +1,7 @@
 <?php
+ob_start();
 session_start();
+ob_end_flush();
 
 require("config.php"); 
 
@@ -43,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
            if ($role == 'customer') {
-			header("Location: ../CG/index.php");
+			header("Location: ../index.php");
 			exit();
 	     }elseif ($role == 'admin' || $role == 'staff') {
 			header("Location: ../AS/index.php");

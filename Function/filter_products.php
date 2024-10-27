@@ -1,9 +1,14 @@
 <?php
 require('config.php');
 
+// Check database connection
+if (!$con) {
+    die(json_encode(['error' => 'Database connection failed.']));
+}
+
 // Get the posted data
 $data = json_decode(file_get_contents('php://input'), true);
-$prices = $data['prices'];
+$prices = $data['prices'] ?? []; // Use null coalescing operator to avoid undefined index notice
 
 if (empty($prices)) {
     // No filter applied; fetch all products
@@ -25,10 +30,24 @@ if (empty($prices)) {
         }
     }
 
-    $query = "SELECT * FROM product WHERE " . implode(' OR ', $conditions);
+    // Check if there are any valid conditions
+    if (count($conditions) > 0) {
+        $query = "SELECT * FROM product WHERE " . implode(' OR ', $conditions);
+    } else {
+        // If no valid conditions, fetch all products
+        $query = "SELECT * FROM product";
+    }
 }
 
+// Execute the query
 $result = mysqli_query($con, $query);
+
+// Check for query errors
+if (!$result) {
+    die(json_encode(['error' => 'Query failed: ' . mysqli_error($con)]));
+}
+
+// Fetch products
 $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 // Return the products as a JSON response

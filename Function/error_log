@@ -1,0 +1,199 @@
+[26-Oct-2024 13:05:20 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Host '50.6.154.99' is not allowed to connect to this MySQL server in /home2/hynmhemy/public_html/Function/config.php:9
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/config.php(9): mysqli->__construct('50.6.154.99', 'hynmhemy_WPOBR', Object(SensitiveParameterValue), 'hynmhemy_utmadv...')
+#1 /home2/hynmhemy/public_html/Function/Signin.php(4): require('/home2/hynmhemy...')
+#2 {main}
+  thrown in /home2/hynmhemy/public_html/Function/config.php on line 9
+[26-Oct-2024 15:33:33 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[26-Oct-2024 15:33:33 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[26-Oct-2024 15:33:33 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[26-Oct-2024 15:56:54 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[26-Oct-2024 15:56:54 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[26-Oct-2024 15:56:54 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[26-Oct-2024 15:57:16 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[26-Oct-2024 15:57:16 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[26-Oct-2024 15:57:16 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[26-Oct-2024 20:31:13 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[26-Oct-2024 20:31:13 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[26-Oct-2024 20:31:13 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[26-Oct-2024 20:31:19 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[26-Oct-2024 20:31:19 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[26-Oct-2024 20:31:19 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[26-Oct-2024 20:32:22 America/Boise] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in /home2/hynmhemy/public_html/Function/Signup.php:98
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Signup.php(98): mysqli_stmt->close()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Signup.php on line 98
+[26-Oct-2024 20:34:04 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[26-Oct-2024 20:34:04 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[26-Oct-2024 20:34:04 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[26-Oct-2024 20:34:12 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[26-Oct-2024 20:34:12 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[26-Oct-2024 20:34:12 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[26-Oct-2024 21:01:09 America/Boise] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in /home2/hynmhemy/public_html/Function/Signup.php:98
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Signup.php(98): mysqli_stmt->close()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Signup.php on line 98
+[26-Oct-2024 21:02:23 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 21:02:29 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 21:05:27 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 21:06:06 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[26-Oct-2024 21:06:06 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[26-Oct-2024 21:06:06 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[26-Oct-2024 21:06:33 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 21:15:16 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:18 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:22 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:28 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:41 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[26-Oct-2024 23:19:41 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[26-Oct-2024 23:19:41 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[26-Oct-2024 23:19:47 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:54 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:55 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:55 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:56 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:56 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:57 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:57 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:19:58 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:20:02 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:20:20 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:47:26 America/Boise] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in /home2/hynmhemy/public_html/Function/Signup.php:98
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Signup.php(98): mysqli_stmt->close()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Signup.php on line 98
+[26-Oct-2024 23:48:50 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[26-Oct-2024 23:48:58 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[27-Oct-2024 00:11:39 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[27-Oct-2024 00:17:06 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Verification_code' doesn't have a default value in /home2/hynmhemy/public_html/Function/verify.php:28
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/verify.php(28): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/verify.php on line 28
+[27-Oct-2024 00:58:40 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 00:58:40 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 00:58:40 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[27-Oct-2024 01:01:09 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 01:01:09 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 01:01:09 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[27-Oct-2024 01:02:24 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 01:02:24 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 01:02:24 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[27-Oct-2024 01:10:58 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 01:10:58 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 01:10:58 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[27-Oct-2024 01:11:10 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 01:11:10 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 01:11:10 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[27-Oct-2024 01:15:33 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 01:15:33 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 01:15:33 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[27-Oct-2024 01:24:20 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 01:24:20 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 01:24:20 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[27-Oct-2024 01:25:48 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 01:25:48 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 01:25:48 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[27-Oct-2024 01:47:59 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 01:47:59 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 01:47:59 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[27-Oct-2024 01:48:39 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 01:48:39 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 01:48:39 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[27-Oct-2024 01:49:41 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 01:49:41 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 01:49:41 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[27-Oct-2024 01:56:19 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
+[27-Oct-2024 01:56:19 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
+[27-Oct-2024 01:56:19 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
