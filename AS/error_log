@@ -1,0 +1,187 @@
+[26-Oct-2024 13:57:11 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[26-Oct-2024 13:57:11 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 13:57:11 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 13:57:16 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[26-Oct-2024 13:57:16 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 13:57:16 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 67
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 68
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 68
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 243
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 243
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 260
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 260
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 261
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 261
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 283
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 283
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 290
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 290
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 297
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 297
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 304
+[26-Oct-2024 13:57:20 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 304
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 67
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 68
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 68
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 243
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 243
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 260
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 260
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 261
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 261
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 283
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 283
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 290
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 290
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 297
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 297
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 304
+[26-Oct-2024 13:57:24 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 304
+[26-Oct-2024 13:57:42 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/icon-material.php on line 30
+[26-Oct-2024 13:57:42 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/icon-material.php on line 31
+[26-Oct-2024 13:57:42 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/icon-material.php on line 31
+[26-Oct-2024 13:57:44 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/feedbackView.php on line 30
+[26-Oct-2024 13:57:44 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/feedbackView.php on line 31
+[26-Oct-2024 13:57:44 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/feedbackView.php on line 31
+[26-Oct-2024 13:57:46 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/deletecustomerview.php on line 30
+[26-Oct-2024 13:57:46 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/deletecustomerview.php on line 31
+[26-Oct-2024 13:57:46 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/deletecustomerview.php on line 31
+[26-Oct-2024 13:57:54 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/deletecustomerview.php on line 30
+[26-Oct-2024 13:57:54 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/deletecustomerview.php on line 31
+[26-Oct-2024 13:57:54 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/deletecustomerview.php on line 31
+[26-Oct-2024 14:07:43 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[26-Oct-2024 14:07:43 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 14:07:43 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 67
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 68
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 68
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 243
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 243
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 260
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 260
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 261
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 261
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 283
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 283
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 290
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 290
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 297
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 297
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 304
+[26-Oct-2024 14:08:11 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 304
+[26-Oct-2024 14:08:42 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/deletecustomerview.php on line 30
+[26-Oct-2024 14:08:42 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/deletecustomerview.php on line 31
+[26-Oct-2024 14:08:42 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/deletecustomerview.php on line 31
+[26-Oct-2024 14:08:48 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/feedbackView.php on line 30
+[26-Oct-2024 14:08:48 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/feedbackView.php on line 31
+[26-Oct-2024 14:08:48 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/feedbackView.php on line 31
+[26-Oct-2024 14:09:05 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/deletestaffview.php on line 30
+[26-Oct-2024 14:09:05 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/deletestaffview.php on line 31
+[26-Oct-2024 14:09:05 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/deletestaffview.php on line 31
+[26-Oct-2024 14:09:09 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/deletestaffview.php on line 30
+[26-Oct-2024 14:09:09 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/deletestaffview.php on line 31
+[26-Oct-2024 14:09:09 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/deletestaffview.php on line 31
+[26-Oct-2024 14:09:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/Addproductpage.php on line 57
+[26-Oct-2024 14:09:14 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Addproductpage.php on line 58
+[26-Oct-2024 14:09:14 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Addproductpage.php on line 58
+[26-Oct-2024 14:30:50 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[26-Oct-2024 14:30:50 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 14:30:50 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 14:38:38 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[26-Oct-2024 14:38:38 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 14:38:38 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 14:53:32 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[26-Oct-2024 14:53:32 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 14:53:32 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 67
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 68
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 68
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 243
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 243
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 260
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 260
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 261
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 261
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 283
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 283
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 290
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 290
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 297
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 297
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 304
+[26-Oct-2024 14:53:36 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 304
+[26-Oct-2024 15:24:46 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[26-Oct-2024 15:24:46 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 15:24:46 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 15:33:33 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[26-Oct-2024 15:33:33 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 15:33:33 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 15:56:54 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[26-Oct-2024 15:56:54 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 15:56:54 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 15:57:17 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[26-Oct-2024 15:57:17 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[26-Oct-2024 15:57:17 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[27-Oct-2024 01:47:59 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[27-Oct-2024 01:47:59 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[27-Oct-2024 01:47:59 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[27-Oct-2024 02:39:31 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/index.php on line 32
+[27-Oct-2024 02:39:31 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/index.php on line 33
+[27-Oct-2024 02:39:31 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/index.php on line 33
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 67
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed after headers have already been sent in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 70
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 80
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 83
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 84
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 85
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 86
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 86
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 261
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 261
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 278
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 278
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 279
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 279
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 301
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 301
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 308
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 308
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 315
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 315
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 322
+[27-Oct-2024 02:39:33 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 322
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/Profile.php on line 68
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 69
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 69
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 215
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 215
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 232
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 232
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 233
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 233
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 255
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 255
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 262
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 262
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 269
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 269
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 276
+[27-Oct-2024 05:01:09 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 276
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/AS/Profile.php on line 68
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 69
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 69
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 215
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 215
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 232
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 232
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 233
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 233
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 255
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 255
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 262
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 262
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 269
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 269
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 276
+[27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 276

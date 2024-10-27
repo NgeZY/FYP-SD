@@ -64,7 +64,25 @@
 </style>
 <body>
 	<?php
-	session_start();
+	ini_set('session.save_path', '/home2/hynmhemy/sessions'); // Replace with your actual path
+
+// 2. Configure session cookie parameters for security
+session_set_cookie_params([
+    'lifetime' => 0,            // Session cookie expires when the browser closes
+    'path' => '/',              // Available throughout the domain
+    'domain' => 'utmadvance.com', // Replace with your actual domain
+    'secure' => true,           // Only send cookies over HTTPS
+    'httponly' => true,         // Prevent JavaScript access to session cookie
+    'samesite' => 'Lax'         // Helps protect against CSRF
+]);
+
+// 3. Start the session
+session_start();
+
+// 4. Optional: Set session garbage collection (only if needed)
+ini_set('session.gc_probability', 1);  // GC runs with a 1% chance on each request
+ini_set('session.gc_divisor', 100);    // Adjusts GC frequency
+ini_set('session.gc_maxlifetime', 1440); 
 	$role = $_SESSION['role'];
 	?>
     <!-- ============================================================== -->
