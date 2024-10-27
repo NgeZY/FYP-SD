@@ -199,58 +199,108 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
             </div>
 
             <!-- Container fluid -->
-           <div class="container-fluid">
+ <?php
+require('../Function/config.php'); // Include your database configuration
+session_start(); // Start the session
+
+// Get the OrderID from the query parameters
+$orderID = $_GET['OrderID'] ?? null; // Get OrderID from the URL
+
+// Check if OrderID is provided
+if ($orderID === null) {
+    echo "<script>alert('No Order ID provided. Please select an order to view the details.'); window.location.href = 'OrderList.php';</script>";
+    exit();
+}
+
+// Prepare the SQL query to fetch order details
+$sql = "SELECT o.OrderID, o.CustomerName, o.Email, o.Total, o.OrderDate, o.Status, o.ShippingAddress, 
+               oi.ProductID, oi.Quantity, oi.Price, oi.Size, p.ProductName
+        FROM `order` o
+        JOIN order_items oi ON o.OrderID = oi.OrderID
+        JOIN product p ON oi.ProductID = p.ProductID
+        WHERE o.OrderID = ?";
+$stmt = $con->prepare($sql);
+$stmt->bind_param('i', $orderID); // Bind OrderID as an integer
+$stmt->execute();
+$result = $stmt->get_result();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link rel="stylesheet" href="path/to/bootstrap.css"> <!-- Include your Bootstrap CSS -->
+</head>
+<body>
+<div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h4 class="card-title">Order List</h4>
-                    </div>
-                </div>
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col">Order ID</th>
-                                <th scope="col">Customer Name</th>
-                                <th scope="col">Order Date</th>
-                                <th scope="col">Total (RM)</th>
-                                <th scope="col">Order Status</th>
-                                <th scope="col">Shipping Address</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            // Check if any orders exist
-                            if (mysqli_num_rows($result) > 0) {
-                                while ($row = mysqli_fetch_assoc($result)) {
-                                    echo "<tr>";
-                                    echo "<td>" . $row['OrderID'] . "</td>";
-                                    echo "<td>" . $row['CustomerName'] . "</td>";
-                                    echo "<td>" . $row['OrderDate'] . "</td>";
-                                    echo "<td>" . $row['Total'] . "</td>";
-                                    echo "<td>" . $row['Status'] . "</td>";
-                                    echo "<td>" . $row['ShippingAddress'] . "</td>";
-                                    echo "<td>";
-                                    echo "<a href='ViewOrderDetails.php?OrderID=" . $row['OrderID'] . "' class='btn btn-secondary'>View Details</a>";
-                                    echo "<a href='../AS/UpdateOrderStatus.php?id=" . $row['OrderID'] . "' class='btn btn-secondary'>Update Status</a>";
-                                    echo "</td>";
-                                    echo "</tr>";
-                                }
-                            } else {
-                                echo "<tr><td colspan='7'>No orders found</td></tr>";
-                            }
-                            ?>
-                        </tbody>
-                    </table>
+                    <h4 class="card-title">Order Details for Order ID: <?php echo htmlspecialchars($orderID); ?></h4>
+                    <?php
+                    // Check if any order details exist
+                    if ($result->num_rows > 0) {
+                        // Fetch order header
+                        $order = $result->fetch_assoc();
+                        ?>
+                        <p><strong>Customer Name:</strong> <?php echo htmlspecialchars($order['CustomerName']); ?></p>
+                        <p><strong>Email:</strong> <?php echo htmlspecialchars($order['Email']); ?></p>
+                        <p><strong>Order Date:</strong> <?php echo htmlspecialchars($order['OrderDate']); ?></p>
+                        <p><strong>Total:</strong> RM <?php echo number_format($order['Total'], 2); ?></p>
+                        <p><strong>Status:</strong> <?php echo htmlspecialchars($order['Status']); ?></p>
+                        <p><strong>Shipping Address:</strong> <?php echo htmlspecialchars($order['ShippingAddress']); ?></p>
+
+                        <h5 class="mt-4">Order Items:</h5>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Size</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Price (RM)</th>
+                                    <th scope="col">Total (RM)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                        <?php
+                        // Reset the result pointer and fetch all order items
+                        $result->data_seek(0); // Move the pointer back to the beginning
+                        while ($item = $result->fetch_assoc()) {
+                            $itemTotal = $item['Price'] * $item['Quantity'];
+                            echo "<tr>";
+                            echo "<td>" . htmlspecialchars($item['ProductName']) . "</td>";
+                            echo "<td>" . htmlspecialchars($item['Size']) . "</td>";
+                            echo "<td>" . htmlspecialchars($item['Quantity']) . "</td>";
+                            echo "<td>RM " . number_format($item['Price'], 2) . "</td>";
+                            echo "<td>RM " . number_format($itemTotal, 2) . "</td>";
+                            echo "</tr>";
+                        }
+                        ?>
+                            </tbody>
+                        </table>
+                        <?php
+                    } else {
+                        echo "<p>No order details found for this Order ID.</p>";
+                    }
+                    ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<?php
+// Close the statement and connection
+$stmt->close();
+$con->close();
+?>
+
+<script src="path/to/bootstrap.bundle.js"></script> <!-- Include your Bootstrap JS -->
+</body>
+</html>
 
             <!-- End Container fluid -->
             <footer class="footer text-center">
