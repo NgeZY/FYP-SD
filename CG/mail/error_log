@@ -1,0 +1,10 @@
+[26-Oct-2024 13:58:25 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home2/hynmhemy/public_html/CG/mail/contact.php:13
+Stack trace:
+#0 /home2/hynmhemy/public_html/CG/mail/contact.php(13): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'utmadvance')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/CG/mail/contact.php on line 13
+[27-Oct-2024 01:19:22 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home2/hynmhemy/public_html/CG/mail/contact.php:13
+Stack trace:
+#0 /home2/hynmhemy/public_html/CG/mail/contact.php(13): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'utmadvance')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/CG/mail/contact.php on line 13
