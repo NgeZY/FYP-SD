@@ -6,7 +6,7 @@ session_destroy(); // Destroy the session
 // Output JavaScript for alert and redirect
 echo '<script>
     alert("You have been signed out.");
-    window.location.href = "../CG/index.php";
+    window.location.href = "../index.php";
 </script>';
 exit; // Ensure no further code is executed
 ?>

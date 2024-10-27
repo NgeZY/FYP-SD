@@ -109,7 +109,7 @@ if (!isset($_SESSION['email'])) {
     <?php } ?>
 </table>
 
-<a href="index.php">Return to Home</a>
+<a href="../index.php">Return to Home</a>
 
 </body>
 </html>

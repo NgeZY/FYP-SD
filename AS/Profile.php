@@ -124,7 +124,7 @@
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
-						<a href="../CG/index.php" class="nav-item nav-link">Homepage</a>
+						<a href="../index.php" class="nav-item nav-link">Homepage</a>
                         <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
@@ -169,7 +169,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                   <a href="../CG/index.php" class="nav-item nav-link">Home</a>
+                                   <a href="../index.php" class="nav-item nav-link">Home</a>
                                 </ol>
                             </nav>
                         </div>
