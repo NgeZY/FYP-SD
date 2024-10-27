@@ -1,25 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-ini_set('display_errors','1');
-ini_set('display_startup_errors','1');
-error_reporting(E_ALL);
-
-ob_start();
-
-if (session_status() === PHP_SESSION_NONE){
-	session_set_cookies_params([
-		'domain' => 'utmadvance.com',
-		'secure' => true,
-		'httponly' => true,
-		'samesite' => 'Strict',
-]);
-	session_start();
-}
-ob_end_flush();
-var_dump(["session status" => session_status(), "write permission" => is_writable(session_save_path()), "save path" => session_save_path()])
-
-?>
 
 <head>
     <meta charset="utf-8">
@@ -81,21 +61,11 @@ var_dump(["session status" => session_status(), "write permission" => is_writabl
 	
     <!-- Topbar Start -->
     <div class="container-fluid">
-        <div class="row bg-secondary py-2 px-xl-5">
-			</div>
-           
-            <div class="col-lg-6 text-center text-lg-right">
-                
-            </div>
-        </div>
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a href="" class="text-decoration-none">
                     <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">UTM</span>Advance</h1>
                 </a>
-            </div>
-            <div class="col-lg-6 col-6 text-left">
-                
             </div>
         </div>
     </div>
@@ -440,22 +410,23 @@ function filterProducts() {
 
     // Make an AJAX call to your PHP script to fetch filtered products
     fetch('../Function/filter_products.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ prices: selectedPrices }) // Send selected prices to the server
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        updateProductList(data); // Update the product display
-    })
-    .catch(error => console.error('Error fetching products:', error));
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({ prices: selectedPrices }) // Send selected prices to the server
+	})
+	.then(response => {
+		if (!response.ok) {
+			throw new Error('Network response was not ok');
+		}
+		return response.json();
+	})
+	.then(data => {
+		console.log(data); // Log the response for debugging
+		updateProductList(data); // Update the product display
+	})
+	.catch(error => console.error('Error fetching products:', error));
 }
 
 function updateProductList(products) {

@@ -1,26 +1,10 @@
+<?php
+ob_start();
+session_start();
+ob_end_flush();
+?>
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-ini_set('display_errors','1');
-ini_set('display_startup_errors','1');
-error_reporting(E_ALL);
-
-ob_start();
-
-if (session_status() === PHP_SESSION_NONE){
-	session_set_cookies_params([
-		'domain' => 'utmadvance.com',
-		'secure' => true,
-		'httponly' => true,
-		'samesite' => 'Strict',
-]);
-	session_start();
-}
-ob_end_flush();
-var_dump(["session status" => session_status(), "write permission" => is_writable(session_save_path()), "save path" => session_save_path()])
-
-?>
-
 <head>
     <meta charset="utf-8">
     <title>UTM Advance</title>
@@ -90,10 +74,6 @@ var_dump(["session status" => session_status(), "write permission" => is_writabl
     </p>
     <button onclick="acceptCookies()">Accept</button>
 </div>
-
-	<?php
-	session_start();
-	?>
     <!-- Topbar Start -->
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
@@ -244,13 +224,9 @@ var_dump(["session status" => session_status(), "write permission" => is_writabl
             <?php
 			require('../Function/config.php');
 
-			$sql = "SELECT * FROM (
-					SELECT *, 
-					(SELECT COUNT(ProductID) FROM product AS p2 WHERE p2.Category = p1.Category) AS product_count
-					FROM product AS p1
-					GROUP BY Category
-					) AS temp
-					GROUP BY Category";
+			$sql = "WITH RankedProducts AS (SELECT p.*, pc.product_count, ROW_NUMBER() OVER (PARTITION BY p.Category ORDER BY p.ProductID) AS rn FROM product p 
+			JOIN (SELECT Category, COUNT(*) AS product_count FROM product GROUP BY Category) pc ON p.Category = pc.Category) SELECT * FROM RankedProducts WHERE rn = 1";
+
 
 			$result = mysqli_query($con, $sql); // Execute the query
 
