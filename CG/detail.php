@@ -1,3 +1,9 @@
+<?php
+ob_start();
+session_start();
+ob_end_flush();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +33,6 @@
 
 <body>
 	<?php
-	session_start();
 	require '../Function/config.php';
 	if (isset($_GET['id'])) {
     // Get the product ID from the URL

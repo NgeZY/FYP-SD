@@ -1,3 +1,9 @@
+<?php
+ob_start();
+session_start();
+ob_end_flush();
+?>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -54,7 +60,6 @@
 </head>
 <body>
     <?php
-    session_start(); // Start the session
 	$role = $_SESSION['role'];
     // Check if session variables are set
     if (isset($_SESSION['productID'])) {

@@ -1,7 +1,10 @@
 <?php
+ob_start();
+session_start();
+ob_end_flush();
+
 // Include your database connection
 require('../Function/config.php');
-session_start(); // Start the session
 
 // Check if the ID is passed and set
 if (isset($_GET['id'])) {

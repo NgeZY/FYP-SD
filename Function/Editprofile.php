@@ -1,5 +1,8 @@
 <?php
+ob_start();
 session_start();
+ob_end_flush();
+
 require 'config.php'; // Include your database connection
 
 if (!isset($_SESSION['role']) || !isset($_SESSION['email'])) {

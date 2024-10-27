@@ -1,5 +1,8 @@
 <?php
+ob_start();
 session_start();
+ob_end_flush();
+
 include 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

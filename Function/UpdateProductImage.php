@@ -1,6 +1,7 @@
 <?php
-// Start session to access session variables
+ob_start();
 session_start();
+ob_end_flush();
 
 // Include the database configuration file
 require 'config.php';

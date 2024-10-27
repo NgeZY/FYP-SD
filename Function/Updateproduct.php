@@ -1,9 +1,12 @@
 <?php
+ob_start();
+session_start();
+ob_end_flush();
+
 // Include the database configuration
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require('config.php');
-session_start();
 
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

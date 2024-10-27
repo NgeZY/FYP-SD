@@ -1,7 +1,8 @@
 <?php
-
+ob_start();
+session_start();
+ob_end_flush();
 require('../Function/config.php');
-session_start(); 
 
 
 $query = "SELECT * FROM product";

@@ -1,3 +1,9 @@
+<?php
+ob_start();
+session_start();
+ob_end_flush();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +33,6 @@
 
 <body>
 	<?php
-	session_start();
 	$defaultAddress = isset($_SESSION['address']) ? $_SESSION['address'] : '';
 	?>
     <!-- Topbar Start -->

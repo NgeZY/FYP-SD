@@ -1,7 +1,9 @@
 <?php
+ob_start();
+session_start();
+ob_end_flush();
 
 require('../Function/config.php');
-session_start(); // Start the session
 
 // SQL query to fetch data from the order table
 $query = "SELECT * FROM `order`";

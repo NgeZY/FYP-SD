@@ -1,5 +1,8 @@
 <?php
-session_start(); // Start the session
+ob_start();
+session_start();
+ob_end_flush();
+
 include '../Function/config.php'; // Your database connection
 
 if (isset($_GET['cartid'])) {

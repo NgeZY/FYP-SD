@@ -1,3 +1,8 @@
+<?php
+ob_start();
+session_start();
+ob_end_flush();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +14,6 @@
 <body>
     <h2>All User Profiles</h2>
     <?php
-session_start();
 require 'config.php';
 
 function viewAllProfiles() {

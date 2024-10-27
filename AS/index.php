@@ -1,3 +1,9 @@
+<?php
+ob_start();
+session_start();
+ob_end_flush();
+?>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -29,7 +35,6 @@
 
 <body>
 	<?php
-	session_start();
 	$role = $_SESSION['role'];
 	?>
     <!-- ============================================================== -->

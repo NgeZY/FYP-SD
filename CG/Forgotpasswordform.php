@@ -1,3 +1,9 @@
+<?php
+ob_start();
+session_start();
+ob_end_flush();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,9 +72,6 @@
     </style>
 </head>
 <body>
-	<?php
-	session_start();
-	?>
     <div class="container">
         <h1>Forgot Password</h1>
         <form action="../Function/Sendcode.php" method="post">

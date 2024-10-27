@@ -1,5 +1,8 @@
 <?php
+ob_start();
 session_start();
+ob_end_flush();
+
 
 if (!isset($_SESSION['email'])) {
     header("Location: Signinform.php"); // Redirect to sign-in if not logged in

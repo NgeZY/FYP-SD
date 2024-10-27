@@ -1,6 +1,7 @@
 <?php
-// send_verification_code.php
+ob_start();
 session_start();
+ob_end_flush();
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;

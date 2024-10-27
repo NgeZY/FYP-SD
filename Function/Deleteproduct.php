@@ -1,5 +1,8 @@
 <?php
+ob_start();
 session_start();
+ob_end_flush();
+
 
 // Include the database configuration file
 require 'config.php'; // Assuming you have a database connection file
