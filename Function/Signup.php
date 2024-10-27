@@ -1,6 +1,7 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+require 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
@@ -11,12 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = $_POST['address'];
     $contact = $_POST['contact'];
     $role = $_POST['role'];
-
-    $con = new mysqli("localhost", "root", "", "utmadvance");
-
-    if ($con->connect_error) {
-        die("Connection failed: " . $con->connect_error);
-    }
+    
 
     // Check if any required field is empty
     if (empty($username) || empty($password) || empty($confirmPassword) || empty($email) || empty($role)) {
@@ -87,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $mail->Subject = 'Verify your email';
             $mail->Body    = "Please click the link below to verify your email address for UTM Advance:
-http://localhost/FYP-SD/Function/verify.php?token=$token&role=$role";
+https://utmadvance.com/Function/verify.php?token=$token&role=$role";
 
             if ($mail->send()) {
                 echo "<script>alert('A verification link has been sent to your email.'); window.location.href = '../CG/Signinform.php';</script>";

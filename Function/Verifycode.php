@@ -1,21 +1,10 @@
 <?php
 session_start();
+require 'config.php';
 // reset_password.php
 
 if (!isset($_SESSION['email']) || !isset($_SESSION['user_type'])) {
     die("<script>alert('Session expired or invalid. Please try again.'); window.location.href = '../CG/Forgotpasswordform.php';</script>");
-}
-
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "utmadvance";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
 }
 
 // Sanitize and validate input
@@ -55,7 +44,7 @@ switch ($user_type) {
 
 // Verify the code
 $sql = "SELECT Verification_code FROM $table WHERE email='$email'";
-$result = $conn->query($sql);
+$result = $con->query($sql);
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
@@ -63,10 +52,10 @@ if ($result->num_rows > 0) {
     if ($row['Verification_code'] == $verification_code) {
         // Update the password
         $sql = "UPDATE $table SET password='$hashed_password' WHERE email='$email'";
-        if ($conn->query($sql) === TRUE) {
+        if ($con->query($sql) === TRUE) {
             echo '<script>alert("Your password has been reset successfully."); window.location.href = "../CG/Signinform.php";</script>';
         } else {
-            echo "<script>alert('Error updating password: " . $conn->error . "'); window.history.back();</script>";
+            echo "<script>alert('Error updating password: " . $con->error . "'); window.history.back();</script>";
         }
     } else {
         echo '<script>alert("Incorrect verification code."); window.history.back();</script>';
@@ -75,7 +64,7 @@ if ($result->num_rows > 0) {
     echo '<script>alert("No user found with that email."); window.history.back();</script>';
 }
 
-$conn->close();
+$con->close();
 session_unset(); // Remove all session variables
 session_destroy();
 ?>
