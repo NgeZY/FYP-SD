@@ -54,8 +54,8 @@ $data = [
     'billTo' => $customerName,
     'billEmail' => $email,
     'billPhone' => $_POST['contact_number'], // Include a phone number input field
-    'billReturnUrl' => 'https://yourwebsite.com/CG/order_confirmation.php',
-    'billCallbackUrl' => 'https://yourwebsite.com/CG/order_confirmation.php'
+    'billReturnUrl' => 'https://utmadvance.com/CG/order_confirmation.php',
+    'billCallbackUrl' => 'https://utmadvance.com/CG/order_confirmation.php'
 	'paymentMethod' => $paymentMethod
 ];
 

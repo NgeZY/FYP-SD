@@ -2,6 +2,9 @@
 ob_start();
 session_start();
 ob_end_flush();
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 ?>
 
 <!DOCTYPE html>
@@ -150,56 +153,32 @@ ob_end_flush();
             <!-- Shop Sidebar Start -->
             <div class="col-lg-3 col-md-12">
                 <!-- Price Start -->
-				<?php
-				require('../Function/config.php');
-
-				$query_all = "SELECT COUNT(*) as total_products FROM product"; // All products
-				$query_1 = "SELECT COUNT(*) as total_products FROM product WHERE Price BETWEEN 1 AND 30"; // RM1 - RM30
-				$query_2 = "SELECT COUNT(*) as total_products FROM product WHERE Price BETWEEN 31 AND 60"; // RM31 - RM60
-				$query_3 = "SELECT COUNT(*) as total_products FROM product WHERE Price BETWEEN 61 AND 90"; // RM61 - RM90
-				$query_4 = "SELECT COUNT(*) as total_products FROM product WHERE Price BETWEEN 91 AND 120"; // RM91 - RM120
-				$query_5 = "SELECT COUNT(*) as total_products FROM product WHERE Price > 120"; // RM121 and above
-
-				$result_all = mysqli_fetch_assoc(mysqli_query($con, $query_all))['total_products'];
-				$result_1 = mysqli_fetch_assoc(mysqli_query($con, $query_1))['total_products'];
-				$result_2 = mysqli_fetch_assoc(mysqli_query($con, $query_2))['total_products'];
-				$result_3 = mysqli_fetch_assoc(mysqli_query($con, $query_3))['total_products'];
-				$result_4 = mysqli_fetch_assoc(mysqli_query($con, $query_4))['total_products'];
-				$result_5 = mysqli_fetch_assoc(mysqli_query($con, $query_5))['total_products'];
-
-				?>
                 <div class="border-bottom mb-4 pb-4">
                     <h5 class="font-weight-semi-bold mb-4">Filter by price</h5>
                     <form>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" checked id="price-all">
                             <label class="custom-control-label" for="price-all">All Price</label>
-                            <span class="badge border font-weight-normal"><?php echo $result_all ? $result_all : 0; ?></span> <!-- Display all stock -->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="price-1">
                             <label class="custom-control-label" for="price-1">RM1 - RM30</label>
-                            <span class="badge border font-weight-normal"><?php echo $result_1 ? $result_1 : 0; ?></span> <!-- Stock for RM1 - RM30 -->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="price-2">
                             <label class="custom-control-label" for="price-2">RM31 - RM60</label>
-                            <span class="badge border font-weight-normal"><?php echo $result_2 ? $result_2 : 0; ?></span> <!-- Stock for RM31 - RM60 -->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="price-3">
                             <label class="custom-control-label" for="price-3">RM61 - RM90</label>
-                            <span class="badge border font-weight-normal"><?php echo $result_3 ? $result_3 : 0; ?></span> <!-- Stock for RM61 - RM90 -->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="price-4">
                             <label class="custom-control-label" for="price-4">RM91 - RM120</label>
-                            <span class="badge border font-weight-normal"><?php echo $result_4 ? $result_4 : 0; ?></span> <!-- Stock for RM91 - RM120 -->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
                             <input type="checkbox" class="custom-control-input" id="price-5">
                             <label class="custom-control-label" for="price-5">RM121 and above</label>
-                            <span class="badge border font-weight-normal"><?php echo $result_5 ? $result_5 : 0; ?></span> <!-- Stock for RM121 and above -->
                         </div>
                     </form>
                 </div>
@@ -490,7 +469,6 @@ function updateProductList(products) {
         viewDetail.appendChild(document.createTextNode('View Detail'));
 
         cardFooter.appendChild(viewDetail);
-        cardFooter.appendChild(addToCart);
 
         card.appendChild(cardHeader);
         card.appendChild(cardBody);
