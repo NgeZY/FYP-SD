@@ -8,7 +8,6 @@ require 'config.php';
 $email = $_SESSION['email'];
 $customerName = $_POST['customerName'];
 $shippingAddress = $_POST['shippingAddress'];
-$paymentMethod = $_POST['payment']; // Get the selected payment method
 
 // Step 1: Calculate the subtotal and prepare order items (as before)
 $subtotal = 0;
@@ -55,15 +54,20 @@ $data = [
     'billEmail' => $email,
     'billPhone' => $_POST['contact_number'], // Include a phone number input field
     'billReturnUrl' => 'https://utmadvance.com/CG/order_confirmation.php',
-    'billCallbackUrl' => 'https://utmadvance.com/CG/order_confirmation.php'
-	'paymentMethod' => $paymentMethod
+    'billCallbackUrl' => 'https://utmadvance.com/CG/order_confirmation.php',
+	'billPriceSetting' => '1',
+	'billPayorInfo' => '1'
 ];
 
 // Send the payment request to ToyyibPay
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://dev.toyyibpay.com/index.php/api/createBill');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
 $response = curl_exec($ch);
 curl_close($ch);
 

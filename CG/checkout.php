@@ -220,14 +220,8 @@ ob_end_flush();
                     <div class="card-body">
 						<div class="form-group">
 							<div class="custom-control custom-radio">
-								<input type="radio" class="custom-control-input" name="payment" id="paypal" value="paypal" required>
-								<label class="custom-control-label" for="paypal">Paypal</label>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="custom-control custom-radio">
-								<input type="radio" class="custom-control-input" name="payment" id="banktransfer" value="bank_transfer" required>
-								<label class="custom-control-label" for="banktransfer">Bank Transfer</label>
+								<input type="radio" class="custom-control-input" name="payment" id="onlinebanking" value="onlinebanking" required>
+								<label class="custom-control-label" for="onlinebanking">Online Banking</label>
 							</div>
 						</div>
 						<input type="hidden" id="customerName" name="customerName">
