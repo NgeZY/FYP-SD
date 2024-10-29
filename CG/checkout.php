@@ -148,7 +148,7 @@ ob_end_flush();
                         </div>
 						<div class="col-md-6 form-group">
                             <label>Contact Number</label>
-                            <input class="form-control" type="number" id="contact_number" placeholder="0123456789" required>
+                            <input class="form-control" type="number" id="contact" placeholder="0123456789" required>
                         </div>
                         <div class="col-md-12 form-group">
                             <div class="custom-control custom-checkbox">
@@ -304,7 +304,7 @@ ob_end_flush();
         var firstName = document.getElementById('firstName').value;
         var lastName = document.getElementById('lastName').value;
         var address = document.getElementById('address').value;
-		var contact_number = document.getElementById('contact_number').value;
+		var contact_number = document.getElementById('contact').value;
 
         // Populate the payment details
         document.getElementById('customerName').value = firstName + ' ' + lastName;
