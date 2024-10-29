@@ -5,10 +5,21 @@ ob_end_flush();
 
 require 'config.php';
 
+// Ensure the user is logged in
+if (!isset($_SESSION['email'])) {
+    header("Location: Signinform.php"); // Redirect to sign-in if not logged in
+    exit;
+}
+
+// Retrieve customer info from POST data
 $email = $_SESSION['email'];
 $customerName = $_POST['customerName'];
 $shippingAddress = $_POST['shippingAddress'];
 $contact = $_POST['contact_number'];
+
+// Store customer info in session
+$_SESSION['customername'] = $customerName;
+$_SESSION['shippingAddress'] = $shippingAddress;
 
 // Step 1: Calculate the subtotal and prepare order items
 $subtotal = 0;
@@ -40,10 +51,13 @@ if ($result->num_rows > 0) {
     exit;
 }
 
-// Step 2: Initialize ToyyibPay payment
+// Store subtotal and order items in session
+$_SESSION['amount'] = $subtotal;
+$_SESSION['orderItems'] = $orderItems;
+
 $billAmount = $subtotal * 100; // Convert to cents
-$categoryCode = '5tbwgxxl';
-$apiKey = '0ceq5jjt-sihb-sqvu-p6vb-k8voda9hn3td'; // Replace with your ToyyibPay API key
+$categoryCode = 'uyshevch';
+$apiKey = 'mbk1ugcw-t6v8-sphv-dofx-44n7u3shs6oq'; // Replace with your ToyyibPay API key
 
 $data = [
     'userSecretKey' => $apiKey,
@@ -53,9 +67,9 @@ $data = [
     'billAmount' => $billAmount,
     'billTo' => $customerName,
     'billEmail' => $email,
-    'billPhone' => $contact, // Include a phone number input field
-    'billReturnUrl' => 'https://utmadvance.com/CG/order_confirmation.php',
-    'billCallbackUrl' => 'https://utmadvance.com/CG/order_confirmation.php',
+    'billPhone' => $contact,
+    'billReturnUrl' => 'https://utmadvance.com/Function/ordersuccess.php',
+    'billCallbackUrl' => 'https://utmadvance.com/Function/ordersuccess.php',
     'billPriceSetting' => '1',
     'billPayorInfo' => '1'
 ];
@@ -70,23 +84,12 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
 $response = curl_exec($ch);
-
-// Check for cURL errors
-if (curl_errno($ch)) {
-    echo "cURL error: ' . curl_error($ch) . '";
-    exit;
-}
 curl_close($ch);
-
-// Print the raw response for debugging
-echo "<pre>";
-print_r($response); // This will show you the raw response from the API
-echo "</pre>";
 
 // Decode the JSON response
 $responseData = json_decode($response, true);
 if ($responseData === null) {
-    echo "Failed to decode JSON response.";
+    echo "<script>alert('Failed to decode JSON response.'); window.history.back();</script>";
     exit;
 }
 
@@ -97,10 +100,7 @@ if (isset($responseData[0]['BillCode'])) {
     header("Location: $paymentUrl");
     exit;
 } else {
-    // If BillCode is not found, print the response data for debugging
-    echo "<pre>";
-    print_r($responseData);
-    echo "</pre>";
-    echo "Failed to initiate payment. Please try again.";
+    echo "<script>alert('Failed to initiate payment. Please try again.'); window.history.back();</script>";
     exit;
 }
+?>
