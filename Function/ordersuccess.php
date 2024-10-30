@@ -15,13 +15,14 @@ $email = $_SESSION['email'];
 $subtotal = $_SESSION['amount'];
 $shippingAddress = $_SESSION['shippingAddress'];
 $customerName = $_SESSION['customername'];
+$status = $_GET['status_id'];
 
-if (!isset($_GET['bill_code'])) {
+if ($status != 1) {
     echo "<script>alert('Your payment is unsuccessful'); window.location.href = '../CG/checkout.php';</script>";
     exit;
 } else {
 // Prepare the SQL statement for inserting the order
-$sqlInsertOrder = "INSERT INTO `orders` (CustomerName, Email, Total, ShippingAddress, Status) VALUES (?, ?, ?, ?, ?)";
+$sqlInsertOrder = "INSERT INTO `order` (CustomerName, Email, Total, ShippingAddress, Status) VALUES (?, ?, ?, ?, ?)";
 $stmtOrder = $con->prepare($sqlInsertOrder);
 
 if ($stmtOrder === false) {
@@ -43,6 +44,7 @@ if ($stmtOrder->error) {
 
 // Get the last inserted OrderID
 $orderId = $stmtOrder->insert_id;
+$_SESSION['Id'] = $orderId;
 
 // Prepare the SQL statement for inserting order items
 $sqlInsertItems = "INSERT INTO order_items (OrderID, ProductID, Quantity, Price, Size) VALUES (?, ?, ?, ?, ?)";
@@ -75,11 +77,7 @@ if ($stmtDelete->error) {
     die('Execution error during cart deletion: ' . htmlspecialchars($stmtDelete->error));
 }
 
-// Clear session variables related to the order
-unset($_SESSION['amount']);
-unset($_SESSION['shippingAddress']);
 unset($_SESSION['customername']);
-unset($_SESSION['orderItems']);
 
 // Optional: Redirect to a success page or display a success message
 echo "<script>alert('Order placed successfully! Your order ID is: " . htmlspecialchars($orderId) . "'); window.location.href = '../CG/order_confirmation.php';</script>";

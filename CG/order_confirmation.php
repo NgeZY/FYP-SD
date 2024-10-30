@@ -1,24 +1,38 @@
 <?php
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
 ob_start();
 session_start();
 ob_end_flush();
+require '../Function/config.php'; // Ensure you include your database configuration
 
 if (!isset($_SESSION['email'])) {
     header("Location: Signinform.php"); // Redirect to sign-in if not logged in
     exit;
 }
 
-// Assuming order details are stored in session after placing an order
-if (!isset($_SESSION['amount'], $_SESSION['shippingAddress'], $_SESSION['orderItems'], $_SESSION['orderId'])) {
-    // Redirect to checkout if session data is missing
-    header("Location: checkout.php");
-    exit;
-}
-
 $subtotal = $_SESSION['amount'];
 $shippingAddress = $_SESSION['shippingAddress'];
-$orderItems = $_SESSION['orderItems']; // This should be an array of ordered items
-$orderId = $_SESSION['orderId']; // Get the order ID from session
+$orderId = $_SESSION['Id']; // Get the order ID from session
+$orderItems = [];
+
+// Retrieve order items from the database using the order ID
+
+$sql = "SELECT p.ProductName, oi.Quantity, oi.Price FROM order_items oi INNER JOIN product p ON oi.ProductID = p.ProductID WHERE oi.OrderID = ?";
+$stmt = $con->prepare($sql);
+$stmt->bind_param("i", $orderId);
+$stmt->execute();
+$result = $stmt->get_result();
+
+$orderItems = [];
+while ($row = $result->fetch_assoc()) {
+    $orderItems[] = $row; // Store each item in the orderItems array
+}
+
+$stmt->close();
+$con->close();
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +40,7 @@ $orderId = $_SESSION['orderId']; // Get the order ID from session
 <head>
     <meta charset="UTF-8">
     <title>Order Confirmation</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <meta charset="utf-8">
     <title>UTM Advance</title>
@@ -112,4 +126,11 @@ $orderId = $_SESSION['orderId']; // Get the order ID from session
         <a href="../index.php">Return to Home</a>
     </div>
 </body>
+<?php
+// Clear session variables related to the order
+unset($_SESSION['amount']);
+unset($_SESSION['shippingAddress']);
+unset($_SESSION['orderItems']);
+unset($_SESSION['orderId']);
+?>
 </html>
