@@ -96,6 +96,8 @@ $con->close();
 
 		<div class="order-confirmation" style="text-align: center; margin: auto;">
         <h2>Order Details:</h2>
+		<br>
+		<br>
         <table style="width: 100%; max-width: 600px; margin: 20px auto; border-collapse: collapse; font-family: Arial, sans-serif; color: #333;">
             <tr style="background-color: #f09e9a;">
                 <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Order Number</th>
@@ -111,6 +113,8 @@ $con->close();
 
 		
         <h3>Items Ordered:</h3>
+		<br>
+		<br>
         <table style="width: 100%; max-width: 600px; margin: 20px auto; border-collapse: collapse; font-family: Arial, sans-serif; color: #333;">
             <tr style="background-color: #f09e9a;">
                 <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Product Name</th>
@@ -125,6 +129,8 @@ $con->close();
                 </tr>
             <?php } ?>
         </table>
+		<br>
+		<br>
 
         <a href="../index.php">Return to Home</a>
     </div>
