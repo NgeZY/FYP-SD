@@ -94,7 +94,7 @@ $con->close();
         </div>
     </div>
 
-		<div class="order-confirmation" style="margin-left: 20px;">
+		<div class="order-confirmation" style="text-align: center; margin: auto;">
         <h2>Order Details:</h2>
         <table style="width: 100%; max-width: 600px; margin: 20px auto; border-collapse: collapse; font-family: Arial, sans-serif; color: #333;">
             <tr style="background-color: #f09e9a;">
