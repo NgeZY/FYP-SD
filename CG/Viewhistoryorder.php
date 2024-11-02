@@ -33,7 +33,7 @@ ob_end_flush();
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid">
+   <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
 			</div>
            
@@ -56,7 +56,7 @@ ob_end_flush();
 
 
     <!-- Navbar Start -->
-   <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
@@ -74,7 +74,7 @@ ob_end_flush();
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                     <a href="" class="text-decoration-none d-block d-lg-none">
-                        <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">UTM</span>Advance</h1>
+                        <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -84,7 +84,7 @@ ob_end_flush();
                             <a href="../index.php" class="nav-item nav-link">Home</a>
                             <a href="mainpage.php" class="nav-item nav-link">Shop</a>
                             <a href="detail.php" class="nav-item nav-link">Shop Detail</a>
-                            <a href="cart.php" class="nav-item nav-link">Cart</a>
+							<a href="cart.php" class="nav-item nav-link">Cart</a>
 							<a href="about.php" class="nav-item nav-link">About Us</a>
                             <a href="contact.php" class="nav-item nav-link">Contact Us</a>
 							<a href="Viewhistoryorder.php" class="nav-item nav-link">History</a>
@@ -114,32 +114,131 @@ ob_end_flush();
     <!-- Page Header Start -->
     <div class="container-fluid bg-secondary mb-5">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
-            <h1 class="font-weight-semi-bold text-uppercase mb-3">About Us</h1>
+            <h1 class="font-weight-semi-bold text-uppercase mb-3">Shopping Cart</h1>
             <div class="d-inline-flex">
                 <p class="m-0"><a href="../index.php">Home</a></p>
                 <p class="m-0 px-2">-</p>
-                <p class="m-0">About Us</p>
+                <p class="m-0">Shopping Cart</p>
             </div>
         </div>
     </div>
     <!-- Page Header End -->
 
 
-    <!-- About Start -->
-    <div class="container-fluid pt-5">
-        <div class="text-center mb-4">
-            <p class = "px-5" style="margin-left: 175px; margin-right: 175px; font-size: 20px;">
-			Welcome to UTM Advance, your go-to store for stylish clothing and accessories that celebrate the spirit of the University of 
-			Technology Malaysia (UTM). Founded by UTM alumni, we are committed to offering high-quality products that allow you to proudly 
-			showcase your UTM pride.
-			Whether you're a student, alumni, or a fan, our collection has something for everyone. From trendy apparel to unique accessories,
-			each item reflects the innovation and excellence that UTM stands for. Thank you for choosing UTM Advance—where UTM pride meets 
-			style!
-			</p>
+   <!-- Order History Start -->
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5">
+        <div class="col-lg-12 table-responsive mb-5">
+            <?php
+            include '../Function/config.php'; // Your database connection
+
+            if (isset($_SESSION['email'])) {
+                $email = $_SESSION['email']; // Assuming email is stored in session after login
+            } else {
+                echo "<script>alert('Please sign in to continue.'); window.location.href = 'Signinform.php';</script>";
+                exit();
+            }
+
+            // Query to fetch orders for the current user
+            $sql = "SELECT o.OrderID, o.OrderDate, o.Total, o.Status 
+                    FROM `order` o
+                    WHERE o.Email = ? ORDER BY o.OrderDate DESC";
+            $stmt = $con->prepare($sql);
+            $stmt->bind_param('s', $email);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            // Check if any orders exist
+            if ($result->num_rows > 0) {
+                echo '<table class="table table-bordered text-center mb-0">
+                        <thead class="bg-secondary text-dark">
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Order Date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody class="align-middle">';
+
+                // Loop through each order
+                while ($order = $result->fetch_assoc()) {
+                    echo '<tr>
+                            <td class="align-middle">' . htmlspecialchars($order['OrderID']) . '</td>
+                            <td class="align-middle">' . htmlspecialchars($order['OrderDate']) . '</td>
+                            <td class="align-middle">RM ' . number_format($order['Total'], 2) . '</td>
+                            <td class="align-middle">' . htmlspecialchars($order['Status']) . '</td>
+                            <td class="align-middle">
+                                <button class="btn btn-sm btn-primary" onclick="toggleOrderDetails(' . $order['OrderID'] . ')">View Items</button>
+                            </td>
+                          </tr>';
+
+                    // Query to fetch order items for each order
+                    $item_sql = "SELECT oi.ProductID, p.ProductName, oi.Quantity, oi.Price, oi.Size 
+                                 FROM order_items oi
+                                 JOIN product p ON oi.ProductID = p.ProductID
+                                 WHERE oi.OrderID = ?";
+                    $item_stmt = $con->prepare($item_sql);
+                    $item_stmt->bind_param('i', $order['OrderID']);
+                    $item_stmt->execute();
+                    $item_result = $item_stmt->get_result();
+
+                    // Display order items
+                    echo '<tr id="order-' . $order['OrderID'] . '" style="display: none;">
+                            <td colspan="5">
+                                <table class="table table-bordered text-center mb-0">
+                                    <thead class="bg-light">
+                                        <tr>
+                                            <th>Product Name</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Size</th>
+                                            <th>Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="align-middle">';
+
+                    while ($item = $item_result->fetch_assoc()) {
+                        $subtotal = $item['Price'] * $item['Quantity'];
+                        echo '<tr>
+                                <td class="align-middle">' . htmlspecialchars($item['ProductName']) . '</td>
+                                <td class="align-middle">RM ' . number_format($item['Price'], 2) . '</td>
+                                <td class="align-middle">' . $item['Quantity'] . '</td>
+                                <td class="align-middle">' . htmlspecialchars($item['Size']) . '</td>
+                                <td class="align-middle">RM ' . number_format($subtotal, 2) . '</td>
+                              </tr>';
+                    }
+
+                    echo '</tbody></table></td></tr>';
+                    $item_stmt->close();
+                }
+
+                echo '</tbody></table>';
+            } else {
+                echo '<p>You have no order history.</p>';
+            }
+
+            $stmt->close();
+            $con->close();
+            ?>
         </div>
     </div>
-    <!-- About End -->
+</div>
+<!-- Order History End -->
 
+<script>
+function toggleOrderDetails(orderID) {
+    const orderDetails = document.getElementById('order-' + orderID);
+    if (orderDetails.style.display === 'none') {
+        orderDetails.style.display = 'table-row';
+    } else {
+        orderDetails.style.display = 'none';
+    }
+}
+</script>
+
+ 
 
     <!-- Footer Start -->
     <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
@@ -168,7 +267,6 @@ ob_end_flush();
                     </div>
                     
                     
-                 
         <div class="row border-top border-light mx-xl-5 py-4">
             <div class="col-md-6 px-xl-0">
                 <p class="mb-md-0 text-center text-md-left text-dark">
@@ -196,6 +294,9 @@ ob_end_flush();
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
