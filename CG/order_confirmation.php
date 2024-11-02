@@ -111,7 +111,8 @@ $con->close();
             </tr>
         </table>
 
-		
+		<br>
+		<br>
         <h3>Items Ordered:</h3>
 		<br>
 		<br>
