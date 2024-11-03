@@ -267,7 +267,7 @@ ob_end_flush();
                 <div class="row">
                     <!-- column -->
                     <div class="col-lg-6">
-                        <div class="card">
+                        <div class="card" style="margin-left: 20px;">
                             <div class="card-body">
                                 <h4 class="card-title">Recent Feedbacks</h4>
                             </div>
