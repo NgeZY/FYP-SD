@@ -64,29 +64,6 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
     .card-body .btn {
         margin-bottom: 1rem;
     }
-
-    .table {
-        border-collapse: collapse !important;
-        width: 100%;
-        margin-bottom: 0;
-    }
-
-    .table td,
-    .table th {
-        background-color: #fff !important;
-        padding: 0.75rem;
-        vertical-align: top;
-        border: 1px solid #dee2e6 !important;
-    }
-
-    .table-bordered th {
-		border: 1px solid #dee2e6 !important;
-		background-color: #007bff !important;
-	}
-    .table-bordered td {
-        border: 1px solid #dee2e6 !important;
-		background-color: #cce5ff !important;
-    }
 </style>
 
 <body>
@@ -104,40 +81,37 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
         
         <!-- Topbar header -->
         <header class="topbar" data-navbarbg="skin5">
-		<nav class="navbar top-navbar navbar-expand-md navbar-dark">
-        <div class="navbar-header" data-logobg="skin5">
-            <!-- ============================================================== -->
-            <!-- Logo -->
-            <!-- ============================================================== -->
-            <a class="navbar-brand" href="index.php">
-                <!-- Logo icon -->
-                <img src="../CG/img/UTM.png" alt="" style="height: 40px; width: auto;">
-                <!-- End Logo icon -->
-            </a>
-            <!-- ============================================================== -->
-            <!-- Sidebar toggle (visible on mobile only) -->
-            <!-- ============================================================== -->
-            <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
-                <i class="ti-menu ti-close"></i>
-            </a>
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Logo -->
-        <!-- ============================================================== -->
-        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-            <!-- ============================================================== -->
-            <!-- Nav items and right side controls -->
-            <!-- ============================================================== -->
-            <ul class="navbar-nav float-start me-auto">
-                <!-- Optional: Add items to the left side if needed -->
-            </ul>
-            <ul class="navbar-nav float-end" style="font-size: 16px;">
-                <!-- Sign out button -->
-                <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
-            </ul>
-        </div>
-    </nav>
-</header>
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin5">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="index.php">
+						<!-- Logo icon -->
+						<img src="../CG/img/UTM.png" alt="" style="height: 40px; width: auto;">
+						<!-- End Logo icon -->
+					</a>
+                        <!-- Logo text -->
+                        
+                    <!-- End Logo -->
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                </div>
+                <!-- End Logo -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <!-- toggle and nav items -->
+                    <ul class="navbar-nav float-start me-auto">
+                        <!-- Search -->
+
+                    </ul>
+                    <!-- Right side toggle and nav items -->
+                    <ul class="navbar-nav float-end" style="font-size: 16px;">
+                        <!-- User profile and search -->
+                        <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
+                        <!-- User profile and search -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
         <!-- Left Sidebar -->
         <aside class="left-sidebar" data-sidebarbg="skin6">
@@ -190,12 +164,12 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
             <div class="page-breadcrumb">
                 <div class="row align-items-center">
                     <div class="col-5">
-                        <h4 class="page-title">Product</h4>
+                        <h4 class="page-title">Order</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Product</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Order</li>
                                 </ol>
                             </nav>
                         </div>
@@ -214,16 +188,16 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
                     </div>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered" style="background-color: #FFFFFF;">
                         <thead>
-                            <tr>
-                                <th scope="col">Order ID</th>
-                                <th scope="col">Customer Name</th>
-                                <th scope="col">Order Date</th>
-                                <th scope="col">Total (RM)</th>
-                                <th scope="col">Order Status</th>
-                                <th scope="col">Shipping Address</th>
-                                <th scope="col">Action</th>
+                            <tr style="background-color: #f09e9a; color: white;">
+                                <th>Order ID</th>
+                                <th>Customer Name</th>
+                                <th>Order Date</th>
+                                <th>Total (RM)</th>
+                                <th>Order Status</th>
+                                <th>Shipping Address</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>

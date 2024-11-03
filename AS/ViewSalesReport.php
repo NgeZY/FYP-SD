@@ -64,29 +64,6 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
     .card-body .btn {
         margin-bottom: 1rem;
     }
-
-    .table {
-        border-collapse: collapse !important;
-        width: 100%;
-        margin-bottom: 0;
-    }
-
-    .table td,
-    .table th {
-        background-color: #fff !important;
-        padding: 0.75rem;
-        vertical-align: top;
-        border: 1px solid #dee2e6 !important;
-    }
-
-    .table-bordered th {
-		border: 1px solid #dee2e6 !important;
-		background-color: #007bff !important;
-	}
-    .table-bordered td {
-        border: 1px solid #dee2e6 !important;
-		background-color: #cce5ff !important;
-    }
 </style>
 
 <body>
