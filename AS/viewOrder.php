@@ -190,12 +190,12 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
             <div class="page-breadcrumb">
                 <div class="row align-items-center">
                     <div class="col-5">
-                        <h4 class="page-title">Order List</h4>
+                        <h4 class="page-title">Product</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Order List</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Product</li>
                                 </ol>
                             </nav>
                         </div>
@@ -228,22 +228,18 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
                         </thead>
                         <tbody>
                             <?php
-                            // Query to fetch order details
-                            $sql = "SELECT OrderID, CustomerName, OrderDate, Total, Status, ShippingAddress FROM orders";
-                            $result = $con->query($sql);
-                            
                             // Check if any orders exist
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
                                     echo "<tr>";
                                     echo "<td>" . $row['OrderID'] . "</td>";
-                                    echo "<td>" . htmlspecialchars($row['CustomerName']) . "</td>";
+                                    echo "<td>" . $row['CustomerName'] . "</td>";
                                     echo "<td>" . $row['OrderDate'] . "</td>";
-                                    echo "<td>RM " . number_format($row['Total'], 2) . "</td>";
+                                    echo "<td>" . $row['Total'] . "</td>";
                                     echo "<td>" . $row['Status'] . "</td>";
-                                    echo "<td>" . htmlspecialchars($row['ShippingAddress']) . "</td>";
+                                    echo "<td>" . $row['ShippingAddress'] . "</td>";
                                     echo "<td>";
-                                    echo "<a href='ViewOrderDetails.php?OrderID=" . $row['OrderID'] . "' class='btn btn-secondary'>View Details</a> ";
+                                    echo "<a href='ViewOrderDetails.php?OrderID=" . $row['OrderID'] . "' class='btn btn-secondary'>View Details</a>";
                                     echo "<a href='../AS/UpdateOrderStatus.php?id=" . $row['OrderID'] . "' class='btn btn-secondary'>Update Status</a>";
                                     echo "</td>";
                                     echo "</tr>";
@@ -259,7 +255,6 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
         </div>
     </div>
 </div>
-
 
 
             <!-- End Container fluid -->

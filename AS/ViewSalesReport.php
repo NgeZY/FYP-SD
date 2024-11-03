@@ -220,7 +220,7 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <h4 class="card-title">Sales Report</h4>
-                        <a href="../Function/downloadpdf.php" class="btn btn-primary mb-3">Download PDF</a> <!-- Download Button -->
+                        <a href="download_pdf.php" class="btn btn-primary mb-3">Download PDF</a> <!-- Download Button -->
                     </div>
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table-hover table-sm">
