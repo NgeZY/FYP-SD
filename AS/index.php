@@ -207,17 +207,7 @@ ob_end_flush();
                         <h4 class="card-title">Top Selling Products</h4>
                         <h5 class="card-subtitle">Overview of Top Selling Items</h5>
                     </div>
-                    <div class="ms-auto">
-                        <div class="dl">
-                            <select class="form-select shadow-none">
-                                <option value="0" selected>Monthly</option>
-                                <option value="1">Daily</option>
-                                <option value="2">Weekly</option>
-                                <option value="3">Yearly</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+                    
                 <!-- title -->
             </div>
             <div class="table-responsive">
