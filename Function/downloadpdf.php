@@ -1,6 +1,6 @@
 <?php
 require('../Function/config.php'); // Include your database configuration
-require('path/to/fpdf.php'); // Path to your FPDF library
+require('../FPDF/fpdf.php'); // Path to your FPDF library
 
 // Query to fetch sales data
 $sql = "SELECT 
