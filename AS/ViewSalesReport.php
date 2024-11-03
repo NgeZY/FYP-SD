@@ -204,6 +204,28 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
             </div>
 
             <!-- Container fluid -->
+			<?php
+require('../Function/config.php'); // Include your database configuration
+session_start(); // Start the session
+
+// Prepare the SQL query to generate the sales report
+$sql = "SELECT 
+            p.ProductName, 
+            SUM(oi.Quantity) AS ItemSold, 
+            SUM(oi.Quantity * oi.Price) AS TotalRevenue
+        FROM 
+            order_items oi
+        JOIN 
+            product p ON oi.ProductID = p.ProductID
+        GROUP BY 
+            p.ProductName";
+$result = $con->query($sql);
+
+// Check for query execution
+if (!$result) {
+    die("Query failed: " . $con->error);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -220,15 +242,15 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <h4 class="card-title">Sales Report</h4>
-                        <a href="download_pdf.php" class="btn btn-primary mb-3">Download PDF</a> <!-- Download Button -->
+                        <a href="../Function/downloadpdf.php" class="btn btn-primary mb-3">Download PDF</a> <!-- Download Button -->
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-hover table-sm">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col" class="text-center">Product Name</th>
-                                    <th scope="col" class="text-center">Items Sold</th>
-                                    <th scope="col" class="text-center">Total Revenue (RM)</th>
+                        <table class="table table-bordered" style="background-color: #FFFFFF;">
+                            <thead>
+                                <tr style="background-color: #f09e9a; color: white;">
+                                    <th>Product Name</th>
+                                    <th>Items Sold</th>
+                                    <th>Total Revenue (RM)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -237,9 +259,9 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
                                 if ($result->num_rows > 0) {
                                     while ($row = $result->fetch_assoc()) {
                                         echo "<tr>";
-                                        echo "<td class='text-center'>" . htmlspecialchars($row['ProductName']) . "</td>";
-                                        echo "<td class='text-center'>" . htmlspecialchars($row['ItemSold']) . "</td>";
-                                        echo "<td class='text-center'>RM " . number_format($row['TotalRevenue'], 2) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row['ProductName']) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row['ItemSold']) . "</td>";
+                                        echo "<td>RM " . number_format($row['TotalRevenue'], 2) . "</td>";
                                         echo "</tr>";
                                     }
                                 } else {
@@ -259,8 +281,6 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
 // Close the connection
 $con->close();
 ?>
-
-<script src="path/to/bootstrap.bundle.js"></script> <!-- Include your Bootstrap JS -->
 </body>
 </html>
 
