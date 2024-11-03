@@ -70,23 +70,6 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
         width: 100%;
         margin-bottom: 0;
     }
-
-    .table td,
-    .table th {
-        background-color: #fff !important;
-        padding: 0.75rem;
-        vertical-align: top;
-        border: 1px solid #dee2e6 !important;
-    }
-
-    .table-bordered th {
-		border: 1px solid #dee2e6 !important;
-		background-color: #007bff !important;
-	}
-    .table-bordered td {
-        border: 1px solid #dee2e6 !important;
-		background-color: #cce5ff !important;
-    }
 </style>
 
 <body>
@@ -190,12 +173,13 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
             <div class="page-breadcrumb">
                 <div class="row align-items-center">
                     <div class="col-5">
-                        <h4 class="page-title">Product</h4>
+                        <h4 class="page-title">Order Details</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Product</li>
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="Product.php">Order</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Order Details</li>
                                 </ol>
                             </nav>
                         </div>
@@ -259,14 +243,14 @@ $result = $stmt->get_result();
                         <p><strong>Shipping Address:</strong> <?php echo htmlspecialchars($order['ShippingAddress']); ?></p>
 
                         <h5 class="mt-4">Order Items:</h5>
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" style="background-color: #FFFFFF;">
                             <thead>
-                                <tr>
-                                    <th scope="col">Product Name</th>
-                                    <th scope="col">Size</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Price (RM)</th>
-                                    <th scope="col">Total (RM)</th>
+                                <tr style="background-color: #f09e9a; color: white;">
+                                    <th>Product Name</th>
+                                    <th>Size</th>
+                                    <th>Quantity</th>
+                                    <th>Price (RM)</th>
+                                    <th>Total (RM)</th>
                                 </tr>
                             </thead>
                             <tbody>
