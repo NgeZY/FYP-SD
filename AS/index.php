@@ -199,7 +199,7 @@ ob_end_flush();
 <div class="row">
     <!-- column -->
     <div class="col-12">
-        <div class="card">
+        <div class="card" style="margin-left: 20px;"> <!-- Adds spacing from sidebar -->
             <div class="card-body">
                 <!-- title -->
                 <div class="d-md-flex">
@@ -246,13 +246,8 @@ ob_end_flush();
                             while ($row = $result->fetch_assoc()) {
                                 echo '<tr>
                                         <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="m-r-10">
-                                                    <a class="btn btn-circle d-flex btn-info text-white">P</a>
-                                                </div>
-                                                <div>
-                                                    <h4 class="m-b-0 font-16">' . htmlspecialchars($row['ProductName']) . '</h4>
-                                                </div>
+                                            <div>
+                                                <h4 class="m-b-0 font-16">' . htmlspecialchars($row['ProductName']) . '</h4>
                                             </div>
                                         </td>
                                         <td>' . $row['Sales'] . '</td>
@@ -271,6 +266,7 @@ ob_end_flush();
         </div>
     </div>
 </div>
+
 
                 <!-- ============================================================== -->
                 <!-- Table -->
