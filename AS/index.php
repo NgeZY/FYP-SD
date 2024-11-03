@@ -191,54 +191,86 @@ ob_end_flush();
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
-             
                 <!-- ============================================================== -->
                 <!-- Table -->
                 <!-- ============================================================== -->
-               <?php
-include '../Function/config.php'; // Database connection
+<?php include '../Function/config.php'; // Database connection ?>
 
-// Query to fetch the top 4 highest-sold products
-$sql = "SELECT p.ProductName, SUM(oi.Quantity) AS Sales, SUM(oi.Quantity * oi.Price) AS Earnings
-        FROM order_items oi
-        JOIN product p ON oi.ProductID = p.ProductID
-        GROUP BY p.ProductName
-        ORDER BY Sales DESC
-        LIMIT 4";
+<div class="row">
+    <!-- column -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- title -->
+                <div class="d-md-flex">
+                    <div>
+                        <h4 class="card-title">Top Selling Products</h4>
+                        <h5 class="card-subtitle">Overview of Top Selling Items</h5>
+                    </div>
+                    <div class="ms-auto">
+                        <div class="dl">
+                            <select class="form-select shadow-none">
+                                <option value="0" selected>Monthly</option>
+                                <option value="1">Daily</option>
+                                <option value="2">Weekly</option>
+                                <option value="3">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- title -->
+            </div>
+            <div class="table-responsive">
+                <table class="table v-middle">
+                    <thead>
+                        <tr class="bg-light">
+                            <th class="border-top-0">Products</th>
+                            <th class="border-top-0">Sales</th>
+                            <th class="border-top-0">Earnings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        // Query to fetch the top 4 highest-sold products
+                        $sql = "SELECT p.ProductName, SUM(oi.Quantity) AS Sales, SUM(oi.Quantity * oi.Price) AS Earnings
+                                FROM order_items oi
+                                JOIN product p ON oi.ProductID = p.ProductID
+                                GROUP BY p.ProductName
+                                ORDER BY Sales DESC
+                                LIMIT 4";
 
-$result = $con->query($sql);
+                        $result = $con->query($sql);
 
-if ($result->num_rows > 0) {
-    echo '<div class="table-responsive">
-            <table class="table v-middle">
-                <thead>
-                    <tr class="bg-light">
-                        <th class="border-top-0">Product</th>
-                        <th class="border-top-0">Sales</th>
-                        <th class="border-top-0">Earnings</th>
-                    </tr>
-                </thead>
-                <tbody>';
+                        if ($result->num_rows > 0) {
+                            // Loop through the result and display each product
+                            while ($row = $result->fetch_assoc()) {
+                                echo '<tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="m-r-10">
+                                                    <a class="btn btn-circle d-flex btn-info text-white">P</a>
+                                                </div>
+                                                <div>
+                                                    <h4 class="m-b-0 font-16">' . htmlspecialchars($row['ProductName']) . '</h4>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>' . $row['Sales'] . '</td>
+                                        <td>RM ' . number_format($row['Earnings'], 2) . '</td>
+                                    </tr>';
+                            }
+                        } else {
+                            echo "<tr><td colspan='3'>No data available.</td></tr>";
+                        }
 
-    // Loop through the result and display each product
-    while ($row = $result->fetch_assoc()) {
-        echo '<tr>
-                <td>' . htmlspecialchars($row['ProductName']) . '</td>
-                <td>' . $row['Sales'] . '</td>
-                <td>RM ' . number_format($row['Earnings'], 2) . '</td>
-              </tr>';
-    }
-
-    echo '    </tbody>
-            </table>
-          </div>';
-} else {
-    echo "<p>No data available.</p>";
-}
-
-$con->close(); // Close the database connection
-?>
+                        $con->close(); // Close the database connection
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
                 <!-- ============================================================== -->
                 <!-- Table -->
