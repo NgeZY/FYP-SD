@@ -200,10 +200,10 @@ ob_end_flush();
 include '../Function/config.php'; // Database connection
 
 // Query to fetch the top 4 highest-sold products
-$sql = "SELECT ProductName, SUM(Quantity) AS Sales, SUM(Quantity * Price) AS Earnings
+$sql = "SELECT p.ProductName, SUM(oi.Quantity) AS Sales, SUM(oi.Quantity * oi.Price) AS Earnings
         FROM order_items oi
         JOIN product p ON oi.ProductID = p.ProductID
-        GROUP BY ProductName
+        GROUP BY p.ProductName
         ORDER BY Sales DESC
         LIMIT 4";
 
