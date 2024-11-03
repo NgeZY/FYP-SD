@@ -192,203 +192,54 @@ ob_end_flush();
             <!-- Container fluid  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Sales chart -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-md-flex align-items-center">
-                                    <div>
-                                        <h4 class="card-title">Sales Summary</h4>
-                                        <h5 class="card-subtitle">Overview of Latest Month</h5>
-                                    </div>
-                                    <div class="ms-auto d-flex no-block align-items-center">
-                                        <ul class="list-inline font-12 dl m-r-15 m-b-0">
-                                            <li class="list-inline-item text-info"><i class="fa fa-circle"></i> Iphone
-                                            </li>
-                                            <li class="list-inline-item text-primary"><i class="fa fa-circle"></i> Ipad
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <!-- column -->
-                                    <div class="col-lg-12">
-                                        <div class="campaign ct-charts"></div>
-                                    </div>
-                                    <!-- column -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Feeds</h4>
-                                <div class="feed-widget">
-                                    <ul class="list-style-none feed-body m-0 p-b-20">
-                                        <li class="feed-item">
-                                            <div class="feed-icon bg-info"><i class="far fa-bell"></i></div> You have 4
-                                            pending tasks. <span class="ms-auto font-12 text-muted">Just Now</span>
-                                        </li>
-                                        <li class="feed-item">
-                                            <div class="feed-icon bg-success"><i class="ti-server"></i></div> Server #1
-                                            overloaded.<span class="ms-auto font-12 text-muted">2 Hours ago</span>
-                                        </li>
-                                        <li class="feed-item">
-                                            <div class="feed-icon bg-warning"><i class="ti-shopping-cart"></i></div> New
-                                            order received.<span class="ms-auto font-12 text-muted">31 May</span>
-                                        </li>
-                                        <li class="feed-item">
-                                            <div class="feed-icon bg-danger"><i class="ti-user"></i></div> New user
-                                            registered.<span class="ms-auto font-12 text-muted">30 May</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- Sales chart -->
-                <!-- ============================================================== -->
+             
                 <!-- ============================================================== -->
                 <!-- Table -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <!-- column -->
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <!-- title -->
-                                <div class="d-md-flex">
-                                    <div>
-                                        <h4 class="card-title">Top Selling Products</h4>
-                                        <h5 class="card-subtitle">Overview of Top Selling Items</h5>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <div class="dl">
-                                            <select class="form-select shadow-none">
-                                                <option value="0" selected>Monthly</option>
-                                                <option value="1">Daily</option>
-                                                <option value="2">Weekly</option>
-                                                <option value="3">Yearly</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- title -->
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table v-middle">
-                                    <thead>
-                                        <tr class="bg-light">
-                                            <th class="border-top-0">Products</th>
-                                            <th class="border-top-0">License</th>
-                                            <th class="border-top-0">Support Agent</th>
-                                            <th class="border-top-0">Technology</th>
-                                            <th class="border-top-0">Tickets</th>
-                                            <th class="border-top-0">Sales</th>
-                                            <th class="border-top-0">Earnings</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="m-r-10"><a
-                                                            class="btn btn-circle d-flex btn-info text-white">EA</a>
-                                                    </div>
-                                                    <div class="">
-                                                        <h4 class="m-b-0 font-16">Elite Admin</h4>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>Single Use</td>
-                                            <td>John Doe</td>
-                                            <td>
-                                                <label class="label label-danger">Angular</label>
-                                            </td>
-                                            <td>46</td>
-                                            <td>356</td>
-                                            <td>
-                                                <h5 class="m-b-0">$2850.06</h5>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="m-r-10"><a
-                                                            class="btn btn-circle d-flex btn-orange text-white">MA</a>
-                                                    </div>
-                                                    <div class="">
-                                                        <h4 class="m-b-0 font-16">Monster Admin</h4>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>Single Use</td>
-                                            <td>Venessa Fern</td>
-                                            <td>
-                                                <label class="label label-info">Vue Js</label>
-                                            </td>
-                                            <td>46</td>
-                                            <td>356</td>
-                                            <td>
-                                                <h5 class="m-b-0">$2850.06</h5>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="m-r-10"><a
-                                                            class="btn btn-circle d-flex btn-success text-white">MP</a>
-                                                    </div>
-                                                    <div class="">
-                                                        <h4 class="m-b-0 font-16">Material Pro Admin</h4>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>Single Use</td>
-                                            <td>John Doe</td>
-                                            <td>
-                                                <label class="label label-success">Bootstrap</label>
-                                            </td>
-                                            <td>46</td>
-                                            <td>356</td>
-                                            <td>
-                                                <h5 class="m-b-0">$2850.06</h5>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="m-r-10"><a
-                                                            class="btn btn-circle d-flex btn-purple text-white">AA</a>
-                                                    </div>
-                                                    <div class="">
-                                                        <h4 class="m-b-0 font-16">Ample Admin</h4>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>Single Use</td>
-                                            <td>John Doe</td>
-                                            <td>
-                                                <label class="label label-purple">React</label>
-                                            </td>
-                                            <td>46</td>
-                                            <td>356</td>
-                                            <td>
-                                                <h5 class="m-b-0">$2850.06</h5>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <?php
+include '../Function/config.php'; // Database connection
+
+// Query to fetch the top 4 highest-sold products
+$sql = "SELECT ProductName, SUM(Quantity) AS Sales, SUM(Quantity * Price) AS Earnings
+        FROM order_items oi
+        JOIN product p ON oi.ProductID = p.ProductID
+        GROUP BY ProductName
+        ORDER BY Sales DESC
+        LIMIT 4";
+
+$result = $con->query($sql);
+
+if ($result->num_rows > 0) {
+    echo '<div class="table-responsive">
+            <table class="table v-middle">
+                <thead>
+                    <tr class="bg-light">
+                        <th class="border-top-0">Product</th>
+                        <th class="border-top-0">Sales</th>
+                        <th class="border-top-0">Earnings</th>
+                    </tr>
+                </thead>
+                <tbody>';
+
+    // Loop through the result and display each product
+    while ($row = $result->fetch_assoc()) {
+        echo '<tr>
+                <td>' . htmlspecialchars($row['ProductName']) . '</td>
+                <td>' . $row['Sales'] . '</td>
+                <td>RM ' . number_format($row['Earnings'], 2) . '</td>
+              </tr>';
+    }
+
+    echo '    </tbody>
+            </table>
+          </div>';
+} else {
+    echo "<p>No data available.</p>";
+}
+
+$con->close(); // Close the database connection
+?>
+
                 <!-- ============================================================== -->
                 <!-- Table -->
                 <!-- ============================================================== -->

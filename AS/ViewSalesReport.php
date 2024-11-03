@@ -190,12 +190,12 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
             <div class="page-breadcrumb">
                 <div class="row align-items-center">
                     <div class="col-5">
-                        <h4 class="page-title">Product</h4>
+                        <h4 class="page-title">Sales Report</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Product</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Sales Report</li>
                                 </ol>
                             </nav>
                         </div>
@@ -204,29 +204,6 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
             </div>
 
             <!-- Container fluid -->
-<?php
-require('../Function/config.php'); // Include your database configuration
-session_start(); // Start the session
-
-// Prepare the SQL query to generate the sales report
-$sql = "SELECT 
-            p.ProductName, 
-            SUM(oi.Quantity) AS ItemSold, 
-            SUM(oi.Quantity * oi.Price) AS TotalRevenue
-        FROM 
-            order_items oi
-        JOIN 
-            product p ON oi.ProductID = p.ProductID
-        GROUP BY 
-            p.ProductName";
-$result = $con->query($sql);
-
-// Check for query execution
-if (!$result) {
-    die("Query failed: " . $con->error);
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -241,14 +218,17 @@ if (!$result) {
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Sales Report</h4>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="card-title">Sales Report</h4>
+                        <a href="../Function/downloadpdf.php" class="btn btn-primary mb-3">Download PDF</a> <!-- Download Button -->
+                    </div>
                     <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
+                        <table class="table table-bordered table-striped table-hover table-sm">
+                            <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col">Product Name</th>
-                                    <th scope="col">Items Sold</th>
-                                    <th scope="col">Total Revenue (RM)</th>
+                                    <th scope="col" class="text-center">Product Name</th>
+                                    <th scope="col" class="text-center">Items Sold</th>
+                                    <th scope="col" class="text-center">Total Revenue (RM)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -257,13 +237,13 @@ if (!$result) {
                                 if ($result->num_rows > 0) {
                                     while ($row = $result->fetch_assoc()) {
                                         echo "<tr>";
-                                        echo "<td>" . htmlspecialchars($row['ProductName']) . "</td>";
-                                        echo "<td>" . htmlspecialchars($row['ItemSold']) . "</td>";
-                                        echo "<td>RM " . number_format($row['TotalRevenue'], 2) . "</td>";
+                                        echo "<td class='text-center'>" . htmlspecialchars($row['ProductName']) . "</td>";
+                                        echo "<td class='text-center'>" . htmlspecialchars($row['ItemSold']) . "</td>";
+                                        echo "<td class='text-center'>RM " . number_format($row['TotalRevenue'], 2) . "</td>";
                                         echo "</tr>";
                                     }
                                 } else {
-                                    echo "<tr><td colspan='3'>No sales data found</td></tr>";
+                                    echo "<tr><td colspan='3' class='text-center'>No sales data found</td></tr>";
                                 }
                                 ?>
                             </tbody>
@@ -283,6 +263,7 @@ $con->close();
 <script src="path/to/bootstrap.bundle.js"></script> <!-- Include your Bootstrap JS -->
 </body>
 </html>
+
 
 
             <!-- End Container fluid -->
