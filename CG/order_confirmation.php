@@ -161,12 +161,13 @@ unset($_SESSION['orderId']);
                     <div class="col-md-4 mb-5">
                         <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="../index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-dark mb-2" href="mainpage.php"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                            <a class="text-dark mb-2" href="detail.php"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                            <a class="text-dark mb-2" href="cart.php"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                            <a class="text-dark mb-2" href="about.php"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                            <a class="text-dark mb-2" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            <a href="../index.php" class="nav-item nav-link">Home</a>
+                            <a href="mainpage.php" class="nav-item nav-link">Shop</a>
+                            <a href="detail.php" class="nav-item nav-link">Shop Detail</a>
+							<a href="cart.php" class="nav-item nav-link">Cart</a>
+							<a href="about.php" class="nav-item nav-link">About Us</a>
+                            <a href="contact.php" class="nav-item nav-link">Contact Us</a>
+							<a href="Viewhistoryorder.php" class="nav-item nav-link">Purchase History</a>
                         </div>
                     </div>
                     

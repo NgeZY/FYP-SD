@@ -110,7 +110,7 @@ error_reporting(E_ALL);
                             <a href="cart.php" class="nav-item nav-link">Cart</a>
 							<a href="about.php" class="nav-item nav-link">About Us</a>
                             <a href="contact.php" class="nav-item nav-link">Contact Us</a>
-							<a href="Viewhistoryorder.php" class="nav-item nav-link">History</a>
+							<a href="Viewhistoryorder.php" class="nav-item nav-link">Purchase History</a>
                         </div>
 						<div class="navbar-nav ml-auto py-0">
                        <?php if(isset($_SESSION['username'])): ?>
