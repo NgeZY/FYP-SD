@@ -311,6 +311,10 @@ ob_end_flush();
         document.getElementById('customerName').value = firstName + ' ' + lastName;
         document.getElementById('shippingAddress').value = address;
 		document.getElementById('contact_number').value = contact_number;
+		if (!/^\d{10,11}$/.test(contact_number)) {
+        alert("Please enter a valid contact number with 10-11 digits.");
+        return false;
+		}
 
         return true; // Allow form submission
     }
