@@ -80,38 +80,42 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
         
         <!-- Topbar header -->
-        <header class="topbar" data-navbarbg="skin5">
-            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-                <div class="navbar-header" data-logobg="skin5">
-                    <!-- Logo -->
-                    <a class="navbar-brand" href="index.php">
-						<!-- Logo icon -->
-						<img src="../CG/img/UTM.png" alt="" style="height: 40px; width: auto;">
-						<!-- End Logo icon -->
-					</a>
-                        <!-- Logo text -->
-                        
-                    <!-- End Logo -->
-                    <!-- This is for the sidebar toggle which is visible on mobile only -->
-                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
-                            class="ti-menu ti-close"></i></a>
-                </div>
-                <!-- End Logo -->
-                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                    <!-- toggle and nav items -->
-                    <ul class="navbar-nav float-start me-auto">
-                        <!-- Search -->
+        <header class="topbar" data-navbarbg="">
+		<nav class="navbar top-navbar navbar-expand-md navbar-dark">
+        <div class="navbar-header" data-logobg="">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <a class="navbar-brand" href="index.php">
+                <!-- Logo icon -->
+                <img src="../CG/img/UTM.png" alt="" style="height: 40px; width: auto;">
+                <!-- End Logo icon -->
+            </a>
+            <!-- ============================================================== -->
+            <!-- Sidebar toggle (visible on mobile only) -->
+            <!-- ============================================================== -->
+            <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
+                <i class="ti-menu ti-close"></i>
+            </a>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Logo -->
+        <!-- ============================================================== -->
+        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="">
+            <!-- ============================================================== -->
+            <!-- Nav items and right side controls -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav float-start me-auto">
+                <!-- Optional: Add items to the left side if needed -->
+            </ul>
+            <ul class="navbar-nav float-end" style="font-size: 16px;">
+			<!-- Sign out button -->
+			<a href="../Function/Signout.php" class="nav-item nav-link" style="color: #000000;">Sign Out</a>
+			</ul>
 
-                    </ul>
-                    <!-- Right side toggle and nav items -->
-                    <ul class="navbar-nav float-end" style="font-size: 16px;">
-                        <!-- User profile and search -->
-                        <a href="../Function/Signout.php" class="nav-item nav-link">Sign Out</a>
-                        <!-- User profile and search -->
-                    </ul>
-                </div>
-            </nav>
-        </header>
+			</div>
+		</nav>
+	</header>
 
         <!-- Left Sidebar -->
         <aside class="left-sidebar" data-sidebarbg="skin6">
