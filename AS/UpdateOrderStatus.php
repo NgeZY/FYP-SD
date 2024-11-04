@@ -197,7 +197,7 @@ $orderID = $_GET['OrderID'] ?? null; // Get OrderID from the URL
 
 // Check if OrderID is provided
 if ($orderID === null) {
-    echo "<script>alert('No Order ID provided. Please select an order to view the details.'); window.location.href = 'OrderList.php';</script>";
+    echo "<script>alert('No Order ID provided. Please select an order to view the details.'); window.location.href = 'viewOrder.php';</script>";
     exit();
 }
 
@@ -211,7 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $updateStmt = $con->prepare($updateSql);
     $updateStmt->bind_param('ssi', $newStatus, $newAddress, $orderID);
     if ($updateStmt->execute()) {
-        echo "<script>alert('Order status and shipping address updated successfully.'); window.location.href = 'OrderDetails.php?OrderID=$orderID';</script>";
+        echo "<script>alert('Order status and shipping address updated successfully.'); window.location.href = 'viewOrder.php?OrderID=$orderID';</script>";
     } else {
         echo "<script>alert('Failed to update order status or address.');</script>";
     }
