@@ -214,7 +214,7 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
                                     echo "<td>" . $row['ShippingAddress'] . "</td>";
                                     echo "<td>";
                                     echo "<a href='ViewOrderDetails.php?OrderID=" . $row['OrderID'] . "' class='btn btn-secondary'>View Details</a>";
-                                    echo "<a href='UpdateOrderStatus.php?id=" . $row['OrderID'] . "' class='btn btn-secondary'>Update Status</a>";
+                                    echo "<a href='UpdateOrderStatus.php?OrderID=" . $row['OrderID'] . "' class='btn btn-secondary'>Update Status</a>";
                                     echo "</td>";
                                     echo "</tr>";
                                 }
