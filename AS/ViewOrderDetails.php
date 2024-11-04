@@ -179,7 +179,7 @@ unset($_SESSION['orderID'], $_SESSION['customerName'], $_SESSION['email'], $_SES
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="Product.php">Order</a></li>
+                                    <li class="breadcrumb-item"><a href="viewOrder.php">Order</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Order Details</li>
                                 </ol>
                             </nav>
