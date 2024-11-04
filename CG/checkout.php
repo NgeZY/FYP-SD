@@ -302,22 +302,39 @@ ob_end_flush();
 	
 	<script>
     function populatePaymentDetails() {
-        var firstName = document.getElementById('firstName').value;
-        var lastName = document.getElementById('lastName').value;
-        var address = document.getElementById('address').value;
-		var contact_number = document.getElementById('contact').value;
+    var firstName = document.getElementById('firstName').value.trim();
+    var lastName = document.getElementById('lastName').value.trim();
+    var address = document.getElementById('address').value.trim();
+    var contact_number = document.getElementById('contact').value.trim();
 
-        // Populate the payment details
-        document.getElementById('customerName').value = firstName + ' ' + lastName;
-        document.getElementById('shippingAddress').value = address;
-		document.getElementById('contact_number').value = contact_number;
-		if (!/^\d{10,11}$/.test(contact_number)) {
+    // Check if the name and address fields are empty
+    if (firstName === "") {
+        alert("First name cannot be empty.");
+        return false;
+    }
+    if (lastName === "") {
+        alert("Last name cannot be empty.");
+        return false;
+    }
+    if (address === "") {
+        alert("Shipping address cannot be empty.");
+        return false;
+    }
+
+    // Check if contact number is between 10 and 11 digits
+    if (!/^\d{10,11}$/.test(contact_number)) {
         alert("Please enter a valid contact number with 10-11 digits.");
         return false;
-		}
-
-        return true; // Allow form submission
     }
+
+    // Populate the hidden fields with the validated data
+    document.getElementById('customerName').value = firstName + ' ' + lastName;
+    document.getElementById('shippingAddress').value = address;
+    document.getElementById('contact_number').value = contact_number;
+
+    return true; // Allow form submission if all validations pass
+}
+
 	</script>
 	
 	<script>
