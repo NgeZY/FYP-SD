@@ -17,16 +17,14 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $sql = "INSERT INTO staff (email, password) VALUES ('$emailToAdd', '$passwordToAdd')";
 
     if ($con->query($sql) === TRUE) {
-        echo "New staff member registered successfully.";
-    } else {
-        echo "Error registering staff member: " . $con->error;
-    }
+		echo "<script>alert('New staff member registered successfully.'); window.location.href = '../AS/deletestaffview.php';</script>";
+	} else {
+		echo "<script>alert('Error registering staff member: " . $con->error . "'); window.history.back();</script>";
+	}
+
 }
 
 // Close connection
 $con->close();
-
-// Redirect back to the previous page
-header("Location: ../AS/deletestaffview.php"); // Update with your actual page
 exit();
 ?>
