@@ -185,3 +185,504 @@
 [27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 269
 [27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home2/hynmhemy/public_html/AS/Profile.php on line 276
 [27-Oct-2024 05:01:15 America/Boise] PHP Warning:  Trying to access array offset on null in /home2/hynmhemy/public_html/AS/Profile.php on line 276
+[03-Nov-2024 08:26:50 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/index.php on line 38
+[03-Nov-2024 08:28:33 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/deletecustomerview.php on line 36
+[03-Nov-2024 08:33:00 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 268
+[03-Nov-2024 08:33:00 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 298
+[03-Nov-2024 09:44:11 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Price' in field list is ambiguous in /home2/hynmhemy/public_html/AS/index.php:210
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/index.php(210): mysqli->query('SELECT ProductN...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/index.php on line 210
+[03-Nov-2024 09:44:30 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Price' in field list is ambiguous in /home2/hynmhemy/public_html/AS/index.php:210
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/index.php(210): mysqli->query('SELECT ProductN...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/index.php on line 210
+[03-Nov-2024 09:46:30 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Price' in field list is ambiguous in /home2/hynmhemy/public_html/AS/index.php:210
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/index.php(210): mysqli->query('SELECT ProductN...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/index.php on line 210
+[03-Nov-2024 09:46:47 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Price' in field list is ambiguous in /home2/hynmhemy/public_html/AS/index.php:210
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/index.php(210): mysqli->query('SELECT ProductN...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/index.php on line 210
+[03-Nov-2024 09:47:01 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Price' in field list is ambiguous in /home2/hynmhemy/public_html/AS/index.php:210
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/index.php(210): mysqli->query('SELECT ProductN...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/index.php on line 210
+[03-Nov-2024 09:50:08 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Price' in field list is ambiguous in /home2/hynmhemy/public_html/AS/index.php:210
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/index.php(210): mysqli->query('SELECT ProductN...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/index.php on line 210
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:13 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:19 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.orders' doesn't exist in /home2/hynmhemy/public_html/AS/viewOrder.php:233
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/viewOrder.php(233): mysqli->query('SELECT OrderID,...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/viewOrder.php on line 233
+[03-Nov-2024 10:12:50 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 268
+[03-Nov-2024 10:12:50 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 298
+[03-Nov-2024 10:12:52 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.orders' doesn't exist in /home2/hynmhemy/public_html/AS/viewOrder.php:233
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/viewOrder.php(233): mysqli->query('SELECT OrderID,...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/viewOrder.php on line 233
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:12:59 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:13:07 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.orders' doesn't exist in /home2/hynmhemy/public_html/AS/viewOrder.php:233
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/viewOrder.php(233): mysqli->query('SELECT OrderID,...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/viewOrder.php on line 233
+[03-Nov-2024 10:13:31 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.orders' doesn't exist in /home2/hynmhemy/public_html/AS/viewOrder.php:233
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/viewOrder.php(233): mysqli->query('SELECT OrderID,...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/viewOrder.php on line 233
+[03-Nov-2024 10:14:27 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.orders' doesn't exist in /home2/hynmhemy/public_html/AS/viewOrder.php:233
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/viewOrder.php(233): mysqli->query('SELECT OrderID,...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/viewOrder.php on line 233
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:31 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:40 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:43 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.orders' doesn't exist in /home2/hynmhemy/public_html/AS/viewOrder.php:233
+Stack trace:
+#0 /home2/hynmhemy/public_html/AS/viewOrder.php(233): mysqli->query('SELECT OrderID,...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/AS/viewOrder.php on line 233
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:14:45 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:11 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:18:23 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 240
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "ItemSold" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 241
+[03-Nov-2024 10:21:07 America/Boise] PHP Warning:  Undefined array key "TotalRevenue" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 242
+[03-Nov-2024 10:37:37 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 268
+[03-Nov-2024 10:37:37 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 298
+[03-Nov-2024 10:38:42 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 268
+[03-Nov-2024 10:38:42 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 298
+[03-Nov-2024 10:46:14 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 268
+[03-Nov-2024 10:46:14 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 298
+[03-Nov-2024 10:49:47 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 268
+[03-Nov-2024 10:49:47 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 298
+[03-Nov-2024 23:19:02 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/Product.php on line 91
+[03-Nov-2024 23:19:05 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:19:07 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:19:13 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:19:15 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:19:20 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:19:21 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:22:35 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:22:37 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:22:39 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:22:51 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:24:08 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:24:09 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:24:37 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:24:44 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:27:05 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/Product.php on line 91
+[03-Nov-2024 23:27:09 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:27:12 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:27:14 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:27:16 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:27:19 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:27:24 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:27:26 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:27:34 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:31:21 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:31:23 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:31:30 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:31:40 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:31:42 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:31:52 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/ViewOrderDetails.php on line 77
+[03-Nov-2024 23:31:58 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/viewOrder.php on line 71
+[03-Nov-2024 23:32:00 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/UpdateOrderStatus.php on line 77
+[03-Nov-2024 23:34:53 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/index.php on line 38
+[03-Nov-2024 23:34:58 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/ViewSalesReport.php on line 71
+[03-Nov-2024 23:35:01 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/icon-material.php on line 36
+[03-Nov-2024 23:35:04 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/feedbackView.php on line 36
+[03-Nov-2024 23:35:04 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/feedbackView.php on line 36
+[04-Nov-2024 03:10:04 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 73
+[04-Nov-2024 03:10:04 America/Boise] PHP Warning:  Undefined array key "username" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 251
+[04-Nov-2024 03:10:04 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 268
+[04-Nov-2024 03:10:04 America/Boise] PHP Warning:  Undefined array key "contact" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 269
+[04-Nov-2024 03:10:04 America/Boise] PHP Warning:  Undefined array key "username" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 291
+[04-Nov-2024 03:10:04 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 298
+[04-Nov-2024 03:10:04 America/Boise] PHP Warning:  Undefined array key "contact" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 305
+[04-Nov-2024 03:10:04 America/Boise] PHP Warning:  Undefined array key "address" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 312
+[04-Nov-2024 03:12:50 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 268
+[04-Nov-2024 03:12:50 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 298
+[04-Nov-2024 05:01:11 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 73
+[04-Nov-2024 05:01:11 America/Boise] PHP Warning:  Undefined array key "username" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 251
+[04-Nov-2024 05:01:11 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 268
+[04-Nov-2024 05:01:11 America/Boise] PHP Warning:  Undefined array key "contact" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 269
+[04-Nov-2024 05:01:11 America/Boise] PHP Warning:  Undefined array key "username" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 291
+[04-Nov-2024 05:01:11 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 298
+[04-Nov-2024 05:01:11 America/Boise] PHP Warning:  Undefined array key "contact" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 305
+[04-Nov-2024 05:01:11 America/Boise] PHP Warning:  Undefined array key "address" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 312
+[04-Nov-2024 07:02:55 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 73
+[04-Nov-2024 07:02:55 America/Boise] PHP Warning:  Undefined array key "username" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 251
+[04-Nov-2024 07:02:55 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 268
+[04-Nov-2024 07:02:55 America/Boise] PHP Warning:  Undefined array key "contact" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 269
+[04-Nov-2024 07:02:55 America/Boise] PHP Warning:  Undefined array key "username" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 291
+[04-Nov-2024 07:02:55 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 298
+[04-Nov-2024 07:02:55 America/Boise] PHP Warning:  Undefined array key "contact" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 305
+[04-Nov-2024 07:02:55 America/Boise] PHP Warning:  Undefined array key "address" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 312
+[04-Nov-2024 07:08:53 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 268
+[04-Nov-2024 07:08:53 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/AS/ProfileAS.php on line 298
+[05-Nov-2024 11:51:35 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/index.php on line 38
+[05-Nov-2024 11:55:00 America/Boise] PHP Warning:  Undefined array key "role" in /home2/hynmhemy/public_html/AS/deletecustomerview.php on line 36

@@ -197,3 +197,101 @@ Stack trace:
 [27-Oct-2024 01:56:19 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 18
 [27-Oct-2024 01:56:19 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 19
 [27-Oct-2024 01:56:19 America/Boise] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home2/hynmhemy/public_html/Function/Signin.php on line 20
+[28-Oct-2024 01:02:19 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/Function/Sendcode.php on line 14
+[28-Oct-2024 01:02:19 America/Boise] PHP Warning:  Undefined array key "user_type" in /home2/hynmhemy/public_html/Function/Sendcode.php on line 15
+[29-Oct-2024 06:33:19 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.Cart' doesn't exist in /home2/hynmhemy/public_html/Function/Addtocart.php:22
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Addtocart.php(22): mysqli->prepare('INSERT INTO Car...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Addtocart.php on line 22
+[29-Oct-2024 06:33:34 America/Boise] PHP Warning:  Undefined array key "category" in /home2/hynmhemy/public_html/Function/Addtocart.php on line 12
+[29-Oct-2024 06:33:34 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.Cart' doesn't exist in /home2/hynmhemy/public_html/Function/Addtocart.php:26
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Addtocart.php(26): mysqli->prepare('INSERT INTO Car...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Addtocart.php on line 26
+[29-Oct-2024 06:34:20 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.Cart' doesn't exist in /home2/hynmhemy/public_html/Function/Addtocart.php:22
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Addtocart.php(22): mysqli->prepare('INSERT INTO Car...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Addtocart.php on line 22
+[29-Oct-2024 06:43:18 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.Cart' doesn't exist in /home2/hynmhemy/public_html/Function/Addtocart.php:26
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Addtocart.php(26): mysqli->prepare('INSERT INTO Car...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Addtocart.php on line 26
+[29-Oct-2024 06:46:39 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.Cart' doesn't exist in /home2/hynmhemy/public_html/Function/Addtocart.php:22
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Addtocart.php(22): mysqli->prepare('INSERT INTO Car...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Addtocart.php on line 22
+[29-Oct-2024 07:16:22 America/Boise] PHP Warning:  Undefined array key "category" in /home2/hynmhemy/public_html/Function/Addtocart.php on line 12
+[29-Oct-2024 07:16:22 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/Function/Addtocart.php on line 18
+[29-Oct-2024 07:16:22 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.Cart' doesn't exist in /home2/hynmhemy/public_html/Function/Addtocart.php:26
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Addtocart.php(26): mysqli->prepare('INSERT INTO Car...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Addtocart.php on line 26
+[29-Oct-2024 07:21:45 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.Cart' doesn't exist in /home2/hynmhemy/public_html/Function/Addtocart.php:22
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Addtocart.php(22): mysqli->prepare('INSERT INTO Car...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Addtocart.php on line 22
+[29-Oct-2024 07:22:49 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.Cart' doesn't exist in /home2/hynmhemy/public_html/Function/Addtocart.php:20
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Addtocart.php(20): mysqli->prepare('INSERT INTO Car...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Addtocart.php on line 20
+[29-Oct-2024 08:03:56 America/Boise] PHP Parse error:  syntax error, unexpected single-quoted string "paymentMethod", expecting "]" in /home2/hynmhemy/public_html/Function/processorder.php on line 59
+[29-Oct-2024 09:07:14 America/Boise] PHP Warning:  Undefined variable $responseData in /home2/hynmhemy/public_html/Function/processorder.php on line 74
+[29-Oct-2024 09:56:50 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/hynmhemy/public_html/Function/processorder.php:82) in /home2/hynmhemy/public_html/Function/processorder.php on line 97
+[29-Oct-2024 23:06:58 America/Boise] PHP Warning:  Undefined array key "status" in /home2/hynmhemy/public_html/Function/ordersuccess.php on line 18
+[29-Oct-2024 23:08:19 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.orders' doesn't exist in /home2/hynmhemy/public_html/Function/ordersuccess.php:26
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/ordersuccess.php(26): mysqli->prepare('INSERT INTO `or...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/ordersuccess.php on line 26
+[02-Nov-2024 10:13:20 America/Boise] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in /home2/hynmhemy/public_html/Function/Signup.php:98
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Signup.php(98): mysqli_stmt->close()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Signup.php on line 98
+[03-Nov-2024 08:49:35 America/Boise] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in /home2/hynmhemy/public_html/Function/Signup.php:98
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Signup.php(98): mysqli_stmt->close()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Signup.php on line 98
+[03-Nov-2024 08:50:02 America/Boise] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in /home2/hynmhemy/public_html/Function/Signup.php:98
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Signup.php(98): mysqli_stmt->close()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Signup.php on line 98
+[03-Nov-2024 08:50:21 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/hynmhemy/public_html/Function/Sendcode.php:74) in /home2/hynmhemy/public_html/Function/Sendcode.php on line 75
+[03-Nov-2024 08:51:03 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/hynmhemy/public_html/Function/Sendcode.php:74) in /home2/hynmhemy/public_html/Function/Sendcode.php on line 75
+[03-Nov-2024 08:51:26 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/hynmhemy/public_html/Function/Sendcode.php:74) in /home2/hynmhemy/public_html/Function/Sendcode.php on line 75
+[03-Nov-2024 10:26:23 America/Boise] PHP Warning:  require(path/to/fpdf.php): Failed to open stream: No such file or directory in /home2/hynmhemy/public_html/Function/downloadpdf.php on line 3
+[03-Nov-2024 10:26:23 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'path/to/fpdf.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home2/hynmhemy/public_html/Function/downloadpdf.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/Function/downloadpdf.php on line 3
+[03-Nov-2024 10:38:59 America/Boise] PHP Warning:  require(path/to/fpdf.php): Failed to open stream: No such file or directory in /home2/hynmhemy/public_html/Function/downloadpdf.php on line 3
+[03-Nov-2024 10:38:59 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'path/to/fpdf.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home2/hynmhemy/public_html/Function/downloadpdf.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/Function/downloadpdf.php on line 3
+[05-Nov-2024 11:52:37 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hynmhemy_utmadvance.Product' doesn't exist in /home2/hynmhemy/public_html/Function/Addproduct.php:52
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Addproduct.php(52): mysqli_query(Object(mysqli), 'INSERT INTO Pro...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Addproduct.php on line 52
+[05-Nov-2024 12:09:44 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'Username' doesn't have a default value in /home2/hynmhemy/public_html/Function/registerstaff.php:19
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/registerstaff.php(19): mysqli->query('INSERT INTO sta...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/registerstaff.php on line 19
+[05-Nov-2024 12:14:39 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/hynmhemy/public_html/Function/registerstaff.php:20) in /home2/hynmhemy/public_html/Function/registerstaff.php on line 30
+[05-Nov-2024 20:30:59 America/Boise] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in /home2/hynmhemy/public_html/Function/Signup.php:98
+Stack trace:
+#0 /home2/hynmhemy/public_html/Function/Signup.php(98): mysqli_stmt->close()
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/Function/Signup.php on line 98

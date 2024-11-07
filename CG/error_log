@@ -472,3 +472,151 @@ Stack trace:
 [27-Oct-2024 03:32:52 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/CG/about.php on line 30
 [27-Oct-2024 03:33:37 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/CG/about.php on line 30
 [27-Oct-2024 04:58:56 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/CG/detail.php on line 30
+[27-Oct-2024 11:38:31 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[27-Oct-2024 11:40:58 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[27-Oct-2024 12:09:49 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[28-Oct-2024 01:01:56 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[28-Oct-2024 09:51:45 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[28-Oct-2024 15:08:51 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[29-Oct-2024 00:45:51 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[29-Oct-2024 08:34:37 America/Boise] PHP Warning:  Undefined variable $query_all in /home2/hynmhemy/public_html/CG/mainpage.php on line 167
+[29-Oct-2024 08:34:37 America/Boise] PHP Deprecated:  mysqli_query(): Passing null to parameter #2 ($query) of type string is deprecated in /home2/hynmhemy/public_html/CG/mainpage.php on line 167
+[29-Oct-2024 08:34:37 America/Boise] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in /home2/hynmhemy/public_html/CG/mainpage.php:167
+Stack trace:
+#0 /home2/hynmhemy/public_html/CG/mainpage.php(167): mysqli_query(Object(mysqli), '')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/CG/mainpage.php on line 167
+[29-Oct-2024 08:35:07 America/Boise] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home2/hynmhemy/public_html/CG/mainpage.php:180
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/CG/mainpage.php on line 180
+[29-Oct-2024 08:37:39 America/Boise] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home2/hynmhemy/public_html/CG/mainpage.php:180
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/CG/mainpage.php on line 180
+[29-Oct-2024 08:37:45 America/Boise] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home2/hynmhemy/public_html/CG/mainpage.php:180
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/CG/mainpage.php on line 180
+[29-Oct-2024 08:37:47 America/Boise] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home2/hynmhemy/public_html/CG/mainpage.php:180
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/CG/mainpage.php on line 180
+[29-Oct-2024 08:37:48 America/Boise] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home2/hynmhemy/public_html/CG/mainpage.php:180
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/CG/mainpage.php on line 180
+[29-Oct-2024 08:37:58 America/Boise] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home2/hynmhemy/public_html/CG/mainpage.php:180
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/CG/mainpage.php on line 180
+[29-Oct-2024 08:41:24 America/Boise] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home2/hynmhemy/public_html/CG/mainpage.php:168
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/CG/mainpage.php on line 168
+[29-Oct-2024 08:42:04 America/Boise] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home2/hynmhemy/public_html/CG/mainpage.php:168
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/CG/mainpage.php on line 168
+[29-Oct-2024 10:03:12 America/Boise] PHP Warning:  Undefined variable $orderId in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 90
+[29-Oct-2024 10:03:12 America/Boise] PHP Warning:  Undefined variable $subtotal in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 91
+[29-Oct-2024 10:03:12 America/Boise] PHP Warning:  Undefined variable $shippingAddress in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 92
+[29-Oct-2024 10:03:12 America/Boise] PHP Warning:  Undefined variable $orderItems in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[29-Oct-2024 10:03:12 America/Boise] PHP Warning:  foreach() argument must be of type array|object, null given in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[29-Oct-2024 10:06:38 America/Boise] PHP Warning:  Undefined variable $orderId in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 90
+[29-Oct-2024 10:06:38 America/Boise] PHP Warning:  Undefined variable $subtotal in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 91
+[29-Oct-2024 10:06:38 America/Boise] PHP Warning:  Undefined variable $shippingAddress in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 92
+[29-Oct-2024 10:06:38 America/Boise] PHP Warning:  Undefined variable $orderItems in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[29-Oct-2024 10:06:38 America/Boise] PHP Warning:  foreach() argument must be of type array|object, null given in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[29-Oct-2024 12:02:00 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[29-Oct-2024 19:09:34 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[29-Oct-2024 23:15:59 America/Boise] PHP Warning:  Undefined array key "orderId" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 14
+[29-Oct-2024 23:15:59 America/Boise] PHP Warning:  Undefined array key "ProductName" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 104
+[29-Oct-2024 23:34:11 America/Boise] PHP Warning:  Undefined array key "orderId" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 14
+[29-Oct-2024 23:38:24 America/Boise] PHP Warning:  Undefined array key "orderId" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 14
+[29-Oct-2024 23:41:17 America/Boise] PHP Warning:  Undefined array key "orderId" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 14
+[30-Oct-2024 00:03:31 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[30-Oct-2024 00:03:31 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[30-Oct-2024 01:02:24 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[30-Oct-2024 18:08:21 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[31-Oct-2024 03:55:17 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[31-Oct-2024 06:05:52 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[01-Nov-2024 00:49:39 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[01-Nov-2024 15:11:09 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 198
+[02-Nov-2024 10:17:12 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:17:12 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:17:12 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:17:12 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:17:12 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:17:12 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:17:12 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:17:12 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:17:14 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:17:14 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:17:14 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:17:14 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:17:17 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:17:17 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:17:17 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:17:17 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:18:12 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:18:12 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:18:12 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:18:12 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:18:13 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:18:13 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:18:13 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:18:13 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:18:14 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:18:14 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:18:14 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:18:14 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:18:14 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:18:14 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:18:14 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:18:14 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:18:15 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:18:15 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:18:15 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:18:15 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:18:30 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:18:30 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:18:30 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:18:30 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:18:39 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:18:39 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:18:39 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:18:39 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:18:39 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:18:39 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:18:39 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:18:39 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:18:40 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:18:40 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:18:40 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:18:40 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:18:40 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:18:40 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:18:40 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:18:40 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 10:22:08 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 10:22:08 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 10:22:08 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 105
+[02-Nov-2024 10:22:08 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 106
+[02-Nov-2024 11:12:36 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[02-Nov-2024 11:12:36 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[02-Nov-2024 11:12:36 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 109
+[02-Nov-2024 11:12:36 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 110
+[02-Nov-2024 12:05:12 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 199
+[02-Nov-2024 19:08:49 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 199
+[03-Nov-2024 01:49:39 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 199
+[04-Nov-2024 01:01:10 America/Boise] PHP Warning:  Undefined array key "amount" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 16
+[04-Nov-2024 01:01:10 America/Boise] PHP Warning:  Undefined array key "shippingAddress" in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 17
+[04-Nov-2024 01:01:10 America/Boise] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 109
+[04-Nov-2024 01:01:10 America/Boise] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home2/hynmhemy/public_html/CG/order_confirmation.php on line 110
+[04-Nov-2024 07:20:38 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 199
+[04-Nov-2024 16:34:13 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 199
+[04-Nov-2024 17:04:32 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 199
+[05-Nov-2024 00:50:35 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 199
+[06-Nov-2024 06:09:57 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 199
+[06-Nov-2024 17:14:49 America/Boise] PHP Warning:  Undefined array key "email" in /home2/hynmhemy/public_html/CG/cart.php on line 199

@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	}
     
     // Insert into the Product table
-    $insertProductQuery = "INSERT INTO Product (ProductName, Price, Category, StockQuantity, Status)
+    $insertProductQuery = "INSERT INTO product (ProductName, Price, Category, StockQuantity, Status)
                            VALUES ('$productName', '$price', '$category', '$stockQuantity', '$status')";
     
     if (mysqli_query($con, $insertProductQuery)) {

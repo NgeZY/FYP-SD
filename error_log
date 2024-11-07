@@ -1,0 +1,334 @@
+[26-Oct-2024 14:29:47 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 41
+[26-Oct-2024 14:29:47 America/Boise] PHP Warning:  require(../Function/config.php): Failed to open stream: No such file or directory in /home2/hynmhemy/public_html/index.php on line 191
+[26-Oct-2024 14:29:47 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '../Function/config.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home2/hynmhemy/public_html/index.php:191
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 191
+[26-Oct-2024 14:29:59 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 41
+[26-Oct-2024 14:29:59 America/Boise] PHP Warning:  require(../Function/config.php): Failed to open stream: No such file or directory in /home2/hynmhemy/public_html/index.php on line 191
+[26-Oct-2024 14:29:59 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '../Function/config.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home2/hynmhemy/public_html/index.php:191
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 191
+[26-Oct-2024 14:36:31 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 41
+[26-Oct-2024 14:36:31 America/Boise] PHP Warning:  require(../Function/config.php): Failed to open stream: No such file or directory in /home2/hynmhemy/public_html/index.php on line 191
+[26-Oct-2024 14:36:31 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '../Function/config.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home2/hynmhemy/public_html/index.php:191
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 191
+[26-Oct-2024 14:37:00 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 41
+[26-Oct-2024 14:37:00 America/Boise] PHP Warning:  require(../Function/config.php): Failed to open stream: No such file or directory in /home2/hynmhemy/public_html/index.php on line 191
+[26-Oct-2024 14:37:00 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '../Function/config.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home2/hynmhemy/public_html/index.php:191
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 191
+[26-Oct-2024 19:02:06 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 19:02:06 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 19:07:48 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 19:07:48 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 19:34:45 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 19:34:45 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 20:06:21 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 20:06:21 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 20:29:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 20:29:14 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 20:39:11 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 20:39:11 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 21:02:39 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 21:02:39 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 21:02:45 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 21:02:45 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 21:02:48 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 21:02:48 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 21:17:55 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 21:17:55 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 21:41:08 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 21:41:08 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:30:49 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:30:49 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:30:49 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:30:49 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:30:49 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:30:49 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:30:49 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:30:49 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:30:49 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:30:49 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:30:49 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:30:49 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:46:35 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:46:35 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:46:35 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:46:35 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:46:41 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:46:41 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:48:47 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:48:47 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:48:48 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:48:48 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 22:48:54 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 22:48:54 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 23:17:44 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 23:17:44 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 23:19:11 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 23:19:11 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 23:27:06 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 23:27:06 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 23:28:16 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 23:28:16 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[26-Oct-2024 23:41:01 America/Boise] PHP Fatal error:  Uncaught Error: Undefined constant "php" in /home2/hynmhemy/public_html/config.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/config.php on line 3
+[26-Oct-2024 23:41:04 America/Boise] PHP Fatal error:  Uncaught Error: Undefined constant "php" in /home2/hynmhemy/public_html/config.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/config.php on line 3
+[26-Oct-2024 23:41:22 America/Boise] PHP Fatal error:  Uncaught Error: Undefined constant "php" in /home2/hynmhemy/public_html/config.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/hynmhemy/public_html/config.php on line 3
+[26-Oct-2024 23:44:27 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[26-Oct-2024 23:44:27 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 00:12:34 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 00:12:34 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 00:52:28 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 00:52:28 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 01:04:21 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 01:04:21 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 01:15:21 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 01:15:21 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 01:16:18 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 01:16:18 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 01:16:19 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 01:16:19 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 01:26:10 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 01:26:10 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 01:29:29 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 01:29:29 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 01:38:25 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 01:38:25 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 01:38:37 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 01:38:37 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 01:39:44 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 01:39:44 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 01:40:27 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 75
+[27-Oct-2024 01:40:27 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:235
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(235): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 235
+[27-Oct-2024 01:45:56 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 4
+[27-Oct-2024 01:45:56 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:236
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(236): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 236
+[27-Oct-2024 01:45:56 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 4
+[27-Oct-2024 01:45:56 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:236
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(236): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 236
+[27-Oct-2024 01:49:27 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 4
+[27-Oct-2024 01:49:27 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:236
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(236): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 236
+[27-Oct-2024 01:49:30 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 4
+[27-Oct-2024 01:49:30 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:236
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(236): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 236
+[27-Oct-2024 01:49:42 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 4
+[27-Oct-2024 01:49:42 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:236
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(236): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 236
+[27-Oct-2024 01:51:13 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 4
+[27-Oct-2024 01:51:13 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:236
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(236): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 236
+[27-Oct-2024 01:56:20 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/hynmhemy/public_html/index.php on line 4
+[27-Oct-2024 01:56:20 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'hynmhemy_utmadvance.p1.ProductID' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home2/hynmhemy/public_html/index.php:236
+Stack trace:
+#0 /home2/hynmhemy/public_html/index.php(236): mysqli_query(Object(mysqli), 'SELECT * FROM (...')
+#1 {main}
+  thrown in /home2/hynmhemy/public_html/index.php on line 236
+[27-Oct-2024 01:59:23 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 234
+[27-Oct-2024 01:59:26 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 234
+[27-Oct-2024 01:59:38 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 234
+[27-Oct-2024 02:05:48 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 245
+[27-Oct-2024 02:08:50 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 245
+[27-Oct-2024 02:09:32 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 245
+[27-Oct-2024 02:11:51 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 245
+[27-Oct-2024 02:12:10 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 249
+[27-Oct-2024 02:13:04 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 249
+[27-Oct-2024 02:13:18 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 249
+[27-Oct-2024 02:13:22 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 249
+[27-Oct-2024 02:13:31 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 249
+[27-Oct-2024 02:13:38 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 249
+[27-Oct-2024 02:14:00 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 249
+[27-Oct-2024 02:14:01 America/Boise] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in /home2/hynmhemy/public_html/index.php on line 249
+[27-Oct-2024 02:34:55 America/Boise] PHP Parse error:  syntax error, unexpected identifier "ob_end_flush" in /home2/hynmhemy/public_html/index.php on line 5
