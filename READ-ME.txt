@@ -1,11 +1,23 @@
-  =>  Template Name    : EShopper - Bootstrap Shop Template
+1. Install the xampp server, the application package is in folder Installer Package.
+2. Refer this youtube video for the installation (https://youtu.be/VCHXCusltqI?si=KB2LA7EokBEmNQj6)
+3. Move the "System Folder" folder into "C:\xampp\htdocs"
+4. Open xampp control panel and start Apache and MySQL Module
+5. Click on Admin button of MySQL Module
+6. Create a database named "hynmhemy_utmadvance"
+7. Refer this youtube video to add privileges for the database (https://youtu.be/zS4g31spQ00?si=ekuzHsZwJq2_hCmo)
+8. The server name is "localhost", username is "hynmhemy_NgeZY" and the password is "2.u&EPt@T2!2"
+9. Import the database file in folder "C:\xampp\htdocs\System Folder\Database by referring this video (https://youtu.be/2ynKAAt1G4Y?si=obX4pjD31J4i20mH)
 
-  =>  Template Link    : https://htmlcodex.com/bootstrap-shop-template
+Link of GitHub for source code (https://github.com/NgeZY/FYP-SD.git)
 
-  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+Link of the project (https://utmadvance.com/index.php)
 
-  =>  Template Author  : HTML Codex
+List of the username and password
 
-  =>  Author Website   : https://htmlcodex.com
+Customer User Id: zheyunge@gmail.com	Password: Customer123
 
-  =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )
+Staff User Id: ngezy041225@gmail.com	Password: Staff123
+
+Admin User Id: ngezheyu1225@gmail.com	Password: Admin123
+
+Password to register admin: 1225
