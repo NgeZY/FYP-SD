@@ -1,4 +1,4 @@
-1. Install the xampp server, the application package is in folder Installer Package.
+1. Install the xampp server by using this link (https://www.apachefriends.org/download.html).
 2. Refer this youtube video for the installation (https://youtu.be/VCHXCusltqI?si=KB2LA7EokBEmNQj6)
 3. Move the "System Folder" folder into "C:\xampp\htdocs"
 4. Open xampp control panel and start Apache and MySQL Module
