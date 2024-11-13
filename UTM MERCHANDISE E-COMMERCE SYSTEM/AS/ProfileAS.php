@@ -314,7 +314,7 @@ ob_end_flush();
 										<div class="col-sm-12">
 											<div class="button-container">
 												<button class="btn btn-success text-white" name="update_profile">Update Profile</button>
-    											<button class="btn btn-success text-white" onclick="window.location.href='../CG/Changepasswordform.html'">Change Password</button>
+    											<button type = "button" class="btn btn-success text-white" onclick="window.location.href='../CG/Changepasswordform.html'">Change Password</button>
 											</div>
 										</div>
 									</div>
