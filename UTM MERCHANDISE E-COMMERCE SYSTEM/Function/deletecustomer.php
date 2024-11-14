@@ -10,9 +10,9 @@ if (isset($_POST['username'])) {
     $sql = "DELETE FROM customer WHERE username='$usernameToDelete'";
 
     if ($con->query($sql) === TRUE) {
-        echo "customer deleted successfully.";
+        echo "<script>alert('Customer deleted successfully!'); window.location.href = '../AS/deletecustomerview.php';</script>";
     } else {
-        echo "Error deleting customer: " . $con->error;
+        echo "<script>alert('Error deleting customer: " . $con->error . "'); window.history.back();</script>";
     }
 }
 
