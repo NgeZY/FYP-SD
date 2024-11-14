@@ -208,7 +208,7 @@ ob_end_flush();
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-body">
-                                <form id="productForm" method="POST" action="../Function/UpdateProduct.php">
+                                <form id="productForm" method="POST" action="../Function/Updateproduct.php">
 									<input type="hidden" id="formMode" value="view">
                                     <div class="form-group">
                                         <label for="productName">Product Name:</label>
