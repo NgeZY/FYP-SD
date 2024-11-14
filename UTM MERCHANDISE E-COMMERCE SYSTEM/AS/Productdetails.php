@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById('deleteButton').addEventListener('click', function() {
     if (confirm('Are you sure you want to delete this product?')) {
         // Proceed with deletion
-        window.location.href = '../Function/DeleteProduct.php?productID=<?= $productID ?>';
+        window.location.href = '../Function/Deleteproduct.php?productID=<?= $productID ?>';
     }
 });
 
